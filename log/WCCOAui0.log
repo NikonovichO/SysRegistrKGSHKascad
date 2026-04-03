@@ -247,3 +247,6 @@ WCCOAui      (0), 2026.04.02 17:21:29.505,	Qt,	QObject::~QObject: Timers cannot 
 WCCOAui      (0), 2026.04.02 18:24:18.787,	Qt,	QObject::~QObject: Timers cannot be stopped from another thread
 WCCOAui      (0), 2026.04.02 18:54:41.562,	Qt,	QObject::~QObject: Timers cannot be stopped from another thread
 WCCOAui      (0), 2026.04.02 18:55:24.450,	Qt,	QObject::~QObject: Timers cannot be stopped from another thread
+WCCOAui      (0), 2026.04.03 12:02:18.282: no password given, exiting
+WCCOAui      (0), 2026.04.03 12:02:21.319: no password given, exiting
+WCCOAui      (0), 2026.04.03 12:02:22.584,	Qt,	QObject::~QObject: Timers cannot be stopped from another thread

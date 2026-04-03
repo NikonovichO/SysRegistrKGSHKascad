@@ -845,3 +845,31 @@ WCCILpmon    (1), 2026.04.02 18:55:30.225, SYS,  INFO,       13/pmon, Проек
 WCCILpmon    (1), 2026.04.03 11:17:11.059, SYS,  INFO,        3/pmon, Получена команда отключения - остановка проекта и завершение работы
 WCCILpmon    (1), 2026.04.03 11:17:11.060, SYS,  INFO,       15/pmon, Проект полностью остановлен - завершение
 WCCILpmon    (1), 2026.04.03 11:17:11.061, SYS,  INFO,        2, Manager Stop
+WCCILpmon    (1), 2026.04.03 11:55:59.634, SYS,  INFO,        1, Manager Start, WAIT_MODE
+WCCILpmon    (1), 2026.04.03 11:56:02.060, SYS,  INFO,       20/pmon, Получена команда START_ALL от ::1, запуск проекта
+WCCILpmon    (1), 2026.04.03 11:56:02.245, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SysRegistrKGSHKascad -pmonIndex 1 
+WCCILpmon    (1), 2026.04.03 11:56:03.614, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SysRegistrKGSHKascad -pmonIndex 2 
+WCCILpmon    (1), 2026.04.03 11:56:04.113, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SysRegistrKGSHKascad -pmonIndex 3 
+WCCILpmon    (1), 2026.04.03 11:56:04.590, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SysRegistrKGSHKascad -pmonIndex 4 
+WCCILpmon    (1), 2026.04.03 11:56:04.863, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.03 11:56:05.236, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SysRegistrKGSHKascad -pmonIndex 6 
+WCCILpmon    (1), 2026.04.03 11:56:05.565, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SysRegistrKGSHKascad -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.03 11:56:33.766, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.03 12:02:15.832, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.03 12:02:15.835, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SysRegistrKGSHKascad -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.03 12:02:18.401, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #2
+WCCILpmon    (1), 2026.04.03 12:02:18.404, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SysRegistrKGSHKascad -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.03 12:02:21.358, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #3
+WCCILpmon    (1), 2026.04.03 12:02:21.362, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SysRegistrKGSHKascad -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.03 12:02:22.091, SYS,  INFO,       21/pmon, Получена команда нду STOP_ALL от ::1, остановка проекта
+WCCILpmon    (1), 2026.04.03 12:02:22.522, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.03 12:02:22.522, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.03 12:02:22.524, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.03 12:02:22.524, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.03 12:02:26.495, SYS,  INFO,       17/pmon, Остановка менеджера WCCILevent(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.03 12:02:26.604, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.03 12:02:27.641, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.03 12:02:27.859, SYS,  INFO,       13/pmon, Проект полностью остановлен - ожидание команд
+WCCILpmon    (1), 2026.04.03 12:04:12.791, SYS,  INFO,        3/pmon, Получена команда отключения - остановка проекта и завершение работы
+WCCILpmon    (1), 2026.04.03 12:04:12.791, SYS,  INFO,       15/pmon, Проект полностью остановлен - завершение
+WCCILpmon    (1), 2026.04.03 12:04:12.792, SYS,  INFO,        2, Manager Stop

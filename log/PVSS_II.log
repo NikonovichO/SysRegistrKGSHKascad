@@ -2282,3 +2282,211 @@ WCCILpmon    (1), 2026.04.02 18:55:30.225, SYS,  INFO,       13/pmon, Проек
 WCCILpmon    (1), 2026.04.03 11:17:11.059, SYS,  INFO,        3/pmon, Получена команда отключения - остановка проекта и завершение работы
 WCCILpmon    (1), 2026.04.03 11:17:11.060, SYS,  INFO,       15/pmon, Проект полностью остановлен - завершение
 WCCILpmon    (1), 2026.04.03 11:17:11.061, SYS,  INFO,        2, Manager Stop
+WCCILpmon    (1), 2026.04.03 11:55:59.634, SYS,  INFO,        1, Manager Start, WAIT_MODE
+WCCILpmon    (1), 2026.04.03 11:56:02.060, SYS,  INFO,       20/pmon, Получена команда START_ALL от ::1, запуск проекта
+WCCILpmon    (1), 2026.04.03 11:56:02.245, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SysRegistrKGSHKascad -pmonIndex 1 
+WCCILdata    (0), 2026.04.03 11:56:02.384, SYS,  INFO,        1, Manager Start, PROJ, SysRegistrKGSHKascad, V 3.18 - 3.18   platform Windows AMD64 linked at Nov 10 2021 20:28:52 (a061d04d4492)
+WCCILdata    (0), 2026.04.03 11:56:02.390, SYS,  INFO,        0, , (Re)Opening databases in single user mode without transaction logging.
+WCCILdata    (0), 2026.04.03 11:56:03.412, SYS,  INFO,        0, , Initialize archive smoothing
+WCCILdata    (0), 2026.04.03 11:56:03.414, SYS,  INFO,        0, , Initialize archive smoothing
+WCCILdata    (0), 2026.04.03 11:56:03.414, SYS,  INFO,        0, , Loading DpIdentification
+WCCILdata    (0), 2026.04.03 11:56:03.444, SYS,  INFO,        0, , Initializing last value cache
+WCCILdata    (0), 2026.04.03 11:56:03.487, SYS,  INFO,        0, , Loading internal datapoints
+WCCILdata    (0), 2026.04.03 11:56:03.488, SYS,  INFO,        0, , Initializing ID history
+WCCILdata    (0), 2026.04.03 11:56:03.489, SYS,  INFO,        0, , Initializing Alert history
+WCCILdata    (0), 2026.04.03 11:56:03.490, SYS,  INFO,        0, , Initializing Alert Class cache
+WCCILdata    (0), 2026.04.03 11:56:03.494, SYS,  INFO,        6, Initialization by Data Manager finished
+WCCILdata    (0), 2026.04.03 11:56:03.495, SYS,  INFO,        0, , NextGen Archiver will be used...
+WCCILdata    (0), 2026.04.03 11:56:03.496, IMPL, SEVERE,     54, Unexpected state, DataManDpIntern, refreshDiskStatus, Cannot stat 'D:/Projects/90131/New/KGSHNextGen/data/OnlineBackup/'
+WCCILpmon    (1), 2026.04.03 11:56:03.614, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SysRegistrKGSHKascad -pmonIndex 2 
+WCCOAnextgenarch(0), 2026.04.03 11:56:03.701, SYS,  INFO,        1, Manager Start, PROJ, SysRegistrKGSHKascad, V 3.18 - 3.18   platform Windows AMD64 linked at Nov 10 2021 20:28:52 (a061d04d4492)
+WCCOAnextgenarch(118), 2026.04.03 11:56:03.706, SYS,  INFO,        3, Trying to connect to (SYS: 0 Data -num 0 CONN: 1) @ localhost:4897
+WCCOAnextgenarch(118), 2026.04.03 11:56:03.709, SYS,  INFO,        4, Connected to (SYS: 0 Data -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.03 11:56:03.711, SYS,  INFO,        4, Connected to (SYS: 1 Data -num 120 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.03 11:56:03.862, SYS,  INFO,        0, , Manager (SYS: 1 Data -num 120 CONN: 1) initialised
+WCCOAnextgenarch(118), 2026.04.03 11:56:03.862, SYS,  INFO,        6, Initialization by Data Manager finished
+WCCOAnextgenarch(118), 2026.04.03 11:56:03.975, IMPL, INFO,        0, , Starting backend plugin NGAinfluxBackend for "System1:_NGA_B_InfluxDB"
+WCCILpmon    (1), 2026.04.03 11:56:04.113, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SysRegistrKGSHKascad -pmonIndex 3 
+WCCILevent   (0), 2026.04.03 11:56:04.236, SYS,  INFO,        1, Manager Start, PROJ, SysRegistrKGSHKascad, V 3.18 - 3.18   platform Windows AMD64 linked at Nov 10 2021 20:28:52 (a061d04d4492)
+WCCILevent   (0), 2026.04.03 11:56:04.295, SYS,  INFO,        3, Trying to connect to (SYS: 0 Data -num 0 CONN: 1) @ localhost:4897
+WCCILevent   (0), 2026.04.03 11:56:04.298, SYS,  INFO,        4, Connected to (SYS: 0 Data -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.03 11:56:04.300, SYS,  INFO,        4, Connected to (SYS: 1 Event -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.03 11:56:04.452, SYS,  INFO,        0, , Manager (SYS: 1 Event -num 0 CONN: 1) initialised
+WCCILevent   (0), 2026.04.03 11:56:04.453, SYS,  INFO,        6, Initialization by Data Manager finished
+WCCILevent   (0), 2026.04.03 11:56:04.453, SYS,  INFO,      169, Initialize 72 dp-functions
+WCCILevent   (0), 2026.04.03 11:56:04.498, SYS,  INFO,      168, Initialize 132 alerts
+WCCOAnextgenarch(118), 2026.04.03 11:56:04.502, SYS,  INFO,        3, Trying to connect to (SYS: 1 Event -num 0 CONN: 1) @ localhost:4998
+WCCILevent   (0), 2026.04.03 11:56:04.502, SYS,  INFO,      103, User names/passwords initialized
+WCCILdata    (0), 2026.04.03 11:56:04.503, SYS,  INFO,      103, User names/passwords initialized
+WCCOAnextgenarch(118), 2026.04.03 11:56:04.504, SYS,  INFO,        4, Connected to (SYS: 1 Event -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILevent   (0), 2026.04.03 11:56:04.505, SYS,  INFO,        4, Connected to (SYS: 1 Data -num 120 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILpmon    (1), 2026.04.03 11:56:04.590, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SysRegistrKGSHKascad -pmonIndex 4 
+WCCILproxy   (1), 2026.04.03 11:56:04.689, SYS,  INFO,      220, Multiplexing proxy Start, PROJ, SysRegistrKGSHKascad, V 3.18 - 3.18   platform Windows AMD64 linked at Nov 10 2021 20:28:52 (a061d04d4492)
+WCCILproxy   (1), 2026.04.03 11:56:04.695, SYS,  INFO,        0, , Can maintain up to 4088 concurrent connections
+WCCOAnextgenarch(118), 2026.04.03 11:56:04.701, SYS,  INFO,      103, User names/passwords initialized
+WCCOAnextgenarch(118), 2026.04.03 11:56:04.763, IMPL, INFO,        0, , InfluxDB database process started (from _NGA_B_InfluxDB) 
+WCCILpmon    (1), 2026.04.03 11:56:04.863, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 5 -f pvss_scripts.lst
+WCCOActrl    (0), 2026.04.03 11:56:04.965, SYS,  INFO,        1, Manager Start, PROJ, SysRegistrKGSHKascad, V 3.18 - 3.18   platform Windows AMD64 linked at Nov 10 2021 20:28:52 (a061d04d4492)
+WCCOActrl    (0), 2026.04.03 11:56:04.969, SYS,  INFO,        3, Trying to connect to (SYS: 0 Data -num 0 CONN: 1) @ localhost:4897
+WCCOActrl    (0), 2026.04.03 11:56:04.972, SYS,  INFO,        4, Connected to (SYS: 0 Data -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.03 11:56:04.974, SYS,  INFO,        4, Connected to (SYS: 1 Ctrl -num 1 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.03 11:56:04.981, SYS,  INFO,        0, , Manager (SYS: 1 Ctrl -num 1 CONN: 1) initialised
+WCCOActrl    (1), 2026.04.03 11:56:04.982, SYS,  INFO,        6, Initialization by Data Manager finished
+WCCOActrl    (1), 2026.04.03 11:56:04.982, SYS,  INFO,        3, Trying to connect to (SYS: 1 Event -num 0 CONN: 1) @ localhost:4998
+WCCOActrl    (1), 2026.04.03 11:56:04.984, SYS,  INFO,        4, Connected to (SYS: 1 Event -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILevent   (0), 2026.04.03 11:56:04.985, SYS,  INFO,        4, Connected to (SYS: 1 Ctrl -num 1 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCOActrl    (1), 2026.04.03 11:56:04.987, SYS,  INFO,      102, Waiting for user names/passwords
+WCCOActrl    (1), 2026.04.03 11:56:04.988, SYS,  INFO,      103, User names/passwords initialized
+WCCOActrl    (1), 2026.04.03 11:56:04.991, SYS,  INFO,      102, Waiting for user names/passwords
+WCCILpmon    (1), 2026.04.03 11:56:05.236, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SysRegistrKGSHKascad -pmonIndex 6 
+WCCILsim     (1), 2026.04.03 11:56:05.440, SYS,  INFO,        1, Manager Start, PROJ, SysRegistrKGSHKascad, V 3.18 - 3.18   platform Windows AMD64 linked at Nov 10 2021 20:28:52 (a061d04d4492)
+WCCILsim     (1), 2026.04.03 11:56:05.445, SYS,  INFO,        3, Trying to connect to (SYS: 0 Data -num 0 CONN: 1) @ localhost:4897
+WCCILsim     (1), 2026.04.03 11:56:05.449, SYS,  INFO,        4, Connected to (SYS: 0 Data -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.03 11:56:05.451, SYS,  INFO,        4, Connected to (SYS: 1 Driver -num 1 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.03 11:56:05.459, SYS,  INFO,        0, , Manager (SYS: 1 Driver -num 1 CONN: 1) initialised
+WCCILsim     (1), 2026.04.03 11:56:05.459, SYS,  INFO,        6, Initialization by Data Manager finished
+WCCILsim     (1), 2026.04.03 11:56:05.460, SYS,  INFO,        3, Trying to connect to (SYS: 1 Event -num 0 CONN: 1) @ localhost:4998
+WCCILsim     (1), 2026.04.03 11:56:05.461, SYS,  INFO,        4, Connected to (SYS: 1 Event -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILevent   (0), 2026.04.03 11:56:05.463, SYS,  INFO,        4, Connected to (SYS: 1 Driver -num 1 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILsim     (1), 2026.04.03 11:56:05.466, SYS,  INFO,      156, Driver initialization finished.
+WCCILpmon    (1), 2026.04.03 11:56:05.565, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SysRegistrKGSHKascad -pmonIndex 7 -m gedi
+WCCOAnextgenarch(118), 2026.04.03 11:56:06.322, IMPL, INFO,        0, , Connected to database (from _NGA_B_InfluxDB)
+WCCOAnextgenarch(118), 2026.04.03 11:56:06.369, IMPL, SEVERE,     69, Database error, error authorizing query: create admin user first or disable authentication (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:56:06.369, IMPL, SEVERE,     69, Database error, Unable to execute SHOW RETENTION POLICIES (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:56:06.384, IMPL, SEVERE,     69, Database error, error authorizing query: create admin user first or disable authentication (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:56:06.404, IMPL, SEVERE,     69, Database error, error authorizing query: create admin user first or disable authentication (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:56:06.416, IMPL, SEVERE,     69, Database error, Unable to execute SHOW RETENTION POLICIES (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:56:06.431, IMPL, SEVERE,     69, Database error, error authorizing query: create admin user first or disable authentication (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:56:06.452, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAui      (0), 2026.04.03 11:56:06.907, SYS,  INFO,        1, Manager Start, PROJ, SysRegistrKGSHKascad, V 3.18 - 3.18   platform Windows AMD64 linked at Nov 10 2021 20:28:52 (a061d04d4492)
+WCCOActrl    (1), 2026.04.03 11:56:07.507, CTRL, INFO,        0, , DB Version Update, 3.18 DB version 7, nothing to do
+WCCILdata    (0), 2026.04.03 11:56:07.796, IMPL, SEVERE,     54, Unexpected state, DataManDpIntern, refreshDiskStatus, Cannot stat 'D:/Projects/90131/New/KGSHNextGen/data/OnlineBackup/'
+WCCOAnextgenarch(118), 2026.04.03 11:56:15.260, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAui      (0), 2026.04.03 11:56:19.036, SYS,  WARNING,     0, , Para. Demo period started 30 minutes
+WCCILevent   (0), 2026.04.03 11:56:23.605, SYS,  WARNING,     0, , Demo period started 30 minutes
+WCCOAnextgenarch(118), 2026.04.03 11:56:25.971, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAui      (0), 2026.04.03 11:56:33.691, SYS,  INFO,        3, Trying to connect to (SYS: 0 Data -num 0 CONN: 1) @ localhost:4897
+WCCOAui      (0), 2026.04.03 11:56:33.693, SYS,  INFO,        4, Connected to (SYS: 0 Data -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.03 11:56:33.696, SYS,  INFO,        4, Connected to (SYS: 1 Ui -num 1 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.03 11:56:33.705, SYS,  INFO,        0, , Manager (SYS: 1 Ui -num 1 CONN: 1) initialised
+WCCOAui      (1), 2026.04.03 11:56:33.705, SYS,  INFO,        6, Initialization by Data Manager finished
+WCCOAui      (1), 2026.04.03 11:56:33.705, SYS,  INFO,        3, Trying to connect to (SYS: 1 Event -num 0 CONN: 1) @ localhost:4998
+WCCOAui      (1), 2026.04.03 11:56:33.707, SYS,  INFO,        4, Connected to (SYS: 1 Event -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILevent   (0), 2026.04.03 11:56:33.708, SYS,  INFO,        4, Connected to (SYS: 1 Ui -num 1 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCOAui      (1), 2026.04.03 11:56:33.711, SYS,  INFO,      102, Waiting for user names/passwords
+WCCOAui      (1), 2026.04.03 11:56:33.714, SYS,  INFO,      103, User names/passwords initialized
+WCCOAui      (1), 2026.04.03 11:56:33.722, SYS,  INFO,      102, Waiting for user names/passwords
+WCCILpmon    (1), 2026.04.03 11:56:33.766, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCOAnextgenarch(118), 2026.04.03 11:56:36.683, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOActrl    (1), 2026.04.03 11:56:37.792, CTRL, INFO,        0, , Cyclic updateUserGroups running every 60 minutes.
+WCCOAnextgenarch(118), 2026.04.03 11:56:47.432, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:56:58.157, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCILdata    (0), 2026.04.03 11:57:03.507, IMPL, SEVERE,     54, Unexpected state, DataManDpIntern, refreshDiskStatus, Cannot stat 'D:/Projects/90131/New/KGSHNextGen/data/OnlineBackup/'
+WCCOAnextgenarch(118), 2026.04.03 11:57:08.920, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:57:19.662, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:57:30.403, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCILdata    (0), 2026.04.03 11:57:34.203, SYS,  INFO,        0, , Closing databases...
+WCCILdata    (0), 2026.04.03 11:57:34.203, SYS,  INFO,        0, , Loading DpIdentification
+WCCILdata    (0), 2026.04.03 11:57:34.205, SYS,  INFO,        0, , Databases closed.
+WCCILdata    (0), 2026.04.03 11:57:34.205, SYS,  INFO,        0, , Opening databases...
+WCCILdata    (0), 2026.04.03 11:57:34.205, SYS,  INFO,        0, , (Re)Opening databases in multi user mode without transaction logging.
+WCCILdata    (0), 2026.04.03 11:57:35.218, SYS,  INFO,        0, , Databases opened.
+WCCILdata    (0), 2026.04.03 11:57:35.218, SYS,  INFO,        0, , Restoring last value cache...
+WCCILdata    (0), 2026.04.03 11:57:35.218, SYS,  INFO,        0, , Refreshing value DB list...
+WCCILdata    (0), 2026.04.03 11:57:35.219, SYS,  INFO,        0, , Refreshing alert DB list...
+WCCILdata    (0), 2026.04.03 11:57:35.219, SYS,  INFO,        0, , Reopening database done.
+WCCOAnextgenarch(118), 2026.04.03 11:57:41.161, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:57:51.872, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:58:02.652, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCILdata    (0), 2026.04.03 11:58:03.785, IMPL, SEVERE,     54, Unexpected state, DataManDpIntern, refreshDiskStatus, Cannot stat 'D:/Projects/90131/New/KGSHNextGen/data/OnlineBackup/'
+WCCOAnextgenarch(118), 2026.04.03 11:58:13.427, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:58:24.174, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:58:34.906, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:58:45.672, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:58:56.435, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCILdata    (0), 2026.04.03 11:59:03.956, IMPL, SEVERE,     54, Unexpected state, DataManDpIntern, refreshDiskStatus, Cannot stat 'D:/Projects/90131/New/KGSHNextGen/data/OnlineBackup/'
+WCCOAnextgenarch(118), 2026.04.03 11:59:07.207, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:59:17.985, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:59:28.755, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:59:39.494, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 11:59:50.235, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 12:00:00.972, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCILdata    (0), 2026.04.03 12:00:04.135, IMPL, SEVERE,     54, Unexpected state, DataManDpIntern, refreshDiskStatus, Cannot stat 'D:/Projects/90131/New/KGSHNextGen/data/OnlineBackup/'
+WCCOAnextgenarch(118), 2026.04.03 12:00:11.703, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 12:00:22.451, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 12:00:33.162, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 12:00:43.868, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 12:00:54.585, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCILdata    (0), 2026.04.03 12:01:05.103, IMPL, SEVERE,     54, Unexpected state, DataManDpIntern, refreshDiskStatus, Cannot stat 'D:/Projects/90131/New/KGSHNextGen/data/OnlineBackup/'
+WCCOAnextgenarch(118), 2026.04.03 12:01:05.335, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 12:01:16.083, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 12:01:26.843, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 12:01:37.581, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 12:01:48.320, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 12:01:59.064, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCILdata    (0), 2026.04.03 12:02:05.330, IMPL, SEVERE,     54, Unexpected state, DataManDpIntern, refreshDiskStatus, Cannot stat 'D:/Projects/90131/New/KGSHNextGen/data/OnlineBackup/'
+WCCOAnextgenarch(118), 2026.04.03 12:02:09.818, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAui      (1), 2026.04.03 12:02:15.606, SYS,  INFO,      181, Closing connection to (SYS: 1 Data -num 0 CONN: 1)
+WCCILdata    (0), 2026.04.03 12:02:15.607, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ui -num 1 CONN: 1), Connection closed
+WCCOAui      (1), 2026.04.03 12:02:15.607, SYS,  INFO,      181, Closing connection to (SYS: 1 Event -num 0 CONN: 1)
+WCCOAui      (1), 2026.04.03 12:02:15.607, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Data -num 0 CONN: 1), Connection closed
+WCCILevent   (0), 2026.04.03 12:02:15.608, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ui -num 1 CONN: 1), Connection closed
+WCCOAui      (1), 2026.04.03 12:02:15.608, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Event -num 0 CONN: 1), Connection closed
+WCCOAui      (1), 2026.04.03 12:02:15.756, SYS,  INFO,        2, Manager Stop
+WCCILpmon    (1), 2026.04.03 12:02:15.832, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.03 12:02:15.835, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SysRegistrKGSHKascad -pmonIndex 7 -m gedi
+WCCOAui      (0), 2026.04.03 12:02:16.866, SYS,  INFO,        1, Manager Start, PROJ, SysRegistrKGSHKascad, V 3.18 - 3.18   platform Windows AMD64 linked at Nov 10 2021 20:28:52 (a061d04d4492)
+WCCOAui      (0), 2026.04.03 12:02:18.295, SYS,  INFO,        2, Manager Stop
+WCCILpmon    (1), 2026.04.03 12:02:18.401, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #2
+WCCILpmon    (1), 2026.04.03 12:02:18.404, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SysRegistrKGSHKascad -pmonIndex 7 -m gedi
+WCCOAui      (0), 2026.04.03 12:02:19.453, SYS,  INFO,        1, Manager Start, PROJ, SysRegistrKGSHKascad, V 3.18 - 3.18   platform Windows AMD64 linked at Nov 10 2021 20:28:52 (a061d04d4492)
+WCCOAnextgenarch(118), 2026.04.03 12:02:20.581, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAui      (0), 2026.04.03 12:02:21.331, SYS,  INFO,        2, Manager Stop
+WCCILpmon    (1), 2026.04.03 12:02:21.358, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #3
+WCCILpmon    (1), 2026.04.03 12:02:21.362, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SysRegistrKGSHKascad -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.03 12:02:22.091, SYS,  INFO,       21/pmon, Получена команда нду STOP_ALL от ::1, остановка проекта
+WCCOAui      (0), 2026.04.03 12:02:22.327, SYS,  INFO,        1, Manager Start, PROJ, SysRegistrKGSHKascad, V 3.18 - 3.18   platform Windows AMD64 linked at Nov 10 2021 20:28:52 (a061d04d4492)
+WCCILpmon    (1), 2026.04.03 12:02:22.522, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.03 12:02:22.522, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.03 12:02:22.524, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCOActrl    (1), 2026.04.03 12:02:22.524, SYS,  INFO,      170, Signal SIGTERM received - exiting ...
+WCCILpmon    (1), 2026.04.03 12:02:22.524, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILsim     (1), 2026.04.03 12:02:22.568, SYS,  INFO,      181, Closing connection to (SYS: 1 Data -num 0 CONN: 1)
+WCCILsim     (1), 2026.04.03 12:02:22.568, SYS,  INFO,      181, Closing connection to (SYS: 1 Event -num 0 CONN: 1)
+ Connection closed
+WCCILevent   (0), 2026.04.03 12:02:22.568, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Driver -num 1 CONN: 1), Connection closed
+WCCILsim     (1), 2026.04.03 12:02:22.570, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Event -num 0 CONN: 1), Connection closed
+WCCILsim     (1), 2026.04.03 12:02:22.570, SYS,  INFO,        2, Manager Stop
+WCCOActrl    (1), 2026.04.03 12:02:22.572, SYS,  INFO,      181, Closing connection to (SYS: 1 Data -num 0 CONN: 1)
+WCCILdata    (0), 2026.04.03 12:02:22.572, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ctrl -num 1 CONN: 1), Connection closed
+WCCOActrl    (1), 2026.04.03 12:02:22.572, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Data -num 0 CONN: 1), Connection closed
+WCCILevent   (0), 2026.04.03 12:02:22.573, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ctrl -num 1 CONN: 1), Connection closed
+WCCOActrl    (1), 2026.04.03 12:02:22.573, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Event -num 0 CONN: 1), Connection closed
+WCCOActrl    (1), 2026.04.03 12:02:22.573, SYS,  SEVERE,     54, Unexpected state, CtrlMgr, doConnectionClose, Lost Connection to Event Manager, exiting ...
+WCCOActrl    (1), 2026.04.03 12:02:22.605, SYS,  INFO,        2, Manager Stop
+WCCOAnextgenarch(118), 2026.04.03 12:02:22.941, IMPL, INFO,        0, , InfluxDB database process stopped (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.03 12:02:26.464, IMPL, INFO,        0, , Backend plugin thread has finished executing without exception for NGAinfluxBackend
+WCCOAnextgenarch(118), 2026.04.03 12:02:26.468, SYS,  INFO,      181, Closing connection to (SYS: 1 Data -num 0 CONN: 1)
+WCCOAnextgenarch(118), 2026.04.03 12:02:26.468, SYS,  INFO,      181, Closing connection to (SYS: 1 Event -num 0 CONN: 1)
+ection closed
+WCCOAnextgenarch(118), 2026.04.03 12:02:26.468, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Data -num 0 CONN: 1), Connection closed
+WCCILevent   (0), 2026.04.03 12:02:26.470, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Data -num 120 CONN: 1), Connection closed
+WCCOAnextgenarch(118), 2026.04.03 12:02:26.470, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Event -num 0 CONN: 1), Connection closed
+WCCOAnextgenarch(118), 2026.04.03 12:02:26.476, SYS,  INFO,        2, Manager Stop
+WCCILpmon    (1), 2026.04.03 12:02:26.495, SYS,  INFO,       17/pmon, Остановка менеджера WCCILevent(0) с сигналом SIGTERM
+WCCILevent   (0), 2026.04.03 12:02:26.495, SYS,  INFO,        2, Manager Stop, received signal 15, exiting
+WCCILevent   (0), 2026.04.03 12:02:26.572, SYS,  INFO,        2, Manager Stop, start cleanup
+WCCILevent   (0), 2026.04.03 12:02:26.572, SYS,  INFO,      181, Closing connection to (SYS: 1 Data -num 0 CONN: 1)
+WCCILdata    (0), 2026.04.03 12:02:26.572, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Event -num 0 CONN: 1), Connection closed
+WCCILevent   (0), 2026.04.03 12:02:26.573, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Data -num 0 CONN: 1), Connection closed
+WCCILevent   (0), 2026.04.03 12:02:26.581, SYS,  INFO,        2, Manager Stop
+WCCILpmon    (1), 2026.04.03 12:02:26.604, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILdata    (0), 2026.04.03 12:02:27.580, SYS,  INFO,        0, , Loading DpIdentification
+WCCILdata    (0), 2026.04.03 12:02:27.583, SYS,  INFO,        2, Manager Stop
+WCCILpmon    (1), 2026.04.03 12:02:27.641, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILproxy   (1), 2026.04.03 12:02:27.641, SYS,  INFO,      170, Signal SIGTERM received - exiting ...
+WCCILproxy   (1), 2026.04.03 12:02:27.828, SYS,  INFO,      221, Multiplexing proxy Stop
+WCCILpmon    (1), 2026.04.03 12:02:27.859, SYS,  INFO,       13/pmon, Проект полностью остановлен - ожидание команд
+WCCILpmon    (1), 2026.04.03 12:04:12.791, SYS,  INFO,        3/pmon, Получена команда отключения - остановка проекта и завершение работы
+WCCILpmon    (1), 2026.04.03 12:04:12.791, SYS,  INFO,       15/pmon, Проект полностью остановлен - завершение
+WCCILpmon    (1), 2026.04.03 12:04:12.792, SYS,  INFO,        2, Manager Stop
