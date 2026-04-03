@@ -1,0 +1,705 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1920 800 N "_3DFace" 0
+E E E E E 1 -1 -1 0  -1.06581410364015e-14 0.25
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.746"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+6 28
+"RECTANGLE2"
+""
+1 272 725.9999999999999 E E E 1 E 1 E N {0,0,0} E N {255,255,255} E E
+ E E
+27 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1 0 1.034720537531826 4 -26.20698895039668 1 E 272 725.9999999999999 906.0120520665134 798
+6 1
+"RECTANGLE1"
+""
+1 30 630 E E E 1 E 1 E N {0,0,0} E N {0,95,135} E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 0 3 2 1 E 1.438888888888889 0 9.987500000000002 -43.16666666666669 -5492.625000000002 1 E 30 630 210 550
+2 2
+"PRIMITIVE_TEXT9"
+""
+1 20.939453125 30.23943876925242 E E E 1 E 1 E N "White" E N "_Window" E E
+ E E
+1 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E 2.364671674339715 0 1 -19.16808012276878 21.03535970469493 0 E 16 19 26 42
+0 2 2 "0s" 0 0 0 201 0 0  20.939453125 30.23943876925242 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 2 с
+2 3
+"PRIMITIVE_TEXT10"
+""
+1 29.70513381138439 86.99999999999878 E E E 1 E 1 E N "White" E N "_Window" E E
+ E E
+2 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E U  0 E 19 76 41 99
+0 2 2 "0s" 0 0 0 201 0 0  29.70513381138439 86.99999999999878 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 4 по
+29 4
+"DE_START"
+""
+1 56.70298864986327 35.09521939700804 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+3 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"displayFormat" "string dd:MM:yy HH:mm"
+"specialValueText" "string "
+"calendarPopup" "bool TRUE"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  56.70298864986327 35.09521939700804 236.1474330943078 67.97550001238181
+16 DateTimeEdit.ewo
+0
+"main()
+{
+  time t = getCurrentTime();
+  DateTimeEdit_ewo2.dateTime(t);
+}" 0
+29 5
+"DE_END"
+""
+1 56.14743309430781 71.86153899749138 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+4 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"displayFormat" "string dd:MM:yy HH:mm"
+"specialValueText" "string "
+"calendarPopup" "bool TRUE"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  56.14743309430781 71.86153899749138 236.1474330943078 104.0837612197136
+16 DateTimeEdit.ewo
+0
+"main()
+{
+  time t = getCurrentTime();
+  this.dateTime(t);
+}" 0
+30 6
+"FRAME1"
+""
+1 220 351 E E E 1 E 1 E N "White" E N {0,0,0} E E
+ E E
+5 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.904908585055647 0 2.77941176470588 -414.2415209326985 -975.9068627450981 0 E 220 351 349 420
+1
+LANG:10027 56 MS Shell Dlg 2,-1,22,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 32 Выборка за период
+13 7
+"btnPassports"
+""
+1 20.18590023902552 119.0672746410895 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+6 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {0,149,199,139}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  14.66666666666666 107.6666666666654 237.6666666666667 145.6666666666655
+
+T 
+1
+LANG:10027 29 Прошедшие сутки
+"main(mapping event)
+{
+  int rc;
+  dbConnection conn;
+  dbCommand cmd;
+  dbRecordset rs;
+  anytype fld;
+  dyn_string models;
+  string cmdStr, sn, raw, model, resipe, timeS,timeE, press, diaphr, diaphr_curCicl, diaphr_ability ;
+
+  //подключение к БД через ODBC. В приложении \"Администратор ODBC\" создается источник данных, в нашем случае KGSHVulcanisation
+  rc = dbOpenConnection(\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
+  Debug(\"подключение:\", rc);
+  if (!rc)
+  {
+    //выборка данных в recordset
+    cmdStr = \"SELECT serial_num, raw_tire_num, model_tire, num_recipe, quality, time_start, time_stop, num_diaphr, current_cycle, number_cycles FROM vPassport\";
+
+    rc =  dbOpenRecordset(conn, cmdStr, rs);
+    Debug(\"dbOpenRecordset\", rc);
+
+    if (!rc)
+    {
+    // shape list = getShape(\"CB_Passports\");
+     while (!rc && !dbEOF (rs))
+      {
+       dbGetField(rs, 0, sn);
+       dbGetField(rs, 1, raw);
+       dbGetField(rs, 2, model);
+       dbGetField(rs, 3, model);
+
+       //rc = dbSetParameter(cmd, 1, DB_PARAM_IN, 1111);
+     //  list.appendItem(sn); // Добавление
+       tblPassports.appendLine(\"serial_num\", sn, \"raw\", raw, \"model\", model);
+       dbMoveNext(rs);
+      }
+     }
+  }
+    rc = dbCloseConnection(conn); // Соединение закрыто
+}" 0
+ E E E
+13 8
+"PUSH_BUTTON1"
+""
+1 20.18590023902554 157.5672746410895 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+7 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {0,149,199,139}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  14.66666666666666 145.6666666666655 237.6666666666667 183.6666666666655
+
+T 
+1
+LANG:10027 10 7 дней
+"main(mapping event)
+{
+  int rc;
+  dbConnection conn;
+  dbCommand cmd;
+  dbRecordset rs;
+  anytype fld;
+  dyn_string models;
+  string cmdStr, sn, raw, model, resipe, timeS,timeE, press, diaphr, diaphr_curCicl, diaphr_ability ;
+
+  //подключение к БД через ODBC. В приложении \"Администратор ODBC\" создается источник данных, в нашем случае KGSHVulcanisation
+  rc = dbOpenConnection(\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
+  Debug(\"подключение:\", rc);
+  if (!rc)
+  {
+    //выборка данных в recordset
+    cmdStr = \"SELECT serial_num, raw_tire_num, model_tire, num_recipe, quality, time_start, time_stop, num_diaphr, current_cycle, number_cycles FROM vPassport\";
+
+    rc =  dbOpenRecordset(conn, cmdStr, rs);
+    Debug(\"dbOpenRecordset\", rc);
+
+    if (!rc)
+    {
+    // shape list = getShape(\"CB_Passports\");
+     while (!rc && !dbEOF (rs))
+      {
+       dbGetField(rs, 0, sn);
+       dbGetField(rs, 1, raw);
+       dbGetField(rs, 2, model);
+       dbGetField(rs, 3, model);
+
+       //rc = dbSetParameter(cmd, 1, DB_PARAM_IN, 1111);
+     //  list.appendItem(sn); // Добавление
+       tblPassports.appendLine(\"serial_num\", sn, \"raw\", raw, \"model\", model);
+       dbMoveNext(rs);
+      }
+     }
+  }
+    rc = dbCloseConnection(conn); // Соединение закрыто
+}" 0
+ E E E
+13 9
+"PUSH_BUTTON2"
+""
+1 18.58348106344544 409.6410870625846 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+8 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {0,149,199,139}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  15 217.6666666666667 238 270.6666666666667
+
+T 
+1
+LANG:10027 19 По прессам
+"main(mapping event)
+{
+  ReportTable.columnVisibility(1, false);
+  ReportTable.columnWidth(0, 210);
+  ReportTable.columnWidth(2, 210);
+  ReportTable.columnWidth(3, 210);
+
+}" 0
+ E E E
+13 10
+"PUSH_BUTTON3"
+""
+1 14.3900206834078 474.4785600896887 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+9 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {0,149,199,139}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  15 274.6666666666667 238 327.6666666666667
+
+T 
+1
+LANG:10027 38 По прессам 
+и моделям
+"main(mapping event)
+{
+  ReportTable.columnVisibility(1, true);
+  ReportTable.columnWidth(0, 140);
+  ReportTable.columnWidth(2, 140);
+  ReportTable.columnWidth(3, 140);
+}" 0
+ E E E
+25 13
+"ReportTable"
+""
+1 276 0 E E E 1 E 1 E N "STD_textfield_text" E N "White" E E
+ E E
+12 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  274 -2 911.9999999999999 700.1112728413891
+EE 1 0 1 4 0 "Press" 6 1 0 "s" 1
+LANG:10027 10 Пресс
+E
+1
+LANG:10027 0 
+
+140 "Model" 6 1 0 "s" 1
+LANG:10027 12 Модель
+E
+1
+LANG:10027 0 
+
+210 "Amount" 6 1 0 "s" 1
+LANG:10027 10 Всего
+E
+1
+LANG:10027 0 
+
+140 "Defect" 6 1 0 "[0s,,,AlignHCenter|AlignVCenter]" 1
+LANG:10027 19 С дефектом
+E
+1
+LANG:10027 0 
+
+140 
+20 20 10 0
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0 0 1 1 1 7
+1 0
+14 16
+"TEXT_FIELD2"
+""
+1 520.5866160113928 875.6036380536483 E E E 1 E 1 E N {73,255,23} E N {27,33,38} E E
+ E E
+15 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  436.5573170731705 735.8333333333333 534.5573170731706 788.8333333333333
+3 "0s" 0 0 0 9 0 -1  E E E
+14 17
+"TEXT_FIELD3"
+""
+1 706.1011889620324 874.5324270017824 E E E 1 E 1 E N {73,255,23} E N {27,33,38} E E
+ E E
+16 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  791.5693691396837 733.8382055583802 889.5693691396837 786.8382055583802
+3 "0s" 0 0 0 9 0 -1  E E E
+2 18
+"PRIMITIVE_TEXT11"
+""
+1 260 747 E E E 1 E 1 E N "STD_textfield_text" E N "White" E E
+ E E
+17 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 2.170731707317073 0 1.397435897435899 -292.3902439024389 -317.8846153846165 0 E 260 747 424 799
+0 0 2 "0s" 0 0 0 72 0 0  260 747 2
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 13   Всего 
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 25   изготовлено:
+2 19
+"PRIMITIVE_TEXT12"
+""
+1 260 747 E E E 1 E 1 E N "STD_textfield_text" E N "White" E E
+ E E
+18 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1.701219512195123 0 1.416844729344733 188.6949788957812 -333.3827702250986 0 E 260 747 424 799
+0 0 2 "0s" 0 0 0 72 0 0  260 747 2
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 25   Изготовлено 
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 22   с дефектом:
+29 21
+"Pdf_ewo1"
+""
+1 660.3999999999996 19.00000000000003 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+20 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+8
+"accessibleDescription" "string "
+"layoutDirection" "enum 0"
+"contextMenuPolicy" "enum 3"
+"showControls" "bool TRUE"
+"zoomMode" "enum 2"
+"zoomFactor" "float 1"
+"tabletTracking" "bool FALSE"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  926.782089412716 19.00000000000003 1905.77007283813 684
+7 Pdf.ewo
+0
+E30 11
+"FRAME2"
+""
+1 220 351 E E E 1 E 1 E N "White" E N {0,0,0} E E
+ E E
+10 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.904908585055647 0 2.132352941176469 -414.0798887122423 -559.4558823529405 0 E 220 351 349 420
+1
+LANG:10027 56 MS Shell Dlg 2,-1,22,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 29 Составить отчет
+30 24
+"FRAME3"
+""
+1 220 351 E E E 1 E 1 E N {0,122,167} E N {0,0,0} E E
+ E E
+23 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 7.645743041071836 0 1.647058823529412 -754.9485054548688 106.8823529411765 0 E 220 351 349 420
+1
+LANG:10027 56 MS Shell Dlg 2,-1,22,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 29 Составить отчет
+13 26
+"btn_Preview"
+""
+1 25 340.7948654884446 E E E 1 E 1 E N {80,90,100} E N {225,225,225} E E
+ E E
+25 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {0,149,199,139}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,23,5,75,0,0,0,0,0,Полужирный
+0  946 723 1229 781
+
+T 
+1
+LANG:10027 35 Сформировать отчет
+"main(mapping event)
+{
+
+  Pdf_ewo1.load(\"D:/Projects/90131/Docs/WinCC_for_user.pdf\");
+  Pdf_ewo1.zoomMode(\"FitInView\");
+  btn_SaveReport.enabled(true);
+
+
+
+}" 0
+ E E E
+13 27
+"btn_PrintReport"
+""
+1 680.0795096175716 340.7948654884446 E E E 0 E 1 E N {80,90,100} E N {225,225,225} E E
+ E E
+26 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {0,149,199,139}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,23,5,75,0,0,0,0,0,Полужирный
+0  1601 723 1884 781
+
+B 
+4294967295
+"pictures/projAdmin/file.svg"
+1
+LANG:10027 23 Печать отчет
+E E E E
+29 14
+"Label16"
+""
+1 855.8128094291665 125.7218178965269 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+13 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"text" "string Итого"
+"alignment" "enum 132"
+"frameShadow" "enum 16"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,23,5,75,0,0,0,0,0,Полужирный
+0  276.0120520665137 698.000242595417 910.0120520665134 725.000242595417
+5 Label
+0
+E13 29
+"btn_SaveReport"
+""
+1 352.5795096175716 340.7948654884446 E E E 0 E 1 E N {80,90,100} E N {225,225,225} E E
+ E E
+28 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {0,149,199,139}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,23,5,75,0,0,0,0,0,Полужирный
+0  1273.5 723 1556.5 781
+
+T 
+1
+LANG:10027 29 Сохранить отчет
+"main(mapping event)
+{
+  string savePath;
+  string defaultName = \"REPORT\" + \"_\" + formatTime(\"%Y%m%d_%H%M\", getCurrentTime()) + \".pdf\";
+
+  // Параметры: путь по умолчанию, фильтр файлов, формат
+  fileSelector(savePath, \"/\", false, \"*.pdf\", \"Сохранить отчет как...\");
+
+  //или всегда сохранять в одно и то же место?
+
+  // Если путь выбран
+  if (savePath != \"\")
+  {
+    /* Проверяю, есть ли расширение .pdf
+    if (patternMatch(\"*.pdf\", savePath) == false) {
+      savePath += \".pdf\";
+    }*/
+
+    // Копирую превью в выбранное место
+    if (filecopy(\"D:/Projects/90131/Docs/WinCC_for_user.pdf\", savePath) == 0) { //пока тут хардкод моего файла
+      ChildPanelOnCentral(\"Vision/MessageInfo\", \"Успех\", makeVariable(\"$1\", \"Файл успешно сохранен!\"));
+      btn_PrintReport.enabled(true);
+    } else {
+      ChildPanelOnCentral(\"Vision/MessageInfo\", \"Ошибка\", makeVariable(\"$1\", \"Не удалось сохранить файл. Проверьте права доступа.\"));
+    }
+  }
+
+
+}
+" 0
+ E E E
+0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

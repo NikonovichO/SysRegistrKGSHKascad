@@ -1,0 +1,265 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1946 956 N {207,207,207} 0
+"main()
+{
+  int rc;
+  dbConnection conn;
+  dbRecordset rs;
+  anytype fld;
+  //подключение к БД через ODBC. В приложении \"Администратор ODBC\" создается источник данных, в нашем случае KGSHVulcanisation
+  rc = dbOpenConnection(\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
+  Debug(\"подключение для чтения:\", rc);
+  //showError(conn);
+  if (!rc)
+  {
+   //создаем и открываем набор записей
+    rc = dbOpenRecordset (conn, \"SELECT model_tire FROM tTires\", rs);
+    // The data subset is opened
+     if (!rc)
+     {
+        rc = dbGetField (rs, 0, fld);
+         Debug(\"dbGetField:\", rc);
+         if (!rc)
+           TEXT_SERIALNUM.text = fld; ///???
+      }
+      dbCloseRecordset (rs); //closes subset
+    }
+    dbCloseConnection (conn); //closes connection
+  EMBEDDED_MODULE1.ModuleName = \"Module1\";
+  dyn_string MyParams;
+  MyParams =  makeDynString(\"$dp:Press2.\");
+  RootPanelOnModule(\"Process.pnl\", \"1\", \"Module1\", MyParams);
+  //EMBEDDED_MODULE1.loadPanel(0, \"Process.pnl\", \"Process\", MyParams);
+ // EMBEDDED_MODULE1.panel(panel);
+  }
+
+void showError (dbConnection conn) /// ???
+{
+  int errCnt, errNo, errNative;
+  string errDescr, errSql;
+  int rc;
+  errCnt = 1;
+  rc = 0;
+  while (errCnt > 0 && ! rc)
+  {
+    rc = dbGetError (conn, errCnt, errNo, errNative, errDescr,
+    errSql);
+    if (!rc)
+    {
+      DebugN(\"Errornumber : \", errNo);
+      DebugN(\"BaseError : \", errNative);
+      DebugN(\"Description : \", errDescr);
+      DebugN(\"SQL-errortext: \", errSql);
+    }
+    else
+    DebugN(\"dbGetError failed, rc = \", rc);
+    errCnt--;
+  }
+}
+
+void rootPanel()
+{
+   EMBEDDED_MODULE1.ModuleName = \"Module1\";
+  dyn_string MyParams;
+  MyParams =  makeDynString(\"$dp:Press1.\");
+  RootPanelOnModule(\"Process.pnl\", \"1\", \"Module1\", MyParams);
+  //EMBEDDED_MODULE1.loadPanel(0, \"Process.pnl\", \"Process\", MyParams);
+ // EMBEDDED_MODULE1.panel(panel);
+}
+" 0
+ E E E E 1 -1 -1 0  140 60
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "93.2319"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+29 85
+"EMBEDDED_MODULE1"
+""
+1 7.75 39.99999999999998 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+84 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+10
+"newPanelAnimDuration" "int 0"
+"oldPanelAnimDuration" "int 0"
+"newPanelAnimateOpacity" "bool TRUE"
+"oldPanelAnimateOpacity" "bool TRUE"
+"newPanelAnimateSize" "bool TRUE"
+"oldPanelAnimateSize" "bool TRUE"
+"newPanelAnimType" "string TopLeft"
+"oldPanelAnimType" "string BottomRight"
+"ModuleName" "string Module1"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  7.75 39.99999999999998 1940.25 951
+15 Canvas.Canvas.1
+0
+E13 86
+"BTN_Press1"
+""
+1 9 9.999999999999993 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+85 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,16,5,75,0,0,0,0,0,Полужирный
+0  7 2.086956521739125 71 40.08695652173913
+
+T 
+1
+LANG:10027 1 1
+"main(mapping event)
+{
+  PanelOffModule(\"Process\", \"Module1\");
+  delay(0,500);
+  dyn_string MyParams;
+  MyParams =  makeDynString(\"$dp:Press1.\");
+  RootPanelOnModule(\"Process.pnl\", \"Process\", \"Module1\", MyParams);
+
+
+ // EMBEDDED_MODULE1.loadPanel(0, \"Process.pnl\", \"Process\", MyParams);
+ // EMBEDDED_MODULE1.panel(panel);
+}" 0
+ E E E
+13 87
+"BTN_press2"
+""
+1 69 9.999999999999996 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+86 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,16,5,75,0,0,0,0,0,Полужирный
+0  67 2.086956521739129 131 40.08695652173913
+
+T 
+1
+LANG:10027 1 2
+"main(mapping event)
+{
+  EMBEDDED_MODULE1.ModuleName = \"Module1\";
+  PanelOffModule(\"Process\", \"Module1\");
+  delay(0,500);
+  dyn_string MyParams;
+  MyParams =  makeDynString(\"$dp:Press2.\");
+  RootPanelOnModule(\"Process.pnl\", \"Process\", \"Module1\", MyParams);
+  //EMBEDDED_MODULE1.loadPanel(0, \"Process.pnl\", \"Process\", MyParams);
+}" 0
+ E E E
+13 88
+"BTN_Press3"
+""
+1 128 10.04347826086956 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+87 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,16,5,75,0,0,0,0,0,Полужирный
+0  126 2.130434782608688 190 40.13043478260869
+
+T 
+1
+LANG:10027 1 3
+"main(mapping event)
+{
+  EMBEDDED_MODULE1.ModuleName = \"Module1\";
+  PanelOffModule(\"Process\", \"Module1\");
+  delay(0,500);
+  dyn_string MyParams;
+  MyParams =  makeDynString(\"$dp:Press3.\");
+  RootPanelOnModule(\"Process.pnl\", \"Process\", \"Module1\", MyParams);
+}" 0
+ E E E
+13 89
+"BTN_Press4"
+""
+1 188 10 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+88 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,16,5,75,0,0,0,0,0,Полужирный
+0  186 2.086956521739133 250 40.08695652173914
+
+T 
+1
+LANG:10027 1 4
+"main(mapping event)
+{
+  EMBEDDED_MODULE1.ModuleName = \"Module1\";
+  PanelOffModule(\"Process\", \"Module1\");
+  delay(0,500);
+  dyn_string MyParams;
+  MyParams =  makeDynString(\"$dp:Press4.\");
+  RootPanelOnModule(\"Process.pnl\", \"Process\", \"Module1\", MyParams);
+}" 0
+ E E E
+0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

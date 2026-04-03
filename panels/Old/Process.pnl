@@ -1,0 +1,2255 @@
+V 14
+1
+LANG:10027 7 Process
+PANEL,-1 -1 1930 894 N {207,207,207} 1
+"$dp"
+"main()
+{
+  int rc;
+  dbConnection conn;
+  dbRecordset rs;
+  anytype fld;
+//   dyn_string MyParams;
+//   MyParams =  makeDynString(\"$dp:Press1.\");
+  $dp = \"Press1.\";
+  Debug(\"ТОЧКА ДАННЫХ:\", $dp);
+  //подключение к БД через ODBC. В приложении \"Администратор ODBC\" создается источник данных, в нашем случае KGSHVulcanisation
+  rc = dbOpenConnection(\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
+  Debug(\"подключение для чтения:\", rc);
+  //showError(conn);
+  if (!rc)
+  {
+   //создаем и открываем набор записей
+    rc = dbOpenRecordset (conn, \"SELECT model_tire FROM tTires\", rs);
+    // The data subset is opened
+     if (!rc)
+     {
+//       while (!rc && !dbEOF (rs))
+      // as long as the file end is not reached
+//       {
+        rc = dbGetField (rs, 0, fld);
+         Debug(\"dbGetField:\", rc);
+        //reads current column
+         if (!rc)
+           TEXT_SERIALNUM.text = fld;
+//         DebugN(\"Field 1: \" , fld);
+//         rc = dbGetField (rs, 1, fld);
+//         if (!rc)
+//         DebugN(\"Field 2: \" , fld);
+//         rc = dbMoveNext(rs); //to the next record
+      }
+      dbCloseRecordset (rs); //closes subset
+    }
+    dbCloseConnection (conn); //closes connection
+    Debug(\"$dp:\",$dp);
+  }
+
+void showError (dbConnection conn)
+{
+  int errCnt, errNo, errNative;
+  string errDescr, errSql;
+  int rc;
+  errCnt = 1;
+  rc = 0;
+  while (errCnt > 0 && ! rc)
+  {
+    rc = dbGetError (conn, errCnt, errNo, errNative, errDescr,
+    errSql);
+    if (!rc)
+    {
+      DebugN(\"Errornumber : \", errNo);
+      DebugN(\"BaseError : \", errNative);
+      DebugN(\"Description : \", errDescr);
+      DebugN(\"SQL-errortext: \", errSql);
+    }
+    else
+    DebugN(\"dbGetError failed, rc = \", rc);
+    errCnt--;
+  }
+}
+" 0
+ E E E E 1 -1 -1 0  140 60
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "93.2319"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+29 14
+"DateTimeEdit_ewo2"
+""
+1 1620 10 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+13 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"displayFormat" "string dd:MM:yy HH:mm"
+"specialValueText" "string "
+"calendarPopup" "bool TRUE"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  1620 10 1749 40
+16 DateTimeEdit.ewo
+0
+"main()
+{
+  time t = getCurrentTime();
+  DateTimeEdit_ewo2.dateTime(t);
+}" 0
+29 15
+"DateTimeEdit_ewo3"
+""
+1 1620 45 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+14 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"displayFormat" "string dd:MM:yy HH:mm"
+"specialValueText" "string "
+"calendarPopup" "bool TRUE"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  1620 45 1749 75
+16 DateTimeEdit.ewo
+0
+"main()
+{
+  time t = getCurrentTime();
+  this.dateTime(t);
+}" 0
+14 16
+"TEXT_FIELD1"
+""
+1 524.8499999999999 108.6809563431946 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+15 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  513.8499999999999 100.5603187810649 586.8499999999999 125.5603187810649
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
+main()
+{
+  EP_textFieldIn();
+}
+
+ void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:\"+$dp+\"Inputs.AnalogValues.PressSupplyDiaph:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:\"+$dp+\"Inputs.AnalogValues.PressSupplyDiaph:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+void EP_textFieldInCB(string dp, float fNewValue)
+{
+  setValue(\"\", \"text\", dpValToString(dp, fNewValue, FALSE) );
+  Debug(\"точка данных: \", dp);
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:\"+$dp+\"Inputs.AnalogValues.ValuePressSupplyDiaph}
+// DPConfig {:_online.._value}
+// DPType {float}
+// UseDPUnit {FALSE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+29 17
+"Label3"
+""
+1 245.8 103.1206375621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+16 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Давление подачи в диафрагму, МПа"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  245.8 103.1206375621297 509.6999999999998 123.1206375621297
+5 Label
+0
+E14 18
+"TEXT_FIELD2"
+""
+1 518 138.1809563431945 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+17 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  516 131.0603187810648 589 156.0603187810648
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:\"+$dp+\"Inputs.AnalogValues.PressReturnDiaph:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:\"+$dp+\"Inputs.AnalogValues.PressReturnDiaph:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+void EP_textFieldInCB(string dp, float fNewValue)
+{
+  setValue(\"TEXT_FIELD2\", \"text\", dpValToString(dp, fNewValue, FALSE) );
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:\"+$dp+\"Inputs.AnalogValues.ValuePressReturnDiaph}
+// DPConfig {:_online.._value}
+// DPType {float}
+// UseDPUnit {FALSE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+29 19
+"Label4"
+""
+1 220.2000000000001 133.3706375621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+18 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Давление возврата из диафрагмы, МПа"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  220 133.1206375621297 510 154.1206375621297
+5 Label
+0
+E14 20
+"TEXT_FIELD3"
+""
+1 516 173.5603187810648 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+19 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  514 163.4396812189351 587 188.4396812189351
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists(\"System1:\"+$dp+\"Inputs.AnalogValues.TempSupplyDiaph\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:\"+$dp+\"Inputs.AnalogValues.TempSupplyDiaph\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+void EP_textFieldInCB(string dp, float fNewValue)
+{
+  setValue(\"TEXT_FIELD3\", \"text\", dpValToString(dp, fNewValue, TRUE) );
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:Press2.Inputs.AnalogValues.ValuePressReturnDiaph}
+// DPConfig {:_online.._value}
+// DPType {float}
+// UseDPUnit {TRUE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+29 21
+"Label5"
+""
+1 230 163.1206375621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+20 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Температура подачи в диафрагму, °С "
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  230 163.1206375621297 510 184.1206375621297
+5 Label
+0
+E14 22
+"TEXT_FIELD4"
+""
+1 519.15 200.2456375621297 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+21 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  517 191 590 216
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:\"+$dp+\"Inputs.AnalogValues.TempReturnDiaph:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:\"+$dp+\"Inputs.AnalogValues.TempReturnDiaph:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+
+void EP_textFieldInCB(string dp, float fNewValue)
+{
+  setValue(\"\", \"text\", dpValToString(dp, fNewValue, TRUE) );
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:\"+$dp+\"Inputs.AnalogValues.TempReturnDiaph}
+// DPConfig {:_online.._value}
+// DPType {float}
+// UseDPUnit {TRUE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+29 23
+"Label6"
+""
+1 219.9625 192.2143875621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+22 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Температура возврата из диафрагмы, °С "
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  210 193.1206375621297 510 214.1206375621297
+5 Label
+0
+E14 24
+"TEXT_FIELD5"
+""
+1 519.15 257.2456375621297 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+23 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  517 251 590 276
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:\"+$dp+\"Inputs.AnalogValues.TempCam:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:\"+$dp+\"Inputs.AnalogValues.TempCam:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+
+void EP_textFieldInCB(string dp, float fNewValue)
+{
+  setValue(\"\", \"text\", dpValToString(dp, fNewValue, TRUE) );
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:\"+$dp+\"Inputs.AnalogValues.TempCam}
+// DPConfig {:_online.._value}
+// DPType {float}
+// UseDPUnit {TRUE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+29 25
+"Label7"
+""
+1 311.9279296875 252.7456375621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+24 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Температура в камере, °С "
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  312 253.1206375621297 512 274.1206375621297
+5 Label
+0
+E14 26
+"TEXT_FIELD6"
+""
+1 517.0625000000001 227.2747063431945 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+25 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  515 221.0603187810648 588 246.0603187810648
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:\"+$dp+\"Inputs.AnalogValues.PressureCam:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:\"+$dp+\"Inputs.AnalogValues.PressureCam:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+
+void EP_textFieldInCB(string dp, float fNewValue)
+{
+  setValue(\"\", \"text\", dpValToString(dp, fNewValue, TRUE) );
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:\"+$dp+\"Inputs.AnalogValues.PressureCam}
+// DPConfig {:_online.._value}
+// DPType {float}
+// UseDPUnit {TRUE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+29 27
+"Label8"
+""
+1 328.0625000000001 223.1518875621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+26 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Давление в камере, МПа"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  328 223.1206375621297 510 244.1206375621297
+5 Label
+0
+E14 28
+"TEXT_FIELD7"
+""
+1 519.0062500000001 287.2300125621297 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+27 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  517 281 590 306
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:\"+$dp+\"Inputs.AnalogValues.FormingPressure:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:\"+$dp+\"Inputs.AnalogValues.FormingPressure:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+
+void EP_textFieldInCB(string dp, float fNewValue)
+{
+  setValue(\"\", \"text\", dpValToString(dp, fNewValue, TRUE) );
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:Press1.Inputs.AnalogValues.FormingPressure}
+// DPConfig {:_online.._value}
+// DPType {float}
+// UseDPUnit {TRUE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+29 29
+"Label9"
+""
+1 320.0093750000001 282.7847000621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+28 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Давление формования, кг"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  320 283.1206375621297 512 304.1206375621297
+5 Label
+0
+E30 30
+"FRAME1"
+""
+1 590 71 E E E 1 E 1 E N {4,5,18} E N {0,0,0} E E
+ E E
+29 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 4 3 2 1 E 1.358064516129032 0 1.131926121372032 -618.2580645161286 -3.366754617414275 0 E 590 71 901 451
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 35 Параметры процесса
+14 31
+"TEXT_FIELD8"
+""
+1 518.003125 325.2903313431945 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+30 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  516 311.0603187810648 589 336.0603187810648
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:\"+$dp+\"Inputs.AnalogValues.FormingPressure:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:\"+$dp+\"Inputs.AnalogValues.FormingPressure:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+
+void EP_textFieldInCB(string dp, float fNewValue)
+{
+  setValue(\"\", \"text\", dpValToString(dp, fNewValue, TRUE) );
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:Press1.Inputs.AnalogValues.FormingPressure}
+// DPConfig {:_online.._value}
+// DPType {float}
+// UseDPUnit {TRUE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+29 32
+"Label10"
+""
+1 341.9859375000001 313.0073563121297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+31 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Прессовое усилие, бар"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  342 313.1206375621297 512 334.1206375621297
+5 Label
+0
+E14 33
+"TEXT_FIELD9"
+""
+1 519.1015624999999 361.2300125621297 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+32 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  517 341 590 366
+3 "0s" 0 0 0 0 0 -1  E E E
+29 34
+"Label11"
+""
+1 280.0115234374999 342.9800125621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+33 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Шаг вулканизации/всего шагов"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  280 343.1206375621297 512 364.1206375621297
+5 Label
+0
+E14 35
+"TEXT_FIELD10"
+""
+1 519.0181884765624 396.0503250621297 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+34 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  517 371 590 396
+3 "0s" 0 0 0 0 0 -1  E E E
+29 36
+"Label12"
+""
+1 350.0103515625001 376.9800125621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+35 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Процент выполнения"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  352 374 511 395
+5 Label
+0
+E14 37
+"TEXT_FIELD11"
+""
+1 519.0171874999999 428.3432938121297 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+36 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  517 401 590 426
+3 "0s" 0 0 0 0 0 -1  E E E
+29 38
+"Label13"
+""
+1 340 403.1206375621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+37 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Общее время, ч.м."
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  340 403.1206375621297 510 424.1206375621297
+5 Label
+0
+E14 39
+"TEXT_FIELD12"
+""
+1 519.0261718749998 458.2300125621297 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+38 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  517 431 590 456
+3 "0s" 0 0 0 0 0 -1  E E E
+29 40
+"Label14"
+""
+1 342.0089843750001 433.0073563121297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+39 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Прошедшее время,ч.м."
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  342 433.1206375621297 512 454.1206375621297
+5 Label
+0
+E14 41
+"TEXT_FIELD13"
+""
+1 461.9671356201171 476.1206375621297 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+40 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  460 471 590 496
+3 "0s" 0 0 0 0 0 -1  E E E
+29 42
+"Label15"
+""
+1 363.4595947265626 473.1206375621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+41 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string КАЧЕСТВО"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0  363 473.1206375621297 462 494.1206375621297
+5 Label
+0
+E23 43
+"TREND1"
+""
+1 616.5931863727455 79.99999999999989 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+42 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  615 78.00000000000003 1268 732
+5 "main()
+{
+  TREND1.connectDirectly(\"FormingPressuer\", \"System1:\"+$dp+\"Inputs.AnalogValues.FormingPressure:_online.._value\");
+  TREND1.connectDirectly(\"PressReturnDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.PressReturnDiaph:_online.._value\");
+  TREND1.connectDirectly(\"PressSupplyDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.PressSupplyDiaph:_online.._value\");
+  TREND1.connectDirectly(\"TempSupplyDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.TempSupplyDiaph:_online.._value\");
+  TREND1.connectDirectly(\"TempReturnDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.TempReturnDiaph:_online.._value\");
+  TREND1.manageCommands(TRUE);
+}
+" 0
+ E E 3 648 N {0,0,0} 0 0 1 0 1 0 1 0 "FormingPressuer" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 1 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 0 
+1
+LANG:10027 0 
+1 "" ""  0 0.06 10 0 0 1 0 1 N "Red"
+1 0 0 0 0 0 0 0
+0 
+E 648 N {0,0,0} 0 0 1 0 1 0 2 0 "PressSupplyDiaph" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 1 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 0 
+1
+LANG:10027 0 
+1 "" ""  0 0 4 0 0 1 0 1 N "Red"
+0 0 0 0 0 0 0 0
+0 "PressReturnDiaph" "" 0 2 0 0 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 0 
+1
+LANG:10027 0 
+1 "" ""  1 0 0 1 0 1 N "blue"
+0 0 0 0 0 0 0 0
+0 
+E 648 N {0,0,0} 0 0 1 0 1 0 2 0 "TempSupplyDiaph" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 1 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 0 
+1
+LANG:10027 0 
+1 "" "С"  0 0 300 0 0 1 0 1 N "Red"
+1 0 0 0 0 0 0 0
+0 "TempReturnDiaph" "" 0 2 0 0 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 0 
+1
+LANG:10027 0 
+1 "" ""  1 0 0 1 0 1 N "blue"
+0 10 10 1 1 0 0 0
+1 0 "%X" "%x" 0 1 0 0 
+E 1 0 0 0 90 1 20 600
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  100 
+N {0,0,0} 0 0 1 0 1 150 1 5 5 1 2
+0
+23 44
+"TREND2"
+""
+1 1276.296593186373 79.06899657603947 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+43 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  1272 77 1925 731
+5 "main()
+{
+  TREND2.connectDirectly(\"PressureCam\", \"System1:\"+$dp+\"Inputs.AnalogValues.PressureCam\");
+  TREND2.connectDirectly(\"TempCam\", \"System1:\"+$dp+\"Inputs.AnalogValues.TempCam\");
+  TREND2.connectDirectly(\"PressingForce\", \"System1:\"+$dp+\"Inputs.AnalogValues.PressingForce\");
+  TREND1.manageCommands(TRUE);
+ }" 0
+ E E 3 648 N {0,0,0} 0 0 1 0 1 0 1 0 "PressureCam" "System1:Press1.Inputs.AnalogValues.PressureCam" 0 2 0 0 1 "1 3 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 38 Press1.Inputs.AnalogValues.PressureCam
+1
+LANG:10027 0 
+1 "" ""  0 0 1 0 0 1 0 1 N "Red"
+1 0 0 0 0 0 0 0
+0 
+E 648 N {0,0,0} 0 0 1 0 1 0 1 0 "TempCam" "System1:Press1.Inputs.AnalogValues.TempCam" 0 2 0 0 1 "3 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 34 Press1.Inputs.AnalogValues.TempCam
+1
+LANG:10027 0 
+1 "" ""  0 0 300 0 0 1 0 1 N "Red"
+0 0 0 0 0 0 0 0
+0 
+E 648 N {0,0,0} 0 0 1 0 1 0 1 0 "PressingForce" "System1:Press1.Inputs.AnalogValues.PressingForce" 0 2 0 0 1 "3 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 40 Press1.Inputs.AnalogValues.PressingForce
+1
+LANG:10027 0 
+1 "" ""  0 0 400 0 0 1 0 1 N {70,190,255}
+0 0 0 0 0 0 0 0
+1 0 "%X" "%x" 0 1 0 0 
+E 1 0 0 0 90 1 20 7200
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  1
+LANG:10027 35 MS Shell Dlg 2,-1,11,5,50,0,0,0,0,0
+0  1
+LANG:10027 35 MS Shell Dlg 2,-1,11,5,50,0,0,0,0,0
+0  100 
+N {0,0,0} 0 0 1 0 1 150 1 5 5 1 2
+0
+30 45
+"FRAME2"
+""
+1 30 101 E E E 1 E 1 E N "_WindowText" E N {0,0,0} E E
+ E E
+44 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 4 3 2 1 E 1.333333333333333 0 0.7540189048404039 -25 3.812130383947913 0 E 30 101 151 451
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 16 Покрышка
+2 46
+"PRIMITIVE_TEXT1"
+""
+1 60 140 E E E 1 E 1 E N "_WindowText" E N "_3DFace" E E
+ E E
+45 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E 1.020913926499033 0 0.493518832144588 -41.21300773694389 86.20989391558494 1 E 60 140 111 177
+0 2 2 "0s" 0 0 0 192 0 0  60 140 2
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 12 Рецепт
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 0 
+14 47
+"TEXT_FIELD14"
+""
+1 20 182.4165446502553 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+46 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  18 178 161 203
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:\"+$dp+\"Inputs.StringValues.Model:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:\"+$dp+\"Inputs.StringValues.Model:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+
+void EP_textFieldInCB(string dp, string sNewValue)
+{
+  setValue(\"\", \"text\", dpValToString(dp, sNewValue, FALSE) );
+  Debug(\"точка данных: \",dp);
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:Press1.Inputs.StringValues.Model}
+// DPConfig {:_online.._value}
+// DPType {string}
+// UseDPUnit {FALSE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+2 48
+"PRIMITIVE_TEXT2"
+""
+1 60 140 E E E 1 E 1 E N "_WindowText" E N "_3DFace" E E
+ E E
+47 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E 1.089108910891089 0 0.31867149733974 -45.16831683168317 165.2217150240712 1 E 60 140 176 197
+0 2 2 "0s" 0 0 0 192 0 0  60 140 3
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 27 Серийный номер
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 0 
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 0 
+14 49
+"TEXT_SERIALNUM"
+""
+1 20 237.9329158310935 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+48 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  18 233 161 258
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {valid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:Press1.Inputs.StringValues.SerialNumber:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:Press1.Inputs.StringValues.SerialNumber:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+
+void EP_textFieldInCB(string dp, string sNewValue)
+{
+  setValue(\"\", \"text\", dpValToString(dp, sNewValue, FALSE) );
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:Press1.Inputs.StringValues.SerialNumber}
+// DPConfig {:_online.._value}
+// DPType {string}
+// UseDPUnit {FALSE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+2 50
+"PRIMITIVE_TEXT3"
+""
+1 60 140 E E E 1 E 1 E N "_WindowText" E N "_3DFace" E E
+ E E
+49 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E 1 0 0.3917525773195877 -40 210.1546391752577 1 E 60 140 169 237
+0 2 2 "0s" 0 0 0 192 0 0  60 140 5
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 24 Номер "сырой" 
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 16 покрышки
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 0 
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 0 
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 0 
+14 51
+"TEXT_FIELD16"
+""
+1 20 313.4347841726763 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+50 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  18 308 161 333
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {valid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:Press1.Inputs.StringValues.RawTireNumber:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:Press1.Inputs.StringValues.RawTireNumber:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+
+void EP_textFieldInCB(string dp, string sNewValue)
+{
+  setValue(\"\", \"text\", dpValToString(dp, sNewValue, FALSE) );
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:Press1.Inputs.StringValues.RawTireNumber}
+// DPConfig {:_online.._value}
+// DPType {string}
+// UseDPUnit {FALSE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+2 52
+"PRIMITIVE_TEXT4"
+""
+1 60 140 E E E 1 E 1 E N "_WindowText" E N "_3DFace" E E
+ E E
+51 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E 1.25531914893617 0 0.5250440678172501 -55.80851063829786 26.01711186071223 1 E 60 140 114 177
+0 2 2 "0s" 0 0 0 192 0 0  60 140 2
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 12 Модель
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 0 
+14 53
+"TEXT_FIELD17"
+""
+1 20 130 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+52 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  18 125.1786314485382 161 150.1786314485382
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {valid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:Press1.Inputs.StringValues.Model:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:Press1.Inputs.StringValues.Model:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+
+void EP_textFieldInCB(string dp, string sNewValue)
+{
+  setValue(\"\", \"text\", dpValToString(dp, sNewValue, FALSE) );
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:Press1.Inputs.StringValues.Model}
+// DPConfig {:_online.._value}
+// DPType {string}
+// UseDPUnit {FALSE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+2 54
+"PRIMITIVE_TEXT5"
+""
+1 180 30 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+53 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E U  0 E 180 30 235 48
+0 2 2 "0s" 0 0 0 192 0 0  180 30 1
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0 1
+LANG:10027 11 Режим 
+2 58
+"PRIMITIVE_TEXT6"
+""
+1 24.9999999999998 51.56467895349223 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+57 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E 1 0 0.9882352941176471 -9.774999999999949 -21.23573139083043 0 E 24.9999999999998 51.56467895349223 96 70
+0 2 2 "0s" 0 0 0 192 0 0  24.9999999999998 51.56467895349223 1
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0 1
+LANG:10027 15 Пресс № 
+25 62
+"TABLE1"
+""
+1 638.9132634005488 795.8797975452111 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+61 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  615 728 1268 892
+"main()
+{
+//определяем массивы x и y для заполнения строк таблицы TABLE1
+  dyn_anytype ts,tr,ps,pr,pf;
+  ts[1]= \"Температура подачи, °С\";
+  ts[2]= \"\";
+  ts[3]=\"red\";
+  tr[1]=\"Температура возврата, °С\";
+  tr[2]= \"\";
+  tr[3]=\"blue\";
+  ps[1]= \"Давление подачи, Мпа\";
+  ps[2]= \"\";
+  ps[3]=\"red\";
+  pr[1]=\"Давление возврата, МПа\";
+  pr[2]= \"\";
+  pr[3]=\"blue\";
+  pf[1]=\"Давление формования, МПа\";
+  pf[2]= \"\";
+  pf[3]=\"blue\";
+//заполняем строки таблицы, используя массив
+  setValue(\"TABLE1\",\"updateLine\",1,\"Param\",ts,\"Value\",ts,\"TimeStemp\",ts);
+  setValue(\"TABLE1\",\"updateLine\",1,\"Param\",tr,\"Value\",tr,\"TimeStemp\",tr);
+  setValue(\"TABLE1\",\"updateLine\",1,\"Param\",ps,\"Value\",ps,\"TimeStemp\",ps);
+  setValue(\"TABLE1\",\"updateLine\",1,\"Param\",pr,\"Value\",pr,\"TimeStemp\",pr);
+  setValue(\"TABLE1\",\"updateLine\",1,\"Param\",pf,\"Value\",pf,\"TimeStemp\",pf);
+//связываем метод FillTable с DPE точки данных
+  dpConnect(\"FillTable\",\"System1:\"+$dp+\"Inputs.AnalogValues.TempSupplyDiaph\",
+                        \"System1:\"+$dp+\"Inputs.AnalogValues.TempReturnDiaph\",
+                        \"System1:\"+$dp+\"Inputs.AnalogValues.PressSupplyDiaph\",
+                        \"System1:\"+$dp+\"Inputs.AnalogValues.PressReturnDiaph\",
+                        \"System1:\"+$dp+\"Inputs.AnalogValues.FormingPressure\");
+}
+
+void FillTable(string dpe1, float val1, string dpe2, float val2, string dpe3, float val3, string dpe4, float val4, string dpe5, float val5)
+{
+ shape table = getShape(\"TABLE1\");
+ time ts1, ts2, ts3, ts4, ts5;
+
+//записываем в поле Value переменную val1, в ту строку где поле \"Param\" = \"Давление подачи, Мпа\", 1 - число полей по которым производится поиск строки
+  table.updateLine(1,\"Param\",\"Температура подачи, °С\", \"Value\", val1);
+  table.updateLine(1,\"Param\",\"Температура возврата, °С\", \"Value\", val2);
+  Debug(\"Температура возврата, °С:\", val2);
+  table.updateLine(1,\"Param\",\"Давление подачи, Мпа\", \"Value\", val3);
+  table.updateLine(1,\"Param\",\"Давление возврата, МПа\", \"Value\", val4);
+  table.updateLine(1,\"Param\",\"Давление формования, МПа\", \"Value\", val5);
+
+//получаем время текущего значения
+  dpGet(\"System1:\"+$dp+\"Inputs.AnalogValues.TempSupplyDiaph:_online.._stime\",ts1);
+  table.updateLine(1,\"Param\",\"Температура подачи, °С\", \"TimeStemp\",ts1);
+
+  dpGet(\"System1:\"+$dp+\"Inputs.AnalogValues.TempReturnDiaph:_online.._stime\",ts2);
+  table.updateLine(1,\"Param\",\"Температура возврата, °С\", \"TimeStemp\",ts2);
+
+  dpGet(\"System1:\"+$dp+\"Inputs.AnalogValues.PressSupplyDiaph:_online.._stime\",ts3);
+  table.updateLine(1,\"Param\",\"Давление подачи, Мпа\", \"TimeStemp\",ts3);
+
+  dpGet(\"System1:\"+$dp+\"Inputs.AnalogValues.PressSupplyDiaph:_online.._stime\",ts4);
+  table.updateLine(1,\"Param\",\"Давление возврата, МПа\", \"TimeStemp\",ts4);
+
+
+  dpGet(\"System1:\"+$dp+\"Inputs.AnalogValues.FormingPressure:_online.._stime\",ts5);
+  table.updateLine(1,\"Param\",\"Давление формования, МПа\", \"TimeStemp\",ts5);
+
+
+
+}
+" 0
+E 1 0 1 3 3 "Param" 6 1 0 "[30s,,,AlignLeft]" 1
+LANG:10027 16 Параметр
+E
+1
+LANG:10027 0 
+
+200 "Value" 6 1 0 "[3.3f,False,False,AlignLeft,False]" 1
+LANG:10027 16 Значение
+E
+1
+LANG:10027 0 
+
+100 "TimeStemp" 6 1 0 "[%ct,False,,AlignLeft]" 1
+LANG:10027 29 Отметка времени
+E
+1
+LANG:10027 0 
+
+180 
+15 15 "" 1 1
+LANG:10027 2 #3
+"" 1 1
+LANG:10027 2 #2
+"" 1 1
+LANG:10027 2 #1
+10 0
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0 0 1 1 1 7
+1 0
+25 63
+"TABLE2"
+""
+1 1295.986973947896 794.9411764705883 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+62 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1272.013026052104 727.0588235294118 1925.013026052104 891.0588235294118
+"main()
+{
+//определяем массивы  для заполнения строк таблицы TABLE2
+  dyn_anytype tc,pc,fp;
+  tc[1]= \"Температура,°С\";
+  tc[2]= \"\";
+  tc[3]=\"red\";
+  pc[1]=\"Давление, Мпа\";
+  pc[2]= \"\";
+  pc[3]=\"blue\";
+  fp[1]= \"Прессовое усилие, бар\";
+  fp[2]= \"\";
+  fp[3]=\"red\";
+
+  Debug(\"tc[1]: \", tc[1]);
+//заполняем строки таблицы, используя массив
+  setValue(\"TABLE2\",\"updateLine\",1,\"Param\",tc,\"Value\",tc,\"TimeStemp\",tc);
+  setValue(\"TABLE2\",\"updateLine\",1,\"Param\",pc,\"Value\",pc,\"TimeStemp\",pc);
+  setValue(\"TABLE2\",\"updateLine\",1,\"Param\",fp,\"Value\",fp,\"TimeStemp\",fp);
+
+//связываем метод FillTable с DPE точки данных
+  dpConnect(\"FillTable2\",\"System1:\"+$dp+\"Inputs.AnalogValues.TempCam\",
+                        \"System1:\"+$dp+\"Inputs.AnalogValues.PressureCam\",
+                        \"System1:\"+$dp+\"Inputs.AnalogValues.PressingForce\");
+}
+
+void FillTable2(string dpe1, float val1, string dpe2, float val2, string dpe3, float val3)
+{
+ shape table = getShape(\"TABLE2\");
+ time ts1,ts2,ts3;
+
+//записываем в поле Value переменную val1, в ту строку где поле \"Param\" = \"Давление подачи, Мпа\", 1 - число полей по которым производится поиск строки
+  table.updateLine(1,\"Param\",\"Температура,°С\",\"Value\",val1);
+  table.updateLine(1,\"Param\",\"Давление, Мпа\",\"Value\",val2);
+  table.updateLine(1,\"Param\",\"Прессовое усилие, бар\",\"Value\",val3);
+
+//получаем время текущего значения
+  dpGet(\"System1:\"+$dp+\"Inputs.AnalogValues.TempCam:_online.._stime\", ts1);
+  table.updateLine(1, \"Param\", \"Температура,°С\", \"TimeStemp\", ts1);
+
+  dpGet(\"System1:\"+$dp+\"Inputs.AnalogValues.PressureCam:_online.._stime\", ts2);
+  table.updateLine(1, \"Param\", \"Давление, Мпа\", \"TimeStemp\", ts2);
+
+  dpGet(\"System1:\"+$dp+\"Inputs.AnalogValues.PressingForce:_online.._stime\", ts3);
+  table.updateLine(1, \"Param\", \"Прессовое усилие, бар\", \"TimeStemp\", ts3);
+}
+" 0
+E 1 0 1 3 0 "Param" 6 1 0 "[30s,,,AlignLeft]" 1
+LANG:10027 16 Параметр
+E
+1
+LANG:10027 0 
+
+200 "Value" 6 1 0 "[3.3f,False,False,AlignLeft,False]" 1
+LANG:10027 16 Значение
+E
+1
+LANG:10027 0 
+
+100 "TimeStemp" 6 1 0 "[%ct,False,,AlignLeft]" 1
+LANG:10027 29 Отметка времени
+E
+1
+LANG:10027 0 
+
+180 
+15 15 10 0
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0 0 1 1 1 7
+1 0
+13 64
+"BTN_MODE"
+""
+1 239.1250000000002 25.49190714648813 E E E 1 E 1 E N "_3DText" E N "_Button" E E
+ E E
+63 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,19,5,75,0,0,0,0,0,Полужирный
+0  237 18 290 56
+
+T 
+1
+LANG:10027 1 A
+E E E "main()
+{
+  dpConnect(\"ShowMode\",\"System1:\"+$dp+\"Inputs.BoolValues.ModeWork\");
+}
+
+ void ShowMode(string dp1, bool bNewValue)
+{
+  if (bNewValue){
+    BTN_MODE.text = \"А\";
+   // BTN_UPDATE.buttonUpPixmap = \"stop-button.png\";
+
+  }else{
+     BTN_MODE.text = \"Р\";
+     //BTN_UPDATE.buttonUpPixmap = \"play.png\";
+  }
+}
+" 0
+
+2 65
+"PRIMITIVE_TEXT7"
+""
+1 1513 30.13549634307232 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+64 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E U  0 E 1513 30.13549634307232 1578 48
+0 2 2 "0s" 0 0 0 192 0 0  1513 30.13549634307232 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 14 Выборка
+2 66
+"PRIMITIVE_TEXT8"
+""
+1 1103.25 29.76706947978545 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+65 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E U  0 E 1103.25 29.76706947978545 1195 48
+0 2 2 "0s" 0 0 0 192 0 0  1103.25 29.76706947978545 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 20 Обновление
+2 67
+"PRIMITIVE_TEXT9"
+""
+1 1595.09375 14.78375327897967 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+66 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E U  0 E 1595.09375 14.78375327897967 1604 33
+0 2 2 "0s" 0 0 0 192 0 0  1595.09375 14.78375327897967 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 2 с
+2 68
+"PRIMITIVE_TEXT10"
+""
+1 1592.8125 49.92728741712067 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+67 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E U  0 E 1592.8125 49.92728741712067 1612 68
+0 2 2 "0s" 0 0 0 192 0 0  1592.8125 49.92728741712067 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 4 по
+13 69
+"BTN_UPDATE"
+""
+1 1210 20 E E E 1 E 1 E N "_ButtonText" E N "STD_ptSum4Back" E E
+ E E
+68 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"hoverfclr" "N \"_Transparent\""
+"hoverbclr" "N {220,255,66}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1208 7.043478260869572 1263 74.04347826086958
+
+B 
+4294967295
+"XmUNSPECIFIED_PIXMAP"
+1
+LANG:10027 0 
+"main(mapping event)
+{
+  time t = getCurrentTime();
+  setValue(\"TREND1\", \"timeBegin\", t);
+  bool val;
+  dpGet(\"System1:\"+$dp+\"Inputs.BoolValues.Runtime\",val);
+  if (val)
+  {
+     dpSet(\"System1:\"+$dp+\"Inputs.BoolValues.Runtime\",0);
+     Debug(\"0\");
+
+   }
+  else
+   {
+     dpSet(\"System1:\"+$dp+\"Inputs.BoolValues.Runtime\",1);
+     DebugN(\"1\");
+     setValue(\"TREND1\", \"timeBegin\", t);
+   }
+}
+" 0
+ E E " main()
+{
+  BTN_UPDATE.buttonUpPixmap = \"play.png\";
+  dpConnect(\"ShowRuntime\",\"System1:\"+$dp+\"Inputs.BoolValues.Runtime\");
+}
+
+ void ShowRuntime(string dp1, bool bValue)
+{
+  if (bValue){
+     BTN_UPDATE.buttonUpPixmap = \"stop-button.png\";
+  }else{
+     BTN_UPDATE.buttonUpPixmap = \"play.png\";
+  }
+}
+
+" 0
+
+25 70
+"TABLE3"
+""
+1 10.00000000000001 508.9999999999998 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+69 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  8.000000000000007 506.9999999999998 607.25 890.9999999999998
+"main()
+{
+  dpConnect(\"FillTable3\",\"System1:\"+$dp+\".Inputs.Messages.LoaderSafetyBar1\");
+}
+
+void FillTable3(string dp, bool val)
+{
+
+
+}" 0
+E 1 0 1 4 0 "Date" 6 1 0 "[%d.%m.%yt,False,,AlignLeft]" 1
+LANG:10027 8 Дата
+E
+1
+LANG:10027 0 
+
+60 "Time" 6 1 0 "[%Xt,False,,AlignLeft]" 1
+LANG:10027 10 Время
+E
+1
+LANG:10027 0 
+
+60 "State" 6 1 0 "[10s,,,AlignLeft]" 1
+LANG:10027 12 Статус
+E
+1
+LANG:10027 0 
+
+60 "Message" 6 1 0 "[10s,,,AlignLeft]" 1
+LANG:10027 29 Текст Сообщения
+E
+1
+LANG:10027 0 
+
+240 
+13 13 10 0
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0 0 1 1 1 7
+1 0
+13 71
+"PUSH_BUTTON1"
+""
+1 1771 37 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+70 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  1769 31.00000000000001 1893 58.00000000000001
+
+B 
+4294967295
+"pictures/accept.png"
+1
+LANG:10027 18 Применить
+"main(mapping event)
+{
+  time starttime;
+  time endtime;
+  starttime = DateTimeEdit_ewo2.dateTime();
+  endtime = DateTimeEdit_ewo3.dateTime();
+//   starttime = makeTime(2025, 4, 4, 13);
+//   endtime = makeTime(2025, 4, 4, 14, 30);
+  setValue(\"TREND1\", \"timeInterval\", endtime-starttime);
+  setValue(\"TREND1\", \"timeBegin\", starttime);
+}" 0
+ E E E
+29 73
+"Label16"
+""
+1 617.3931863727455 60.12063756212956 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+72 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Диафрагма"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  617.3931863727455 60.12063756212956 722 80.12063756212956
+5 Label
+0
+E29 74
+"Label17"
+""
+1 1274.196593186373 59.18095634319434 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+73 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Камера"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  1274.196593186373 59.18095634319434 1340 79.18095634319434
+5 Label
+0
+E29 79
+"Label21"
+""
+1 1241.123935370741 657 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+78 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string °С"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1241.0625 657 1263.0625 679
+5 Label
+0
+E29 82
+"Label23"
+""
+1 1232.0625 486.0037699238164 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+81 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string МПа"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1232.0625 493.0037699238164 1263.0625 509.0037699238164
+5 Label
+0
+E29 83
+"Label24"
+""
+1 1270 330 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+82 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string кг"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1241 273 1263 289
+5 Label
+0
+E14 85
+"TEXT_FIELD18"
+""
+1 88.22500000000005 28.17603331505192 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+84 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  86.22500000000005 20.99540970262343 132 61.25977498962291
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:\"+$dp+\"Inputs.AnalogValues.NumberPress:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:\"+$dp+\"Inputs.AnalogValues.NumberPress:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+
+void EP_textFieldInCB(string dp, int iNewValue)
+{
+  setValue(\"\", \"text\", dpValToString(dp, iNewValue, FALSE) );
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:Press1.Inputs.AnalogValues.NumberPress}
+// DPConfig {:_online.._value}
+// DPType {int}
+// UseDPUnit {FALSE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+29 86
+"Label25"
+""
+1 1883.5 266 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+85 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string МПа"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1883.5 273 1914.5 289
+5 Label
+0
+E29 87
+"Label26"
+""
+1 1891.342685370741 487.0018849619082 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+86 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string °С"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1891.28125 487.0018849619082 1913.28125 509.0018849619082
+5 Label
+0
+E29 88
+"Label27"
+""
+1 1886.78125 664 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+87 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string бар"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1886.78125 671 1917.78125 687
+5 Label
+0
+E13 89
+"PUSH_BUTTON2"
+""
+1 10 385 E E E 1 E 0 E N "_ButtonText" E N "_Button" E E
+ E E
+88 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  8 379 132 406
+
+T 
+1
+LANG:10027 11 BD_CONNECT 
+"  main(mapping event)
+{
+  int rc;
+  dbConnection conn;
+  dbCommand cmd;
+  dbRecordset rs;
+  anytype fld;
+  string cmdStr, sn, id_r, tstart;
+
+  //подключение к БД через ODBC. В приложении \"Администратор ODBC\" создается источник данных, в нашем случае KGSHVulcanisation
+  rc = dbOpenConnection(\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
+  Debug(\"подключение:\", rc);
+  if (!rc)
+  {
+    rc = dbBeginTransaction (conn); //запуск транзакции
+    cmdStr = \"INSERT INTO tTires (model_tire) values (?)\";
+    rc = dbStartCommand(conn, cmdStr, cmd);
+    Debug(\"StartCommand:\", rc);
+    if (!rc)
+    {
+      //rc = dbSetParameter(cmd, 1, DB_PARAM_IN, 1111);
+      rc = dbSetParameter(cmd, 1, DB_PARAM_IN, \"22222\");
+      Debug(\" dbSetParameter:\", rc);
+      rc = dbExecuteCommand(cmd);
+      Debug(\"ExecuteCommand:\", rc);
+      rc = dbFinishCommand(cmd);
+      Debug(\"dbFinishCommand:\", rc);
+    }
+
+    if (!rc)
+    {
+      rc = dbCommitTransaction(conn); // Внесены изменения в БД
+      Debug(\"DbCommitTransaction:\", rc);
+    }
+     else
+    {
+       rc = dbRollbackTransaction (conn); // Изменения в БД отклонены
+       Debug(\"dbRollbackTransaction:\", rc);
+     }
+   }
+  rc = dbCloseConnection(conn); // Соединение закрыто
+}
+" 0
+ E E E
+0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

@@ -1,0 +1,535 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1920 800 N "_3DFace" 0
+"main()
+{
+  int rc;
+  dbConnection conn;
+  dbRecordset rs;
+  anytype fld;
+  //подключение к БД через ODBC. В приложении \"Администратор ODBC\" создается источник данных, в нашем случае KGSHVulcanisation
+  rc = dbOpenConnection(\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
+  Debug(\"подключение для чтения:\", rc);
+  //showError(conn);
+  if (!rc)
+  {
+   //создаем и открываем набор записей
+    rc = dbOpenRecordset (conn, \"SELECT model_tire FROM tTires\", rs);
+    // The data subset is opened
+     if (!rc)
+     {
+//       while (!rc && !dbEOF (rs))
+      // as long as the file end is not reached
+//       {
+        rc = dbGetField (rs, 0, fld);
+         Debug(\"dbGetField:\", rc);
+        //reads current column
+         if (!rc)
+           TEXT_SERIALNUM.text = fld;
+//         DebugN(\"Field 1: \" , fld);
+//         rc = dbGetField (rs, 1, fld);
+//         if (!rc)
+//         DebugN(\"Field 2: \" , fld);
+//         rc = dbMoveNext(rs); //to the next record
+      }
+      dbCloseRecordset (rs); //closes subset
+    }
+    dbCloseConnection (conn); //closes connection
+  EMBEDDED_MODULE1.ModuleName = \"Module1\";
+  dyn_string MyParams;
+  MyParams =  makeDynString(\"$dp:Press2.\");
+  RootPanelOnModule(\"Process.pnl\", \"1\", \"Module1\", MyParams);
+  //EMBEDDED_MODULE1.loadPanel(0, \"Process.pnl\", \"Process\", MyParams);
+ // EMBEDDED_MODULE1.panel(panel);
+  }
+
+void showError (dbConnection conn)
+{
+  int errCnt, errNo, errNative;
+  string errDescr, errSql;
+  int rc;
+  errCnt = 1;
+  rc = 0;
+  while (errCnt > 0 && ! rc)
+  {
+    rc = dbGetError (conn, errCnt, errNo, errNative, errDescr,
+    errSql);
+    if (!rc)
+    {
+      DebugN(\"Errornumber : \", errNo);
+      DebugN(\"BaseError : \", errNative);
+      DebugN(\"Description : \", errDescr);
+      DebugN(\"SQL-errortext: \", errSql);
+    }
+    else
+    DebugN(\"dbGetError failed, rc = \", rc);
+    errCnt--;
+  }
+}
+
+void rootPanel()
+{
+   EMBEDDED_MODULE1.ModuleName = \"Module1\";
+  dyn_string MyParams;
+  MyParams =  makeDynString(\"$dp:Press1.\");
+  RootPanelOnModule(\"Process.pnl\", \"1\", \"Module1\", MyParams);
+  //EMBEDDED_MODULE1.loadPanel(0, \"Process.pnl\", \"Process\", MyParams);
+ // EMBEDDED_MODULE1.panel(panel);
+}
+" 0
+ E E E E 1 -1 -1 0  0 0
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.746"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+29 1
+"EMBEDDED_MODULE1"
+""
+1 312.9069450027304 25 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+11
+"newPanelAnimDuration" "int 0"
+"oldPanelAnimDuration" "int 0"
+"newPanelAnimateOpacity" "bool TRUE"
+"oldPanelAnimateOpacity" "bool TRUE"
+"newPanelAnimateSize" "bool TRUE"
+"oldPanelAnimateSize" "bool TRUE"
+"newPanelAnimType" "string TopLeft"
+"oldPanelAnimType" "string BottomRight"
+"ModuleName" "string Module1"
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  260 0 1919 799
+15 Canvas.Canvas.1
+0
+E2 15
+"PRIMITIVE_TEXT2"
+""
+1 0.1937908365734984 -1.727607000389717 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+14 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 5.805112679234446 0 1.138934853152303 -0.7768191053285012 51.96763182529378 0 E 0.1937908365734984 -1.727607000389717 44.75 36.93905966627695
+0 0 2 "0s" 0 0 0 68 0 0  0.1937908365734984 -1.727607000389717 1
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0 1
+LANG:10027 0 
+6 21
+"RECTANGLE1"
+""
+1 30 630 E E E 1 E 1 E N {0,0,0} E N {0,95,135} E E
+ E E
+20 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 0 3 2 1 E 1.438888888888889 0 9.987500000000001 -43.16666666666666 -5492.125 1 E 30 630 210 550
+30 24
+"FRAME2"
+""
+1 220 351 E E E 1 E 1 E N "White" E N {0,0,0} E E
+ E E
+23 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.906250000000001 0 1.753440313349369 -413.9205127388618 -615.5301728302784 0 E 220 351 349 420
+1
+LANG:10027 56 MS Shell Dlg 2,-1,23,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 10 Пресс
+2 27
+"PRIMITIVE_TEXT11"
+""
+1 19 36.1915146730611 E E E 1 E 1 E N "White" E N "_Window" E E
+ E E
+26 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E U  0 E 19 36.1915146730611 108 59
+0 2 2 "0s" 0 0 0 192 0 0  19 36.1915146730611 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 14 Линия №
+2 28
+"PRIMITIVE_TEXT12"
+""
+1 19 78.35283313616864 E E E 1 E 1 E N "White" E N "_Window" E E
+ E E
+27 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E U  0 E 19 78.35283313616864 104 101
+0 2 2 "0s" 0 0 0 192 0 0  19 78.35283313616864 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 14 Пресс №
+30 29
+"FRAME3"
+""
+1 30 101 E E E 1 E 1 E N "White" E N {0,0,0} E E
+ E E
+28 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 4 3 2 1 E 2.025 0 0.8624641833810889 -55.29551273886159 31.89111747851003 0 E 30 101 151 451
+1
+LANG:10027 56 MS Shell Dlg 2,-1,23,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 16 Покрышка
+14 31
+"RawTireNumber"
+""
+1 8.98076923076944 305.0171750250555 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+30 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,20,5,75,0,0,0,0,0,Полужирный
+0  13 376 241 409
+3 "0s" 0 0 0 0 0 -1  E E E
+14 33
+"ModelName"
+""
+1 9.007640796703511 123.9887199818969 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+32 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,20,5,75,0,0,0,0,0,Полужирный
+0  13 180 241 213
+3 "0s" 0 0 0 0 0 -1  E E E
+2 34
+"PRIMITIVE_TEXT15"
+""
+1 0.1937908365734984 -1.727607000389717 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+33 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 5.286953306191722 0 0.7599628973566882 1.916613366456319 150.9276851903846 0 E 0.1937908365734984 -1.727607000389717 44.75 36.93905966627695
+0 1 2 "0s" 0 0 0 68 0 0  0.1937908365734984 -1.727607000389717 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 15   Модель:
+2 35
+"PRIMITIVE_TEXT16"
+""
+1 0.1937908365734984 -1.727607000389717 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+34 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 5.566003137528321 0 0.724137931034483 1.862536066195906 347.1520806138225 0 E 0.1937908365734984 -1.727607000389717 44.75 36.93905966627695
+0 1 2 "0s" 0 0 0 68 0 0  0.1937908365734984 -1.727607000389717 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 41   Номер сырой покрышки:
+0
+LAYER, 1 
+1
+LANG:10027 0 
+22 13
+"COMBO_BOX3"
+""
+1 820.499970903297 -28.76221634317849 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+12 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  118 29 241 67
+4
+1
+LANG:10027 1 1
+
+0
+1
+LANG:10027 1 2
+
+0
+1
+LANG:10027 1 3
+
+0
+1
+LANG:10027 1 4
+
+0
+
+E
+E
+E
+ 1 0
+22 12
+"COMBO_BOX2"
+""
+1 425 -62.45565219077118 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+11 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  118 71 241 109
+4
+1
+LANG:10027 1 1
+
+0
+1
+LANG:10027 1 2
+
+0
+1
+LANG:10027 1 3
+
+0
+1
+LANG:10027 1 4
+
+0
+
+E
+"main() {
+  string txt;
+  string model;
+  string recipe;
+  string serialnum;
+  string rawtirenum;
+
+  // Получаем выбранное значение из комбобокса
+  getValue(\"\", \"text\", txt);
+
+  // Полное имя точки
+  string fullDP = \"Press\" + txt;
+
+  // Управление панелью
+  dyn_string MyParams = makeDynString(\"$dp:\" + fullDP + \".\");
+  RootPanelOnModule(\"Main/Process_sub/Press_Process.pnl\", \"Process\", \"Module1\", MyParams);
+
+  // Получение имени модели
+  dpGet(fullDP + \".Inputs.StringValues.Model:_online.._value\", model,
+        fullDP + \".Inputs.StringValues.Recipe:_online.._value\", recipe,
+        fullDP + \".Inputs.StringValues.SerialNumber:_online.._value\", serialnum,
+        fullDP + \".Inputs.StringValues.RawTireNumber:_online.._value\", rawtirenum
+        );
+
+  ModelName.text = model;
+  RecipeName.text = recipe;
+  SerialNumber.text = serialnum;
+  RawTireNumber.text = rawtirenum;
+}
+" 0
+
+E
+ 1 0
+2 16
+"PRIMITIVE_TEXT3"
+""
+1 0.1937908365734984 -1.727607000389717 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+15 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 5.251793282990431 0 0.724137931034483 1.92342705676644 215.756300033501 0 E 0.1937908365734984 -1.727607000389717 44.75 36.93905966627695
+0 1 2 "0s" 0 0 0 68 0 0  0.1937908365734984 -1.727607000389717 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 32   Активный рецепт:
+14 19
+"RecipeName"
+""
+1 7.669171837670339 211.8476677274526 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+18 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,20,5,75,0,0,0,0,0,Полужирный
+0  13 246 241 279
+3 "0s" 0 0 0 0 0 -1  E E E
+2 17
+"PRIMITIVE_TEXT4"
+""
+1 0.1937908365734984 -1.727607000389717 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+16 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 5.251793282990432 0 0.724137931034483 1.92342705676644 281.9541903236618 0 E 0.1937908365734984 -1.727607000389717 44.75 36.93905966627695
+0 1 2 "0s" 0 0 0 68 0 0  0.1937908365734984 -1.727607000389717 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 30   Серийный номер:
+14 20
+"SerialNumber"
+""
+1 8.323488185225759 212.4814512448094 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+19 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,20,5,75,0,0,0,0,0,Полужирный
+0  13 307 241 340
+3 "0s" 0 0 0 0 0 -1  E E E
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

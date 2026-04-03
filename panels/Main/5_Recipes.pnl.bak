@@ -1,0 +1,737 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1920 800 N {27,33,38} 0
+"main()
+{
+  int rc;
+  dbConnection conn;
+  dbRecordset rs;
+  anytype fld1, fld2;
+
+  // Загружаем панель навигации в модуль nav_module
+  RootPanelOnModule(\"Main\\\\Recipe_sub\\\\Recipe_TaskMngr.pnl\", \"TaskMngr\", \"TaskManager\", \"\");
+  RootPanelOnModule(\"Main\\\\Recipe_sub\\\\Recipe_SetValues.pnl\", \"SetValues\", \"SetValues\", \"\");
+  RootPanelOnModule(\"Main\\\\Recipe_sub\\\\Recipe_SetFormValues.pnl\", \"SetFormValues\", \"SetFormValues\", \"\");
+
+  //подключение к БД через ODBC. В приложении \"Администратор ODBC\" создается источник данных, в нашем случае KGSHVulcanisation
+  rc = dbOpenConnection (\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
+  Debug (\"dbOpenConnection: \", rc);
+  if (!rc)
+  {
+    //создаем и открываем набор записей
+    rc = dbOpenRecordset (conn, \"SELECT model_tire, num_recipe FROM tTires,tRecipes WHERE tTires.id_tire = tRecipes.id_tire\", rs);
+    Debug(\"dbOpenRecordset: \", rc);
+    // The data subset is opened
+    if (!rc)
+     {
+       int i = 1;
+       while (!rc && !dbEOF (rs)) // as long as the file end is not reached
+       {
+         dbGetField (rs, 0, fld1);
+         dbGetField (rs, 1, fld2);
+         TABLE1.appendLine(\"Model_tire\", fld1, \"Num_recipe\", fld2);
+         dbMoveNext (rs); i++;
+       }
+       dbCloseRecordset (rs); //closes subset
+     }
+    dbCloseConnection (conn); //closes connection
+   }
+}" 0
+ E E E E 1 -1 -1 0  10 10
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.746"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+13 67
+"PUSH_BUTTON1"
+""
+1 17.33333333333348 233.7740907669065 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+66 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {255,255,255,0}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  15.33333333333348 227.7740907669065 236.0000000000003 257.7740907669065
+
+T 
+1
+LANG:10027 36 Прочитать из архива
+E E E E
+13 68
+"PUSH_BUTTON2"
+""
+1 17.33333333333348 263.7740907669065 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+67 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {255,255,255,0}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  15.33333333333348 257.7740907669065 236.0000000000002 287.7740907669065
+
+T 
+1
+LANG:10027 32 Сохранить в архив
+E E E E
+13 70
+"PUSH_BUTTON3"
+""
+1 17 142.8741606198832 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+69 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  15 135.6433913891141 236 173.6433913891141
+
+T 
+1
+LANG:10027 23 В компьютере
+E E E E
+13 71
+"PUSH_BUTTON4"
+""
+1 17.33333333333337 180.8419340573832 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+70 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  15.33333333333337 173.6111648266141 236.0000000000002 211.6111648266141
+
+T 
+1
+LANG:10027 15 В прессе
+E E E E
+29 72
+"Label36"
+""
+1 16.54551273886159 326.4968156814582 E E E 1 E 1 E N "White" E N {255,255,255,0} E E
+ E E
+71 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"text" "string Тип шины"
+"alignment" "enum 128"
+"frameShape" "enum 0"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  16.54551273886159 326.4968156814582 235.7561264116849 346.6572113037119
+5 Label
+0
+E29 73
+"Label37"
+""
+1 16.54551273886159 376.657211303712 E E E 1 E 1 E N "White" E N {255,255,255,0} E E
+ E E
+72 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"text" "string Номер рецепта"
+"alignment" "enum 128"
+"frameShape" "enum 0"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  16.54551273886159 376.657211303712 235.5901107866849 406.657211303712
+5 Label
+0
+E14 140
+"TEXT_FIELD34"
+""
+1 17.3333333333334 349.6572113037118 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+139 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  15.3333333333334 344.6572113037118 236.0000000000002 378.6572113037118
+3 "0s" 0 0 0 1 0 -1  E E E
+14 141
+"TEXT_FIELD35"
+""
+1 65.48148148148155 415.6572113037121 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+140 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  15.33333333333337 404.6572113037121 236.0000000000002 438.657211303712
+3 "0s" 0 0 0 1 0 -1  E E E
+29 201
+"EMBEDDED_MODULE1"
+""
+1 990.5722944366466 364.6439736172238 E E E 1 E 1 E N "_3DText" E N {0,175,175} E E
+ E E
+200 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+14
+"newPanelAnimDuration" "int 0"
+"oldPanelAnimDuration" "int 0"
+"newPanelAnimateOpacity" "bool TRUE"
+"oldPanelAnimateOpacity" "bool TRUE"
+"newPanelAnimateSize" "bool TRUE"
+"oldPanelAnimateSize" "bool TRUE"
+"newPanelAnimType" "string TopLeft"
+"oldPanelAnimType" "string BottomRight"
+"ModuleName" "string TaskManager"
+"frameShape" "enum 0"
+"horizontalScrollBarPolicy" "enum 1"
+"verticalScrollBarPolicy" "enum 1"
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignHCenter|AlignTop"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  994 394.013237686488 1918 798.013237686488
+15 Canvas.Canvas.1
+0
+E6 202
+"RECTANGLE1"
+""
+1 30 630 E E E 1 E 1 E N {0,0,0} E N {0,95,135} E E
+ E E
+201 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 0 3 2 1 E 1.438888888888889 0 9.983215141296398 -43.16666666666666 -5489.425539016731 1 E 30 630 210 550
+30 203
+"FRAME2"
+""
+1 220 351 E E E 1 E 1 E N "White" E N {0,0,0} E E
+ E E
+202 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.906250000000001 0 1.554850502181791 -413.9205127388618 -546.4823604141706 0 E 220 351 349 420
+1
+LANG:10027 56 MS Shell Dlg 2,-1,23,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 10 Пресс
+30 204
+"FRAME3"
+""
+1 30 101 E E E 1 E 1 E N "White" E N {0,0,0} E E
+ E E
+203 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 4 3 2 1 E 2.025 0 0.3199347028759655 -55.75 72.68659500952748 0 E 30 101 151 451
+1
+LANG:10027 56 MS Shell Dlg 2,-1,23,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 24 Расположение
+30 205
+"FRAME4"
+""
+1 30 101 E E E 1 E 1 E N "White" E N {0,0,0} E E
+ E E
+204 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 4 3 2 1 E 2.025 0 0.4240687679083096 -55.29551273886159 253.1690544412608 0 E 30 101 151 451
+1
+LANG:10027 56 MS Shell Dlg 2,-1,23,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 25 Выбран рецепт
+2 206
+"PRIMITIVE_TEXT12"
+""
+1 161.0423193834723 206 E E E 1 E 1 E N "White" E N "_Window" E E
+ E E
+205 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 0.9516644293253905 0 1.031543052003403 -136.2582469733094 -139.577525575446 0 E 161.0423193834723 206 246 229
+0 2 2 "0s" 0 0 0 192 0 0  161.0423193834723 206 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 14 Пресс №
+22 207
+"cbPress"
+""
+1 122.6666666666667 73.92034313725492 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+206 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  120.6666666666667 68.92034313725492 236 96.92034313725492
+0
+
+E
+E
+E
+ 1 0
+2 208
+"PRIMITIVE_TEXT11"
+""
+1 17.00000000000001 38.97916666666704 E E E 1 E 1 E N "White" E N "_Window" E E
+ E E
+207 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E U  0 E 17.00000000000001 38.97916666666704 106 62
+0 2 2 "0s" 0 0 0 192 0 0  17.00000000000001 38.97916666666704 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 14 Линия №
+22 209
+"cbLine"
+""
+1 122.6666666666667 39.97916666666671 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+208 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  120.6666666666667 34.97916666666671 236 62.97916666666669
+0
+
+E
+"main()
+{
+   int rc;
+  dbRecordset rs;
+  dyn_string models;
+  string cmdStr, nLine, nPress;
+  dbConnection conn;
+
+  cbPress.deleteAllItems();
+  rc = dbOpenConnection(conStr, conn);
+  Debug(\"подключение2:\", rc);
+  Debug(\"строка подключения2:\", conStr);
+  getValue(\"cbLine\", \"text\",  nLine);
+
+  if (!rc)
+  {
+    cmdStr = \"SELECT number FROM tPresses WHERE line = \"+nLine;
+    rc =  dbOpenRecordset(conn, cmdStr, rs);
+    Debug(\"dbOpenRecordset\", rc);
+    if (!rc)
+    {
+     shape list = getShape(\"cbPress\");
+     while (!rc && !dbEOF (rs))
+     {
+       dbGetField(rs, 0, nPress);
+       list.appendItem(nPress); // Добавление
+       dbMoveNext(rs);
+      }
+     }
+   }
+  dbCloseConnection(conn); // Соединение закрыто
+}" 0
+
+E
+ 1 0
+13 210
+"PUSH_BUTTON8"
+""
+1 17.16666666666666 462.4017167982175 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+209 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  15.16666666666666 455.1709475674483 236.0714285714286 493.1709475674483
+
+T 
+1
+LANG:10027 29 Журнал рецептов
+E E E E
+29 211
+"EMBEDDED_MODULE2"
+""
+1 714.5714285714286 312.5968571487608 E E E 1 E 1 E N "_3DText" E N "WF_Warning" E E
+ E E
+210 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+15
+"newPanelAnimDuration" "int 0"
+"oldPanelAnimDuration" "int 0"
+"newPanelAnimateOpacity" "bool TRUE"
+"oldPanelAnimateOpacity" "bool TRUE"
+"newPanelAnimateSize" "bool TRUE"
+"oldPanelAnimateSize" "bool TRUE"
+"newPanelAnimType" "string TopLeft"
+"oldPanelAnimType" "string BottomRight"
+"ModuleName" "string SetValues"
+"frameShape" "enum 0"
+"horizontalScrollBarPolicy" "enum 1"
+"verticalScrollBarPolicy" "enum 1"
+"alignment" "enum 4"
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  715 0.3818741379113817 1514 369.3818741379114
+15 Canvas.Canvas.1
+0
+E29 212
+"EMBEDDED_MODULE3"
+""
+1 1513.716788843197 269.0019512176514 E E E 1 E 1 E N "_3DText" E N "WF_Error" E E
+ E E
+211 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+15
+"newPanelAnimDuration" "int 0"
+"oldPanelAnimDuration" "int 0"
+"newPanelAnimateOpacity" "bool TRUE"
+"oldPanelAnimateOpacity" "bool TRUE"
+"newPanelAnimateSize" "bool TRUE"
+"oldPanelAnimateSize" "bool TRUE"
+"newPanelAnimType" "string TopLeft"
+"oldPanelAnimType" "string BottomRight"
+"ModuleName" "string SetFormValues"
+"frameShape" "enum 0"
+"horizontalScrollBarPolicy" "enum 1"
+"verticalScrollBarPolicy" "enum 1"
+"alignment" "enum 4"
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  1514 0.4015560473581559 1918 319.4015560473582
+15 Canvas.Canvas.1
+0
+E6 213
+"RECTANGLE2"
+""
+1 259 1.342788696288153 E E E 1 E 1 E N {0,0,0} E N {240,240,240} E E
+ E E
+212 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1 0 2.172287627574813 0 -2.535049133482686 1 E 259 1.342788696288153 715 369
+30 214
+"FRAME1"
+""
+1 590 71 E E E 1 E 1 E N {0,122,167} E N {0,0,0} E E
+ E E
+213 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N {255,255,255,0}
+"antiAliased" "0"
+E E 0 4 3 2 1 E 1.277419354838709 0 0.3593520252947044 -463.6774193548383 -14.70841138261695 0 E 590 71 901 451
+1
+LANG:10027 56 MS Shell Dlg 2,-1,20,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 31 Выбор параметров
+30 215
+"FRAME5"
+""
+1 590 71 E E E 1 E 1 E N {0,122,167} E N {0,0,0} E E
+ E E
+214 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N {255,255,255,0}
+"antiAliased" "0"
+E E 0 4 3 2 1 E 1.277419354838709 0 0.3588239885688543 -463.6774193548383 121.5292051440156 0 E 590 71 901 451
+1
+LANG:10027 56 MS Shell Dlg 2,-1,20,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 31 Функции рецептов
+0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+25 66
+"TABLE1"
+""
+1 290.0000000000001 294 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+65 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  288.0000000000001 292 687.9999999999999 801.0000000000001
+EE 1 0 1 3 0 "#" 6 1 0 "s" 1
+LANG:10027 1 #
+E
+1
+LANG:10027 0 
+
+30 "Model" 6 1 0 "s" 1
+LANG:10027 21 Модель шины
+E
+1
+LANG:10027 0 
+
+120 "NumberRecipe" 6 1 0 "s" 1
+LANG:10027 25 Номер рецепта
+E
+1
+LANG:10027 0 
+
+120 
+20 20 10 0
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0 0 1 1 1 7
+1 0
+13 199
+"PUSH_BUTTON9"
+""
+1 1521.489254600601 700.3563654055963 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+198 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  301.5 228.0805680751798 673.5 271.0805680751798
+
+T 
+1
+LANG:10027 28 ЗАГРУЗИТЬ В ПЛК
+E E E E
+13 137
+"PUSH_BUTTON7"
+""
+1 304.1840826820167 185.827585422076 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+136 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  302 176 674 219
+
+T 
+1
+LANG:10027 16 Сравнить
+E E E E
+13 135
+"PUSH_BUTTON5"
+""
+1 304.3507493486834 100.6702397866977 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+134 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  303 93 674 136
+
+T 
+1
+LANG:10027 47 Дополнительные параметры
+E E E E
+13 136
+"PUSH_BUTTON6"
+""
+1 -2546.711050941267 48.97916666666669 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+135 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  302 41 673 84
+
+T 
+1
+LANG:10027 37 Параметры продления
+E E E E
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

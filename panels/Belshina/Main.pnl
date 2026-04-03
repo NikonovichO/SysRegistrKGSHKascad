@@ -1,0 +1,134 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1920 1080 N "_3DFace" 0
+"main()
+{
+  RootPanelOnModule(\"Belshina/Header/Header.pnl\", \"Header\", \"HeaderPlace\", \"\");
+  RootPanelOnModule(\"Belshina/Body/0_General/General.pnl\", \"General\", \"BodyPlace\", \"\");
+  RootPanelOnModule(\"Belshina/Footer/Footer.pnl\", \"Footer\", \"FooterPlace\", \"\");
+}" 0
+ E E E E 1 -1 -1 0  230 40
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "93.2319"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+29 1
+"EMBEDDED_MODULE1"
+""
+1 230 40 E E E 1 E 1 E N "_3DText" E N "SiemensPetrol" E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+10
+"newPanelAnimDuration" "int 0"
+"oldPanelAnimDuration" "int 0"
+"newPanelAnimateOpacity" "bool TRUE"
+"oldPanelAnimateOpacity" "bool TRUE"
+"newPanelAnimateSize" "bool TRUE"
+"oldPanelAnimateSize" "bool TRUE"
+"newPanelAnimType" "string TopLeft"
+"oldPanelAnimType" "string BottomRight"
+"ModuleName" "string HeaderPlace"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  0 0 1919 129
+15 Canvas.Canvas.1
+0
+E29 2
+"EMBEDDED_MODULE2"
+""
+1 230 19 E E E 1 E 1 E N "_3DText" E N "SiemensPetrol" E E
+ E E
+1 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+10
+"newPanelAnimDuration" "int 0"
+"oldPanelAnimDuration" "int 0"
+"newPanelAnimateOpacity" "bool TRUE"
+"oldPanelAnimateOpacity" "bool TRUE"
+"newPanelAnimateSize" "bool TRUE"
+"oldPanelAnimateSize" "bool TRUE"
+"newPanelAnimType" "string TopLeft"
+"oldPanelAnimType" "string BottomRight"
+"ModuleName" "string FooterPlace"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  0 930 1919 1079
+15 Canvas.Canvas.1
+0
+E29 3
+"EMBEDDED_MODULE3"
+""
+1 230 41 E E E 1 E 1 E N "_3DText" E N "SiemensWebFunctionalGray" E E
+ E E
+2 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+10
+"newPanelAnimDuration" "int 0"
+"oldPanelAnimDuration" "int 0"
+"newPanelAnimateOpacity" "bool TRUE"
+"oldPanelAnimateOpacity" "bool TRUE"
+"newPanelAnimateSize" "bool TRUE"
+"oldPanelAnimateSize" "bool TRUE"
+"newPanelAnimType" "string TopLeft"
+"oldPanelAnimType" "string BottomRight"
+"ModuleName" "string BodyPlace"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  0 130 1919 929
+15 Canvas.Canvas.1
+0
+E0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

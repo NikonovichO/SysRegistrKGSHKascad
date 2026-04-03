@@ -1,0 +1,1643 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1660 800 N "_3DFace" 0
+E E E E E 1 -1 -1 0  0.5 0
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "93.2319"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+29 1
+"Label1"
+""
+1 348.9999999999927 33 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string 1"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  348.9999999999927 33 438.9999999999927 83
+5 Label
+0
+E29 2
+"Label2"
+""
+1 446.9999999999927 33 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+1 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string 2"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  446.9999999999927 33 536.9999999999927 83
+5 Label
+0
+E29 3
+"Label3"
+""
+1 544.9999999999927 33 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+2 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string 3"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  544.9999999999927 33 634.9999999999927 83
+5 Label
+0
+E29 4
+"Label4"
+""
+1 642.9999999999927 33 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+3 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string 4"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  642.9999999999927 33 732.9999999999927 83
+5 Label
+0
+E29 5
+"Label9"
+""
+1 348.9999999999927 170.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+4 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  348.9999999999927 170.5 438.9999999999927 206.5
+5 Label
+0
+E29 6
+"Label10"
+""
+1 31.99999999999278 83 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+5 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Режим"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  32 83 349 119
+5 Label
+0
+E29 7
+"Label11"
+""
+1 31.99999999999267 170.5 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+6 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Давление формования"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  31.99999999999267 170.5 348.9999999999927 206.5
+5 Label
+0
+E29 8
+"Label12"
+""
+1 446.9999999999927 170.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+7 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  446.9999999999927 170.5 536.9999999999927 206.5
+5 Label
+0
+E29 9
+"Label13"
+""
+1 544.9999999999926 170.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+8 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  544.9999999999926 170.5 634.9999999999926 206.5
+5 Label
+0
+E29 10
+"Label14"
+""
+1 642.9999999999925 170.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+9 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  642.9999999999925 170.5 732.9999999999925 206.5
+5 Label
+0
+E29 11
+"Label15"
+""
+1 31.99999999999267 214.5 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+10 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Давление подачи"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  31.99999999999267 214.5 348.9999999999927 250.5
+5 Label
+0
+E29 12
+"Label16"
+""
+1 31.99999999999267 258.5 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+11 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Давление возврата"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  31.99999999999267 258.5 348.9999999999927 294.5
+5 Label
+0
+E29 13
+"Label17"
+""
+1 31.99999999999267 302.5 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+12 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Температура подачи"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  31.99999999999267 302.5 348.9999999999927 338.5
+5 Label
+0
+E29 14
+"Label18"
+""
+1 31.99999999999255 346.5 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+13 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Температура возврата"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  31.99999999999255 346.5 348.9999999999926 382.5
+5 Label
+0
+E29 15
+"Label19"
+""
+1 31.99999999999255 126.5 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+14 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Номер сырой покрышки"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  31.99999999999255 126.5 348.9999999999926 162.5
+5 Label
+0
+E29 16
+"Label20"
+""
+1 31.99999999999256 390.5 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+15 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Давление в  камере"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  31.99999999999256 390.5 348.9999999999926 426.5
+5 Label
+0
+E29 17
+"Label21"
+""
+1 31.99999999999256 434.5 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+16 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Температура в камере"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  31.99999999999256 434.5 348.9999999999926 470.5
+5 Label
+0
+E29 18
+"Label22"
+""
+1 348.9999999999926 126.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+17 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  348.9999999999926 126.5 438.9999999999926 162.5
+5 Label
+0
+E29 19
+"Label23"
+""
+1 446.9999999999926 126.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+18 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  446.9999999999926 126.5 536.9999999999926 162.5
+5 Label
+0
+E29 20
+"Label24"
+""
+1 544.9999999999926 126.625 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+19 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  544.9999999999926 126.625 634.9999999999926 162.625
+5 Label
+0
+E29 21
+"Label25"
+""
+1 642.9999999999925 126.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+20 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  642.9999999999925 126.5 732.9999999999925 162.5
+5 Label
+0
+E29 22
+"Label26"
+""
+1 348.9999999999927 214.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+21 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  348.9999999999927 214.5 438.9999999999927 250.5
+5 Label
+0
+E29 23
+"Label27"
+""
+1 348.9999999999927 258.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+22 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  348.9999999999927 258.5 438.9999999999927 294.5
+5 Label
+0
+E29 24
+"Label28"
+""
+1 348.9999999999927 302.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+23 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  348.9999999999927 302.5 438.9999999999927 338.5
+5 Label
+0
+E29 25
+"Label29"
+""
+1 348.9999999999926 346.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+24 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  348.9999999999926 346.5 438.9999999999926 382.5
+5 Label
+0
+E29 26
+"Label30"
+""
+1 348.9999999999926 390.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+25 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  348.9999999999926 390.5 438.9999999999926 426.5
+5 Label
+0
+E29 27
+"Label31"
+""
+1 348.9999999999926 434.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+26 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  348.9999999999926 434.5 438.9999999999926 470.5
+5 Label
+0
+E29 28
+"Label32"
+""
+1 446.9999999999927 214.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+27 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  446.9999999999927 214.5 536.9999999999927 250.5
+5 Label
+0
+E29 29
+"Label33"
+""
+1 446.9999999999927 258.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+28 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  446.9999999999927 258.5 536.9999999999927 294.5
+5 Label
+0
+E29 30
+"Label34"
+""
+1 446.9999999999927 302.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+29 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  446.9999999999927 302.5 536.9999999999927 338.5
+5 Label
+0
+E29 31
+"Label35"
+""
+1 446.9999999999926 346.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+30 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  446.9999999999926 346.5 536.9999999999926 382.5
+5 Label
+0
+E29 32
+"Label36"
+""
+1 446.9999999999926 390.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+31 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  446.9999999999926 390.5 536.9999999999926 426.5
+5 Label
+0
+E29 33
+"Label37"
+""
+1 446.9999999999926 434.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+32 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  446.9999999999926 434.5 536.9999999999926 470.5
+5 Label
+0
+E29 34
+"Label38"
+""
+1 544.9999999999927 214.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+33 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  544.9999999999927 214.5 634.9999999999927 250.5
+5 Label
+0
+E29 35
+"Label39"
+""
+1 544.9999999999927 258.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+34 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  544.9999999999927 258.5 634.9999999999927 294.5
+5 Label
+0
+E29 36
+"Label40"
+""
+1 544.9999999999927 302.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+35 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  544.9999999999927 302.5 634.9999999999927 338.5
+5 Label
+0
+E29 37
+"Label41"
+""
+1 544.9999999999926 346.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+36 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  544.9999999999926 346.5 634.9999999999926 382.5
+5 Label
+0
+E29 38
+"Label42"
+""
+1 544.9999999999926 390.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+37 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  544.9999999999926 390.5 634.9999999999926 426.5
+5 Label
+0
+E29 39
+"Label43"
+""
+1 544.9999999999926 434.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+38 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  544.9999999999926 434.5 634.9999999999926 470.5
+5 Label
+0
+E29 40
+"Label44"
+""
+1 642.9999999999927 214.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+39 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  642.9999999999927 214.5 732.9999999999927 250.5
+5 Label
+0
+E29 41
+"Label45"
+""
+1 642.9999999999927 258.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+40 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  642.9999999999927 258.5 732.9999999999927 294.5
+5 Label
+0
+E29 42
+"Label46"
+""
+1 642.9999999999925 302.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+41 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  642.9999999999925 302.5 732.9999999999925 338.5
+5 Label
+0
+E29 43
+"Label47"
+""
+1 642.9999999999925 346.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+42 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  642.9999999999925 346.5 732.9999999999925 382.5
+5 Label
+0
+E29 44
+"Label48"
+""
+1 642.9999999999925 390.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+43 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  642.9999999999925 390.5 732.9999999999925 426.5
+5 Label
+0
+E29 45
+"Label49"
+""
+1 642.9999999999927 434.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+44 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  642.9999999999927 434.5 732.9999999999927 470.5
+5 Label
+0
+E6 46
+"RECTANGLE2"
+""
+1 900 170 E E E 1 E 1 E N {0,0,0} E N {179,204,220} E E
+ E E
+45 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E -1 1 3 0 1 E 33.18000000000001 0 15.98 -29862.50000000001 -2716.6 1 E 900 170 950 220
+29 51
+"Label50"
+""
+1 739.9999999999927 33 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+50 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string 5"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  739.9999999999927 33 829.9999999999927 83
+5 Label
+0
+E29 52
+"Label51"
+""
+1 739.9999999999925 170.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+51 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  739.9999999999925 170.5 829.9999999999925 206.5
+5 Label
+0
+E29 53
+"Label52"
+""
+1 739.9999999999925 126.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+52 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  739.9999999999925 126.5 829.9999999999925 162.5
+5 Label
+0
+E29 54
+"Label53"
+""
+1 739.9999999999927 214.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+53 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  739.9999999999927 214.5 829.9999999999927 250.5
+5 Label
+0
+E29 55
+"Label54"
+""
+1 739.9999999999927 258.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+54 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  739.9999999999927 258.5 829.9999999999927 294.5
+5 Label
+0
+E29 56
+"Label55"
+""
+1 739.9999999999925 302.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+55 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  739.9999999999925 302.5 829.9999999999925 338.5
+5 Label
+0
+E29 57
+"Label56"
+""
+1 739.9999999999925 346.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+56 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  739.9999999999925 346.5 829.9999999999925 382.5
+5 Label
+0
+E29 58
+"Label57"
+""
+1 739.9999999999925 390.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+57 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  739.9999999999925 390.5 829.9999999999925 426.5
+5 Label
+0
+E29 59
+"Label58"
+""
+1 739.9999999999927 434.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+58 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  739.9999999999927 434.5 829.9999999999927 470.5
+5 Label
+0
+E29 62
+"Label59"
+""
+1 836.9999999999927 33 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+61 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string 6"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  836.9999999999927 33 926.9999999999927 83
+5 Label
+0
+E29 63
+"Label60"
+""
+1 836.9999999999925 170.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+62 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  836.9999999999925 170.5 926.9999999999925 206.5
+5 Label
+0
+E29 64
+"Label61"
+""
+1 836.9999999999925 126.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+63 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  836.9999999999925 126.5 926.9999999999925 162.5
+5 Label
+0
+E29 65
+"Label62"
+""
+1 836.9999999999927 214.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+64 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  836.9999999999927 214.5 926.9999999999927 250.5
+5 Label
+0
+E29 66
+"Label63"
+""
+1 836.9999999999927 258.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+65 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  836.9999999999927 258.5 926.9999999999927 294.5
+5 Label
+0
+E29 67
+"Label64"
+""
+1 836.9999999999925 302.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+66 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  836.9999999999925 302.5 926.9999999999925 338.5
+5 Label
+0
+E29 68
+"Label65"
+""
+1 836.9999999999925 346.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+67 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  836.9999999999925 346.5 926.9999999999925 382.5
+5 Label
+0
+E29 69
+"Label66"
+""
+1 836.9999999999925 390.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+68 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  836.9999999999925 390.5 926.9999999999925 426.5
+5 Label
+0
+E29 70
+"Label67"
+""
+1 836.9999999999927 434.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+69 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  836.9999999999927 434.5 926.9999999999927 470.5
+5 Label
+0
+E29 73
+"Label68"
+""
+1 933.9999999999927 33 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+72 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string 7"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  933.9999999999927 33 1023.999999999993 83
+5 Label
+0
+E29 74
+"Label69"
+""
+1 933.9999999999925 170.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+73 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  933.9999999999925 170.5 1023.999999999992 206.5
+5 Label
+0
+E29 75
+"Label70"
+""
+1 933.999999999993 126.75 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+74 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  933.999999999993 126.75 1023.999999999992 162.75
+5 Label
+0
+E29 76
+"Label71"
+""
+1 933.9999999999926 214.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+75 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  933.9999999999926 214.5 1023.999999999993 250.5
+5 Label
+0
+E29 77
+"Label72"
+""
+1 933.9999999999927 258.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+76 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  933.9999999999927 258.5 1023.999999999993 294.5
+5 Label
+0
+E29 78
+"Label73"
+""
+1 933.9999999999925 302.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+77 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  933.9999999999925 302.5 1023.999999999992 338.5
+5 Label
+0
+E29 79
+"Label74"
+""
+1 933.9999999999925 346.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+78 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  933.9999999999925 346.5 1023.999999999992 382.5
+5 Label
+0
+E29 80
+"Label75"
+""
+1 933.9999999999925 390.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+79 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  933.9999999999925 390.5 1023.999999999992 426.5
+5 Label
+0
+E29 81
+"Label76"
+""
+1 933.9999999999927 434.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+80 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  933.9999999999927 434.5 1023.999999999993 470.5
+5 Label
+0
+E29 82
+"Label77"
+""
+1 348.9999999999963 82.75 E E E 1 E 1 E N "_3DText" E N "distsync_OK" E E
+ E E
+81 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Авто"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  348.9999999999963 82.75 438.9999999999963 118.75
+5 Label
+0
+E29 83
+"Label78"
+""
+1 446.9999999999927 82.75 E E E 1 E 1 E N "_3DText" E N "distsync_OK" E E
+ E E
+82 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Авто"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  446.9999999999927 82.75 536.9999999999927 118.75
+5 Label
+0
+E29 84
+"Label79"
+""
+1 544.9999999999926 82.75 E E E 1 E 1 E N "_3DText" E N "distsync_NOK" E E
+ E E
+83 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Ремонт"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  544.9999999999926 82.75 634.9999999999926 118.75
+5 Label
+0
+E29 85
+"Label80"
+""
+1 642.9999999999926 82.75 E E E 1 E 1 E N "_3DText" E N "distsync_tableHintColor" E E
+ E E
+84 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Ручн"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  642.9999999999926 82.75 732.9999999999926 118.75
+5 Label
+0
+E29 86
+"Label81"
+""
+1 739.9999999999926 82.875 E E E 1 E 1 E N "_3DText" E N "distsync_tableHintColor" E E
+ E E
+85 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Ручн"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  739.9999999999926 82.875 829.9999999999926 118.875
+5 Label
+0
+E29 87
+"Label82"
+""
+1 836.9999999999926 82.75 E E E 1 E 1 E N "_3DText" E N "distsync_OK" E E
+ E E
+86 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Авто"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  836.9999999999926 82.75 926.9999999999926 118.75
+5 Label
+0
+E29 88
+"Label83"
+""
+1 933.9999999999927 82.75 E E E 1 E 1 E N "_3DText" E N "distsync_NOK" E E
+ E E
+87 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Ремонт"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  933.9999999999927 82.75 1023.999999999993 118.75
+5 Label
+0
+E0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

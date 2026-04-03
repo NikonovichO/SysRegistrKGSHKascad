@@ -1,0 +1,575 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1920 130 N {39,51,56} 0
+E E E E E 1 -1 -1 0  0.1641791044771139 -0.1273816005362391
+""0  1
+E "shape current_btn;  //нажатая кнопка
+
+void check_btn(shape new_btn){  // меняем состояние нажатой кнопки и предыдущей кнопки
+  if (shapeExists(current_btn)) {
+    current_btn.enabled(true);
+    current_btn.backCol(\"{0,136,185}\");
+  }
+  // Настраиваем новую кнопку
+  new_btn.backCol(\"{148,236,248}\");
+  new_btn.enabled(false);
+
+  // Запоминаем её как текущую
+  current_btn = new_btn;
+}" 0
+ 4
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.746"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+14 12
+"TEXT_FIELD1"
+""
+1 269.4410326808543 73.33346562603643 E E E 1 E 1 E N "White" E N {39,51,56} E E
+ E E
+11 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  267.5000000000001 62 458.5000000000001 125
+2 "0s" 0 0 0 9 0 -1  E "main()
+{
+  setValue(this, \"text\", \"Status\");
+}" 0
+ E
+13 2
+"btn_summary"
+""
+1 335.1393421085 82.75579910908296 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+1 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+5
+"hoverfclr" "N {148,148,148}"
+"hoverbclr" "N {148,236,248}"
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignNone"
+"focusPolicy" "NoFocus"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  466 57.76923076923077 654 130.7692307692308
+
+T 
+1
+LANG:10027 10 Общее
+"main(mapping event)
+{
+  dyn_string MyParams;
+  RootPanelOnModule(\"Main/1_Summary.pnl\", \"Summary\", \"MainModule\", MyParams);
+  setValue(\"CURRENT_WIN\", \"text\", \"Общее\");
+  check_btn(this);
+}" 0
+ E E E
+2 1
+"PRIMITIVE_TEXT4"
+""
+1 230 0 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+5
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 5.646558704453441 0 1.475 -830.7085020242914 0 1 E 230 0 360 40
+0 0 2 "0s" 0 0 0 73 0 0  230 0 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,30,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 18 Навигация
+13 3
+"btn_Process"
+""
+1 649.6860457964065 89.96728730465777 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+2 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"hoverfclr" "N {148,148,148}"
+"hoverbclr" "N {148,236,248}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  650 57.76923076923077 838 130.7692307692308
+
+T 
+1
+LANG:10027 14 Процесс
+"main(mapping event)
+{
+  dyn_string MyParams;
+  RootPanelOnModule(\"Main/2_Process.pnl\", \"Process\", \"MainModule\", MyParams);
+  setValue(\"CURRENT_WIN\", \"text\", \"Процесс\");
+  check_btn(this);
+}" 0
+ E E E
+13 4
+"btn_Production"
+""
+1 857.1077158199579 88.85781984903647 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+3 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"hoverfclr" "N {148,148,148}"
+"hoverbclr" "N {148,236,248}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  834 57.76923076923077 1022 130.7692307692308
+
+T 
+1
+LANG:10027 24 Производство
+"main(mapping event)
+{
+  dyn_string MyParams;
+  RootPanelOnModule(\"Main/3_Production.pnl\", \"Production\", \"MainModule\", MyParams);
+  setValue(\"CURRENT_WIN\", \"text\", \"Производство\");
+  check_btn(this);
+}" 0
+ E E E
+13 5
+"btn_Reports"
+""
+1 1087.188051081166 89.07488956861468 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+4 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"hoverfclr" "N {148,148,148}"
+"hoverbclr" "N {148,236,248}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  1018 57.76923076923077 1206 130.7692307692308
+
+T 
+1
+LANG:10027 12 Отчеты
+"main(mapping event)
+{
+  dyn_string MyParams;
+  RootPanelOnModule(\"Main/4_Report.pnl\", \"Report\", \"MainModule\", MyParams);
+  setValue(\"CURRENT_WIN\", \"text\", \"Отчеты\");
+  check_btn(this);
+}" 0
+ E E E
+13 6
+"btn_Recipes"
+""
+1 1306.294765970246 89.06551001283037 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+5 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"hoverfclr" "N {148,148,148}"
+"hoverbclr" "N {148,236,248}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  1202 57.76923076923077 1390 130.7692307692308
+
+T 
+1
+LANG:10027 14 Рецепты
+"main(mapping event)
+{
+  dyn_string MyParams;
+  RootPanelOnModule(\"Main/5_Recipes.pnl\", \"Recipes\", \"MainModule\", MyParams);
+  setValue(\"CURRENT_WIN\", \"text\", \"Рецепты\");
+  check_btn(this);
+}" 0
+ E E E
+13 7
+"btn_KIP"
+""
+1 1525.529230831922 89.03670137720738 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+6 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"hoverfclr" "N {148,148,148}"
+"hoverbclr" "N {148,236,248}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  1386 57.76923076923077 1574 130.7692307692308
+
+T 
+1
+LANG:10027 6 КИП
+"main(mapping event)
+{
+  dyn_string MyParams;
+  RootPanelOnModule(\"Main/6_KIP.pnl\", \"KIP\", \"MainModule\", MyParams);
+  setValue(\"CURRENT_WIN\", \"text\", \"КИП\");
+  check_btn(this);
+}" 0
+ E E E
+13 8
+"btn_Alarms"
+""
+1 1744.666666666667 89.06799662583369 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+7 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"hoverfclr" "N {148,148,148}"
+"hoverbclr" "N {148,236,248}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  1569 57.76923076923078 1757 130.7692307692308
+
+T 
+1
+LANG:10027 18 Сообщения
+"main(mapping event)
+{
+  dyn_string MyParams;
+  RootPanelOnModule(\"Main/7_Alarms.pnl\", \"Alarms\", \"MainModule\", MyParams);
+  setValue(\"CURRENT_WIN\", \"text\", \"Сообщения\");
+  check_btn(this);
+}" 0
+ E E E
+6 9
+"RECTANGLE2"
+""
+1 124.666666666666 0 E E E 1 E 1 E N "White" E N {255,255,255} E E
+ E E
+8 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.870264849806789 0 1.432899342001857 -232.996763582197 0.3776418969982409 1 E 124.666666666666 0 264.6666666666667 90
+6 10
+"RECTANGLE1"
+""
+1 20 10 E E E 1 E 1 E N "White" E N {255,255,255} E E
+ E E
+9 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 0.9150583975720592 0 1.460959927023516 20.94174851025815 -9.195436192575896 2  1 0  "pictures/Логотип SIMATEK 2022.png" 4294967295 E 20 10 220 90
+2 11
+"PRIMITIVE_TEXT1"
+""
+1 230 0 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+10 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1.569230769230771 0 1.477890582473707 -98.92307692307735 -0.1156232989482786 1 E 230 0 360 40
+0 0 2 "0s" 0 0 0 73 0 0  230 0 2
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 18 Состояние
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 28 резервирования
+14 13
+"CURRENT_WIN"
+""
+1 1387 29.46831816550452 E E E 1 E 1 E N {27,33,38} E N "White" E E
+ E E
+12 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  1385 11.98036834324582 1748 47.01963165675417
+3 "0s" 0 0 0 9 0 -1  E E E
+2 14
+"PRIMITIVE_TEXT3"
+""
+1 230 0 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+13 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 4.237651821862348 0 1.475 229.4453441295548 -7.105427357601002e-15 1 E 230 0 360 40
+0 0 2 "0s" 0 0 0 72 0 0  230 0 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 28   Активное окно:
+13 17
+"PUSH_BUTTON5"
+""
+1 1860.053617719133 -41.96231898037646 E E E 1 E 1 E N "White" E N {39,51,56} E E
+ E E
+16 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {92,120,131}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  1836 57 1919 130
+
+P 
+4294967295
+"pictures/stopforced.svg"
+1
+LANG:10027 33 Завершение работы
+E E E E
+13 18
+"PUSH_BUTTON6"
+""
+1 1840.488400327829 -39.73405811081123 E E E 1 E 1 E N "White" E N {39,51,56} E E
+ E E
+17 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {92,120,131}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  1756 57 1839 130
+
+P 
+4294967295
+"pictures/stop_en.svg"
+1
+LANG:10027 33 Завершение работы
+E E E E
+29 20
+"Splitter4"
+""
+1 1845.166666666667 55.15107319757844 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+19 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  1837.166666666667 59.16666666666666 1839.166666666667 128
+8 Splitter
+0
+E15 21
+"CLOCK1"
+""
+1 1758.314440993789 13.18840579710143 E E E 1 E 1 E N {36,255,7} E N {39,51,56} E E
+ E E
+20 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  1758 0 1917 59
+E 1 1 "%X" "%x"
+1 0 0 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0 
+29 15
+"Splitter1"
+""
+1 1210 -3.017209908735354 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+14 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  1202 0.9692307692307491 1204 59.76923076923076
+8 Splitter
+0
+E29 23
+"Splitter6"
+""
+1 1758 59 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+22 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  1758 59 1917 61
+8 Splitter
+0
+E0
+LAYER, 1 
+1
+LANG:10027 0 
+29 19
+"Splitter3"
+""
+1 1763 -7.594936708860765 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+18 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  1755 -7.105427357601002e-15 1757 150
+8 Splitter
+0
+E29 22
+"Splitter5"
+""
+1 474.1818181818182 -6.657726204763847 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+21 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  466.1818181818182 -0.115623298948293 468.1818181818182 129.0909090909091
+8 Splitter
+0
+E0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

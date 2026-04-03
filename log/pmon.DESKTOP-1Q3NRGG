@@ -1,0 +1,847 @@
+WCCILpmon    (1), 2026.04.01 16:50:15.526, SYS,  INFO,        1, Manager Start, WAIT_MODE
+WCCILpmon    (1), 2026.04.01 16:50:25.550, SYS,  INFO,       20/pmon, Получена команда START_ALL от ::1, запуск проекта
+WCCILpmon    (1), 2026.04.01 16:50:25.555, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 16:50:27.278, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 16:50:27.714, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 16:50:28.257, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 16:50:34.153, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(1) с индексом 8
+WCCILpmon    (1), 2026.04.01 16:50:34.158, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 8 SetValues.ctl
+WCCILpmon    (1), 2026.04.01 16:50:39.321, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 16:50:39.540, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 16:50:39.759, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 16:50:42.868, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.01 16:50:52.669, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.01 16:50:52.673, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 16:50:56.719, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #2
+WCCILpmon    (1), 2026.04.01 16:50:56.723, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 16:51:01.045, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(1) с индексом 8
+WCCILpmon    (1), 2026.04.01 16:51:01.045, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 16:51:04.906, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #3
+WCCILpmon    (1), 2026.04.01 16:51:04.910, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 16:51:11.221, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOAui(1) с индексом 7
+WCCILpmon    (1), 2026.04.01 16:51:11.221, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 16:51:11.335, SYS,  INFO,       12/pmon, Менеджер WCCOAui(1) перезапускается слишком быстро - отказ от перезапуска
+WCCILpmon    (1), 2026.04.01 16:52:33.849, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOAui(1) с индексом 7
+WCCILpmon    (1), 2026.04.01 16:52:33.854, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 17:20:47.051, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.01 17:20:47.161, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 17:20:47.161, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 17:21:17.245, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGKILL
+WCCILpmon    (1), 2026.04.01 17:21:17.354, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 17:21:18.333, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 17:21:18.722, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.01 17:21:18.834, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 17:21:20.138, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 17:21:20.575, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 17:21:20.965, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 17:21:31.968, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 17:21:32.185, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 17:21:32.512, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 17:21:35.902, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.01 17:51:33.706, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.01 17:51:33.816, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 17:51:33.816, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 17:51:37.752, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 17:51:38.690, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 17:51:39.018, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.01 17:51:39.135, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 17:51:40.501, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 17:51:40.935, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 17:51:41.262, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 17:51:46.769, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(1) с индексом 8
+WCCILpmon    (1), 2026.04.01 17:51:46.772, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 8 SetValues.ctl
+WCCILpmon    (1), 2026.04.01 17:51:52.270, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 17:51:52.489, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(1) с индексом 8
+WCCILpmon    (1), 2026.04.01 17:51:52.489, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 17:51:52.494, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 17:51:52.718, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 17:51:54.834, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.01 18:21:49.014, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.01 18:21:49.020, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 18:21:49.355, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.01 18:21:49.463, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 18:21:49.463, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 18:21:49.463, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 18:21:52.959, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 18:21:53.935, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 18:21:54.802, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.01 18:21:54.913, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 18:21:56.190, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 18:21:56.624, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 18:21:57.119, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 18:22:08.123, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 18:22:08.451, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 18:22:08.773, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 18:22:12.289, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.01 18:52:12.814, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.01 18:52:12.819, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 18:52:13.141, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.01 18:52:13.248, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 18:52:13.249, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 18:52:20.815, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 18:52:21.687, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 18:52:22.557, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.01 18:52:22.639, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 18:52:23.945, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 18:52:24.380, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 18:52:24.874, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 18:52:28.236, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOAui(1) с индексом 7
+WCCILpmon    (1), 2026.04.01 18:52:28.240, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 18:52:35.878, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 18:52:36.094, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 18:52:36.310, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.01 19:00:38.909, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.01 19:00:38.914, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 19:22:34.962, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.01 19:22:34.966, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 19:22:35.182, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.01 19:22:35.288, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 19:22:35.289, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 19:22:38.517, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 19:22:39.559, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 19:22:40.215, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.01 19:22:40.327, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 19:22:41.692, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 19:22:42.018, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 19:22:42.347, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 19:22:53.320, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 19:22:53.535, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 19:22:53.860, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 19:52:58.085, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.01 19:52:58.193, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 19:52:58.193, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 19:53:01.846, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 19:53:02.896, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 19:53:03.221, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.01 19:53:03.331, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 19:53:04.492, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 19:53:04.820, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 19:53:05.252, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 19:53:16.210, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 19:53:16.427, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 19:53:16.644, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 20:23:17.298, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.01 20:23:17.406, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 20:23:17.406, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 20:23:21.231, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 20:23:22.275, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 20:23:23.143, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.01 20:23:23.253, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 20:23:24.516, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 20:23:24.845, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 20:23:25.278, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 20:23:25.488, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 20:23:25.785, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 20:23:26.000, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 20:53:37.887, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.01 20:53:37.889, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 20:53:43.867, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.01 20:53:43.977, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 20:53:43.979, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 20:53:47.691, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 20:53:48.670, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 20:53:49.495, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.01 20:53:49.614, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 20:53:50.932, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 20:53:51.309, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 20:53:51.636, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 20:53:51.866, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 20:53:52.093, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 20:53:52.323, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 21:24:04.074, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.01 21:24:04.183, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 21:24:04.183, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 21:24:07.619, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 21:24:08.662, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 21:24:09.098, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.01 21:24:09.209, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 21:24:10.470, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 21:24:10.797, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 21:24:11.126, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 21:24:11.444, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 21:24:11.662, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 21:24:11.880, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 21:54:25.293, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.01 21:54:25.298, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 21:54:27.644, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.01 21:54:27.753, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 21:54:27.753, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 21:54:31.142, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 21:54:32.119, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 21:54:32.445, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.01 21:54:32.557, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 21:54:33.816, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 21:54:34.140, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 21:54:34.468, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 21:54:34.680, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 21:54:34.899, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 21:54:35.117, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 22:24:55.081, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.01 22:24:55.150, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 22:24:58.088, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.01 22:24:58.198, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 22:24:58.198, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 22:25:00.422, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 22:25:01.469, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 22:25:01.796, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.01 22:25:01.954, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 22:25:03.748, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 22:25:04.221, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 22:25:05.109, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 22:25:05.356, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 22:25:05.605, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 22:25:05.818, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 22:55:19.296, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.01 22:55:19.300, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 22:55:28.851, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.01 22:55:28.854, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 22:55:29.068, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.01 22:55:29.177, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 22:55:29.177, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 22:55:29.178, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 22:55:32.811, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 22:55:33.743, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 22:55:34.613, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.01 22:55:34.725, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 22:55:35.987, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 22:55:36.312, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 22:55:36.639, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 22:55:36.852, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 22:55:37.180, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 22:55:37.396, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 23:25:48.959, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.01 23:25:49.069, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 23:25:49.069, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 23:25:52.795, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 23:25:53.837, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 23:25:54.165, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.01 23:25:54.276, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 23:25:55.548, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 23:25:55.875, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 23:25:56.203, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 23:25:56.414, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 23:25:56.739, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 23:25:57.073, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 23:56:06.912, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.01 23:56:06.915, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.01 23:56:10.530, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.01 23:56:10.638, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 23:56:10.638, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 23:56:10.638, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 23:56:14.478, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 23:56:15.459, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.01 23:56:16.395, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.01 23:56:16.507, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.01 23:56:17.699, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.01 23:56:18.028, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.01 23:56:18.418, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.01 23:56:18.631, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.01 23:56:18.849, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.01 23:56:19.067, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 00:26:33.209, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 00:26:33.213, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 00:26:33.381, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 00:26:33.490, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 00:26:33.490, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 00:26:36.498, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 00:26:37.543, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 00:26:37.869, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 00:26:37.985, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 00:26:39.203, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 00:26:39.465, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 00:26:39.790, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 00:26:40.010, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 00:26:40.344, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 00:26:40.671, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 00:56:52.950, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 00:56:52.954, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 00:56:56.986, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 00:56:56.990, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 00:56:57.423, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 00:56:57.531, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 00:56:57.531, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 00:56:57.532, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 00:57:00.816, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 00:57:01.799, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 00:57:02.126, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 00:57:02.236, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 00:57:03.409, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 00:57:03.842, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 00:57:04.277, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 00:57:04.489, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 00:57:04.877, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 00:57:05.206, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 01:27:16.454, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 01:27:16.458, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 01:27:22.970, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 01:27:23.080, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 01:27:23.080, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 01:27:26.695, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 01:27:27.739, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 01:27:28.606, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 01:27:28.719, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 01:27:29.980, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 01:27:30.305, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 01:27:30.743, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 01:27:30.955, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 01:27:31.279, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 01:27:31.498, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 01:57:43.400, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 01:57:43.405, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 01:57:53.093, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 01:57:53.202, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 01:57:53.202, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 01:57:56.647, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 01:57:57.691, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 01:57:58.453, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 01:57:58.569, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 01:57:59.714, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 01:58:00.046, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 01:58:00.370, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 01:58:00.589, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 01:58:00.881, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 01:58:01.211, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 02:28:17.508, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 02:28:17.617, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 02:28:17.617, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 02:28:21.136, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 02:28:22.070, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 02:28:22.505, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 02:28:22.621, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 02:28:23.813, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 02:28:24.097, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 02:28:24.422, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 02:28:24.651, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 02:28:24.978, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 02:28:25.197, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 02:58:33.376, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 02:58:33.484, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 02:58:33.485, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 02:58:37.751, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 02:58:38.738, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 02:58:38.846, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 02:58:38.961, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 02:58:40.116, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 02:58:40.550, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 02:58:40.879, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 02:58:41.203, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 02:58:41.375, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 02:58:41.593, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 03:28:54.789, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 03:28:54.791, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 03:28:57.796, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 03:28:57.905, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 03:28:57.907, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 03:29:01.527, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 03:29:02.585, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 03:29:03.241, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 03:29:03.353, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 03:29:04.500, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 03:29:04.830, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 03:29:05.154, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 03:29:05.368, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 03:29:05.585, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 03:29:05.801, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 03:59:20.498, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 03:59:20.552, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 03:59:21.199, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 03:59:21.309, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 03:59:21.310, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 03:59:21.311, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 03:59:24.333, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 03:59:25.423, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 03:59:26.471, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 03:59:26.645, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 03:59:28.308, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 03:59:28.671, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 03:59:29.453, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 03:59:29.698, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 03:59:29.918, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 03:59:30.182, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 04:29:51.996, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 04:29:52.107, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 04:29:52.108, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 04:29:55.936, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 04:29:56.991, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 04:29:57.970, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 04:29:58.087, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 04:29:59.342, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 04:29:59.560, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 04:29:59.885, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 04:30:00.095, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 04:30:00.425, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 04:30:00.645, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 05:00:08.931, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 05:00:09.041, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 05:00:09.041, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 05:00:12.567, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 05:00:13.654, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 05:00:14.045, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 05:00:14.154, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 05:00:15.352, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 05:00:15.678, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 05:00:16.007, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 05:00:16.280, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 05:00:16.499, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 05:00:16.825, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 05:30:24.621, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 05:30:24.626, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 05:30:36.438, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 05:30:36.442, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 05:30:36.655, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 05:30:36.764, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 05:30:36.764, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 05:30:36.765, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 05:30:40.274, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 05:30:41.315, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 05:30:42.186, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 05:30:42.296, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 05:30:43.569, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 05:30:44.005, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 05:30:44.441, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 05:30:44.658, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 05:30:44.874, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 05:30:45.091, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 06:00:55.507, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 06:00:55.616, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 06:00:55.616, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 06:00:59.017, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 06:00:59.994, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 06:01:01.035, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 06:01:01.193, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 06:01:03.101, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 06:01:03.576, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 06:01:04.267, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 06:01:04.514, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 06:01:04.817, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 06:01:05.083, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 06:31:16.177, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 06:31:16.179, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 06:31:28.102, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 06:31:28.211, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 06:31:28.211, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 06:31:28.211, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 06:31:32.093, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 06:31:33.140, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 06:31:33.466, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 06:31:33.583, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 06:31:34.729, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 06:31:34.947, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 06:31:35.274, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 06:31:35.488, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 06:31:35.704, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 06:31:35.923, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 07:01:49.342, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 07:01:49.345, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 07:01:49.667, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 07:01:49.776, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 07:01:49.777, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 07:01:49.779, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 07:01:52.995, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 07:01:53.965, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 07:01:54.726, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 07:01:54.841, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 07:01:55.988, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 07:01:56.317, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 07:01:56.642, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 07:01:56.861, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 07:01:57.183, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 07:01:57.377, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 07:32:06.612, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 07:32:06.721, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 07:32:06.721, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 07:32:10.165, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 07:32:11.115, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 07:32:11.874, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 07:32:11.986, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 07:32:13.246, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 07:32:13.574, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 07:32:13.899, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 07:32:14.109, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 07:32:14.439, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 07:32:14.626, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 07:48:20.601, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 07:48:20.604, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 07:48:22.921, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 08:02:33.131, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 08:02:33.240, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 08:02:33.240, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 08:03:03.291, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGKILL
+WCCILpmon    (1), 2026.04.02 08:03:03.400, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 08:03:04.442, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 08:03:05.533, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 08:03:05.645, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 08:03:06.905, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 08:03:07.232, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 08:03:07.558, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 08:03:07.769, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 08:03:07.987, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 08:03:08.206, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 08:03:11.379, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 08:33:20.220, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 08:33:20.231, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 08:33:28.648, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 08:33:28.757, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 08:33:28.758, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 08:33:32.714, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 08:33:33.752, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 08:33:34.516, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 08:33:34.628, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 08:33:35.898, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 08:33:36.439, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 08:33:36.978, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 08:33:37.270, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 08:33:37.596, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 08:33:37.924, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 08:33:50.537, SYS,  INFO,       29/pmon, Получена команда PROP_PUT от ::1, изменение менеджера WCCOAui(1) по индексу 7
+WCCILpmon    (1), 2026.04.02 08:33:53.924, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOAui(1) с индексом 7
+WCCILpmon    (1), 2026.04.02 08:33:53.925, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 08:33:54.034, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 09:03:48.121, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 09:03:48.230, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 09:03:51.955, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 09:03:52.999, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 09:03:53.543, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 09:03:53.654, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 09:03:54.916, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 09:03:55.242, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 09:03:55.683, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 09:03:55.895, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 09:03:56.112, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 09:03:56.326, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 09:34:15.611, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 09:34:15.719, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 09:34:19.376, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 09:34:20.416, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 09:34:20.524, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 09:34:20.636, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 09:34:21.907, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 09:34:22.345, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 09:34:22.777, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 09:34:23.100, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 09:34:23.428, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 09:34:23.614, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 10:04:33.301, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 10:04:33.410, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 10:04:37.244, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 10:04:38.223, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 10:04:38.829, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 10:04:38.939, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 10:04:40.253, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 10:04:40.968, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 10:04:41.402, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 10:04:41.615, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 10:04:41.832, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 10:04:42.048, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 10:34:50.161, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 10:34:50.270, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 10:34:54.097, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 10:34:55.078, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 10:34:55.406, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 10:34:55.518, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 10:34:56.780, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 10:34:57.212, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 10:34:57.647, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 10:34:58.051, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 10:34:58.386, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 10:34:58.713, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 11:05:16.423, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 11:05:16.531, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 11:05:20.589, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 11:05:21.631, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 11:05:22.607, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 11:05:22.716, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 11:05:23.987, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 11:05:24.424, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 11:05:24.966, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 11:05:25.256, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 11:05:25.583, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 11:05:25.905, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 11:35:48.732, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 11:35:48.842, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 11:35:52.895, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 11:35:53.878, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 11:35:54.921, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 11:35:55.034, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 11:35:56.342, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 11:35:56.735, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 11:35:57.168, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 11:35:57.493, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 11:35:57.817, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 11:35:58.137, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 12:06:09.303, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 12:06:09.411, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 12:06:13.464, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 12:06:14.397, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 12:06:14.723, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 12:06:14.835, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 12:06:16.090, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 12:06:16.422, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 12:06:16.963, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 12:06:17.179, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 12:06:17.398, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 12:06:17.612, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 12:36:31.576, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 12:36:31.646, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 12:36:32.416, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 12:36:32.525, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 12:36:32.526, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 12:36:35.135, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 12:36:36.074, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 12:36:36.509, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 12:36:36.661, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 12:36:38.466, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 12:36:39.048, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 12:36:40.151, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 12:36:40.412, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 12:36:40.633, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 12:36:40.849, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 13:07:03.552, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 13:07:03.557, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 13:07:03.881, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 13:07:03.991, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:07:03.991, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:07:06.961, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:07:07.942, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:07:08.595, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 13:07:08.663, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 13:07:09.972, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 13:07:10.516, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 13:07:11.009, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 13:07:11.334, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 13:07:11.552, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 13:07:11.874, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 13:37:28.433, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 13:37:28.542, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:37:32.485, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:37:33.522, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:37:34.291, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 13:37:34.403, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 13:37:35.663, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 13:37:36.099, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 13:37:36.639, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 13:37:36.934, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 13:37:37.150, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 13:37:37.473, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 13:37:58.411, SYS,  INFO,       29/pmon, Получена команда PROP_PUT от ::1, изменение менеджера WCCOAui(1) по индексу 7
+WCCILpmon    (1), 2026.04.02 13:37:58.411, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 13:37:58.497, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 13:55:23.873, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 13:55:23.878, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 13:55:41.548, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #2
+WCCILpmon    (1), 2026.04.02 13:55:41.553, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 13:55:45.714, SYS,  INFO,       21/pmon, Получена команда нду STOP_ALL от ::1, остановка проекта
+WCCILpmon    (1), 2026.04.02 13:55:45.715, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:55:45.716, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:55:45.716, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:55:45.717, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:55:49.536, SYS,  INFO,       17/pmon, Остановка менеджера WCCILevent(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:55:49.755, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:55:50.689, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:55:50.905, SYS,  INFO,       13/pmon, Проект полностью остановлен - ожидание команд
+WCCILpmon    (1), 2026.04.02 13:56:21.481, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOAui(1) с индексом 7
+WCCILpmon    (1), 2026.04.02 13:56:21.486, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 13:57:37.044, SYS,  INFO,       20/pmon, Получена команда START_ALL от ::1, запуск проекта
+WCCILpmon    (1), 2026.04.02 13:57:37.046, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 13:57:38.293, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 13:57:38.836, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 13:57:39.271, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 13:57:39.594, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 13:57:39.926, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 13:57:53.577, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOAui(1) с индексом 7
+WCCILpmon    (1), 2026.04.02 13:57:53.578, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 13:57:53.684, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 13:57:56.362, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 14:20:52.268, SYS,  INFO,       21/pmon, Получена команда нду STOP_ALL от ::1, остановка проекта
+WCCILpmon    (1), 2026.04.02 14:20:52.269, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 14:20:52.269, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 14:20:52.270, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 14:20:52.270, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 14:20:56.234, SYS,  INFO,       17/pmon, Остановка менеджера WCCILevent(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 14:20:56.343, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 14:20:57.419, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 14:20:58.158, SYS,  INFO,       13/pmon, Проект полностью остановлен - ожидание команд
+WCCILpmon    (1), 2026.04.02 14:21:04.643, SYS,  INFO,       20/pmon, Получена команда START_ALL от ::1, запуск проекта
+WCCILpmon    (1), 2026.04.02 14:21:04.648, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 14:21:05.953, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 14:21:06.385, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 14:21:06.922, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 14:21:07.242, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 14:21:07.564, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 14:21:07.888, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 14:21:11.634, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 14:51:15.375, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOActrl(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 14:51:15.384, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 14:51:15.606, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 14:51:15.610, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 14:51:15.896, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 14:51:16.004, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 14:51:16.004, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 14:51:16.005, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 14:51:16.005, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 14:51:19.338, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 14:51:20.389, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 14:51:21.035, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 14:51:21.146, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 14:51:22.316, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 14:51:22.747, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 14:51:23.178, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 14:51:23.499, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 14:51:23.918, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 14:51:24.244, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 14:51:27.247, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 15:21:39.997, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 15:21:40.104, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 15:21:40.105, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 15:21:48.862, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 15:21:49.917, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 15:21:50.347, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 15:21:50.457, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 15:21:51.645, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 15:21:52.062, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 15:21:52.495, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 15:21:52.815, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 15:21:53.141, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 15:21:53.464, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 15:22:01.991, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 15:51:59.722, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOActrl(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 15:51:59.729, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 15:51:59.938, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 15:51:59.943, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 15:52:00.264, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 15:52:00.374, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 15:52:00.374, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 15:52:00.375, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 15:52:00.376, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 15:52:03.668, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 15:52:04.755, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 15:52:05.301, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 15:52:05.411, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 15:52:06.674, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 15:52:07.218, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 15:52:07.650, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 15:52:07.929, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 15:52:08.147, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 15:52:08.362, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 15:52:11.477, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 16:22:22.223, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 16:22:22.230, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 16:22:30.342, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 16:22:30.450, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 16:22:30.450, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 16:22:33.845, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 16:22:34.825, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 16:22:35.433, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 16:22:35.543, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 16:22:36.853, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 16:22:37.291, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 16:22:37.679, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 16:22:37.891, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 16:22:38.217, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 16:22:38.543, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 16:22:41.620, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 16:52:49.572, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOActrl(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 16:52:49.575, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 16:52:49.680, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 16:52:49.684, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 16:52:50.011, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 16:52:50.074, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 16:52:50.075, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 16:52:50.075, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 16:52:53.410, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 16:52:54.349, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 16:52:55.006, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 16:52:55.122, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 16:52:56.379, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 16:52:56.702, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 16:52:57.029, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 16:52:57.243, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 16:52:57.461, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 16:52:57.681, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 16:52:59.934, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 16:58:34.136, SYS,  INFO,      165, maxLogFileSize limit reached (10 MB). Renamed the logfile D:\kaskad_project\KGSHNextGen\log\\PVSS_II.log
+WCCILpmon    (1), 2026.04.02 17:21:22.949, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 17:21:22.954, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 17:21:29.433, SYS,  INFO,       21/pmon, Получена команда нду STOP_ALL от ::1, остановка проекта
+WCCILpmon    (1), 2026.04.02 17:21:29.434, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 17:21:29.435, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 17:21:29.435, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 17:21:29.436, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 17:21:33.284, SYS,  INFO,       17/pmon, Остановка менеджера WCCILevent(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 17:21:33.393, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 17:21:34.379, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 17:21:35.202, SYS,  INFO,       13/pmon, Проект полностью остановлен - ожидание команд
+WCCILpmon    (1), 2026.04.02 17:23:27.350, SYS,  INFO,       20/pmon, Получена команда START_ALL от ::1, запуск проекта
+WCCILpmon    (1), 2026.04.02 17:23:27.353, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 17:23:28.562, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 17:23:28.999, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 17:23:29.545, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 17:23:29.756, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 17:23:30.083, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 17:23:30.382, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 17:23:32.619, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 17:53:41.672, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 17:53:41.677, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 17:53:52.135, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOActrl(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 17:53:52.139, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 17:53:52.244, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCILsim(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 17:53:52.247, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 17:53:52.462, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 17:53:52.570, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 17:53:52.570, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 17:53:52.570, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 17:53:52.572, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 17:53:55.858, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 17:53:56.902, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 17:53:57.227, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 17:53:57.346, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 17:53:58.648, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 17:53:59.033, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 17:53:59.359, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 17:53:59.570, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 17:53:59.787, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 17:54:00.116, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 17:54:02.477, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 18:24:17.022, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 18:24:17.027, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 18:24:18.615, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 18:24:18.724, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:24:18.724, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:24:20.961, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:24:21.894, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:24:22.111, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 18:24:22.223, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 18:24:23.482, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 18:24:23.918, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 18:24:24.246, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 18:24:24.457, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 18:24:24.675, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 18:24:24.893, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 18:24:33.328, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.02 18:54:39.241, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAui(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.02 18:54:39.248, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 18:54:41.387, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.02 18:54:41.497, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:54:41.498, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:54:45.003, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:54:46.047, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:54:46.264, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.02 18:54:46.375, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ KGSHNextGen -pmonIndex 1 
+WCCILpmon    (1), 2026.04.02 18:54:47.679, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ KGSHNextGen -pmonIndex 2 
+WCCILpmon    (1), 2026.04.02 18:54:48.080, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ KGSHNextGen -pmonIndex 3 
+WCCILpmon    (1), 2026.04.02 18:54:48.625, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ KGSHNextGen -pmonIndex 4 
+WCCILpmon    (1), 2026.04.02 18:54:48.945, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ KGSHNextGen -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.02 18:54:49.273, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ KGSHNextGen -pmonIndex 6 
+WCCILpmon    (1), 2026.04.02 18:54:49.602, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ KGSHNextGen -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.02 18:55:24.371, SYS,  INFO,       21/pmon, Получена команда нду STOP_ALL от ::1, остановка проекта
+WCCILpmon    (1), 2026.04.02 18:55:24.372, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:55:24.372, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:55:24.373, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:55:24.375, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:55:28.098, SYS,  INFO,       17/pmon, Остановка менеджера WCCILevent(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:55:28.207, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:55:29.248, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.02 18:55:30.225, SYS,  INFO,       13/pmon, Проект полностью остановлен - ожидание команд
+WCCILpmon    (1), 2026.04.03 11:17:11.059, SYS,  INFO,        3/pmon, Получена команда отключения - остановка проекта и завершение работы
+WCCILpmon    (1), 2026.04.03 11:17:11.060, SYS,  INFO,       15/pmon, Проект полностью остановлен - завершение
+WCCILpmon    (1), 2026.04.03 11:17:11.061, SYS,  INFO,        2, Manager Stop

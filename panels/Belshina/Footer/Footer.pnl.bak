@@ -1,0 +1,183 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1920 150 N "_3DFace" 0
+E E E E E 1 -1 -1 0  170 50
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "93.2319"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+25 1
+"TABLE1"
+""
+1 0 0 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,12,-1,5,50,0,0,0,0,0
+0  -2 -2 1436 152
+EE 1 0 1 8 0 "Date" 6 1 0 "s" 1
+LANG:10027 8 Дата
+E
+1
+LANG:10027 0 
+
+80 "Time" 6 1 0 "[%Xt,False,,AlignLeft]" 1
+LANG:10027 10 Время
+E
+1
+LANG:10027 0 
+
+80 "TimeSpan" 6 1 0 "s" 1
+LANG:10027 13 Прод-ть
+E
+1
+LANG:10027 0 
+
+80 "Class" 6 1 0 "s" 1
+LANG:10027 10 Класс
+E
+1
+LANG:10027 0 
+
+200 "Type" 6 1 0 "s" 1
+LANG:10027 6 Тип
+E
+1
+LANG:10027 0 
+
+200 "Press" 6 1 0 "s" 1
+LANG:10027 10 Пресс
+E
+1
+LANG:10027 0 
+
+60 "State" 6 1 0 "s" 1
+LANG:10027 12 Статус
+E
+1
+LANG:10027 0 
+
+60 "Text" 6 1 0 "s" 1
+LANG:10027 29 Текст сообщения
+E
+1
+LANG:10027 0 
+
+670 
+13 13 10 0
+1
+LANG:10027 30 Noto Sans,12,-1,5,50,0,0,0,0,0
+0 0 1 1 1 7
+1 0
+13 2
+"btnLogin"
+""
+1 1370.070549513452 96 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+1 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {92,120,131}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  1432 80 1606 153
+
+P 
+4294967295
+"pictures/group_mgmt_16.svg"
+1
+LANG:10027 22 Авторизация
+E E E E
+14 3
+"AuthStatus"
+""
+1 1602.171505376344 82 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+2 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  1604 80 1921 116
+3 "14s" 14 0 0 9 0 -1  E "main()
+{
+  setValue(\"\", \"text\", \"Status\");
+}" 0
+ E
+14 5
+"Lock_Status"
+""
+1 1641.453541153327 34.49166666666663 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+4 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  1604 114 1921 150
+3 "14s" 14 0 0 9 0 -1  E "main()
+{
+  setValue(this, \"text\", \"UserName\");
+}" 0
+ E
+0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0
