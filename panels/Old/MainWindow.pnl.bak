@@ -1,0 +1,170 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 2029 1149 N "_3DFace" 2
+"$SCREENTYPE"
+"$dp"
+E E E E E 1 -1 -1 0  120 170
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "93.2319"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+28 2
+"TAB1"
+""
+1 72.99999999999967 23 E E E 1 E 1 E N "_3DText" E N {235,237,239} E E
+ E E
+1 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+5
+"shadowOffset" "[8,8]"
+"shadowColor" "{63,63,63,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"showBackground" "0"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0  71 21 2012 965
+E5 "General" 1
+LANG:10027 10 Общее
+0
+"Process" 1
+LANG:10027 14 Процесс
+1 "Process_ref.pnl" 1
+LANG:10027 0 
+0
+
+"Production" 1
+LANG:10027 24 Производство
+1 "Passport_Review.pnl" 1
+LANG:10027 0 
+0
+
+"KIP" 1
+LANG:10027 6 КИП
+1 "KIP.pnl" 1
+LANG:10027 0 
+1
+"$dp""$dp"
+
+"Recipe" 1
+LANG:10027 14 Рецепты
+1 "Recipe.pnl" 1
+LANG:10027 0 
+0
+
+
+2 3
+"PRIMITIVE_TEXT2"
+""
+1 11 12 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+2 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E U  0 E 11 12 54 34
+0 2 2 "0s" 0 0 0 192 0 0  11 12 1
+1
+LANG:10027 56 MS Shell Dlg 2,-1,19,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 6 РЯД
+13 4
+"PUSH_BUTTON1"
+""
+1 9 51.60869565217394 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+3 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  7 43 63.00000000000001 85
+
+T 
+1
+LANG:10027 1 1
+E E E E
+13 5
+"PUSH_BUTTON2"
+""
+1 9 89.17934782608691 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+4 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  7 80.875 63 121.125
+
+T 
+1
+LANG:10027 1 2
+E E E E
+1 6 0 "" 18
+0
+0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+3 0 "PANEL_REF2" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"vision/aes/AESRow.pnl" 131 2183 T 6 U 
+1
+"$SCREENTYPE""$SCREENTYPE"
+0

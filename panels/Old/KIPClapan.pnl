@@ -1,0 +1,253 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1294 842 N "_3DFace" 0
+E E E E E 1 -1 -1 0  760 360
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "93.2319"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+23 1
+"TREND1"
+""
+1 10.00000000000011 29.50000000000001 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  8.000000000000114 27.50000000000001 1286 832
+5 E E E 18 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#1_1" "System1:Press1.Inputs.RecipeBoolVal.SupplySteamCam_01DFB" 0 1 1 1 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 48 Press1.Inputs.RecipeBoolVal.SupplySteamCam_01DFB
+1
+LANG:10027 0 
+0 "" ""  0 0 1 0 0 1 0 1 N "WF_FrameDark"
+1 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#2_1" "System1:Press1.Inputs.RecipeBoolVal.ReturnSteamCam_02DFB" 0 1 1 1 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 48 Press1.Inputs.RecipeBoolVal.ReturnSteamCam_02DFB
+1
+LANG:10027 0 
+0 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+1 0 0 1 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#3_1" "System1:Press1.Inputs.RecipeBoolVal.SupplyCoolWaterCam_03DFB" 0 1 1 1 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 52 Press1.Inputs.RecipeBoolVal.SupplyCoolWaterCam_03DFB
+1
+LANG:10027 0 
+0 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#4_1" "System1:Press1.Inputs.BoolValues.ReturnCoolWaterCam_04DFB" 0 1 1 1 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 49 Press1.Inputs.BoolValues.ReturnCoolWaterCam_04DFB
+1
+LANG:10027 0 
+1 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#5_1" "System1:Press1.Inputs.BoolValues.Vacuum_05DFB" 0 1 1 1 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 37 Press1.Inputs.BoolValues.Vacuum_05DFB
+1
+LANG:10027 0 
+0 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#6_1" "System1:Press1.Inputs.BoolValues.SupplySteamDiaph_06DFB" 0 1 1 0 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 47 Press1.Inputs.BoolValues.SupplySteamDiaph_06DFB
+1
+LANG:10027 0 
+0 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#7_1" "System1:Press1.Inputs.BoolValues.SupplyCoolWater_07DFB" 0 1 1 0 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 46 Press1.Inputs.BoolValues.SupplyCoolWater_07DFB
+1
+LANG:10027 0 
+1 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#8_1" "System1:Press1.Inputs.BoolValues.FillHotWater_08DFB" 0 1 1 0 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 43 Press1.Inputs.BoolValues.FillHotWater_08DFB
+1
+LANG:10027 0 
+1 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#9_1" "System1:Press1.Inputs.BoolValues.SupplyWater190_09DFB" 0 1 1 0 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 45 Press1.Inputs.BoolValues.SupplyWater190_09DFB
+1
+LANG:10027 0 
+1 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#10_1" "System1:Press1.Inputs.BoolValues.OutCircHotWater_10DFB" 0 1 1 0 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 46 Press1.Inputs.BoolValues.OutCircHotWater_10DFB
+1
+LANG:10027 0 
+1 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#11_1" "System1:Press1.Inputs.BoolValues.OutCircWater190_11DFB" 0 1 1 0 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 46 Press1.Inputs.BoolValues.OutCircWater190_11DFB
+1
+LANG:10027 0 
+0 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#12_1" "System1:Press1.Inputs.BoolValues.ReturnWater190_12DFB" 0 1 1 0 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 45 Press1.Inputs.BoolValues.ReturnWater190_12DFB
+1
+LANG:10027 0 
+1 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#13_1" "System1:Press1.Inputs.BoolValues.ReturnCoolWater_13DFB" 0 1 1 0 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 46 Press1.Inputs.BoolValues.ReturnCoolWater_13DFB
+1
+LANG:10027 0 
+1 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#14_1" "System1:Press1.Inputs.BoolValues.UtilHotWater_14DFB" 0 1 1 0 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 43 Press1.Inputs.BoolValues.UtilHotWater_14DFB
+1
+LANG:10027 0 
+1 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#15_1" "System1:Press1.Inputs.BoolValues.Drain_5Bar_15DFB" 0 1 1 0 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 41 Press1.Inputs.BoolValues.Drain_5Bar_15DFB
+1
+LANG:10027 0 
+1 "" ""  0 0.050346673 99.949653 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#16_1" "System1:Press1.Inputs.BoolValues.ReturnSteamDiaph_16DFB" 0 1 1 0 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 47 Press1.Inputs.BoolValues.ReturnSteamDiaph_16DFB
+1
+LANG:10027 0 
+1 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#17_1" "System1:Press1.Inputs.BoolValues.DrainMain_17DFB" 0 1 1 0 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 40 Press1.Inputs.BoolValues.DrainMain_17DFB
+1
+LANG:10027 0 
+1 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+0 
+E 1273 N {0,0,0} 0 0 1 0 1 0 1 0 "#18_1" "System1:Press1.Inputs.BoolValues.Reserve_18DFB" 0 1 1 0 1 "1 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 38 Press1.Inputs.BoolValues.Reserve_18DFB
+1
+LANG:10027 0 
+1 "" ""  0 0 1 0 0 1 0 1 N "WF_Head"
+0 0 0 0 0 0 0 0
+1 1 "%c" "" 0 1 0 0 
+E 1 0 0 0 90 0 20 300
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1
+LANG:10027 49 MS Shell Dlg 2,-1,8,5,50,0,0,0,0,0,Обычный
+0  1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  100 
+N {0,0,0} 0 0 1 0 1 150 1 5 5 1 2
+0
+0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

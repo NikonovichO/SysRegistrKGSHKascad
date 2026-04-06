@@ -1,0 +1,1012 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1827 911 N {207,207,207} 1
+"$dp"
+E E E E E 1 -1 -1 0  540 120
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "93.2319"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+13 1
+"BTN_VALVE"
+""
+1 1071.046593186373 28.00000000000001 E E E 1 E 1 E N "WF_Text" E N "WF_RefDiffLineDark" E E
+ E E
+0 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+3
+"hoverfclr" "N \"WF_Text\""
+"hoverbclr" "N \"WF_Text\""
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  1069.046593186373 22.00000000000001 1183.046593186373 49.00000000000001
+
+B 
+4294967295
+"XmUNSPECIFIED_PIXMAP"
+1
+LANG:10027 15 Клапаны
+
+"// SimpleCtrlScriptStart {invalid}
+main()
+{
+  EP_childPanelOn();
+}
+
+void EP_childPanelOn()
+{
+  ChildPanelOnRelativModal(\"KIPClapan.pnl\",
+      \"Клапаны\", makeDynString(\"\"), 60, 30);
+}
+
+// SimpleCtrlScript {EP_childPanelOn}
+// Function {ChildPanelOnRelativModal}
+// File {KIPClapan.pnl}
+// Panel {Клапаны}
+// Parent {}
+// Module {}
+// OffsetX {60}
+// OffsetY {30}
+// SimpleCtrlScriptEnd {EP_childPanelOn}
+" 0
+ E E E
+13 2
+"PUSH_BUTTON1"
+""
+1 41 76.13820439054206 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+1 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  39 70.13820439054206 163 97.13820439054206
+
+T 
+1
+LANG:10027 25 Отчет пример
+
+
+"main(mapping event)
+{
+
+  idispatch objXL;
+  idispatch objXLWorkbooks;
+  idispatch objXLWorkbook;
+  idispatch objXLWorksheet; // Добавили объект Worksheet
+  anytype range;
+  string filePath = \"D:\\\\1.xlsx\"; // Путь к вашему Excel файлу.  Обязательно укажите правильный путь!
+  string sheetName = \"Sheet1\";        // Имя листа, в который нужно внести изменения.  Измените, если нужно.
+
+  objXL = createComObject(\"Excel.Application\");
+
+  objXL.Visible = -1; // -1 делает Excel видимым, 0 - невидимым (для фоновой работы)
+  objXLWorkbooks = objXL.Workbooks;
+
+  // Открываем СУЩЕСТВУЮЩИЙ файл
+  objXLWorkbook = objXLWorkbooks.Open(filePath);
+ DebugN(\"Документ открыт\");
+ objXLWorksheet = objXLWorkbook.Worksheets(sheetName);  // Первый лист (индексация с 1)
+
+ range=objXL.Range(\"A3\");
+ range.Value2 = \"Привет мир\"; // Записываем значение
+
+  // Сохраняем изменения и закрываем файл
+  objXLWorkbook.Save(); // Сохраняем изменения в файле
+  // objXLWorkbook.SaveAs(\"C:\\\\path\\\\to\\\\your\\\\newfile.xlsx\");  // Альтернатива: Сохранить как новый файл, не перезаписывая исходный.
+
+  objXLWorkbook.Close();    // Закрываем книгу
+
+  objXL.Quit();  // Закрываем Excel.  Это важно!
+DebugN(\"Документ закрыт, проверьте результат\");
+  // Освобождаем COM-объекты
+  releaseComObject(objXLWorksheet);
+  releaseComObject(objXLWorkbook);
+  releaseComObject(objXLWorkbooks);
+  releaseComObject(objXL);
+
+}" 0
+ E E E
+13 3
+"PUSH_BUTTON2"
+""
+1 1191 27 E E E 1 E 1 E N "WF_Text" E N "WF_RefDiffLineDark" E E
+ E E
+2 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+3
+"hoverfclr" "N \"WF_Text\""
+"hoverbclr" "N \"WF_Text\""
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  1189 21 1303 48
+
+B 
+4294967295
+"XmUNSPECIFIED_PIXMAP"
+1
+LANG:10027 20 Фомование
+
+
+"// SimpleCtrlScriptStart {valid}
+main()
+{
+  EP_childPanelOn();
+}
+
+void EP_childPanelOn()
+{
+  ChildPanelOnRelativModal(\"KIPClapan.pnl\",
+      \"Клапаны\",
+      makeDynString(\"\"),
+      60, 30);
+}
+
+// SimpleCtrlScript {EP_childPanelOn}
+// Function {ChildPanelOnRelativModal}
+// File {KIPClapan.pnl}
+// Panel {Клапаны}
+// Parent {}
+// Module {}
+// OffsetX {60}
+// OffsetY {30}
+// SimpleCtrlScriptEnd {EP_childPanelOn}
+" 0
+ E E E
+29 4
+"DateTimeEdit_ewo2"
+""
+1 620 10 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+3 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"displayFormat" "string dd:MM:yy HH:mm"
+"specialValueText" "string "
+"calendarPopup" "bool TRUE"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  620 10 749 40
+16 DateTimeEdit.ewo
+0
+"main()
+{
+  time t = getCurrentTime();
+  DateTimeEdit_ewo2.dateTime(t);
+}" 0
+29 5
+"DateTimeEdit_ewo3"
+""
+1 620 42 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+4 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"displayFormat" "string dd:MM:yy HH:mm"
+"specialValueText" "string "
+"calendarPopup" "bool TRUE"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  620 42 749 72
+16 DateTimeEdit.ewo
+0
+"main()
+{
+  time t = getCurrentTime();
+  this.dateTime(t);
+}" 0
+2 6
+"PRIMITIVE_TEXT7"
+""
+1 513 30.1354963430723 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+5 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E U  0 E 513 30.1354963430723 578 48
+0 2 2 "0s" 0 0 0 192 0 0  513 30.1354963430723 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 14 Выборка
+2 7
+"PRIMITIVE_TEXT8"
+""
+1 270 30 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+6 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E U  0 E 270 30 362 48
+0 2 2 "0s" 0 0 0 192 0 0  270 30 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 20 Обновление
+2 8
+"PRIMITIVE_TEXT9"
+""
+1 595.09375 14.78375327897967 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+7 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E U  0 E 595.09375 14.78375327897967 604 33
+0 2 2 "0s" 0 0 0 192 0 0  595.09375 14.78375327897967 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 2 с
+2 9
+"PRIMITIVE_TEXT10"
+""
+1 592.8125 49.92728741712068 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+8 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E U  0 E 592.8125 49.92728741712068 612 68
+0 2 2 "0s" 0 0 0 192 0 0  592.8125 49.92728741712068 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 4 по
+13 10
+"BTN_UPDATE"
+""
+1 376.75 20.23293052021455 E E E 1 E 1 E N "_ButtonText" E N "STD_ptSum4Back" E E
+ E E
+9 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"hoverfclr" "N \"_Transparent\""
+"hoverbclr" "N {220,255,66}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  374.75 7.276408781084124 429.75 74.27640878108413
+
+B 
+4294967295
+"XmUNSPECIFIED_PIXMAP"
+1
+LANG:10027 0 
+"main(mapping event)
+{
+  time t = getCurrentTime();
+  setValue(\"TREND1\", \"timeBegin\", t);
+  bool val;
+  dpGet(\"System1:\"+$dp+\"Inputs.BoolValues.Runtime\",val);
+  if (val)
+  {
+     dpSet(\"System1:\"+$dp+\"Inputs.BoolValues.Runtime\",0);
+     Debug(\"0\");
+
+   }
+  else
+   {
+     dpSet(\"System1:\"+$dp+\"Inputs.BoolValues.Runtime\",1);
+     DebugN(\"1\");
+     setValue(\"TREND1\", \"timeBegin\", t);
+   }
+}
+" 0
+ E E " main()
+{
+  BTN_UPDATE.buttonUpPixmap = \"play.png\";
+  dpConnect(\"ShowRuntime\",\"System1:\"+$dp+\"Inputs.BoolValues.Runtime\");
+}
+
+ void ShowRuntime(string dp1, bool bValue)
+{
+  if (bValue){
+     BTN_UPDATE.buttonUpPixmap = \"stop-button.png\";
+  }else{
+     BTN_UPDATE.buttonUpPixmap = \"play.png\";
+  }
+}
+
+" 0
+
+13 11
+"PUSH_BUTTON3"
+""
+1 771 37 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+10 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  769 31.00000000000001 893 58.00000000000001
+
+B 
+4294967295
+"pictures/accept.png"
+1
+LANG:10027 18 Применить
+"main(mapping event)
+{
+  time starttime;
+  time endtime;
+  starttime = DateTimeEdit_ewo2.dateTime();
+  endtime = DateTimeEdit_ewo3.dateTime();
+//   starttime = makeTime(2025, 4, 4, 13);
+//   endtime = makeTime(2025, 4, 4, 14, 30);
+  setValue(\"TREND1\", \"timeInterval\", endtime-starttime);
+  setValue(\"TREND1\", \"timeBegin\", starttime);
+}" 0
+ E E E
+13 12
+"PUSH_BUTTON4"
+""
+1 1311.046593186373 26.00000000000001 E E E 1 E 1 E N "WF_Text" E N "WF_RefDiffLineDark" E E
+ E E
+11 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+3
+"hoverfclr" "N \"WF_Text\""
+"hoverbclr" "N \"WF_Text\""
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  1309.046593186373 20.00000000000002 1423.046593186373 47.00000000000001
+
+B 
+4294967295
+"XmUNSPECIFIED_PIXMAP"
+1
+LANG:10027 20 Диафрагма
+
+
+"// SimpleCtrlScriptStart {valid}
+main()
+{
+  EP_childPanelOn();
+}
+
+void EP_childPanelOn()
+{
+  ChildPanelOnRelativModal(\"KIPClapan.pnl\",
+      \"Клапаны\",
+      makeDynString(\"\"),
+      60, 30);
+}
+
+// SimpleCtrlScript {EP_childPanelOn}
+// Function {ChildPanelOnRelativModal}
+// File {KIPClapan.pnl}
+// Panel {Клапаны}
+// Parent {}
+// Module {}
+// OffsetX {60}
+// OffsetY {30}
+// SimpleCtrlScriptEnd {EP_childPanelOn}
+" 0
+ E E E
+13 13
+"PUSH_BUTTON5"
+""
+1 1427.046593186373 27.00000000000001 E E E 1 E 1 E N "WF_Text" E N "WF_RefDiffLineDark" E E
+ E E
+12 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+3
+"hoverfclr" "N \"WF_Text\""
+"hoverbclr" "N \"WF_Text\""
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  1425.046593186373 21.00000000000002 1539.046593186373 48.00000000000001
+
+B 
+4294967295
+"XmUNSPECIFIED_PIXMAP"
+1
+LANG:10027 27 Реле давления
+
+
+"// SimpleCtrlScriptStart {valid}
+main()
+{
+  EP_childPanelOn();
+}
+
+void EP_childPanelOn()
+{
+  ChildPanelOnRelativModal(\"KIPClapan.pnl\",
+      \"Клапаны\",
+      makeDynString(\"\"),
+      60, 30);
+}
+
+// SimpleCtrlScript {EP_childPanelOn}
+// Function {ChildPanelOnRelativModal}
+// File {KIPClapan.pnl}
+// Panel {Клапаны}
+// Parent {}
+// Module {}
+// OffsetX {60}
+// OffsetY {30}
+// SimpleCtrlScriptEnd {EP_childPanelOn}
+" 0
+ E E E
+13 14
+"PUSH_BUTTON6"
+""
+1 1542.046593186373 26.75000000000001 E E E 1 E 1 E N "WF_Text" E N "WF_RefDiffLineDark" E E
+ E E
+13 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+3
+"hoverfclr" "N \"WF_Text\""
+"hoverbclr" "N \"WF_Text\""
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  1540.046593186373 20.75000000000001 1654.046593186373 47.75000000000001
+
+B 
+4294967295
+"XmUNSPECIFIED_PIXMAP"
+1
+LANG:10027 9 Сила
+
+"// SimpleCtrlScriptStart {valid}
+main()
+{
+  EP_childPanelOn();
+}
+
+void EP_childPanelOn()
+{
+  ChildPanelOnRelativModal(\"KIPClapan.pnl\",
+      \"Клапаны\",
+      makeDynString(\"\"),
+      60, 30);
+}
+
+// SimpleCtrlScript {EP_childPanelOn}
+// Function {ChildPanelOnRelativModal}
+// File {KIPClapan.pnl}
+// Panel {Клапаны}
+// Parent {}
+// Module {}
+// OffsetX {60}
+// OffsetY {30}
+// SimpleCtrlScriptEnd {EP_childPanelOn}
+" 0
+ E E E
+13 15
+"PUSH_BUTTON7"
+""
+1 1657.013026052104 26.5 E E E 1 E 1 E N "WF_Text" E N "WF_RefDiffLineDark" E E
+ E E
+14 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+3
+"hoverfclr" "N \"WF_Text\""
+"hoverbclr" "N \"WF_Text\""
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  1655.013026052104 20.50000000000001 1819.013026052104 47.5
+
+B 
+4294967295
+"XmUNSPECIFIED_PIXMAP"
+1
+LANG:10027 39 Положение цилиндров
+
+
+"// SimpleCtrlScriptStart {valid}
+main()
+{
+  EP_childPanelOn();
+}
+
+void EP_childPanelOn()
+{
+  ChildPanelOnRelativModal(\"KIPClapan.pnl\",
+      \"Клапаны\",
+      makeDynString(\"\"),
+      60, 30);
+}
+
+// SimpleCtrlScript {EP_childPanelOn}
+// Function {ChildPanelOnRelativModal}
+// File {KIPClapan.pnl}
+// Panel {Клапаны}
+// Parent {}
+// Module {}
+// OffsetX {60}
+// OffsetY {30}
+// SimpleCtrlScriptEnd {EP_childPanelOn}
+" 0
+ E E E
+25 16
+"TABLE3"
+""
+1 11.4375 102.0735294117645 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+15 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  9.4375 100.0735294117645 494.5625 902
+"main()
+{
+  dpConnect(\"FillTable3\",\"System1:\"+$dp+\".Inputs.Messages.LoaderSafetyBar1\");
+}
+
+void FillTable3(string dp, bool val)
+{
+
+
+}" 0
+E 1 0 1 4 0 "Date" 6 1 0 "[%d.%m.%yt,False,,AlignLeft]" 1
+LANG:10027 8 Дата
+E
+1
+LANG:10027 0 
+
+60 "Time" 6 1 0 "[%Xt,False,,AlignLeft]" 1
+LANG:10027 10 Время
+E
+1
+LANG:10027 0 
+
+60 "State" 6 1 0 "[10s,,,AlignLeft]" 1
+LANG:10027 12 Статус
+E
+1
+LANG:10027 0 
+
+60 "Message" 6 1 0 "[10s,,,AlignLeft]" 1
+LANG:10027 29 Текст Сообщения
+E
+1
+LANG:10027 0 
+
+240 
+13 13 10 0
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0 0 1 1 1 7
+1 0
+23 17
+"TREND1"
+""
+1 510.5931863727455 99.99999999999986 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+16 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  509 98.00000000000001 1162 802
+5 "main()
+{
+  TREND1.connectDirectly(\"FormingPressuer\", \"System1:\"+$dp+\"Inputs.AnalogValues.FormingPressure:_online.._value\");
+  TREND1.connectDirectly(\"PressReturnDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.PressReturnDiaph:_online.._value\");
+  TREND1.connectDirectly(\"PressSupplyDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.PressSupplyDiaph:_online.._value\");
+  TREND1.connectDirectly(\"TempSupplyDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.TempSupplyDiaph:_online.._value\");
+  TREND1.connectDirectly(\"TempReturnDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.TempReturnDiaph:_online.._value\");
+}" 0
+ E E 2 648 N {0,0,0} 0 0 1 0 1 0 1 0 "TemperatureCam1" "" 0 2 0 0 1 "3 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 0 
+1
+LANG:10027 3 °C
+1 "" ""  0 0 200 0 0 1 0 1 N "Red"
+1 0 0 0 0 0 0 0
+0 
+E 648 N {0,0,0} 0 0 1 0 1 0 1 0 "Control" "" 0 2 0 0 1 "3 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 0 
+1
+LANG:10027 1 %
+1 "" ""  0 0 100 0 0 1 0 1 N "blue"
+0 0 0 0 0 0 0 0
+1 0 "%H:%M:%S" "%x" 0 1 0 0 
+E 1 0 0 0 90 1 20 600
+1
+LANG:10027 50 MS Shell Dlg 2,-1,12,5,50,0,0,0,0,0,Обычный
+0  1
+LANG:10027 50 MS Shell Dlg 2,-1,12,5,50,0,0,0,0,0,Обычный
+0  1
+LANG:10027 50 MS Shell Dlg 2,-1,12,5,50,0,0,0,0,0,Обычный
+0  100 
+N {0,0,0} 0 0 1 0 1 150 1 5 5 1 2
+0
+23 18
+"TREND2"
+""
+1 1175.296593186373 100.0743040049657 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+17 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  1171 98.00000000000003 1824 802
+5 "main()
+{
+  connectDirectly(\"PressureCam\", \"System1:\"+$dp+\"Inputs.AnalogValues.PressureCam\");
+  connectDirectly(\"TempCam\", \"System1:\"+$dp+\"Inputs.AnalogValues.TempCam\");
+  connectDirectly(\"PressingForce\", \"System1:\"+$dp+\"Inputs.AnalogValues.PressingForce\");
+ }" 0
+ E E 2 648 N {0,0,0} 0 0 1 0 1 0 1 0 "PressureCam" "" 0 2 0 0 1 "1 3 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 32 Давление в камере
+1
+LANG:10027 6 мПа
+0 "" ""  0 0 1 0 0 1 0 1 N "Red"
+0 0 0 0 0 0 0 0
+0 
+E 648 N {0,0,0} 0 0 1 0 1 0 1 0 "PressureControl" "" 0 2 0 0 1 "3 0 0.0" "%x" 0 0 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 0 
+1
+LANG:10027 1 %
+1 "" ""  0 0 100 0 0 1 0 1 N {70,190,255}
+0 0 0 0 0 0 0 0
+1 0 "%X" "%x" 0 1 0 0 
+E 1 0 0 0 90 1 20 7200
+1
+LANG:10027 35 MS Shell Dlg 2,-1,11,5,50,0,0,0,0,0
+0  1
+LANG:10027 35 MS Shell Dlg 2,-1,11,5,50,0,0,0,0,0
+0  1
+LANG:10027 35 MS Shell Dlg 2,-1,11,5,50,0,0,0,0,0
+0  100 
+N {0,0,0} 0 0 1 0 1 150 1 5 5 1 2
+0
+25 19
+"TABLE1"
+""
+1 532.9132634005488 845.2336171390448 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+18 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  509 800 1162 909
+"main()
+{
+//определяем массивы x и y для заполнения строк таблицы TABLE1
+  dyn_anytype tm,cn;
+  tm[1]= \"Температура , °С\";
+  tm[2]= \"\";
+  tm[3]=\"red\";
+  cn[1]=\"Управление, °С\";
+  cn[2]= \"\";
+  cn[3]=\"blue\";
+
+//заполняем строки таблицы, используя массив
+  setValue(\"TABLE1\",\"updateLine\",1,\"Param\",tm,\"Value\",tm,\"TimeStemp\",tm);
+  setValue(\"TABLE1\",\"updateLine\",1,\"Param\",cn,\"Value\",cn,\"TimeStemp\",cn);
+
+  //связываем метод FillTable с DPE точки данных
+  dpConnect(\"FillTable\",\"System1:\"+$dp+\"Inputs.AnalogValues.TempSupplyDiaph\",
+                        \"System1:\"+$dp+\"Inputs.AnalogValues.TempReturnDiaph\");
+}
+
+
+void FillTable(string dpe1, float val1, string dpe2, float val2)
+{
+ shape table = getShape(\"TABLE1\");
+ time ts1, ts2;
+
+//записываем в поле Value переменную val1, в ту строку где поле \"Param\" = \"Давление подачи, Мпа\", 1 - число полей по которым производится поиск строки
+  table.updateLine(1,\"Param\",\"Температура, °С\", \"Value\", val1);
+  table.updateLine(1,\"Param\",\"Управление, %\", \"Value\", val2);
+
+//получаем время текущего значения
+  dpGet(\"System1:\"+$dp+\"Inputs.AnalogValues.TempSupplyDiaph:_online.._stime\",ts1);
+  table.updateLine(1,\"Param\",\"Температура подачи, °С\", \"TimeStemp\",ts1);
+
+  dpGet(\"System1:\"+$dp+\"Inputs.AnalogValues.TempReturnDiaph:_online.._stime\",ts2);
+  table.updateLine(1,\"Param\",\"Температура возврата, °С\", \"TimeStemp\",ts2);
+
+}
+" 0
+E 1 0 1 3 3 "Param" 6 1 0 "[30s,,,AlignLeft]" 1
+LANG:10027 16 Параметр
+E
+1
+LANG:10027 0 
+
+200 "Value" 6 1 0 "[3.3f,False,False,AlignLeft,False]" 1
+LANG:10027 16 Значение
+E
+1
+LANG:10027 0 
+
+100 "TimeStemp" 6 1 0 "[%ct,False,,AlignLeft]" 1
+LANG:10027 29 Отметка времени
+E
+1
+LANG:10027 0 
+
+180 
+15 15 "" 1 1
+LANG:10027 2 #3
+"" 1 1
+LANG:10027 2 #2
+"" 1 1
+LANG:10027 2 #1
+10 0
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0 0 1 1 1 7
+1 0
+25 20
+"TABLE2"
+""
+1 1194.986973947896 842.8719723183391 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+19 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1171.013026052104 798 1824.013026052104 906.1176470588235
+"main()
+{
+//определяем массивы  для заполнения строк таблицы TABLE2
+  dyn_anytype pc, cn;
+
+  pc[1]=\"Давление, Мпа\";
+  pc[2]= \"\";
+  pc[3]=\"red\";
+
+  cn[1]= \"Управление, %\";
+  cn[2]= \"\";
+  cn[3]=\"blue\";
+
+  //заполняем строки таблицы, используя массив
+  setValue(\"TABLE2\", \"updateLine\", 1, \"Param\", pc, \"Value\", pc, \"TimeStemp\", pc);
+  setValue(\"TABLE2\", \"updateLine\", 1, \"Param\", cn, \"Value\", cn, \"TimeStemp\", cn);
+
+//связываем метод FillTable с DPE точки данных
+  dpConnect(\"FillTable2\",\"System1:\"+$dp+\"Inputs.AnalogValues.TempCam\",
+                        \"System1:\"+$dp+\"Inputs.AnalogValues.PressureCam\");
+}
+
+void FillTable2(string dpe1, float val1, string dpe2, float val2)
+{
+ shape table = getShape(\"TABLE2\");
+ time ts1,ts2;
+
+//записываем в поле Value переменную val1, в ту строку где поле \"Param\" = \"Давление подачи, Мпа\", 1 - число полей по которым производится поиск строки
+  table.updateLine(1, \"Param\", \"Давление, Мпа\", val1);
+  table.updateLine(1, \"Param\", \"Управление, %\", val2);
+
+//получаем время текущего значения
+  dpGet(\"System1:\"+$dp+\"Inputs.AnalogValues.PressSupplyDiaph:_online.._stime\", ts1);
+  table.updateLine(1, \"Param\", \"Температура,°С\", \"TimeStemp\", ts1);
+
+  dpGet(\"System1:\"+$dp+\"Inputs.AnalogValues.PressSupplyDiaph:_online.._stime\", ts2);
+  table.updateLine(1, \"Param\", \"Давление, Мпа\", \"TimeStemp\", ts2);
+
+  }
+" 0
+E 1 0 1 3 0 "Param" 6 1 0 "[30s,,,AlignLeft]" 1
+LANG:10027 16 Параметр
+E
+1
+LANG:10027 0 
+
+200 "Value" 6 1 0 "[3.3f,False,False,AlignLeft,False]" 1
+LANG:10027 16 Значение
+E
+1
+LANG:10027 0 
+
+100 "TimeStemp" 6 1 0 "[%ct,False,,AlignLeft]" 1
+LANG:10027 29 Отметка времени
+E
+1
+LANG:10027 0 
+
+180 
+15 15 10 0
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0 0 1 1 1 7
+1 0
+29 23
+"Label_trend1"
+""
+1 510 73 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+22 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Паровая камера, температура"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  510 73 719.9068136272545 98.00000000000003
+5 Label
+0
+E29 24
+"Label_trend2"
+""
+1 1172.093186372746 72.99999999999987 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+23 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Паровая камера, давление"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1172.093186372746 72.99999999999987 1354 97.99999999999987
+5 Label
+0
+E0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

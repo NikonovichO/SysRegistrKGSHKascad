@@ -1,0 +1,1076 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1920 800 N "_3DFace" 0
+E E E E E 1 -1 -1 0  170 230
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "93.2319"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+6 1
+"RECTANGLE1"
+""
+1 170 230 E E E 1 E 1 E N {0,0,0} E N {0,95,135} E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E -1 1 3 2 1 E 5.18 0 15.98 -880.5999999999999 -3675.4 1 E 170 230 220 280
+29 11
+"Label2"
+""
+1 70 32 E E E 1 E 1 E N {0,95,135} E N "White" E E
+ E E
+10 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Ряд"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,27,5,75,0,0,0,0,0,Полужирный
+0  0 2 259 51
+5 Label
+0
+E13 13
+"PUSH_BUTTON1"
+""
+1 40 70 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+12 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  -2 49 261 93
+
+T 
+1
+LANG:10027 1 1
+E E E E
+13 14
+"PUSH_BUTTON2"
+""
+1 40 112 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+13 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  -2 91 261 135
+
+T 
+1
+LANG:10027 1 2
+E E E E
+29 15
+"Label4"
+""
+1 70 165 E E E 1 E 1 E N {0,95,135} E N "White" E E
+ E E
+14 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Пресс"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,27,5,75,0,0,0,0,0,Полужирный
+0  0 135 259 184
+5 Label
+0
+E13 16
+"PUSH_BUTTON3"
+""
+1 40 203 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+15 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  -2 182 261 226
+
+T 
+1
+LANG:10027 1 1
+E E E E
+13 17
+"PUSH_BUTTON4"
+""
+1 40 245 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+16 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  -2 224 261 268
+
+T 
+1
+LANG:10027 1 2
+E E E E
+6 21
+"RECTANGLE2"
+""
+1 560 180 E E E 1 E 1 E N {0,0,0} E N {179,204,220} E E
+ E E
+20 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 33.18000000000001 0 15.97999999999999 -18320.8 -2876.399999999997 1 E 560 180 610 230
+13 22
+"PUSH_BUTTON5"
+""
+1 40 287 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+21 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  -2 266 261 310
+
+T 
+1
+LANG:10027 1 3
+E E E E
+13 23
+"PUSH_BUTTON6"
+""
+1 40 329 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+22 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  -2 308 261 352
+
+T 
+1
+LANG:10027 1 4
+E E E E
+13 24
+"PUSH_BUTTON7"
+""
+1 40 371 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+23 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  -2 350 261 394
+
+T 
+1
+LANG:10027 1 5
+E E E E
+13 25
+"PUSH_BUTTON8"
+""
+1 40 413 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+24 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  -2 392 261 436
+
+T 
+1
+LANG:10027 1 6
+E E E E
+13 26
+"PUSH_BUTTON9"
+""
+1 40 455 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+25 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  -2 434 261 478
+
+T 
+1
+LANG:10027 1 7
+E E E E
+29 27
+"Label5"
+""
+1 274.9999999999999 54 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+26 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Модель:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  275 54 620 90
+5 Label
+0
+E29 28
+"Label6"
+""
+1 275 8.5 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+27 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Покрышка"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  275 8.5 740 44.5
+5 Label
+0
+E29 29
+"Label7"
+""
+1 620 54 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+28 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  620 54 740 90
+5 Label
+0
+E29 30
+"Label8"
+""
+1 274.9999999999999 92 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+29 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Рецепт:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  274.9999999999999 92 620 128
+5 Label
+0
+E29 31
+"Label9"
+""
+1 620 92 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+30 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  620 92 740 128
+5 Label
+0
+E29 32
+"Label10"
+""
+1 620 130 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+31 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"alignment" "enum 132"
+"text" "string -"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  620 130 740 166
+5 Label
+0
+E29 33
+"Label11"
+""
+1 620 168 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+32 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"alignment" "enum 132"
+"text" "string -"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  620 168 740 204
+5 Label
+0
+E29 34
+"Label12"
+""
+1 275 130 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+33 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Серийный номер:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  275 130 620 166
+5 Label
+0
+E29 35
+"Label13"
+""
+1 275 168 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+34 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Номер \"сырой\" покрышки:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  275 168 620 204
+5 Label
+0
+E29 36
+"Label14"
+""
+1 275 225.75 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+35 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Параметры процесса"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  275 225.75 880 261.75
+5 Label
+0
+E29 37
+"Label15"
+""
+1 274.9999999999999 53 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+36 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Давление подачи в диафрагму, МПа:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  275.0000000000001 270 760 306
+5 Label
+0
+E29 38
+"Label16"
+""
+1 760 270 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+37 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  760 270 880 306
+5 Label
+0
+E29 39
+"Label17"
+""
+1 274.9999999999999 91 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+38 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Давление возврата из диафрагмы, МПа:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  275.0000000000001 308 760 344
+5 Label
+0
+E29 40
+"Label18"
+""
+1 275 129 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+39 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Температура подачи в диафрагму, °С:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  275.0000000000002 346 760 382
+5 Label
+0
+E29 41
+"Label19"
+""
+1 275.0000000000001 167 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+40 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Температура возврата из диафрагмы, °С:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  275.0000000000003 384 760 420
+5 Label
+0
+E29 42
+"Label20"
+""
+1 274.9999999999999 205 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+41 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Давление в камере, МПа:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  275.0000000000002 422 760.0000000000001 458
+5 Label
+0
+E29 43
+"Label21"
+""
+1 274.9999999999999 243 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+42 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Температура в камере, °С:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  275.0000000000002 460 760.0000000000001 496
+5 Label
+0
+E29 44
+"Label22"
+""
+1 274.9999999999998 281 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+43 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Давление формавания, кг:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  275 498 760 534
+5 Label
+0
+E29 45
+"Label23"
+""
+1 274.9999999999997 319 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+44 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Шаг вулканизации / всего шагов:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  274.9999999999999 536 760 572
+5 Label
+0
+E29 46
+"Label24"
+""
+1 274.9999999999997 357 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+45 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Процент выполнения, %:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  274.9999999999999 574 760 610
+5 Label
+0
+E29 47
+"Label25"
+""
+1 274.9999999999997 395 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+46 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Общее время, ч.м.:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  274.9999999999999 612 760 648
+5 Label
+0
+E29 48
+"Label26"
+""
+1 274.9999999999997 433 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+47 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Прошедшее время, ч.м.:"
+"alignment" "enum 2"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,24,5,50,0,0,0,0,0,Обычный
+0  274.9999999999999 650 760 686
+5 Label
+0
+E29 49
+"Label27"
+""
+1 760 308 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+48 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  760 308 880 344
+5 Label
+0
+E29 50
+"Label28"
+""
+1 760 346 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+49 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  760 346 880 382
+5 Label
+0
+E29 51
+"Label29"
+""
+1 760 384 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+50 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  760 384 880 420
+5 Label
+0
+E29 52
+"Label30"
+""
+1 760 422 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+51 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  760 422 880 458
+5 Label
+0
+E29 53
+"Label31"
+""
+1 760 460 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+52 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  760 460 880 496
+5 Label
+0
+E29 54
+"Label32"
+""
+1 760 498 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+53 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  760 498 880 534
+5 Label
+0
+E29 55
+"Label33"
+""
+1 760 536 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+54 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  760 536 880 572
+5 Label
+0
+E29 56
+"Label34"
+""
+1 760 574 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+55 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  760 574 880 610
+5 Label
+0
+E29 57
+"Label35"
+""
+1 760 612 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+56 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  760 612 880 648
+5 Label
+0
+E29 58
+"Label36"
+""
+1 760 650 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+57 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,24,5,75,0,0,0,0,0,Полужирный
+0  760 650 880 686
+5 Label
+0
+E23 59
+"TREND1"
+""
+1 895 8.749999999999886 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+58 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  893 7 1396 559
+5 E E E 1 498 N {0,0,0} 0 0 1 0 1 0 1 0 "#1_1" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 1 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 0 
+1
+LANG:10027 0 
+1 "" ""  1 0 0 1 0 1 N "Red"
+0 0 0 0 0 0 0 0
+1 1 "%H:%M:%S" "%x" 0 1 0 0 
+E 1 1 1 0 90 0 20 7200
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  100 
+N {0,0,0} 0 0 1 0 1 150 1 5 5 1 2
+0
+25 60
+"TABLE1"
+""
+1 895 570 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+59 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,12,-1,5,50,0,0,0,0,0
+0  893 568 1396 792
+EE 1 0 1 1 0 "#1" 6 1 0 "s" 1
+LANG:10027 2 #1
+E
+1
+LANG:10027 0 
+
+60 
+13 13 10 0
+1
+LANG:10027 30 Noto Sans,12,-1,5,50,0,0,0,0,0
+0 0 1 1 1 7
+1 0
+25 61
+"TABLE2"
+""
+1 1054 630 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+60 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,12,-1,5,50,0,0,0,0,0
+0  1405 568 1908 792
+EE 1 0 1 1 0 "#1" 6 1 0 "s" 1
+LANG:10027 2 #1
+E
+1
+LANG:10027 0 
+
+60 
+13 13 10 0
+1
+LANG:10027 30 Noto Sans,12,-1,5,50,0,0,0,0,0
+0 0 1 1 1 7
+1 0
+23 62
+"TREND2"
+""
+1 892 8.749999999999886 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+61 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  1404 7 1907 559
+5 E E E 1 498 N {0,0,0} 0 0 1 0 1 0 1 0 "#1_1" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 1 2 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 0 
+1
+LANG:10027 0 
+1 "" ""  1 0 0 1 0 1 N "Red"
+0 0 0 0 0 0 0 0
+1 1 "%H:%M:%S" "%x" 0 1 0 0 
+E 1 1 1 0 90 0 20 7200
+1
+LANG:10027 37 MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0
+0  1
+LANG:10027 37 MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0
+0  1
+LANG:10027 37 MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0
+0  100 
+N {0,0,0} 0 0 1 0 1 150 1 5 5 1 2
+0
+0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

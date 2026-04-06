@@ -1,0 +1,167 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 806 647 N "_3DFace" 0
+"main()
+{
+  int rc;
+  dbConnection conn;
+  dbRecordset rs;
+  anytype fld1, fld2;
+
+//подключение к БД через ODBC. В приложении \"Администратор ODBC\" создается источник данных, в нашем случае KGSHVulcanisation
+  rc = dbOpenConnection (\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
+  Debug (\"dbOpenConnection: \", rc);
+  if (!rc)
+  {
+    //создаем и открываем набор записей
+    rc = dbOpenRecordset (conn, \"SELECT model_tire, num_recipe FROM tTires,tRecipes WHERE tTires.id_tire = tRecipes.id_tire\", rs);
+    Debug(\"dbOpenRecordset: \", rc);
+    // The data subset is opened
+    if (!rc)
+     {
+       int i = 1;
+       while (!rc && !dbEOF (rs)) // as long as the file end is not reached
+       {
+         dbGetField (rs, 0, fld1);
+         dbGetField (rs, 1, fld2);
+         TABLE1.appendLine(\"Model_tire\", fld1, \"Num_recipe\", fld2);
+         dbMoveNext (rs); i++;
+       }
+       dbCloseRecordset (rs); //closes subset
+     }
+    dbCloseConnection (conn); //closes connection
+   }
+}" 0
+ E E E E 1 -1 -1 0  240 140
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "93.2319"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+25 1
+"TABLE1"
+""
+1 100 80 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  98 78 421.9999999999999 442.0000000000001
+EE 1 0 1 2 0 "Model_tire" 6 1 0 "s" 1
+LANG:10027 21 Модель шины
+E
+1
+LANG:10027 0 
+
+150 "Num_recipe" 6 1 0 "s" 1
+LANG:10027 25 Номер рецепта
+E
+1
+LANG:10027 0 
+
+80 
+20 20 10 0
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0 0 1 1 1 7
+1 0
+14 2
+"TEXT_FIELD1"
+""
+1 630 130 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+1 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  628 125 752 150
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {valid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:Press2.Inputs.AnalogValues.NumberPress:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:Press2.Inputs.AnalogValues.NumberPress:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+
+void EP_textFieldInCB(string dp, int iNewValue)
+{
+  setValue(\"\", \"text\", dpValToString(dp, iNewValue, TRUE) );
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:Press2.Inputs.AnalogValues.NumberPress}
+// DPConfig {:_online.._value}
+// DPType {int}
+// UseDPUnit {TRUE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

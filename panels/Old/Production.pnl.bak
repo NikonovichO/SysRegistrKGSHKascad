@@ -1,0 +1,712 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 294 454 N {207,207,207} 0
+"main()
+{
+  int rc;
+  dbConnection conn;
+  dbRecordset rs;
+  string cmdStr, sn, id_r, tstart;
+  //подключение к БД через ODBC. В приложении \"Администратор ODBC\" создается источник данных, в нашем случае KGSHVulcanisation
+  rc = dbOpenConnection(\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
+  Debug(\"подключение:\", rc);
+  if (!rc)
+  {
+    //выборка данных в recordset
+    cmdStr = \" SELECT num_recipe FROM tRecipes \";
+    rc =  dbOpenRecordset(conn, cmdStr, rs);
+    Debug(\"dbOpenRecordset\", rc);
+
+    if (!rc)
+    {
+     shape list = getShape(\"CB_Recipe\");
+     while (!rc && !dbEOF (rs))
+      {
+       dbGetField(rs, 0, sn);
+       //rc = dbSetParameter(cmd, 1, DB_PARAM_IN, 1111);
+       list.appendItem(sn); // Добавление
+       dbMoveNext(rs);
+      }
+     }
+     //выборка данных в recordset
+    cmdStr = \"SELECT id_press FROM tPresses\";
+    rc =  dbOpenRecordset(conn, cmdStr, rs);
+   if (!rc)
+    {
+     shape list = getShape(\"CB_Press\");
+     while (!rc && !dbEOF (rs))
+      {
+       dbGetField(rs, 0, sn);
+       //rc = dbSetParameter(cmd, 1, DB_PARAM_IN, 1111);
+       list.appendItem(sn); // Добавление
+       dbMoveNext(rs);
+      }
+     }
+     cmdStr = \"SELECT model_tire FROM tModelsTire\";
+    rc =  dbOpenRecordset(conn, cmdStr, rs);
+   if (!rc)
+    {
+     shape list = getShape(\"CB_Model\");
+     while (!rc && !dbEOF (rs))
+      {
+       dbGetField(rs, 0, sn);
+       //rc = dbSetParameter(cmd, 1, DB_PARAM_IN, 1111);
+       list.appendItem(sn); // Добавление
+       dbMoveNext(rs);
+      }
+     }
+  }
+
+    rc = dbCloseConnection(conn); // Соединение закрыто
+  }
+" 0
+ E E E E 1 -1 -1 0  230 180
+""0  1
+E "int idModel, idRecipe;" 0
+ 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "93.2319"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+14 22
+"TF_Number"
+""
+1 139.9977653158954 28.78162366388397 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+21 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"sizePolicy" "Expanding Fixed"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  137.9977653158954 23.12544283473378 301.9977653158955 53.30409978702939
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {valid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:Press1.Inputs.StringValues.SerialNumber:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:Press1.Inputs.StringValues.SerialNumber:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+
+void EP_textFieldInCB(string dp, string sNewValue)
+{
+  setValue(\"\", \"text\", dpValToString(dp, sNewValue, FALSE) );
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:Press1.Inputs.StringValues.SerialNumber}
+// DPConfig {:_online.._value}
+// DPType {string}
+// UseDPUnit {FALSE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+29 29
+"Label28"
+""
+1 12.58953630262351 23.21477131088159 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+28 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Номер:"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  12.58953630262351 23.21477131088159 120 53.21477131088159
+5 Label
+0
+E29 30
+"Label29"
+""
+1 13 62.01855563435416 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+29 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Модель:"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  13 62.01855563435416 120 91.0843223979878
+5 Label
+0
+E29 31
+"Label30"
+""
+1 12.75 100.308750335302 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+30 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Пресс №"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  12.75 100.308750335302 121.25 130
+5 Label
+0
+E29 32
+"Label31"
+""
+1 9.999999999999998 139.75 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+31 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Рецепт:"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  9.999999999999998 139.75 123 168
+5 Label
+0
+E29 33
+"Label32"
+""
+1 10.5895363026236 183 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+32 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Номер \"сырой\" покрышки"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  10.5895363026236 183 192.5895363026236 213
+5 Label
+0
+E30 43
+"FRAME3"
+""
+1 110 482 E E E 1 E 1 E N "_WindowText" E N {0,0,0} E E
+ E E
+42 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 4 3 2 1 E 2.624607296918316 0 2.443855939774011 -278.117266358391 -951.4074896862521 0 E 110 482 225 547
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 18 Диафрагма
+29 46
+"Label35"
+""
+1 29.29476815131189 253.9378534303578 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+45 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Номер:"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  29.29476815131189 253.9378534303578 149.2947681513119 283.9378534303578
+5 Label
+0
+E29 47
+"Label36"
+""
+1 29.29476815131189 297.9378534303578 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+46 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Ходимость:"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  29.29476815131189 297.9378534303578 149.2947681513119 327.9378534303578
+5 Label
+0
+E29 48
+"Label37"
+""
+1 29.44215222696784 339.7577683212053 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+47 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Счетчик циклов:"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  29.44215222696784 339.7577683212053 150 369.7577683212053
+5 Label
+0
+E14 49
+"TF_NumberDiaph"
+""
+1 181.1458408804913 257.661017226021 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+48 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  179.1458408804913 251.9378534303578 273.1458408804913 282
+3 "0s" 0 0 0 0 0 -1  E E E
+14 50
+"TEXT_FIELD20"
+""
+1 184.9999999999999 298.2998963681125 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+49 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  182.9999999999999 292.6832124294647 277 322
+3 "0s" 0 0 0 0 0 -1  E E E
+14 51
+"TEXT_FIELD21"
+""
+1 184.9999999999999 337.6850280294001 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+50 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  182.9999999999999 331.5466099272317 277 364.5155366424106
+3 "0s" 0 0 0 0 0 -1  E E E
+22 52
+"CB_Recipe"
+""
+1 140.5566119973145 144.2372706282541 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+51 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  138.5566119973145 138.0765563425398 297.5804486277628 171.2015563425398
+0
+
+E
+E
+E
+ 1 0
+14 53
+"TF_NumRow"
+""
+1 207 188.4381449950277 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+52 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  205 182.2757634374684 292 211.7242365625316
+3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {valid}
+main()
+{
+  EP_textFieldIn();
+}
+
+void EP_textFieldIn()
+{
+  dyn_errClass err;
+
+  if( !dpExists( \"System1:Press1.Inputs.StringValues.RawTireNumber:_online.._value\"))
+  {
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+    return;
+  }
+
+  dpConnect(\"EP_textFieldInCB\",
+            \"System1:Press1.Inputs.StringValues.RawTireNumber:_online.._value\");
+  err = getLastError();
+  if (dynlen(err) > 0)
+    setValue(\"\", \"color\", \"_dpdoesnotexist\");
+
+}
+
+
+void EP_textFieldInCB(string dp, string sNewValue)
+{
+  setValue(\"\", \"text\", dpValToString(dp, sNewValue, FALSE) );
+}
+
+// SimpleCtrlScript {EP_textFieldIn}
+// DP {System1:Press1.Inputs.StringValues.RawTireNumber}
+// DPConfig {:_online.._value}
+// DPType {string}
+// UseDPUnit {FALSE}
+// UseDPFormat {TRUE}
+// SimpleCtrlScriptEnd {EP_textFieldIn}
+" 0
+ E
+13 54
+"BTN_BEGIN"
+""
+1 10.96573484373063 417 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+53 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  8.96573484373063 411 132.9657348437307 438
+
+T 
+1
+LANG:10027 12 НАЧАТЬ
+"main(mapping event)
+{
+  int rc, yr, mn, d, hh, mm, ss;
+  dbConnection conn;
+  dbCommand cmd;
+  dbRecordset rs;
+  anytype fld;
+  dyn_string models;
+  string cmdStr, sn, id_r, tstart, s_yr, s_mn, s_d, s_hh, s_mm, s_ss, s_t, press;
+
+  rc = dbOpenConnection(\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
+  Debug(\"подключение:\", rc);
+
+  if (!rc)
+  {
+    rc=-1;
+  //получаем id модели
+  cmdStr = \"SELECT id_tire, model_tire FROM tModelsTire WHERE model_tire = '\" + CB_Model.text+\"'\";
+  DebugN(\"модель:\", cmdStr);
+  rc =  dbOpenRecordset(conn, cmdStr, rs);
+  DebugN(\"модель запрос:\",rc);
+
+
+  if (!rc)
+  {
+     dbGetField(rs, 0, idModel);
+     Debug(\"idModel:\", idModel);
+  }
+  rc= -1;
+  cmdStr = \"SELECT id_recipe, num_recipe FROM tRecipes WHERE num_recipe = '\" + CB_Recipe.text + \"'\";
+  DebugN(\"рецепт:\", cmdStr);
+  rc =  dbOpenRecordset(conn, cmdStr, rs);
+  if (!rc)
+  {
+     dbGetField(rs, 0, idRecipe);
+     Debug(\"idRecipe:\", idRecipe);
+  }
+   dbCloseConnection(conn);
+
+    time t = getCurrentTime();
+    yr = year(t);
+    mn = month(t);
+    d = day(t);
+    hh = hour(t);
+    mm = minute(t);
+    ss = second(t);
+    // переводим дату в строковый литерал для добавления в БД
+    s_yr = yr;
+    if (mn < 9) s_mn = \"0\" + mn;
+       else  s_mn = mn;
+    if (d < 9) s_d = \"0\" + d;
+       else  s_d = d;
+    if (hh < 9) s_hh = \"0\" + hh;
+       else  s_hh = hh;
+    if (mm < 9) s_mm = \"0\" + mm;
+       else  s_mm = mm;
+    if (ss < 9) s_ss = \"0\" + ss;
+       else  s_ss = ss;
+    s_t = s_yr+ '-' + s_mn + '-' + s_d + ' ' + s_hh + ':' + s_mm + ':' +s_ss;
+    Debug(\"time:\", s_t);
+    rc = dbOpenConnection(\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
+    Debug(\"подключение_1:\", rc);
+    rc = dbBeginTransaction(conn); //запуск транзакции
+    cmdStr = \"INSERT INTO tPassport(serial_num, id_recipe, time_start, id_press, id_tire, raw_tire_num) values (?,?,?,?,?,?)\";
+    // id_recipe,
+    rc = dbStartCommand(conn, cmdStr, cmd);
+    Debug(\"StartCommand:\", rc);
+    if (!rc)
+    {
+      getValue(\"CB_Press\", \"text\", press);
+     rc = dbSetParameter(cmd, 1, DB_PARAM_IN, TF_Number.text);
+      rc = dbSetParameter(cmd, 2, DB_PARAM_IN, idRecipe);
+      rc = dbSetParameter(cmd, 3, DB_PARAM_IN, s_t);
+      rc = dbSetParameter(cmd, 4, DB_PARAM_IN, press);
+      rc = dbSetParameter(cmd, 5, DB_PARAM_IN,  idModel);
+      rc = dbSetParameter(cmd, 6, DB_PARAM_IN, TF_NumRow.text);
+
+      rc = dbExecuteCommand(cmd);
+      Debug(\"dbExecuteCommand:\", rc);
+      rc = dbFinishCommand(cmd);
+      Debug(\"dbFinishCommand:\", rc);
+    }
+    if (!rc)
+    {
+      rc = dbCommitTransaction(conn); // Внесены изменения в БД
+      Debug(\"DbCommitTransaction:\", rc);
+    }
+     else
+    {
+       rc = dbRollbackTransaction (conn); // Изменения в БД отклонены
+       Debug(\"dbRollbackTransaction:\", rc);
+     //  ChildPanelOnRelativModal(\"InformationPnl.pnl\", \"Information\",  makeDynString(\"\"),10,10);
+     }
+    //ChildPanelOnRelativModal(\"InformationPnl.pnl\", \"Information\",  makeDynString(\"\"),10,10);
+   }
+
+  dbCloseConnection(conn); // Соединение закрыто
+}" 0
+ E E E
+22 55
+"CB_Press"
+""
+1 140 103.7897303835828 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+54 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  138 98 299.0476732608965 128.5281126850796
+0
+
+E
+E
+E
+ 1 0
+22 56
+"CB_Model"
+""
+1 139.901673899401 66.02221344559081 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+55 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  137.901673899401 61 298.1877134647799 86.15549411913547
+0
+
+E
+E
+E
+ 1 0
+13 57
+"BTN_END"
+""
+1 180.0938567323899 418 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+56 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  178.0938567323899 412 302.0938567323899 439
+
+T 
+1
+LANG:10027 17 ОКОНЧИТЬ
+
+"main(mapping event)
+{
+  int rc, yr, mn, d, hh, mm, ss;
+  dbConnection conn;
+  dbCommand cmd;
+  dbRecordset rs;
+  anytype fld;
+  dyn_string models;
+  string cmdStr, sn, id_r, tstart, s_yr, s_mn, s_d, s_hh, s_mm, s_ss, s_t;
+
+  rc = dbOpenConnection(\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
+  Debug(\"подключение:\", rc);
+  if (!rc)
+  {
+    time t = getCurrentTime();
+    yr = year(t);
+    mn = month(t);
+    d = day(t);
+    hh = hour(t);
+    mm = minute(t);
+    ss = second(t);
+    // переводим дату в строковый литерал для добавления в БД
+    s_yr = yr;
+    if (mn < 9) s_mn = \"0\" + mn;
+       else  s_mn = mn;
+    if (d < 9) s_d = \"0\" + d;
+       else  s_d = d;
+    if (hh < 9) s_hh = \"0\" + hh;
+       else  s_hh = hh;
+    if (mm < 9) s_mm = \"0\" + mm;
+       else  s_mm = mm;
+    if (ss < 9) s_ss = \"0\" + ss;
+       else  s_ss = ss;
+    s_t = s_yr+ '-' + s_mn + '-' + s_d + ' ' + s_hh + ':' + s_mm + ':' +s_ss;
+    Debug(\"time:\", s_t);
+    rc = dbBeginTransaction (conn); //запуск транзакции
+    cmdStr = \"UPDATE tPassport SET time_stop =? WHERE serial_num=?\";
+    rc = dbStartCommand(conn, cmdStr, cmd);
+    Debug(\"StartCommand:\", rc);
+
+    if (!rc)
+    {
+      rc = dbSetParameter(cmd, 1, DB_PARAM_IN, s_t);
+      Debug(\"dbSetParameter1:\", s_t);
+      rc = dbSetParameter(cmd, 2, DB_PARAM_IN, TF_Number.text);
+
+      rc = dbExecuteCommand(cmd);
+      Debug(\"dbExecuteCommand:\", rc);
+      rc = dbFinishCommand(cmd);
+      Debug(\"dbFinishCommand:\", rc);
+    }
+    if (!rc)
+    {
+      rc = dbCommitTransaction(conn); // Внесены изменения в БД
+      Debug(\"DbCommitTransaction:\", rc);
+    }
+     else
+    {
+       rc = dbRollbackTransaction (conn); // Изменения в БД отклонены
+       Debug(\"dbRollbackTransaction:\", rc);
+     }
+   }
+  rc = dbCloseConnection(conn); // Соединение закрыто
+}" 0
+ E E E
+0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

@@ -1,15 +1,8 @@
 [general]
-pvss_path = "D:/Sybcom/Kaskad/3.18"
-proj_path = "D:/kaskad_project/SysRegistrKGSHKascad"
+pvss_path = "C:/Sybcom/Kaskad/3.18"
+proj_path = "D:/Kaskad/Projects/SysRegistrKGSHKascad"
 proj_version = "3.18"
-#[S5ap]
-#accessPoint = "PCONLINE"
 langs = "ru_RU.utf8"
 useNGA = 1
 [ui]
 defaultFont = "Noto Sans"
-
-[opcuasrv]
-disableSecurity = 1
-enableAnonymous = 1
-uaSecurityPolicy = 0

@@ -1,6 +1,178 @@
-processing file D:\ProgramsDeveloped\Caskad\KGSHNextGen\KGSHNextGen\dplist\dplist1.txt
-DpType (152): Create msg for type VulcanisationPress sent.
-Datapoint/DpId (155): create Press1.
+processing file C:\Sybcom\Kaskad\3.18\dplist\update_004.dpl
+
+modifying type _VarTrend:
+DpType (29): Modify msg for type _VarTrend sent.
+
+modifying type _VarTrendSettings:
+DpType (40): Modify msg for type _VarTrendSettings sent.
+Datapoint/DpId (43): create _NGA_P_MSSQL_nonRedundant_Profile.
+Datapoint/DpId (44): create _NGA_P_MSSQL_Profile.
+Datapoint/DpId (45): create _NGA_B_MSSQL.
+Datapoint/DpId (46): create _NGA_B_MSSQL_2.
+Datapoint/DpId (47): create _NGA_G_EVENT_MS.
+Datapoint/DpId (48): create _NGA_G_EVENT_MS_2.
+DpValue (53): Values for _NGA_P_PostgreSQLBackend_Profile.minimumSegmentDuration sent.
+DpValue (54): Values for _NGA_P_PostgreSQLBackend_nonRedundant_Profile.minimumSegmentDuration sent.
+DpValue (55): Values for _NGA_B_PostgreSQLBackend.buffering.bufferFilesLocation sent.
+DpValue (56): Values for _NGA_B_PostgreSQLBackend_2.buffering.bufferFilesLocation sent.
+DpValue (57): Values for _VarTrend_0000.isViewportEnabled sent.
+DpValue (58): Values for _VarTrend_9999.isViewportEnabled sent.
+DpValue (59): Values for _VarTrend_STDLIB_general.isViewportEnabled sent.
+DpValue (60): Values for _VarTrendSettings.TrendRulerType sent.
+DpValue (61): Values for _Event.License.RemainingTime sent.
+DpValue (62): Values for _Event_2.License.RemainingTime sent.
+DpValue (63): Values for _NGA_B_PostgreSQLBackend.buffering.bufferingLevel sent.
+DpValue (64): Values for _NGA_B_PostgreSQLBackend_2.buffering.bufferingLevel sent.
+DpValue (65): Values for _NGA_G_EVENT.storage.disableBackupOnDeletion sent.
+DpValue (66): Values for _NGA_G_EVENT_2.storage.disableBackupOnDeletion sent.
+DpValue (67): Values for _NGA_G_ALERT.storage.disableBackupOnDeletion sent.
+DpValue (68): Values for _NGA_G_ALERT_2.storage.disableBackupOnDeletion sent.
+DpValue (69): Values for _NGA_G_EVENT_PG.storage.disableBackupOnDeletion sent.
+DpValue (70): Values for _NGA_G_EVENT_PG_2.storage.disableBackupOnDeletion sent.
+DpValue (71): Values for _NGA_P_MSSQL_nonRedundant_Profile.sendDpWithId sent.
+DpValue (72): Values for _NGA_P_MSSQL_nonRedundant_Profile.sendDpWithName sent.
+DpValue (73): Values for _NGA_P_MSSQL_nonRedundant_Profile.sendDpWithAlias sent.
+DpValue (74): Values for _NGA_P_MSSQL_nonRedundant_Profile.supportsMonthsAndYears sent.
+DpValue (75): Values for _NGA_P_MSSQL_nonRedundant_Profile.modifiableRetention sent.
+DpValue (76): Values for _NGA_P_MSSQL_nonRedundant_Profile.modifiableSegmentDuration sent.
+DpValue (77): Values for _NGA_P_MSSQL_nonRedundant_Profile.oraNameRestrictions sent.
+DpValue (78): Values for _NGA_P_MSSQL_nonRedundant_Profile.manualSegmentSwitch sent.
+DpValue (79): Values for _NGA_P_MSSQL_nonRedundant_Profile.startStopDBProcess sent.
+DpValue (80): Values for _NGA_P_MSSQL_nonRedundant_Profile.dbSpecific sent.
+DpValue (81): Values for _NGA_P_MSSQL_nonRedundant_Profile.autogenGroupNameInDB sent.
+DpValue (82): Values for _NGA_P_MSSQL_nonRedundant_Profile.handleRedundancy sent.
+DpValue (83): Values for _NGA_P_MSSQL_nonRedundant_Profile.displayName sent.
+DpValue (84): Values for _NGA_P_MSSQL_nonRedundant_Profile.genericSettingsKeysValues sent.
+DpValue (85): Values for _NGA_P_MSSQL_nonRedundant_Profile.minimumSegmentDuration sent.
+DpValue (86): Values for _NGA_P_MSSQL_nonRedundant_Profile.defaultValuesPerBlock sent.
+DpValue (87): Values for _NGA_P_MSSQL_nonRedundant_Profile.databaseRedundant sent.
+DpValue (88): Values for _NGA_P_MSSQL_Profile.sendDpWithId sent.
+DpValue (89): Values for _NGA_P_MSSQL_Profile.sendDpWithName sent.
+DpValue (90): Values for _NGA_P_MSSQL_Profile.sendDpWithAlias sent.
+DpValue (91): Values for _NGA_P_MSSQL_Profile.supportsMonthsAndYears sent.
+DpValue (92): Values for _NGA_P_MSSQL_Profile.modifiableRetention sent.
+DpValue (93): Values for _NGA_P_MSSQL_Profile.modifiableSegmentDuration sent.
+DpValue (94): Values for _NGA_P_MSSQL_Profile.oraNameRestrictions sent.
+DpValue (95): Values for _NGA_P_MSSQL_Profile.manualSegmentSwitch sent.
+DpValue (96): Values for _NGA_P_MSSQL_Profile.startStopDBProcess sent.
+DpValue (97): Values for _NGA_P_MSSQL_Profile.dbSpecific sent.
+DpValue (98): Values for _NGA_P_MSSQL_Profile.autogenGroupNameInDB sent.
+DpValue (99): Values for _NGA_P_MSSQL_Profile.handleRedundancy sent.
+DpValue (100): Values for _NGA_P_MSSQL_Profile.displayName sent.
+DpValue (101): Values for _NGA_P_MSSQL_Profile.genericSettingsKeysValues sent.
+DpValue (102): Values for _NGA_P_MSSQL_Profile.minimumSegmentDuration sent.
+DpValue (103): Values for _NGA_P_MSSQL_Profile.defaultValuesPerBlock sent.
+DpValue (104): Values for _NGA_P_MSSQL_Profile.databaseRedundant sent.
+DpValue (105): Values for _NGA_B_MSSQL.general.active sent.
+DpValue (106): Values for _NGA_B_MSSQL.general.discardIncomingValues sent.
+DpValue (107): Values for _NGA_B_MSSQL.general.discardReads sent.
+DpValue (108): Values for _NGA_B_MSSQL.general.pluginName sent.
+DpValue (109): Values for _NGA_B_MSSQL.general.backendProcCtrl sent.
+DpValue (110): Values for _NGA_B_MSSQL.general.backendType sent.
+DpValue (111): Values for _NGA_B_MSSQL.general.profile sent.
+DpValue (112): Values for _NGA_B_MSSQL.general.directReadDistPartners sent.
+DpValue (113): Values for _NGA_B_MSSQL.comm.zmqAddress sent.
+DpValue (114): Values for _NGA_B_MSSQL.comm.sendDpeWithName sent.
+DpValue (115): Values for _NGA_B_MSSQL.comm.sendDpeWithId sent.
+DpValue (116): Values for _NGA_B_MSSQL.comm.sendDpeWithAlias sent.
+DpValue (117): Values for _NGA_B_MSSQL.comm.splitSize sent.
+DpValue (118): Values for _NGA_B_MSSQL.buffering.bufferFilesLocation sent.
+DpValue (119): Values for _NGA_B_MSSQL.buffering.bufferFilesPrefix sent.
+DpValue (120): Values for _NGA_B_MSSQL.buffering.bufferingLevel sent.
+DpValue (121): Values for _NGA_B_MSSQL.buffering.memoryBufferSize sent.
+DpValue (122): Values for _NGA_B_MSSQL.buffering.blockSize sent.
+DpValue (123): Values for _NGA_B_MSSQL.buffering.timeoutUntilBlockIsWrittenToDisk sent.
+DpValue (124): Values for _NGA_B_MSSQL.buffering.processOldBlocksAtStartup sent.
+DpValue (125): Values for _NGA_B_MSSQL.timing.sendTimeout sent.
+DpValue (126): Values for _NGA_B_MSSQL.timing.maxBufferTime sent.
+DpValue (127): Values for _NGA_B_MSSQL.timing.waitForDBWrite sent.
+DpValue (128): Values for _NGA_B_MSSQL.timing.timeToWaitForFinishingAsyncOperInMilisecs sent.
+DpValue (129): Values for _NGA_B_MSSQL.database.connection sent.
+DpValue (130): Values for _NGA_B_MSSQL.database.user sent.
+DpValue (131): Values for _NGA_B_MSSQL.database.password sent.
+DpValue (132): Values for _NGA_B_MSSQL.database.dbSpecific sent.
+DpValue (133): Values for _NGA_B_MSSQL.database.dbProcControl sent.
+DpValue (134): Values for _NGA_B_MSSQL.database.dbProcMgmt sent.
+DpValue (135): Values for _NGA_B_MSSQL.database.privateKeyFile sent.
+DpValue (136): Values for _NGA_B_MSSQL.database.publicKey sent.
+DpValue (137): Values for _NGA_B_MSSQL.monitor.backendConnectedToDB sent.
+DpValue (138): Values for _NGA_B_MSSQL.monitor.backendConnectedToFrontend sent.
+DpValue (139): Values for _NGA_B_MSSQL.actual.activeZmqAddress sent.
+DpValue (140): Values for _NGA_B_MSSQL.displayName sent.
+DpValue (141): Values for _NGA_B_MSSQL_2.general.active sent.
+DpValue (142): Values for _NGA_B_MSSQL_2.general.discardIncomingValues sent.
+DpValue (143): Values for _NGA_B_MSSQL_2.general.discardReads sent.
+DpValue (144): Values for _NGA_B_MSSQL_2.general.pluginName sent.
+DpValue (145): Values for _NGA_B_MSSQL_2.general.backendProcCtrl sent.
+DpValue (146): Values for _NGA_B_MSSQL_2.general.backendProcMgmt sent.
+DpValue (147): Values for _NGA_B_MSSQL_2.general.backendType sent.
+DpValue (148): Values for _NGA_B_MSSQL_2.general.profile sent.
+DpValue (149): Values for _NGA_B_MSSQL_2.general.directReadDistPartners sent.
+DpValue (150): Values for _NGA_B_MSSQL_2.comm.zmqAddress sent.
+DpValue (151): Values for _NGA_B_MSSQL_2.comm.sendDpeWithName sent.
+DpValue (152): Values for _NGA_B_MSSQL_2.comm.sendDpeWithId sent.
+DpValue (153): Values for _NGA_B_MSSQL_2.comm.sendDpeWithAlias sent.
+DpValue (154): Values for _NGA_B_MSSQL_2.comm.splitSize sent.
+DpValue (155): Values for _NGA_B_MSSQL_2.buffering.bufferFilesLocation sent.
+DpValue (156): Values for _NGA_B_MSSQL_2.buffering.bufferFilesPrefix sent.
+DpValue (157): Values for _NGA_B_MSSQL_2.buffering.bufferingLevel sent.
+DpValue (158): Values for _NGA_B_MSSQL_2.buffering.memoryBufferSize sent.
+DpValue (159): Values for _NGA_B_MSSQL_2.buffering.blockSize sent.
+DpValue (160): Values for _NGA_B_MSSQL_2.buffering.timeoutUntilBlockIsWrittenToDisk sent.
+DpValue (161): Values for _NGA_B_MSSQL_2.buffering.processOldBlocksAtStartup sent.
+DpValue (162): Values for _NGA_B_MSSQL_2.timing.sendTimeout sent.
+DpValue (163): Values for _NGA_B_MSSQL_2.timing.maxBufferTime sent.
+DpValue (164): Values for _NGA_B_MSSQL_2.timing.waitForDBWrite sent.
+DpValue (165): Values for _NGA_B_MSSQL_2.timing.timeToWaitForFinishingAsyncOperInMilisecs sent.
+DpValue (166): Values for _NGA_B_MSSQL_2.database.user sent.
+DpValue (167): Values for _NGA_B_MSSQL_2.database.password sent.
+DpValue (168): Values for _NGA_B_MSSQL_2.database.dbSpecific sent.
+DpValue (169): Values for _NGA_B_MSSQL_2.database.dbProcMgmt sent.
+DpValue (170): Values for _NGA_B_MSSQL_2.database.privateKeyFile sent.
+DpValue (171): Values for _NGA_B_MSSQL_2.database.publicKey sent.
+DpValue (172): Values for _NGA_B_MSSQL_2.displayName sent.
+DpValue (173): Values for _NGA_G_EVENT_MS.backend sent.
+DpValue (174): Values for _NGA_G_EVENT_MS.active sent.
+DpValue (175): Values for _NGA_G_EVENT_MS.archiveAll sent.
+DpValue (176): Values for _NGA_G_EVENT_MS.groupName sent.
+DpValue (177): Values for _NGA_G_EVENT_MS.groupPriority sent.
+DpValue (178): Values for _NGA_G_EVENT_MS.storage.retentionInterval sent.
+DpValue (179): Values for _NGA_G_EVENT_MS.storage.retentionFactor sent.
+DpValue (180): Values for _NGA_G_EVENT_MS.storage.segmentDurationInterval sent.
+DpValue (181): Values for _NGA_G_EVENT_MS.storage.segmentDurationFactor sent.
+DpValue (182): Values for _NGA_G_EVENT_MS.storage.segmentDurationStart sent.
+DpValue (183): Values for _NGA_G_EVENT_MS.storage.backupAgeInterval sent.
+DpValue (184): Values for _NGA_G_EVENT_MS.storage.backupAgeFactor sent.
+DpValue (185): Values for _NGA_G_EVENT_MS.storage.backupInterval sent.
+DpValue (186): Values for _NGA_G_EVENT_MS.storage.backupFactor sent.
+DpValue (187): Values for _NGA_G_EVENT_MS.storage.nextScheduledBackup sent.
+DpValue (188): Values for _NGA_G_EVENT_MS.storage.backupDayOfMonth sent.
+DpValue (189): Values for _NGA_G_EVENT_MS.storage.disableBackupOnDeletion sent.
+DpValue (190): Values for _NGA_G_EVENT_MS.displayName sent.
+DpValue (191): Values for _NGA_G_EVENT_MS_2.backend sent.
+DpValue (192): Values for _NGA_G_EVENT_MS_2.active sent.
+DpValue (193): Values for _NGA_G_EVENT_MS_2.archiveAll sent.
+DpValue (194): Values for _NGA_G_EVENT_MS_2.groupName sent.
+DpValue (195): Values for _NGA_G_EVENT_MS_2.isAlert sent.
+DpValue (196): Values for _NGA_G_EVENT_MS_2.isUserDefined sent.
+DpValue (197): Values for _NGA_G_EVENT_MS_2.encrypt sent.
+DpValue (198): Values for _NGA_G_EVENT_MS_2.groupPriority sent.
+DpValue (199): Values for _NGA_G_EVENT_MS_2.storage.retentionInterval sent.
+DpValue (200): Values for _NGA_G_EVENT_MS_2.storage.retentionFactor sent.
+DpValue (201): Values for _NGA_G_EVENT_MS_2.storage.segmentDurationInterval sent.
+DpValue (202): Values for _NGA_G_EVENT_MS_2.storage.segmentDurationFactor sent.
+DpValue (203): Values for _NGA_G_EVENT_MS_2.storage.segmentDurationStart sent.
+DpValue (204): Values for _NGA_G_EVENT_MS_2.storage.backupAgeInterval sent.
+DpValue (205): Values for _NGA_G_EVENT_MS_2.storage.backupAgeFactor sent.
+DpValue (206): Values for _NGA_G_EVENT_MS_2.storage.backupInterval sent.
+DpValue (207): Values for _NGA_G_EVENT_MS_2.storage.backupFactor sent.
+DpValue (208): Values for _NGA_G_EVENT_MS_2.storage.nextScheduledBackup sent.
+DpValue (209): Values for _NGA_G_EVENT_MS_2.storage.backupDayOfMonth sent.
+DpValue (210): Values for _NGA_G_EVENT_MS_2.storage.disableBackupOnDeletion sent.
+DpValue (211): Values for _NGA_G_EVENT_MS_2.displayName sent.
+DpValue (214): Values for _WF_ngaRuntime.Navi.Functions.IsChanged sent.
+AlertValue (218): Values for _Event.License.RemainingTime sent.
+AlertValue (221): Values for _Event_2.License.RemainingTime sent.
 Waiting for last response from eventmanager...
-Scanning of file D:\ProgramsDeveloped\Caskad\KGSHNextGen\KGSHNextGen\dplist\dplist1.txt is finished (0)
+Scanning of file C:\Sybcom\Kaskad\3.18\dplist\update_004.dpl is finished (0)
 End of Program
