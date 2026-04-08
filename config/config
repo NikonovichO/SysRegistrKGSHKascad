@@ -1,6 +1,6 @@
 [general]
-pvss_path = "C:/Sybcom/Kaskad/3.18"
-proj_path = "D:/Kaskad/Projects/SysRegistrKGSHKascad"
+pvss_path = "D:/Sybcom/Kaskad/3.18"
+proj_path = "D:/kaskad_project/SysRegistrKGSHKascad"
 proj_version = "3.18"
 langs = "ru_RU.utf8"
 useNGA = 1

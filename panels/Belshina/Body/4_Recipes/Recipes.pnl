@@ -1,0 +1,486 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1920 800 N "_3DFace" 0
+E E E E E 1 -1 -1 0  470 340
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "93.2319"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+6 2
+"RECTANGLE2"
+""
+1 60 100 E E E 1 E 1 E N {0,0,0} E N {0,95,135} E E
+ E E
+1 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E -1 1 3 2 1 E 5.18 0 15.98 -310.8 -1598 1 E 60 100 110 150
+29 3
+"Label1"
+""
+1 110 52 E E E 1 E 1 E N {0,95,135} E N "White" E E
+ E E
+2 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Ряд"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,27,5,75,0,0,0,0,0,Полужирный
+0  0 2 208 51
+5 Label
+0
+E22 4
+"COMBO_BOX1"
+""
+1 190 112 E E E 1 E 1 E N {0,95,135} E N "White" E E
+ E E
+3 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  209 0 261 53
+2
+1
+LANG:10027 1 1
+
+0
+1
+LANG:10027 1 2
+
+0
+
+E
+E
+E
+ 0 0
+29 5
+"Label2"
+""
+1 110 101 E E E 1 E 1 E N {0,95,135} E N "White" E E
+ E E
+4 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Пресс"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,27,5,75,0,0,0,0,0,Полужирный
+0  0 53 208 102
+5 Label
+0
+E22 7
+"COMBO_BOX2"
+""
+1 193 110 E E E 1 E 1 E N {0,95,135} E N "White" E E
+ E E
+6 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  209 51 261 104
+7
+1
+LANG:10027 1 1
+
+0
+1
+LANG:10027 1 2
+
+0
+1
+LANG:10027 1 3
+
+0
+1
+LANG:10027 1 4
+
+0
+1
+LANG:10027 1 5
+
+0
+1
+LANG:10027 1 6
+
+0
+1
+LANG:10027 1 7
+
+0
+
+E
+E
+E
+ 0 0
+6 8
+"RECTANGLE3"
+""
+1 490 220 E E E 1 E 1 E N {0,0,0} E N {179,204,220} E E
+ E E
+7 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E -1 1 3 2 1 E 33.18 0 15.98 -15999.2 -3515.6 1 E 490 220 540 270
+13 11
+"PUSH_BUTTON1"
+""
+1 40 123 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+10 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  -2 102 260 146
+
+T 
+1
+LANG:10027 23 В компьютере
+E E E E
+13 12
+"PUSH_BUTTON2"
+""
+1 40 165 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+11 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  -2 144 260 188
+
+T 
+1
+LANG:10027 15 В прессе
+E E E E
+13 13
+"PUSH_BUTTON3"
+""
+1 40 207 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+12 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  -2 186 260 230
+
+T 
+1
+LANG:10027 16 Сравнить
+E E E E
+29 14
+"Label5"
+""
+1 110 183 E E E 1 E 1 E N {0,95,135} E N "White" E E
+ E E
+13 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Тип шины"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,27,5,75,0,0,0,0,0,Полужирный
+0  0 228 259 277
+5 Label
+0
+E29 15
+"Label6"
+""
+1 90 325 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+14 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  0 277 259 316
+5 Label
+0
+E29 17
+"Label7"
+""
+1 110 271 E E E 1 E 1 E N {0,95,135} E N "White" E E
+ E E
+16 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Номер рецепта"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,27,5,75,0,0,0,0,0,Полужирный
+0  0 316 259 365
+5 Label
+0
+E29 18
+"Label8"
+""
+1 90 413 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+17 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  0 365 259 404
+5 Label
+0
+E13 19
+"PUSH_BUTTON4"
+""
+1 39.99999999999994 728 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+18 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  -2 707 260 751
+
+T 
+1
+LANG:10027 27 Журнал рецепта
+E E E E
+13 20
+"PUSH_BUTTON5"
+""
+1 39.99999999999994 166 E E E 1 E 1 E N "White" E N "SiemensPetrol" E E
+ E E
+19 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  -2 747 260 801
+
+T 
+1
+LANG:10027 28 ЗАГРУЗИТЬ В ПЛК
+E E E E
+29 22
+"Label9"
+""
+1 79 380 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+21 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string Архив рецептов"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  266 2 665 51
+5 Label
+0
+E25 23
+"TABLE1"
+""
+1 276.0000000000001 372.4336633663366 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+22 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  264 49.00000000000001 667 721
+EE 1 0 1 3 0 "#" 6 1 0 "s" 1
+LANG:10027 1 #
+E
+1
+LANG:10027 0 
+
+30 "Model" 6 1 0 "s" 1
+LANG:10027 21 Модель шины
+E
+1
+LANG:10027 0 
+
+140 "NumberRecipe" 6 1 0 "s" 1
+LANG:10027 25 Номер рецепта
+E
+1
+LANG:10027 0 
+
+220 
+20 20 10 0
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0 0 1 1 1 7
+1 0
+13 24
+"PUSH_BUTTON6"
+""
+1 28.99999999999994 165 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+23 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  263.9999999999999 717 667 761
+
+T 
+1
+LANG:10027 36 Прочитать из архива
+E E E E
+13 25
+"PUSH_BUTTON7"
+""
+1 29 207 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+24 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  264 759 667 803
+
+T 
+1
+LANG:10027 32 Сохранить в архив
+E E E E
+0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0
