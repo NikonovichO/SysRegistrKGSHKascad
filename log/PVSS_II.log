@@ -6675,3 +6675,148 @@ WCCOAnextgenarch(118), 2026.04.08 18:46:23.930, IMPL, SEVERE,     69, Database e
 WCCOAui      (0), 2026.04.08 18:46:27.122, SYS,  WARNING,     0, , Para. Demo period started 30 minutes
 WCCOAnextgenarch(118), 2026.04.08 18:46:34.698, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
 WCCOActrl    (1), 2026.04.08 18:46:40.448, CTRL, INFO,        0, , Cyclic updateUserGroups running every 60 minutes.
+WCCOAnextgenarch(118), 2026.04.08 18:46:45.449, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:46:56.173, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAui      (0), 2026.04.08 18:46:59.113, SYS,  INFO,        3, Trying to connect to (SYS: 0 Data -num 0 CONN: 1) @ localhost:4897
+WCCOAui      (0), 2026.04.08 18:46:59.117, SYS,  INFO,        4, Connected to (SYS: 0 Data -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.08 18:46:59.118, SYS,  INFO,        4, Connected to (SYS: 1 Ui -num 1 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.08 18:46:59.127, SYS,  INFO,        0, , Manager (SYS: 1 Ui -num 1 CONN: 1) initialised
+WCCOAui      (1), 2026.04.08 18:46:59.129, SYS,  INFO,        6, Initialization by Data Manager finished
+WCCOAui      (1), 2026.04.08 18:46:59.129, SYS,  INFO,        3, Trying to connect to (SYS: 1 Event -num 0 CONN: 1) @ localhost:4998
+WCCOAui      (1), 2026.04.08 18:46:59.132, SYS,  INFO,        4, Connected to (SYS: 1 Event -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILevent   (0), 2026.04.08 18:46:59.133, SYS,  INFO,        4, Connected to (SYS: 1 Ui -num 1 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCOAui      (1), 2026.04.08 18:46:59.134, SYS,  INFO,      102, Waiting for user names/passwords
+WCCOAui      (1), 2026.04.08 18:46:59.137, SYS,  INFO,      103, User names/passwords initialized
+WCCOAui      (1), 2026.04.08 18:46:59.143, SYS,  INFO,      102, Waiting for user names/passwords
+WCCILpmon    (1), 2026.04.08 18:46:59.233, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 8 CuringStartStop.ctl
+WCCOActrl    (0), 2026.04.08 18:46:59.327, SYS,  INFO,        1, Manager Start, PROJ, SysRegistrKGSHKascad, V 3.18 - 3.18   platform Windows AMD64 linked at Nov 10 2021 20:28:52 (a061d04d4492)
+WCCOActrl    (0), 2026.04.08 18:46:59.330, SYS,  INFO,        3, Trying to connect to (SYS: 0 Data -num 0 CONN: 1) @ localhost:4897
+WCCOActrl    (0), 2026.04.08 18:46:59.333, SYS,  INFO,        4, Connected to (SYS: 0 Data -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.08 18:46:59.335, SYS,  INFO,        4, Connected to (SYS: 1 Ctrl -num 2 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.08 18:46:59.341, SYS,  INFO,        0, , Manager (SYS: 1 Ctrl -num 2 CONN: 1) initialised
+WCCOActrl    (2), 2026.04.08 18:46:59.344, SYS,  INFO,        6, Initialization by Data Manager finished
+WCCOActrl    (2), 2026.04.08 18:46:59.344, SYS,  INFO,        3, Trying to connect to (SYS: 1 Event -num 0 CONN: 1) @ localhost:4998
+WCCOActrl    (2), 2026.04.08 18:46:59.347, SYS,  INFO,        4, Connected to (SYS: 1 Event -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILevent   (0), 2026.04.08 18:46:59.348, SYS,  INFO,        4, Connected to (SYS: 1 Ctrl -num 2 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCOActrl    (2), 2026.04.08 18:46:59.349, SYS,  INFO,      102, Waiting for user names/passwords
+WCCOActrl    (2), 2026.04.08 18:46:59.350, SYS,  INFO,      103, User names/passwords initialized
+WCCOActrl    (2), 2026.04.08 18:46:59.353, SYS,  INFO,      102, Waiting for user names/passwords
+WCCOActrl    (2), 2026.04.08 18:46:59.426, CTRL, WARNING,    71, DP does not exist, D:\kaskad_project\SysRegistrKGSHKascad\scripts\CuringStartStop.ctl    Line: 24, dpConnect, System1:Press1.Inputs.RecipeBoolVal.Runtime
+WCCOActrl    (2), 2026.04.08 18:46:59.427, SYS,  INFO,      181, Closing connection to (SYS: 1 Data -num 0 CONN: 1)
+WCCOActrl    (2), 2026.04.08 18:46:59.427, SYS,  INFO,      181, Closing connection to (SYS: 1 Event -num 0 CONN: 1)
+WCCILdata    (0), 2026.04.08 18:46:59.427, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ctrl -num 2 CONN: 1), Connection closed
+WCCILevent   (0), 2026.04.08 18:46:59.427, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ctrl -num 2 CONN: 1), Connection closed
+WCCOActrl    (2), 2026.04.08 18:46:59.428, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Data -num 0 CONN: 1), Connection closed
+WCCOActrl    (2), 2026.04.08 18:46:59.428, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Event -num 0 CONN: 1), Connection closed
+WCCOActrl    (2), 2026.04.08 18:46:59.436, SYS,  INFO,        2, Manager Stop
+WCCILpmon    (1), 2026.04.08 18:46:59.449, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOActrl(2) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.08 18:46:59.452, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 8 CuringStartStop.ctl
+WCCOActrl    (0), 2026.04.08 18:46:59.685, SYS,  INFO,        1, Manager Start, PROJ, SysRegistrKGSHKascad, V 3.18 - 3.18   platform Windows AMD64 linked at Nov 10 2021 20:28:52 (a061d04d4492)
+WCCOActrl    (0), 2026.04.08 18:46:59.689, SYS,  INFO,        3, Trying to connect to (SYS: 0 Data -num 0 CONN: 1) @ localhost:4897
+WCCOActrl    (0), 2026.04.08 18:46:59.692, SYS,  INFO,        4, Connected to (SYS: 0 Data -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.08 18:46:59.694, SYS,  INFO,        4, Connected to (SYS: 1 Ctrl -num 2 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.08 18:46:59.713, SYS,  INFO,        0, , Manager (SYS: 1 Ctrl -num 2 CONN: 1) initialised
+WCCOActrl    (2), 2026.04.08 18:46:59.717, SYS,  INFO,        6, Initialization by Data Manager finished
+WCCOActrl    (2), 2026.04.08 18:46:59.717, SYS,  INFO,        3, Trying to connect to (SYS: 1 Event -num 0 CONN: 1) @ localhost:4998
+WCCOActrl    (2), 2026.04.08 18:46:59.719, SYS,  INFO,        4, Connected to (SYS: 1 Event -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILevent   (0), 2026.04.08 18:46:59.720, SYS,  INFO,        4, Connected to (SYS: 1 Ctrl -num 2 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCOActrl    (2), 2026.04.08 18:46:59.721, SYS,  INFO,      102, Waiting for user names/passwords
+WCCOActrl    (2), 2026.04.08 18:46:59.721, SYS,  INFO,      103, User names/passwords initialized
+WCCOActrl    (2), 2026.04.08 18:46:59.724, SYS,  INFO,      102, Waiting for user names/passwords
+WCCOActrl    (2), 2026.04.08 18:46:59.788, CTRL, WARNING,    71, DP does not exist, D:\kaskad_project\SysRegistrKGSHKascad\scripts\CuringStartStop.ctl    Line: 24, dpConnect, System1:Press1.Inputs.RecipeBoolVal.Runtime
+WCCOActrl    (2), 2026.04.08 18:46:59.788, SYS,  INFO,      181, Closing connection to (SYS: 1 Data -num 0 CONN: 1)
+WCCOActrl    (2), 2026.04.08 18:46:59.788, SYS,  INFO,      181, Closing connection to (SYS: 1 Event -num 0 CONN: 1)
+WCCILdata    (0), 2026.04.08 18:46:59.789, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ctrl -num 2 CONN: 1), Connection closed
+WCCILevent   (0), 2026.04.08 18:46:59.789, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ctrl -num 2 CONN: 1), Connection closed
+WCCOActrl    (2), 2026.04.08 18:46:59.789, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Data -num 0 CONN: 1), Connection closed
+WCCOActrl    (2), 2026.04.08 18:46:59.789, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Event -num 0 CONN: 1), Connection closed
+WCCOActrl    (2), 2026.04.08 18:46:59.797, SYS,  INFO,        2, Manager Stop
+WCCILpmon    (1), 2026.04.08 18:46:59.882, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOActrl(2) - перезапускаем его #2
+WCCILpmon    (1), 2026.04.08 18:46:59.885, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 8 CuringStartStop.ctl
+WCCOActrl    (0), 2026.04.08 18:46:59.958, SYS,  INFO,        1, Manager Start, PROJ, SysRegistrKGSHKascad, V 3.18 - 3.18   platform Windows AMD64 linked at Nov 10 2021 20:28:52 (a061d04d4492)
+WCCOActrl    (0), 2026.04.08 18:46:59.961, SYS,  INFO,        3, Trying to connect to (SYS: 0 Data -num 0 CONN: 1) @ localhost:4897
+WCCOActrl    (0), 2026.04.08 18:46:59.964, SYS,  INFO,        4, Connected to (SYS: 0 Data -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.08 18:46:59.965, SYS,  INFO,        4, Connected to (SYS: 1 Ctrl -num 2 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.08 18:46:59.967, SYS,  INFO,        0, , Manager (SYS: 1 Ctrl -num 2 CONN: 1) initialised
+WCCOActrl    (2), 2026.04.08 18:46:59.969, SYS,  INFO,        6, Initialization by Data Manager finished
+WCCOActrl    (2), 2026.04.08 18:46:59.970, SYS,  INFO,        3, Trying to connect to (SYS: 1 Event -num 0 CONN: 1) @ localhost:4998
+WCCOActrl    (2), 2026.04.08 18:46:59.971, SYS,  INFO,        4, Connected to (SYS: 1 Event -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILevent   (0), 2026.04.08 18:46:59.972, SYS,  INFO,        4, Connected to (SYS: 1 Ctrl -num 2 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCOActrl    (2), 2026.04.08 18:46:59.973, SYS,  INFO,      102, Waiting for user names/passwords
+WCCOActrl    (2), 2026.04.08 18:46:59.973, SYS,  INFO,      103, User names/passwords initialized
+WCCOActrl    (2), 2026.04.08 18:46:59.976, SYS,  INFO,      102, Waiting for user names/passwords
+WCCOActrl    (2), 2026.04.08 18:47:00.041, CTRL, WARNING,    71, DP does not exist, D:\kaskad_project\SysRegistrKGSHKascad\scripts\CuringStartStop.ctl    Line: 24, dpConnect, System1:Press1.Inputs.RecipeBoolVal.Runtime
+WCCOActrl    (2), 2026.04.08 18:47:00.041, SYS,  INFO,      181, Closing connection to (SYS: 1 Data -num 0 CONN: 1)
+WCCOActrl    (2), 2026.04.08 18:47:00.041, SYS,  INFO,      181, Closing connection to (SYS: 1 Event -num 0 CONN: 1)
+WCCILdata    (0), 2026.04.08 18:47:00.041, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ctrl -num 2 CONN: 1), Connection closed
+WCCOActrl    (2), 2026.04.08 18:47:00.042, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Data -num 0 CONN: 1), Connection closed
+WCCOActrl    (2), 2026.04.08 18:47:00.043, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Event -num 0 CONN: 1), Connection closed
+WCCOActrl    (2), 2026.04.08 18:47:00.049, SYS,  INFO,        2, Manager Stop
+WCCILpmon    (1), 2026.04.08 18:47:00.270, SYS,  INFO,       12/pmon, Менеджер WCCOActrl(2) перезапускается слишком быстро - отказ от перезапуска
+WCCILpmon    (1), 2026.04.08 18:47:00.273, SYS,  INFO,        1, Manager Start, D:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SysRegistrKGSHKascad -pmonIndex 9 -num 2
+WCCOAopcua   (2), 2026.04.08 18:47:00.352, SYS,  INFO,        1, Manager Start, PROJ, SysRegistrKGSHKascad, V 3.18 - 3.18   platform Windows AMD64 linked at Nov 10 2021 20:28:52 (a061d04d4492)
+WCCOAopcua   (2), 2026.04.08 18:47:00.353, SYS,  INFO,        3, Trying to connect to (SYS: 0 Data -num 0 CONN: 1) @ localhost:4897
+WCCOAopcua   (2), 2026.04.08 18:47:00.356, SYS,  INFO,        4, Connected to (SYS: 0 Data -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.08 18:47:00.357, SYS,  INFO,        4, Connected to (SYS: 1 Driver -num 2 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILdata    (0), 2026.04.08 18:47:00.365, SYS,  INFO,        0, , Manager (SYS: 1 Driver -num 2 CONN: 1) initialised
+WCCOAopcua   (2), 2026.04.08 18:47:00.366, SYS,  INFO,        6, Initialization by Data Manager finished
+WCCOAopcua   (2), 2026.04.08 18:47:00.366, SYS,  INFO,        3, Trying to connect to (SYS: 1 Event -num 0 CONN: 1) @ localhost:4998
+WCCOAopcua   (2), 2026.04.08 18:47:00.368, SYS,  INFO,        4, Connected to (SYS: 1 Event -num 0 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCILevent   (0), 2026.04.08 18:47:00.369, SYS,  INFO,        4, Connected to (SYS: 1 Driver -num 2 CONN: 1) @ DESKTOP-1Q3NRGG (::1)
+WCCOAopcua   (2), 2026.04.08 18:47:00.372, SYS,  INFO,      156, Driver initialization finished.
+WCCILpmon    (1), 2026.04.08 18:47:00.490, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCOAnextgenarch(118), 2026.04.08 18:47:06.924, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAopcua   (2), 2026.04.08 18:47:11.796, SYS,  WARNING,     0, , Demo period started 30 minutes
+WCCOAnextgenarch(118), 2026.04.08 18:47:17.646, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:47:28.393, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:47:39.141, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:47:49.882, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:48:00.632, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCILdata    (0), 2026.04.08 18:48:00.648, SYS,  INFO,        0, , Closing databases...
+WCCILdata    (0), 2026.04.08 18:48:00.648, SYS,  INFO,        0, , Loading DpIdentification
+WCCILdata    (0), 2026.04.08 18:48:00.649, SYS,  INFO,        0, , Databases closed.
+WCCILdata    (0), 2026.04.08 18:48:00.649, SYS,  INFO,        0, , Opening databases...
+WCCILdata    (0), 2026.04.08 18:48:00.649, SYS,  INFO,        0, , (Re)Opening databases in multi user mode without transaction logging.
+WCCILdata    (0), 2026.04.08 18:48:01.663, SYS,  INFO,        0, , Databases opened.
+WCCILdata    (0), 2026.04.08 18:48:01.663, SYS,  INFO,        0, , Restoring last value cache...
+WCCILdata    (0), 2026.04.08 18:48:01.663, SYS,  INFO,        0, , Refreshing value DB list...
+WCCILdata    (0), 2026.04.08 18:48:01.663, SYS,  INFO,        0, , Refreshing alert DB list...
+WCCILdata    (0), 2026.04.08 18:48:01.664, SYS,  INFO,        0, , Reopening database done.
+WCCOAnextgenarch(118), 2026.04.08 18:48:11.412, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:48:22.175, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:48:32.933, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:48:43.640, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAui      (1), 2026.04.08 18:48:46.798, CTRL, SEVERE,     17/ctrl, Невозможно найти параметр $SCREENTYPE. Расположение: 
+    Module: Foot
+    Panel: D:\kaskad_project\SysRegistrKGSHKascad\panels\Core\Footer.pnl [Footer]
+    Script: ScopeLib
+    In panel scope library: D:\kaskad_project\SysRegistrKGSHKascad\panels\Core\Footer.pnl
+    Line: 122
+WCCOAnextgenarch(118), 2026.04.08 18:48:54.398, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:49:05.160, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:49:15.891, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:49:26.661, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:49:37.389, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:49:48.172, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:49:58.912, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:50:09.664, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:50:20.420, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:50:31.175, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:50:41.923, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:50:52.685, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:51:03.443, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:51:14.196, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:51:24.925, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:51:35.690, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:51:46.403, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:51:57.095, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:52:07.837, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:52:18.591, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:52:29.334, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:52:40.048, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:52:50.779, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:53:01.528, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:53:12.252, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:53:23.022, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:53:33.763, IMPL, SEVERE,     69, Database error, database not found: "winccoa" (from _NGA_B_InfluxDB) 
+WCCOAnextgenarch(118), 2026.04.08 18:53:33.763, SYS,  SEVERE,    118, Last error already repeated 50 times. Until another output occurs, this one will be blocked.

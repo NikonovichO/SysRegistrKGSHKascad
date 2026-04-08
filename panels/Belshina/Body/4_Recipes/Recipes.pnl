@@ -2,7 +2,11 @@ V 14
 1
 LANG:10027 0 
 PANEL,-1 -1 1920 800 N "_3DFace" 0
-E E E E E 1 -1 -1 0  470 340
+"main()
+{
+  RootPanelOnModule(\"Belshina/Body/4_Recipes/Scheduler.pnl\", \"Scheduler\", \"SchedulerModule\", \"\");
+}" 0
+ E E E E 1 -1 -1 0  470 340
 ""0  1
 E E 4
 "CBRef" "1"
@@ -454,7 +458,61 @@ T
 1
 LANG:10027 32 Сохранить в архив
 E E E E
+29 26
+"EMBEDDED_MODULE1"
+""
+1 852 545 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+25 0 0 0 0 0
+E E E
 0
+1
+LANG:10027 0 
+
+10
+"newPanelAnimDuration" "int 0"
+"oldPanelAnimDuration" "int 0"
+"newPanelAnimateOpacity" "bool TRUE"
+"oldPanelAnimateOpacity" "bool TRUE"
+"newPanelAnimateSize" "bool TRUE"
+"oldPanelAnimateSize" "bool TRUE"
+"newPanelAnimType" "string TopLeft"
+"oldPanelAnimType" "string BottomRight"
+"ModuleName" "string SchedulerModule"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,12,-1,5,50,0,0,0,0,0
+0  665 397 1593 801
+15 Canvas.Canvas.1
+0
+E29 27
+"EMBEDDED_MODULE2"
+""
+1 852 140.4752475247525 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+26 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+10
+"newPanelAnimDuration" "int 0"
+"oldPanelAnimDuration" "int 0"
+"newPanelAnimateOpacity" "bool TRUE"
+"oldPanelAnimateOpacity" "bool TRUE"
+"newPanelAnimateSize" "bool TRUE"
+"oldPanelAnimateSize" "bool TRUE"
+"newPanelAnimType" "string TopLeft"
+"oldPanelAnimType" "string BottomRight"
+"ModuleName" "string ParamModule"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,12,-1,5,50,0,0,0,0,0
+0  665 2 1593 379.9999999999999
+15 Canvas.Canvas.1
+0
+E0
 LAYER, 1 
 1
 LANG:10027 0 
