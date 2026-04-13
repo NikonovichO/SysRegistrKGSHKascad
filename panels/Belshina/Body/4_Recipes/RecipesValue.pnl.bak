@@ -1,0 +1,294 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 930 380 N "_3DFace" 0
+E E E E E 1 -1 -1 0  78.83191247442899 48.81025905077889
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "93.2319"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+29 7
+"Label150"
+""
+1 0 0 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+6 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"alignment" "enum 132"
+"text" "string Параметр"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  0 0 180 50.00000000000001
+5 Label
+0
+E29 8
+"Label151"
+""
+1 180 1.4210854715202e-14 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+7 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"alignment" "enum 132"
+"text" "string Величина"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  180 1.4210854715202e-14 360 50.00000000000003
+5 Label
+0
+E29 9
+"Label152"
+""
+1 360.0000000000001 1.4210854715202e-14 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+8 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"alignment" "enum 132"
+"text" "string Значение"
+"sizePolicy" "Expanding Preferred"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  360.0000000000001 1.4210854715202e-14 499.9999999999999 50.00000000000003
+5 Label
+0
+E29 10
+"Label153"
+""
+1 500 1.4210854715202e-14 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+9 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"alignment" "enum 132"
+"text" "string Max"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  500 1.4210854715202e-14 590 50.00000000000003
+5 Label
+0
+E29 11
+"Label154"
+""
+1 590 1.4210854715202e-14 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+10 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"alignment" "enum 132"
+"text" "string Min"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  590 1.4210854715202e-14 680 50.00000000000003
+5 Label
+0
+E29 12
+"Label155"
+""
+1 749 -1.4210854715202e-14 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+11 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"alignment" "enum 132"
+"text" "string Время стабилизации"
+"textFormat" "enum 2"
+"frameShape" "enum 6"
+"wordWrap" "bool TRUE"
+"sizePolicy" "Expanding Preferred"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
+0  749 -1.4210854715202e-14 929 50.00000000000006
+5 Label
+0
+E29 13
+"Label156"
+""
+1 0 52 E E E 1 E 1 E N "Black" E N {237,237,237} E E
+ E E
+12 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"alignment" "enum 132"
+"text" "string Пар в диафрагме"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,21,5,50,0,0,0,0,0,Обычный
+0  0 52 180 108
+5 Label
+0
+E29 14
+"Label157"
+""
+1 0 110 E E E 1 E 1 E N "Black" E N {204,204,204} E E
+ E E
+13 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"alignment" "enum 132"
+"text" "string Перегретая вода"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,21,5,50,0,0,0,0,0,Обычный
+0  0 110 180 166
+5 Label
+0
+E29 15
+"Label158"
+""
+1 390 258 E E E 1 E 1 E N "Black" E N {237,237,237} E E
+ E E
+14 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"alignment" "enum 132"
+"text" "string Заполнение горячей воды"
+"wordWrap" "bool TRUE"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,21,5,50,0,0,0,0,0,Обычный
+0  0 168 180 224
+5 Label
+0
+E29 16
+"Label159"
+""
+1 390 394 E E E 1 E 1 E N "Black" E N {204,204,204} E E
+ E E
+15 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"alignment" "enum 132"
+"text" "string Камера"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,21,5,50,0,0,0,0,0,Обычный
+0  0 226 180 282
+5 Label
+0
+E29 17
+"Label160"
+""
+1 390 254 E E E 1 E 1 E N "Black" E N {237,237,237} E E
+ E E
+16 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"alignment" "enum 132"
+"text" "string Охлаждающая вода"
+"wordWrap" "bool TRUE"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,21,5,50,0,0,0,0,0,Обычный
+0  0 284 180 340
+5 Label
+0
+E29 18
+"Label161"
+""
+1 250 480 E E E 1 E 1 E N "Black" E N {204,204,204} E E
+ E E
+17 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"alignment" "enum 132"
+"text" "string Формование"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,21,5,50,0,0,0,0,0,Обычный
+0  200 312 380 368
+5 Label
+0
+E0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

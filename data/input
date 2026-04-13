@@ -1,8 +1,8 @@
 backup
-D:/kaskad_project/KGSHNextGen/data/OnlineBackup/
+D:/kaskad_project/SysRegistrKGSHKascad/data/OnlineBackup/
 FILE
 0
-D:\kaskad_project\KGSHNextGen\
+D:\kaskad_project\SysRegistrKGSHKascad\
 db\wincc_oa\0000000000\dplist.db
 db\wincc_oa\0000000000\DpList.dbd
 db\wincc_oa\0000000000\dplist.key
@@ -340,7 +340,6 @@ db\wincc_oa\sysId.key
 db\wincc_oa\typeId.key
 db\wincc_oa\userrng.key
 db\wincc_oa\viewId.key
-db\backup_db_KGSHNextGen_202506260400.txt
-db\backup_db_KGSHNextGen_202604020400.txt
+db\backup_db_SysRegistrKGSHKascad_202604090400.txt
 db\wincc_oa\dbase.touch
 

@@ -5,6 +5,9 @@ PANEL,-1 -1 1920 800 N "_3DFace" 0
 "main()
 {
   RootPanelOnModule(\"Belshina/Body/4_Recipes/Scheduler.pnl\", \"Scheduler\", \"SchedulerModule\", \"\");
+  RootPanelOnModule(\"Belshina/Body/4_Recipes/Parameters.pnl\", \"Parameters\", \"ParametersModule\", \"\");
+  RootPanelOnModule(\"Belshina/Body/4_Recipes/Other.pnl\", \"Other\", \"OtherModule\", \"\");
+  RootPanelOnModule(\"Belshina/Body/4_Recipes/Button.pnl\", \"Button\", \"ButtonModule\", \"\");
 }" 0
  E E E E 1 -1 -1 0  470 340
 ""0  1
@@ -171,73 +174,10 @@ LANG:10027 0
 "dashclr"N "_Transparent"
 "antiAliased" "0"
 E E -1 1 3 2 1 E 33.18 0 15.98 -15999.2 -3515.6 1 E 490 220 540 270
-13 11
-"PUSH_BUTTON1"
-""
-1 40 123 E E E 1 E 1 E N "White" E N {0,136,185} E E
- E E
-10 0 0 0 0 0
-E E E
-1
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
-0  -2 102 260 146
-
-T 
-1
-LANG:10027 23 В компьютере
-E E E E
-13 12
-"PUSH_BUTTON2"
-""
-1 40 165 E E E 1 E 1 E N "White" E N {0,136,185} E E
- E E
-11 0 0 0 0 0
-E E E
-1
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
-0  -2 144 260 188
-
-T 
-1
-LANG:10027 15 В прессе
-E E E E
-13 13
-"PUSH_BUTTON3"
-""
-1 40 207 E E E 1 E 1 E N "White" E N {0,136,185} E E
- E E
-12 0 0 0 0 0
-E E E
-1
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
-0  -2 186 260 230
-
-T 
-1
-LANG:10027 16 Сравнить
-E E E E
 29 14
 "Label5"
 ""
-1 110 183 E E E 1 E 1 E N {0,95,135} E N "White" E E
+1 110 100 E E E 1 E 1 E N {0,95,135} E N "White" E E
  E E
 13 0 0 0 0 0
 E E E
@@ -251,13 +191,13 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,27,5,75,0,0,0,0,0,Полужирный
-0  0 228 259 277
+0  0 145 259 194
 5 Label
 0
 E29 15
 "Label6"
 ""
-1 90 325 E E E 1 E 1 E N "White" E N {0,136,185} E E
+1 90 242 E E E 1 E 1 E N "White" E N {0,136,185} E E
  E E
 14 0 0 0 0 0
 E E E
@@ -271,13 +211,13 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
-0  0 277 259 316
+0  0 194 259 233
 5 Label
 0
 E29 17
 "Label7"
 ""
-1 110 271 E E E 1 E 1 E N {0,95,135} E N "White" E E
+1 110 188 E E E 1 E 1 E N {0,95,135} E N "White" E E
  E E
 16 0 0 0 0 0
 E E E
@@ -291,13 +231,13 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,27,5,75,0,0,0,0,0,Полужирный
-0  0 316 259 365
+0  0 233 259 282
 5 Label
 0
 E29 18
 "Label8"
 ""
-1 90 413 E E E 1 E 1 E N "White" E N {0,136,185} E E
+1 90 330 E E E 1 E 1 E N "White" E N {0,136,185} E E
  E E
 17 0 0 0 0 0
 E E E
@@ -311,7 +251,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
-0  0 365 259 404
+0  0 282 259 321
 5 Label
 0
 E13 19
@@ -461,7 +401,7 @@ E E E E
 29 26
 "EMBEDDED_MODULE1"
 ""
-1 852 545 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 859 545 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 25 0 0 0 0 0
 E E E
@@ -481,14 +421,14 @@ LANG:10027 0
 "ModuleName" "string SchedulerModule"
 "layoutAlignment" "AlignNone"
 1
-LANG:10027 30 Noto Sans,12,-1,5,50,0,0,0,0,0
-0  665 397 1593 801
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  672 397 1600 801
 15 Canvas.Canvas.1
 0
 E29 27
 "EMBEDDED_MODULE2"
 ""
-1 852 140.4752475247525 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 859 140.4752475247525 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 26 0 0 0 0 0
 E E E
@@ -505,14 +445,80 @@ LANG:10027 0
 "oldPanelAnimateSize" "bool TRUE"
 "newPanelAnimType" "string TopLeft"
 "oldPanelAnimType" "string BottomRight"
-"ModuleName" "string ParamModule"
+"ModuleName" "string ParametersModule"
 "layoutAlignment" "AlignNone"
 1
-LANG:10027 30 Noto Sans,12,-1,5,50,0,0,0,0,0
-0  665 2 1593 379.9999999999999
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  672 2 1602 382
 15 Canvas.Canvas.1
 0
-E0
+"main()
+{
+  this.backCol(\"{179,204,220}\");
+}" 0
+29 28
+"EMBEDDED_MODULE3"
+""
+1 1671.931182795699 140.4752475247525 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+27 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+10
+"newPanelAnimDuration" "int 0"
+"oldPanelAnimDuration" "int 0"
+"newPanelAnimateOpacity" "bool TRUE"
+"oldPanelAnimateOpacity" "bool TRUE"
+"newPanelAnimateSize" "bool TRUE"
+"oldPanelAnimateSize" "bool TRUE"
+"newPanelAnimType" "string TopLeft"
+"oldPanelAnimType" "string BottomRight"
+"ModuleName" "string OtherModule"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  1610 2 1918 382
+15 Canvas.Canvas.1
+0
+"main()
+{
+  this.backCol(\"{179,204,220}\");
+}" 0
+29 29
+"EMBEDDED_MODULE4"
+""
+1 1671.931182795699 535.445622720167 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+28 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+10
+"newPanelAnimDuration" "int 0"
+"oldPanelAnimDuration" "int 0"
+"newPanelAnimateOpacity" "bool TRUE"
+"oldPanelAnimateOpacity" "bool TRUE"
+"newPanelAnimateSize" "bool TRUE"
+"oldPanelAnimateSize" "bool TRUE"
+"newPanelAnimType" "string TopLeft"
+"oldPanelAnimType" "string BottomRight"
+"ModuleName" "string ButtonModule"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  1610 390 1918 800
+15 Canvas.Canvas.1
+0
+"main()
+{
+  this.backCol(\"{179,204,220}\");
+}" 0
+0
 LAYER, 1 
 1
 LANG:10027 0 
