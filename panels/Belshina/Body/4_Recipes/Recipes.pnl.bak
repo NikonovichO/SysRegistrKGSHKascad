@@ -401,7 +401,7 @@ E E E E
 29 26
 "EMBEDDED_MODULE1"
 ""
-1 859 545 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 859 538 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 25 0 0 0 0 0
 E E E
@@ -422,7 +422,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
-0  672 397 1600 801
+0  672 390 1600 800
 15 Canvas.Canvas.1
 0
 E29 27
