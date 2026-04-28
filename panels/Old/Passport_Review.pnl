@@ -1,7 +1,7 @@
 V 14
 1
 LANG:10027 0 
-PANEL,-1 -1 1746 828 N {207,207,207} 0
+PANEL,-1 -1 1635 826 N {207,207,207} 0
 "main()
 {
     //Debug (\"строка подключения:\", conStr);
@@ -149,7 +149,7 @@ LANG:10027 4 по
 25 9
 "tblPassports"
 ""
-1 275.9999999999998 8.657067137490628 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 276.0000000000001 2.00000000000002 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E "// SimpleCtrlScriptStart {invalid}
 main()
 {
@@ -188,9 +188,9 @@ LANG:10027 0
 1
 "layoutAlignment" "AlignHCenter"
 1
-LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  273.9999999999998 6.657067137490609 1482 829.7014102528644
-EE 1 0 1 12 0 "serial_num" 6 1 0 "[11s,,,AlignLeft]" 1
+LANG:10027 43 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Regular
+0  274.0000000000001 0 1642 823.0443431153739
+EE 1 0 1 13 0 "serial_num" 6 1 0 "[11s,,,AlignLeft]" 1
 LANG:10027 26 cерийный номер
 E
 1
@@ -220,7 +220,13 @@ E
 1
 LANG:10027 0 
 
-80 "time_start" 6 1 0 "[%ct,False,,AlignLeft|AlignVCenter]" 1
+80 "time_forming" 6 1 0 "[%ct,False,,AlignLeft|AlignVCenter]" 1
+LANG:10027 20 формование
+E
+1
+LANG:10027 0 
+
+150 "time_start" 6 1 0 "[%ct,False,,AlignLeft|AlignVCenter]" 1
 LANG:10027 12 начало
 E
 1
@@ -265,7 +271,7 @@ LANG:10027 0
 120 
 17 17 10 0
 1
-LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+LANG:10027 43 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Regular
 0 0 1 1 1 7
 1 0
 13 10
@@ -537,7 +543,7 @@ LANG:10027 10 пресс
 13 20
 "PUSH_BUTTON2"
 ""
-1 1.444369015735369 349.3375462787023 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+1 1.444369015735333 350.5875462787022 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
  E E
 19 0 0 0 0 0
 E E E
@@ -549,7 +555,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
-0  0.1610387837719607 333 273.161038783772 366
+0  0.1610387837719247 334.2499999999999 273.161038783772 367.2499999999999
 
 T 
 1
@@ -563,8 +569,9 @@ LANG:10027 48 показать список паспортов
   anytype fld;
   dyn_string models;
   string cmdStr, sn, raw, model, recipe, quality, num_diaphr, cycle_counter, all_cycles, line, press;
-  time  time_start,  time_end;
+  time  time_start,  time_end, time_forming;
   string startStr, endStr;
+  bool bad_quality;
 
   tblPassports.deleteAllLines();
 
@@ -584,23 +591,25 @@ LANG:10027 48 показать список паспортов
      startStr = formatTime(\"%Y-%m-%d %H:%M:%S\", time_start);
      endStr   = formatTime(\"%Y-%m-%d %H:%M:%S\", time_end);
 
-   if (isPeriodChecked) //выборка данных в recordset по дате
-    {
-      cmdStr = \"SELECT serial_num, raw_tire_num, model_tire, num_recipe, quality, CAST(time_start AS datetime) AS time_start,  CAST(time_stop AS datetime) AS time_stop, press_fullNum, num_diaphr, current_cycle, number_cycles FROM vPassport\"+
-             + \" WHERE time_start BETWEEN '\"+startStr+\"' AND '\"+ endStr+\"'\";
+     cmdStr = \"SELECT serial_num, raw_tire_num, model_tire, id_recipe, bad_quality, CAST(time_start AS datetime) AS time_start, CAST(time_stop AS datetime) AS time_stop, press_fullNum, num_diaphr, count_diaphr, limit_diaphr,\"+
+              +\" CAST(time_form_start AS datetime) AS time_form_start FROM vPassport\";
+
+     if (isPeriodChecked) //выборка данных в recordset по дате
+   {
+     cmdStr =  cmdStr + \" WHERE time_start BETWEEN '\"+startStr+\"' AND '\"+ endStr+\"'\";
     }
     bool isPressChecked;
     getValue(\"chbPress\", \"state\", 0, isPressChecked);
 
-  //выборка по прессу и периоду
+  //выборка по прессу
    if(isPressChecked && !isPeriodChecked)
    {
      getValue(\"cbLine\", \"selectedText\", line);
      getValue(\"cbPress\", \"selectedText\", press);
-     cmdStr = \"SELECT serial_num, raw_tire_num, model_tire, num_recipe, quality, CAST(time_start AS datetime) AS time_start,  CAST(time_stop AS datetime) AS time_stop, press_fullNum, num_diaphr, current_cycle, number_cycles FROM vPassport\"+
-             + \" WHERE press_fullNum = \" + line + press;
+     cmdStr = cmdStr  + \" WHERE press_fullNum = \" + line + press;
    }
 
+    //выборка по прессу и периоду
     if(isPressChecked && isPeriodChecked)
    {
      getValue(\"cbLine\", \"selectedText\", line);
@@ -611,21 +620,22 @@ LANG:10027 48 показать список паспортов
   //Выборка по  серийному номеру без учета даты
     bool isSNChecked;
     getValue(\"chBox_SN\", \"state\", 0, isSNChecked);
-    Debug(\"isSNChecked:\", isSNChecked);
+  //  Debug(\"isSNChecked:\", isSNChecked);
 
   if(isSNChecked && !isPeriodChecked)
    {
-     cmdStr = \"SELECT serial_num, raw_tire_num, model_tire, num_recipe, quality,  CAST(time_start AS datetime) AS time_start,  CAST(time_stop AS datetime) AS time_stop, press_fullNum, num_diaphr, current_cycle, number_cycles FROM vPassport\"+
-             + \" WHERE serial_num like '%\" +tfSerialNum.text+\"%'\";
-   }
-
-  if(isSNChecked && isPeriodChecked)
-    {
-
-     cmdStr = cmdStr + \"AND  serial_num like '%\" +tfSerialNum.text+\"%'\";
+     cmdStr = cmdStr + \" WHERE serial_num like '%\" +tfSerialNum.text+\"%'\";
     }
 
+  //Серийный номер и период
+    bool isQuality;
+    getValue(\"chBox_quality\", \"state\", 0, isQuality);
+    if(isQuality && isPeriodChecked)
+    {
+     cmdStr = cmdStr + \"AND bad_quality  = true\";;
+    }
     rc = dbOpenRecordset(conn, cmdStr, rs);
+
     Debug(\"rs:\", rc);
     Debug(\"cmdStr:\", cmdStr);
 
@@ -638,14 +648,19 @@ LANG:10027 48 показать список паспортов
        dbGetField(rs, 1, raw);
        dbGetField(rs, 2, model);
        dbGetField(rs, 3, recipe);
-       dbGetField(rs, 4, quality);
+       dbGetField(rs, 4, bad_quality);
        dbGetField(rs, 5, time_start);
        dbGetField(rs, 6, time_end);
        dbGetField(rs, 7, press);
-       dbGetField(rs, 8,  num_diaphr);
+       dbGetField(rs, 8, num_diaphr);
        dbGetField(rs, 9, cycle_counter);
        dbGetField(rs, 10, all_cycles);
-       tblPassports.appendLine(\"serial_num\", sn, \"raw\", raw, \"model\", model, \"recipe\", recipe,
+       dbGetField(rs, 11, time_forming);
+
+      // dbGetField(rs, 8,  num_diaphr);
+      // dbGetField(rs, 9, cycle_counter);
+      // dbGetField(rs, 10, all_cycles);
+       tblPassports.appendLine(\"serial_num\", sn, \"raw\", raw, \"model\", model, \"recipe\", recipe, \"time_forming\", time_forming,
                                \"time_start\", time_start, \"time_end\", time_end,\"press\", press, \"num_diaphr\", num_diaphr, \"cycle_counter\", cycle_counter, \"all_cycles\", all_cycles);
        dbMoveNext(rs);
       }
@@ -786,13 +801,13 @@ main()
 
 void EP_childPanelOn()
 {
- int nLine, nColl;
-string SN;
-getValue (\"tblPassports\", \"currentCell\", nLine, nColl);
-Debug(\"line:\",nLine);
-getValue (\"tblPassports\", \"cellValueRC\", nLine, \"serial_num\", SN);
-Debug(\"line:\",nLine);
-ChildPanelOnCentralModal(\"Passport.pnl\", \"Passport\",  makeDynString(\"$dp:\" + SN));
+  int nLine, nColl;
+  string SN;
+  getValue (\"tblPassports\", \"currentCell\", nLine, nColl);
+  Debug(\"line:\",nLine);
+  getValue (\"tblPassports\", \"cellValueRC\", nLine, \"serial_num\", SN);
+  Debug(\"num:\",SN);
+  ChildPanelOnCentralModal(\"Old/Passport.pnl\", \"Passport\",  makeDynString(\"$dp:\" + SN));
 }
 
 // SimpleCtrlScript {EP_childPanelOn}

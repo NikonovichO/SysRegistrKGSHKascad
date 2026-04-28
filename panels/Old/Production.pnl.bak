@@ -1,7 +1,7 @@
 V 14
 1
 LANG:10027 0 
-PANEL,-1 -1 294 454 N {207,207,207} 0
+PANEL,-1 -1 345 454 N {207,207,207} 0
 "main()
 {
   int rc;
@@ -9,7 +9,8 @@ PANEL,-1 -1 294 454 N {207,207,207} 0
   dbRecordset rs;
   string cmdStr, sn, id_r, tstart;
   //подключение к БД через ODBC. В приложении \"Администратор ODBC\" создается источник данных, в нашем случае KGSHVulcanisation
-  rc = dbOpenConnection(\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
+  dpGet(\"System1:GlobalVar1.ConnectionDB:_online.._value\",conStr);
+  rc = dbOpenConnection(conStr, conn);
   Debug(\"подключение:\", rc);
   if (!rc)
   {
@@ -78,7 +79,7 @@ LANG:10027 0
 14 22
 "TF_Number"
 ""
-1 139.9977653158954 28.78162366388397 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 140 30 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 21 0 0 0 0 0
 E E E
@@ -91,7 +92,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  137.9977653158954 23.12544283473378 301.9977653158955 53.30409978702939
+0  138 24.34381917084981 302.0000000000001 54.52247612314542
 3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {valid}
 main()
 {

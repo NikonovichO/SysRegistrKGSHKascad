@@ -1,33 +1,96 @@
-processing file D:\Sybcom\Kaskad\3.18\dplist\update_007.dpl
-DpType (37): Create msg for type _S7ap sent.
-DpType (50): Create msg for type S7testType sent.
-Datapoint/DpId (53): Datapoint (System1:_SysMgm_DriverS5ap) with ID 523 already exists, new ID will be generated
-Datapoint/DpId (53): create _SysMgm_DriverS7ap.
-DpValue (59): Values for _SysMgm_DriverS7ap.Title sent.
-DpValue (60): Values for _SysMgm_DriverS7ap.Description sent.
-DpValue (61): Values for _SysMgm_DriverS7ap.Icon sent.
-DpValue (62): Values for _SysMgm_DriverS7ap.Index sent.
-DpValue (63): Values for _SysMgm_DriverS7ap.Items.Titles sent.
-DpValue (64): Values for _SysMgm_DriverS7ap.Items.Descriptions sent.
-DpValue (65): Values for _SysMgm_DriverS7ap.Items.IconsSmall sent.
-DpValue (66): Values for _SysMgm_DriverS7ap.Items.IconsLarge sent.
-DpValue (67): Values for _SysMgm_DriverS7ap.Items.OwnActionScripts sent.
-DpValue (68): Values for _SysMgm_DriverS7ap.Items.Filenames sent.
-DpValue (69): Values for _SysMgm_DriverS7ap.Items.ViewPermissions sent.
-DpValue (70): Values for _SysMgm_DriverS7ap.Items.RunPermissions sent.
-DpValue (71): Values for _SysMgm_DriverS7ap.Items.RunPermissionsOwn sent.
-DpValue (72): Values for test1.int sent.
-DpValue (73): Values for test1.uint sent.
-DpValue (74): Values for test1.char sent.
-DpValue (75): Values for test1.long sent.
-DpValue (76): Values for test1.ulong sent.
-DpValue (77): Values for test1.float sent.
-DpValue (78): Values for test1.bit32 sent.
-DpValue (79): Values for test1.bit64 sent.
-DpValue (80): Values for test1.string sent.
-DpValue (81): Values for test1.time sent.
-DpValue (82): Values for test1.blob sent.
-DpValue (83): Values for test1.bool sent.
+processing file D:\Kaskad\Projects\SimatekSysRegistrationNew\dplist\ExportDP.txt
+DpType (184): Create msg for type VulcanisationPress sent.
+DpType (186): Create msg for type GLOBALVARS sent.
+Datapoint/DpId (189): Datapoint (System1:_ACM_Ascii) with ID 518 already exists, new ID will be generated
+Datapoint/DpId (189): create Press1.
+Datapoint/DpId (190): Datapoint (System1:_ACM_Ctrl) with ID 519 already exists, new ID will be generated
+Datapoint/DpId (190): create Press3.
+Datapoint/DpId (191): Datapoint (System1:_Watchdog_WCCILevent_0) with ID 527 already exists, new ID will be generated
+Datapoint/DpId (191): create GlobalVar1.
+Datapoint/DpId (192): Datapoint (System1:_DatabaseState_2) with ID 532 already exists, new ID will be generated
+Datapoint/DpId (192): create Press2.
+Datapoint/DpId (193): Datapoint (System1:_NGA) with ID 533 already exists, new ID will be generated
+Datapoint/DpId (193): create Press4.
+DpConvRawToIngMain (199): Values for Press1.Inputs.AnalogValues.TempReturnDiaph sent.
+DpConvRawToIngMain (201): Values for Press1.Inputs.AnalogValues.TempSupplyDiaph sent.
+DpConvRawToIngMain (203): Values for Press1.Inputs.AnalogValues.TempCam sent.
+DpConvRawToIngMain (205): Values for Press2.Inputs.AnalogValues.TempReturnDiaph sent.
+DpConvRawToIngMain (207): Values for Press2.Inputs.AnalogValues.TempSupplyDiaph sent.
+DpConvRawToIngMain (211): Values for Press2.Inputs.AnalogValues.TempCam sent.
+DpIdentifier _5c for attribute Press1.Inputs.AnalogValues.PressReturnDiaph:_address.._poll_group does not exist!
+PeriphAddrMain (213): Values for Press1.Inputs.AnalogValues.PressReturnDiaph sent.
+DpIdentifier _5c for attribute Press1.Inputs.AnalogValues.PressSupplyDiaph:_address.._poll_group does not exist!
+PeriphAddrMain (214): Values for Press1.Inputs.AnalogValues.PressSupplyDiaph sent.
+DpIdentifier _5c for attribute Press1.Inputs.AnalogValues.TempReturnDiaph:_address.._poll_group does not exist!
+PeriphAddrMain (215): Values for Press1.Inputs.AnalogValues.TempReturnDiaph sent.
+DpIdentifier _5c for attribute Press1.Inputs.AnalogValues.TempSupplyDiaph:_address.._poll_group does not exist!
+PeriphAddrMain (216): Values for Press1.Inputs.AnalogValues.TempSupplyDiaph sent.
+DpIdentifier _5c for attribute Press1.Inputs.AnalogValues.TempCam:_address.._poll_group does not exist!
+PeriphAddrMain (217): Values for Press1.Inputs.AnalogValues.TempCam sent.
+DpIdentifier _5c for attribute Press1.Inputs.AnalogValues.PressureCam:_address.._poll_group does not exist!
+PeriphAddrMain (218): Values for Press1.Inputs.AnalogValues.PressureCam sent.
+DpIdentifier _5c for attribute Press1.Inputs.AnalogValues.FormingPressure:_address.._poll_group does not exist!
+PeriphAddrMain (219): Values for Press1.Inputs.AnalogValues.FormingPressure sent.
+DpIdentifier _5c for attribute Press1.Inputs.RecipeBoolVal.Runtime:_address.._poll_group does not exist!
+PeriphAddrMain (220): Values for Press1.Inputs.RecipeBoolVal.Runtime sent.
+DpIdentifier _5c for attribute Press1.Inputs.StringValues.SerialNumber:_address.._poll_group does not exist!
+PeriphAddrMain (221): Values for Press1.Inputs.StringValues.SerialNumber sent.
+DpIdentifier _5c for attribute Press1.Inputs.StringValues.RawTireNumber:_address.._poll_group does not exist!
+PeriphAddrMain (222): Values for Press1.Inputs.StringValues.RawTireNumber sent.
+DpIdentifier _5c for attribute Press1.Inputs.StringValues.Recipe:_address.._poll_group does not exist!
+PeriphAddrMain (223): Values for Press1.Inputs.StringValues.Recipe sent.
+DpIdentifier _5c for attribute Press1.Inputs.StringValues.Model:_address.._poll_group does not exist!
+PeriphAddrMain (224): Values for Press1.Inputs.StringValues.Model sent.
+DpIdentifier _5c for attribute Press3.Inputs.AnalogValues.PressReturnDiaph:_address.._poll_group does not exist!
+PeriphAddrMain (225): Values for Press3.Inputs.AnalogValues.PressReturnDiaph sent.
+PeriphAddrMain (226): Values for Press3.Inputs.AnalogValues.FormingPressure sent.
+DpIdentifier _5c for attribute Press2.Inputs.AnalogValues.PressReturnDiaph:_address.._poll_group does not exist!
+PeriphAddrMain (227): Values for Press2.Inputs.AnalogValues.PressReturnDiaph sent.
+DpIdentifier _5c for attribute Press2.Inputs.AnalogValues.PressSupplyDiaph:_address.._poll_group does not exist!
+PeriphAddrMain (228): Values for Press2.Inputs.AnalogValues.PressSupplyDiaph sent.
+DpIdentifier _5c for attribute Press2.Inputs.AnalogValues.TempReturnDiaph:_address.._poll_group does not exist!
+PeriphAddrMain (229): Values for Press2.Inputs.AnalogValues.TempReturnDiaph sent.
+DpIdentifier _5c for attribute Press2.Inputs.AnalogValues.TempSupplyDiaph:_address.._poll_group does not exist!
+PeriphAddrMain (230): Values for Press2.Inputs.AnalogValues.TempSupplyDiaph sent.
+DpIdentifier _5c for attribute Press2.Inputs.AnalogValues.TempCam:_address.._poll_group does not exist!
+PeriphAddrMain (231): Values for Press2.Inputs.AnalogValues.TempCam sent.
+DpIdentifier _5c for attribute Press2.Inputs.AnalogValues.PressureCam:_address.._poll_group does not exist!
+PeriphAddrMain (232): Values for Press2.Inputs.AnalogValues.PressureCam sent.
+DpIdentifier _5c for attribute Press2.Inputs.AnalogValues.FormingPressure:_address.._poll_group does not exist!
+PeriphAddrMain (233): Values for Press2.Inputs.AnalogValues.FormingPressure sent.
+DpIdentifier _5c for attribute Press2.Inputs.RecipeBoolVal.Runtime:_address.._poll_group does not exist!
+PeriphAddrMain (234): Values for Press2.Inputs.RecipeBoolVal.Runtime sent.
+DpIdentifier _5c for attribute Press2.Inputs.StringValues.SerialNumber:_address.._poll_group does not exist!
+PeriphAddrMain (235): Values for Press2.Inputs.StringValues.SerialNumber sent.
+DpIdentifier _5c for attribute Press2.Inputs.StringValues.RawTireNumber:_address.._poll_group does not exist!
+PeriphAddrMain (236): Values for Press2.Inputs.StringValues.RawTireNumber sent.
+DpIdentifier _5c for attribute Press2.Inputs.StringValues.Recipe:_address.._poll_group does not exist!
+PeriphAddrMain (237): Values for Press2.Inputs.StringValues.Recipe sent.
+DpIdentifier _5c for attribute Press2.Inputs.StringValues.Model:_address.._poll_group does not exist!
+PeriphAddrMain (240): Values for Press2.Inputs.StringValues.Model sent.
+DbArchiveInfo (243): Values for Press1.Inputs.AnalogValues.PressReturnDiaph sent.
+DbArchiveInfo (245): Values for Press1.Inputs.AnalogValues.PressSupplyDiaph sent.
+DbArchiveInfo (247): Values for Press1.Inputs.AnalogValues.TempReturnDiaph sent.
+DbArchiveInfo (249): Values for Press1.Inputs.AnalogValues.TempSupplyDiaph sent.
+DbArchiveInfo (251): Values for Press1.Inputs.AnalogValues.TempCam sent.
+DbArchiveInfo (253): Values for Press1.Inputs.AnalogValues.PressureCam sent.
+DbArchiveInfo (254): Values for Press1.Inputs.AnalogValues.FormingPressure sent.
+DbArchiveInfo (255): Values for Press1.Inputs.RecipeBoolVal.Runtime sent.
+DbArchiveInfo (257): Values for Press3.Inputs.AnalogValues.PressReturnDiaph sent.
+DbArchiveInfo (259): Values for Press3.Inputs.AnalogValues.FormingPressure sent.
+DbArchiveInfo (261): Values for Press2.Inputs.AnalogValues.PressReturnDiaph sent.
+DbArchiveInfo (263): Values for Press2.Inputs.AnalogValues.PressSupplyDiaph sent.
+DbArchiveInfo (265): Values for Press2.Inputs.AnalogValues.TempReturnDiaph sent.
+DbArchiveInfo (267): Values for Press2.Inputs.AnalogValues.TempSupplyDiaph sent.
+DbArchiveInfo (269): Values for Press2.Inputs.AnalogValues.TempCam sent.
+DbArchiveInfo (271): Values for Press2.Inputs.AnalogValues.PressureCam sent.
+DbArchiveInfo (273): Values for Press2.Inputs.AnalogValues.FormingPressure sent.
+ascii dump of database (277): Values for Press2.Inputs.RecipeBoolVal.Runtime sent.
+Datapoint/DpId (278): Datapoint (System1:_ACM_Device) with ID 520 already exists, new ID will be generated
+Datapoint/DpId (278): create _ds_VulcanisationPress.
+DpValue (283): Values for _ds_VulcanisationPress.symbols sent.
+DpValue (284): Values for _ds_VulcanisationPress.symboldefault sent.
+DpValue (285): Values for _ds_VulcanisationPress.trendElements sent.
 Waiting for last response from eventmanager...
-Scanning of file D:\Sybcom\Kaskad\3.18\dplist\update_007.dpl is finished (56)
+Scanning of file D:\Kaskad\Projects\SimatekSysRegistrationNew\dplist\ExportDP.txt is finished (-50)
 End of Program

@@ -1,7 +1,7 @@
 V 14
 1
 LANG:10027 0 
-PANEL,-1 -1 2029 1149 N "_3DFace" 2
+PANEL,-1 -1 2057 992 N "_3DFace" 2
 "$SCREENTYPE"
 "$dp"
 E E E E E 1 -1 -1 0  120 170
@@ -20,7 +20,7 @@ LANG:10027 0
 28 2
 "TAB1"
 ""
-1 72.99999999999967 23 E E E 1 E 1 E N "_3DText" E N {235,237,239} E E
+1 55.99999999999967 10 E E E 1 E 1 E N "_3DText" E N {235,237,239} E E
  E E
 1 0 0 0 0 0
 E E E
@@ -36,7 +36,7 @@ LANG:10027 0
 "showBackground" "0"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
-0  71 21 2012 965
+0  54 8 2042 952
 E5 "General" 1
 LANG:10027 10 Общее
 1 "Old/General.pnl" 1
@@ -94,7 +94,7 @@ LANG:10027 6 РЯД
 13 4
 "PUSH_BUTTON1"
 ""
-1 9 51.60869565217394 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+1 1 42.42934782608703 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
  E E
 3 0 0 0 0 0
 E E E
@@ -106,7 +106,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
-0  7 43 63.00000000000001 85
+0  -1 33.82065217391309 55.00000000000001 75.82065217391309
 
 T 
 1
@@ -115,7 +115,7 @@ E E E E
 13 5
 "PUSH_BUTTON2"
 ""
-1 9 89.17934782608691 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+1 1 80 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
  E E
 4 0 0 0 0 0
 E E E
@@ -127,7 +127,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
-0  7 80.875 63 121.125
+0  -1 71.69565217391309 55 111.9456521739131
 
 T 
 1

@@ -10,5 +10,6 @@ WCCILproxy       | always |      30 |        2 |        2 |
 WCCOActrl        | always |      30 |        3 |        1 |-f pvss_scripts.lst
 WCCILsim         | always |      30 |        3 |        1 |
 WCCOAui          |   once |      30 |        3 |        1 |-m gedi
-WCCOActrl        | always |      30 |        2 |        2 |CuringStartStop.ctl
+WCCOActrl        | manual |      30 |        2 |        2 |WritePassport.ctl
 WCCOAopcua       | always |      30 |        2 |        2 |-num 2
+WCCOActrl        | manual |      30 |        2 |        2 |SetValues.ctl

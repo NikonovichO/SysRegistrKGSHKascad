@@ -1,107 +1,409 @@
-WCCILpmon    (1), 2026.04.04 15:49:05.878, SYS,  INFO,        1, Manager Start, START_MODE
-WCCILpmon    (1), 2026.04.04 15:49:06.003, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SysRegistrKGSHKascad -pmonIndex 1 
-WCCILpmon    (1), 2026.04.04 15:49:07.344, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SysRegistrKGSHKascad -pmonIndex 2 
-WCCILpmon    (1), 2026.04.04 15:49:07.786, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SysRegistrKGSHKascad -pmonIndex 3 
-WCCILpmon    (1), 2026.04.04 15:49:08.160, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SysRegistrKGSHKascad -pmonIndex 4 
-WCCILpmon    (1), 2026.04.04 15:49:12.996, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 5 -f pvss_scripts.lst
-WCCILpmon    (1), 2026.04.04 15:49:13.326, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SysRegistrKGSHKascad -pmonIndex 6 
-WCCILpmon    (1), 2026.04.04 15:49:13.537, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SysRegistrKGSHKascad -pmonIndex 7 -m gedi
-WCCILpmon    (1), 2026.04.04 15:49:18.781, SYS,  INFO,        9/pmon, The project is up and running. Entering monitor mode
-WCCILpmon    (1), 2026.04.06 09:47:48.264, SYS,  INFO,       21/pmon, Got STOP_ALL command from ::1, stopping the project
-WCCILpmon    (1), 2026.04.06 09:47:48.265, SYS,  INFO,       17/pmon, Stopping Manager WCCOAui(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 09:47:48.266, SYS,  INFO,       17/pmon, Stopping Manager WCCILsim(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 09:47:48.267, SYS,  INFO,       17/pmon, Stopping Manager WCCOActrl(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 09:47:48.268, SYS,  INFO,       17/pmon, Stopping Manager WCCOAnextgenarch(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 09:47:51.941, SYS,  INFO,       17/pmon, Stopping Manager WCCILevent(0) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 09:47:52.050, SYS,  INFO,       17/pmon, Stopping Manager WCCILdata(0) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 09:47:53.094, SYS,  INFO,       17/pmon, Stopping Manager WCCILproxy(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 09:47:53.529, SYS,  INFO,       13/pmon, Completely stopped the project - waiting for commands
-WCCILpmon    (1), 2026.04.06 09:48:05.302, SYS,  INFO,        3/pmon, Got shutdown command - stopping the project and terminating
-WCCILpmon    (1), 2026.04.06 09:48:05.302, SYS,  INFO,       15/pmon, Completely stopped the project - terminating
-WCCILpmon    (1), 2026.04.06 09:48:05.302, SYS,  INFO,        2, Manager Stop
-WCCILpmon    (1), 2026.04.06 09:55:30.667, SYS,  INFO,        1, Manager Start, WAIT_MODE
-WCCILpmon    (1), 2026.04.06 09:55:30.949, SYS,  INFO,       20/pmon, Got START_ALL command from ::1, starting the project
-WCCILpmon    (1), 2026.04.06 09:55:31.058, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SysRegistrKGSHKascad -pmonIndex 1 
-WCCILpmon    (1), 2026.04.06 09:55:32.810, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SysRegistrKGSHKascad -pmonIndex 2 
-WCCILpmon    (1), 2026.04.06 09:55:33.243, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SysRegistrKGSHKascad -pmonIndex 3 
-WCCILpmon    (1), 2026.04.06 09:55:33.643, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SysRegistrKGSHKascad -pmonIndex 4 
-WCCILpmon    (1), 2026.04.06 09:55:38.462, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 5 -f pvss_scripts.lst
-WCCILpmon    (1), 2026.04.06 09:55:38.790, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SysRegistrKGSHKascad -pmonIndex 6 
-WCCILpmon    (1), 2026.04.06 09:55:39.115, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SysRegistrKGSHKascad -pmonIndex 7 -m gedi
-WCCILpmon    (1), 2026.04.06 09:55:41.936, SYS,  INFO,        9/pmon, The project is up and running. Entering monitor mode
-WCCILpmon    (1), 2026.04.06 10:12:36.616, SYS,  INFO,       21/pmon, Got STOP_ALL command from ::1, stopping the project
-WCCILpmon    (1), 2026.04.06 10:12:36.618, SYS,  INFO,       17/pmon, Stopping Manager WCCILsim(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 10:12:36.619, SYS,  INFO,       17/pmon, Stopping Manager WCCOActrl(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 10:12:36.620, SYS,  INFO,       17/pmon, Stopping Manager WCCOAnextgenarch(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 10:12:40.538, SYS,  INFO,       17/pmon, Stopping Manager WCCILevent(0) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 10:12:40.757, SYS,  INFO,       17/pmon, Stopping Manager WCCILdata(0) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 10:12:41.741, SYS,  INFO,       17/pmon, Stopping Manager WCCILproxy(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 10:12:41.960, SYS,  INFO,       13/pmon, Completely stopped the project - waiting for commands
-WCCILpmon    (1), 2026.04.06 10:12:46.846, SYS,  INFO,        3/pmon, Got shutdown command - stopping the project and terminating
-WCCILpmon    (1), 2026.04.06 10:12:46.846, SYS,  INFO,       15/pmon, Completely stopped the project - terminating
-WCCILpmon    (1), 2026.04.06 10:12:46.846, SYS,  INFO,        2, Manager Stop
-WCCILpmon    (1), 2026.04.06 12:57:12.400, SYS,  INFO,        1, Manager Start, WAIT_MODE
-WCCILpmon    (1), 2026.04.06 12:57:12.525, SYS,  INFO,       20/pmon, Got START_ALL command from ::1, starting the project
-WCCILpmon    (1), 2026.04.06 12:57:12.525, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SysRegistrKGSHKascad -pmonIndex 1 
-WCCILpmon    (1), 2026.04.06 12:57:13.872, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SysRegistrKGSHKascad -pmonIndex 2 
-WCCILpmon    (1), 2026.04.06 12:57:14.201, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SysRegistrKGSHKascad -pmonIndex 3 
-WCCILpmon    (1), 2026.04.06 12:57:14.525, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SysRegistrKGSHKascad -pmonIndex 4 
-WCCILpmon    (1), 2026.04.06 12:57:19.515, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 5 -f pvss_scripts.lst
-WCCILpmon    (1), 2026.04.06 12:57:19.840, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SysRegistrKGSHKascad -pmonIndex 6 
-WCCILpmon    (1), 2026.04.06 12:57:20.170, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SysRegistrKGSHKascad -pmonIndex 7 -m gedi
-WCCILpmon    (1), 2026.04.06 12:57:21.956, SYS,  INFO,        9/pmon, The project is up and running. Entering monitor mode
-WCCILpmon    (1), 2026.04.06 14:22:52.006, SYS,  INFO,       21/pmon, Got STOP_ALL command from ::1, stopping the project
-WCCILpmon    (1), 2026.04.06 14:22:52.007, SYS,  INFO,       17/pmon, Stopping Manager WCCOAui(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 14:22:52.008, SYS,  INFO,       17/pmon, Stopping Manager WCCILsim(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 14:22:52.008, SYS,  INFO,       17/pmon, Stopping Manager WCCOActrl(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 14:22:52.010, SYS,  INFO,       17/pmon, Stopping Manager WCCOAnextgenarch(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 14:23:22.067, SYS,  INFO,       17/pmon, Stopping Manager WCCOAui(1) with signal SIGKILL
-WCCILpmon    (1), 2026.04.06 14:23:22.174, SYS,  INFO,       17/pmon, Stopping Manager WCCILevent(0) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 14:23:22.283, SYS,  INFO,       17/pmon, Stopping Manager WCCILdata(0) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 14:23:23.300, SYS,  INFO,       17/pmon, Stopping Manager WCCILproxy(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 14:23:24.389, SYS,  INFO,       13/pmon, Completely stopped the project - waiting for commands
-WCCILpmon    (1), 2026.04.06 14:24:41.880, SYS,  INFO,       28/pmon, Got INS command from ::1, inserting new manager WCCOActrl at index 8
-WCCILpmon    (1), 2026.04.06 14:25:05.686, SYS,  INFO,       28/pmon, Got INS command from ::1, inserting new manager WCCOAopcua at index 9
-WCCILpmon    (1), 2026.04.06 14:25:42.263, SYS,  INFO,       29/pmon, Got PROP_PUT command from ::1, changing manager WCCOAopcua(2) at index 9
-WCCILpmon    (1), 2026.04.06 14:32:43.876, SYS,  INFO,       29/pmon, Got PROP_PUT command from ::1, changing manager WCCOActrl(1) at index 8
-WCCILpmon    (1), 2026.04.06 14:32:49.986, SYS,  INFO,       20/pmon, Got START_ALL command from ::1, starting the project
-WCCILpmon    (1), 2026.04.06 14:32:49.986, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SysRegistrKGSHKascad -pmonIndex 1 
-WCCILpmon    (1), 2026.04.06 14:32:51.288, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SysRegistrKGSHKascad -pmonIndex 2 
-WCCILpmon    (1), 2026.04.06 14:32:51.617, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SysRegistrKGSHKascad -pmonIndex 3 
-WCCILpmon    (1), 2026.04.06 14:32:52.011, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SysRegistrKGSHKascad -pmonIndex 4 
-WCCILpmon    (1), 2026.04.06 14:32:56.826, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 5 -f pvss_scripts.lst
-WCCILpmon    (1), 2026.04.06 14:32:57.156, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SysRegistrKGSHKascad -pmonIndex 6 
-WCCILpmon    (1), 2026.04.06 14:32:57.489, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SysRegistrKGSHKascad -pmonIndex 7 -m gedi
-WCCILpmon    (1), 2026.04.06 14:32:59.502, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 8 CuringStartStop.ctl
-WCCILpmon    (1), 2026.04.06 14:32:59.772, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SysRegistrKGSHKascad -pmonIndex 9 -num 2
-WCCILpmon    (1), 2026.04.06 14:32:59.990, SYS,  INFO,       11/pmon, Detected stopped manager WCCOActrl(2) - restarting it #1
-WCCILpmon    (1), 2026.04.06 14:32:59.995, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 8 CuringStartStop.ctl
-WCCILpmon    (1), 2026.04.06 14:33:00.197, SYS,  INFO,        9/pmon, The project is up and running. Entering monitor mode
-WCCILpmon    (1), 2026.04.06 14:33:00.299, SYS,  INFO,       11/pmon, Detected stopped manager WCCOActrl(2) - restarting it #2
-WCCILpmon    (1), 2026.04.06 14:33:00.302, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 8 CuringStartStop.ctl
-WCCILpmon    (1), 2026.04.06 14:33:00.605, SYS,  INFO,       12/pmon, Manager WCCOActrl(2) restarting too rapidly - giving up restarting
-WCCILpmon    (1), 2026.04.06 14:39:51.007, SYS,  INFO,       21/pmon, Got STOP_ALL command from ::1, stopping the project
-WCCILpmon    (1), 2026.04.06 14:39:51.008, SYS,  INFO,       17/pmon, Stopping Manager WCCOAopcua(2) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 14:39:51.009, SYS,  INFO,       17/pmon, Stopping Manager WCCILsim(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 14:39:51.009, SYS,  INFO,       17/pmon, Stopping Manager WCCOActrl(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 14:39:51.010, SYS,  INFO,       17/pmon, Stopping Manager WCCOAnextgenarch(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 14:39:55.106, SYS,  INFO,       17/pmon, Stopping Manager WCCILevent(0) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 14:39:55.210, SYS,  INFO,       17/pmon, Stopping Manager WCCILdata(0) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 14:39:56.196, SYS,  INFO,       17/pmon, Stopping Manager WCCILproxy(1) with signal SIGTERM
-WCCILpmon    (1), 2026.04.06 14:39:56.707, SYS,  INFO,       13/pmon, Completely stopped the project - waiting for commands
-WCCILpmon    (1), 2026.04.06 14:40:17.002, SYS,  INFO,       20/pmon, Got START_ALL command from ::1, starting the project
-WCCILpmon    (1), 2026.04.06 14:40:17.002, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SysRegistrKGSHKascad -pmonIndex 1 
-WCCILpmon    (1), 2026.04.06 14:40:18.218, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SysRegistrKGSHKascad -pmonIndex 2 
-WCCILpmon    (1), 2026.04.06 14:40:18.551, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SysRegistrKGSHKascad -pmonIndex 3 
-WCCILpmon    (1), 2026.04.06 14:40:18.893, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SysRegistrKGSHKascad -pmonIndex 4 
-WCCILpmon    (1), 2026.04.06 14:40:23.930, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 5 -f pvss_scripts.lst
-WCCILpmon    (1), 2026.04.06 14:40:24.362, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SysRegistrKGSHKascad -pmonIndex 6 
-WCCILpmon    (1), 2026.04.06 14:40:24.577, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SysRegistrKGSHKascad -pmonIndex 7 -m gedi
-WCCILpmon    (1), 2026.04.06 14:40:26.363, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 8 CuringStartStop.ctl
-WCCILpmon    (1), 2026.04.06 14:40:26.565, SYS,  INFO,       11/pmon, Detected stopped manager WCCOActrl(2) - restarting it #1
-WCCILpmon    (1), 2026.04.06 14:40:26.570, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 8 CuringStartStop.ctl
-WCCILpmon    (1), 2026.04.06 14:40:26.775, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SysRegistrKGSHKascad -pmonIndex 9 -num 2
-WCCILpmon    (1), 2026.04.06 14:40:27.081, SYS,  INFO,       11/pmon, Detected stopped manager WCCOActrl(2) - restarting it #2
-WCCILpmon    (1), 2026.04.06 14:40:27.086, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SysRegistrKGSHKascad -pmonIndex 8 CuringStartStop.ctl
-WCCILpmon    (1), 2026.04.06 14:40:27.401, SYS,  INFO,       12/pmon, Manager WCCOActrl(2) restarting too rapidly - giving up restarting
-WCCILpmon    (1), 2026.04.06 14:40:27.401, SYS,  INFO,        9/pmon, The project is up and running. Entering monitor mode
+WCCILpmon    (1), 2026.04.14 15:23:03.844, SYS,  INFO,        1, Manager Start, WAIT_MODE
+WCCILpmon    (1), 2026.04.14 15:23:23.285, SYS,  INFO,       28/pmon, Получена команда INS от ::1, вставка нового менеджера WCCOActrl по индексу 8
+WCCILpmon    (1), 2026.04.14 15:23:30.479, SYS,  INFO,       20/pmon, Получена команда START_ALL от ::1, запуск проекта
+WCCILpmon    (1), 2026.04.14 15:23:30.604, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SimatekSysRegistrationNew -pmonIndex 1 
+WCCILpmon    (1), 2026.04.14 15:23:31.973, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SimatekSysRegistrationNew -pmonIndex 2 
+WCCILpmon    (1), 2026.04.14 15:23:32.644, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SimatekSysRegistrationNew -pmonIndex 3 
+WCCILpmon    (1), 2026.04.14 15:23:33.040, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SimatekSysRegistrationNew -pmonIndex 4 
+WCCILpmon    (1), 2026.04.14 15:23:37.972, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.14 15:23:38.191, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SimatekSysRegistrationNew -pmonIndex 6 
+WCCILpmon    (1), 2026.04.14 15:23:38.413, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.14 15:23:44.067, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.14 15:23:49.691, SYS,  INFO,       28/pmon, Получена команда INS от ::1, вставка нового менеджера WCCOAopcua по индексу 9
+WCCILpmon    (1), 2026.04.14 15:23:49.692, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAopcua(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.14 15:23:49.777, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SimatekSysRegistrationNew -pmonIndex 9 
+WCCILpmon    (1), 2026.04.14 15:24:09.990, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAopcua(1) - перезапускаем его #2
+WCCILpmon    (1), 2026.04.14 15:24:09.990, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SimatekSysRegistrationNew -pmonIndex 9 
+WCCILpmon    (1), 2026.04.14 15:24:30.206, SYS,  INFO,       12/pmon, Менеджер WCCOAopcua(1) перезапускается слишком быстро - отказ от перезапуска
+WCCILpmon    (1), 2026.04.14 15:24:35.345, SYS,  INFO,       29/pmon, Получена команда PROP_PUT от ::1, изменение менеджера WCCOAopcua(1) по индексу 9
+WCCILpmon    (1), 2026.04.14 15:24:39.870, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOAopcua(1) с индексом 9
+WCCILpmon    (1), 2026.04.14 15:24:39.875, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SimatekSysRegistrationNew -pmonIndex 9 num -2
+WCCILpmon    (1), 2026.04.14 15:24:51.470, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOAopcua(1) с индексом 9
+WCCILpmon    (1), 2026.04.14 15:24:51.471, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAopcua(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 15:25:00.053, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOAopcua(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.14 15:25:00.058, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SimatekSysRegistrationNew -pmonIndex 9 num -2
+WCCILpmon    (1), 2026.04.14 15:25:00.125, SYS,  INFO,       21/pmon, Получена команда нду STOP_ALL от ::1, остановка проекта
+WCCILpmon    (1), 2026.04.14 15:25:00.426, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAopcua(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 15:25:00.427, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 15:25:00.427, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 15:25:00.428, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 15:25:00.429, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 15:25:20.353, SYS,  INFO,       17/pmon, Остановка менеджера WCCILevent(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 15:25:20.462, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 15:25:21.437, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 15:25:22.167, SYS,  INFO,       13/pmon, Проект полностью остановлен - ожидание команд
+WCCILpmon    (1), 2026.04.14 15:25:30.643, SYS,  INFO,       29/pmon, Получена команда PROP_PUT от ::1, изменение менеджера WCCOAopcua(2) по индексу 9
+WCCILpmon    (1), 2026.04.14 15:25:41.576, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOAopcua(2) с индексом 9
+WCCILpmon    (1), 2026.04.14 15:25:41.623, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SimatekSysRegistrationNew -pmonIndex 9 -num 2
+WCCILpmon    (1), 2026.04.14 15:25:52.474, SYS,  INFO,       20/pmon, Получена команда START_ALL от ::1, запуск проекта
+WCCILpmon    (1), 2026.04.14 15:25:52.474, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SimatekSysRegistrationNew -pmonIndex 1 
+WCCILpmon    (1), 2026.04.14 15:25:53.715, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SimatekSysRegistrationNew -pmonIndex 2 
+WCCILpmon    (1), 2026.04.14 15:25:54.049, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SimatekSysRegistrationNew -pmonIndex 3 
+WCCILpmon    (1), 2026.04.14 15:25:54.381, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SimatekSysRegistrationNew -pmonIndex 4 
+WCCILpmon    (1), 2026.04.14 15:25:59.243, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.14 15:25:59.572, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SimatekSysRegistrationNew -pmonIndex 6 
+WCCILpmon    (1), 2026.04.14 15:25:59.781, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.14 15:26:10.510, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.14 15:45:15.214, SYS,  INFO,       29/pmon, Получена команда PROP_PUT от ::1, изменение менеджера WCCOActrl(1) по индексу 8
+WCCILpmon    (1), 2026.04.14 15:45:15.215, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOActrl(1) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.14 15:45:15.224, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.14 15:45:15.527, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOActrl(2) - перезапускаем его #2
+WCCILpmon    (1), 2026.04.14 15:45:15.531, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.14 15:45:15.834, SYS,  INFO,       12/pmon, Менеджер WCCOActrl(2) перезапускается слишком быстро - отказ от перезапуска
+WCCILpmon    (1), 2026.04.14 15:45:36.134, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.14 15:45:36.138, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.14 15:45:36.540, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOActrl(2) - перезапускаем его #1
+WCCILpmon    (1), 2026.04.14 15:45:36.544, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.14 15:45:36.846, SYS,  INFO,       11/pmon, Обнаружен остановленный менеджер WCCOActrl(2) - перезапускаем его #2
+WCCILpmon    (1), 2026.04.14 15:45:36.850, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.14 15:45:37.052, SYS,  INFO,       12/pmon, Менеджер WCCOActrl(2) перезапускается слишком быстро - отказ от перезапуска
+WCCILpmon    (1), 2026.04.14 15:46:00.983, SYS,  INFO,       29/pmon, Получена команда PROP_PUT от ::1, изменение менеджера WCCOActrl(1) по индексу 8
+WCCILpmon    (1), 2026.04.14 15:46:06.159, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(1) с индексом 8
+WCCILpmon    (1), 2026.04.14 15:46:06.164, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.14 15:56:03.223, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.14 15:56:03.323, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 15:56:03.324, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 15:56:18.713, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 15:56:19.693, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 15:56:20.240, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.14 15:56:20.349, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SimatekSysRegistrationNew -pmonIndex 1 
+WCCILpmon    (1), 2026.04.14 15:56:21.667, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SimatekSysRegistrationNew -pmonIndex 2 
+WCCILpmon    (1), 2026.04.14 15:56:21.994, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SimatekSysRegistrationNew -pmonIndex 3 
+WCCILpmon    (1), 2026.04.14 15:56:22.321, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SimatekSysRegistrationNew -pmonIndex 4 
+WCCILpmon    (1), 2026.04.14 15:56:27.554, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.14 15:56:27.884, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SimatekSysRegistrationNew -pmonIndex 6 
+WCCILpmon    (1), 2026.04.14 15:56:28.103, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.14 16:26:37.546, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.14 16:26:37.655, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 16:26:37.655, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 16:26:41.171, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 16:26:42.155, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 16:26:42.373, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.14 16:26:42.483, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SimatekSysRegistrationNew -pmonIndex 1 
+WCCILpmon    (1), 2026.04.14 16:26:43.802, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SimatekSysRegistrationNew -pmonIndex 2 
+WCCILpmon    (1), 2026.04.14 16:26:44.242, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SimatekSysRegistrationNew -pmonIndex 3 
+WCCILpmon    (1), 2026.04.14 16:26:44.576, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SimatekSysRegistrationNew -pmonIndex 4 
+WCCILpmon    (1), 2026.04.14 16:26:49.495, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.14 16:26:49.714, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SimatekSysRegistrationNew -pmonIndex 6 
+WCCILpmon    (1), 2026.04.14 16:26:49.939, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.14 16:57:06.886, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.14 16:57:06.996, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 16:57:06.996, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 16:57:10.495, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 16:57:11.581, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 16:57:11.909, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.14 16:57:12.019, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SimatekSysRegistrationNew -pmonIndex 1 
+WCCILpmon    (1), 2026.04.14 16:57:13.326, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SimatekSysRegistrationNew -pmonIndex 2 
+WCCILpmon    (1), 2026.04.14 16:57:13.876, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SimatekSysRegistrationNew -pmonIndex 3 
+WCCILpmon    (1), 2026.04.14 16:57:14.202, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SimatekSysRegistrationNew -pmonIndex 4 
+WCCILpmon    (1), 2026.04.14 16:57:19.203, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.14 16:57:19.533, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SimatekSysRegistrationNew -pmonIndex 6 
+WCCILpmon    (1), 2026.04.14 16:57:19.858, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.14 17:04:47.852, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SimatekSysRegistrationNew -pmonIndex 9 -num 2
+WCCILpmon    (1), 2026.04.14 17:04:48.053, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.14 17:27:27.902, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.14 17:27:28.002, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 17:27:28.003, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 17:27:32.739, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 17:27:33.501, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 17:27:33.830, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.14 17:27:33.939, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SimatekSysRegistrationNew -pmonIndex 1 
+WCCILpmon    (1), 2026.04.14 17:27:35.256, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SimatekSysRegistrationNew -pmonIndex 2 
+WCCILpmon    (1), 2026.04.14 17:27:35.578, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SimatekSysRegistrationNew -pmonIndex 3 
+WCCILpmon    (1), 2026.04.14 17:27:35.907, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SimatekSysRegistrationNew -pmonIndex 4 
+WCCILpmon    (1), 2026.04.14 17:27:40.803, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.14 17:27:41.233, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SimatekSysRegistrationNew -pmonIndex 6 
+WCCILpmon    (1), 2026.04.14 17:27:41.555, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.14 17:30:26.045, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SimatekSysRegistrationNew -pmonIndex 9 -num 2
+WCCILpmon    (1), 2026.04.14 17:30:26.347, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.14 17:55:59.432, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.14 17:55:59.436, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.14 17:57:53.218, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.14 17:57:53.319, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 17:57:53.320, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 17:57:55.771, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 17:57:56.783, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 17:57:57.220, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.14 17:57:57.330, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SimatekSysRegistrationNew -pmonIndex 1 
+WCCILpmon    (1), 2026.04.14 17:57:58.696, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SimatekSysRegistrationNew -pmonIndex 2 
+WCCILpmon    (1), 2026.04.14 17:57:59.025, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SimatekSysRegistrationNew -pmonIndex 3 
+WCCILpmon    (1), 2026.04.14 17:57:59.455, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SimatekSysRegistrationNew -pmonIndex 4 
+WCCILpmon    (1), 2026.04.14 17:58:04.267, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.14 17:58:04.666, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SimatekSysRegistrationNew -pmonIndex 6 
+WCCILpmon    (1), 2026.04.14 17:58:04.978, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.14 17:58:12.036, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SimatekSysRegistrationNew -pmonIndex 9 -num 2
+WCCILpmon    (1), 2026.04.14 17:58:12.339, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.14 18:00:24.237, SYS,  INFO,       21/pmon, Получена команда нду STOP_ALL от ::1, остановка проекта
+WCCILpmon    (1), 2026.04.14 18:00:24.238, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAopcua(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 18:00:24.238, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 18:00:24.239, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 18:00:24.239, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 18:00:24.239, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 18:00:28.120, SYS,  INFO,       17/pmon, Остановка менеджера WCCILevent(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 18:00:28.225, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 18:00:29.205, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 18:00:29.314, SYS,  INFO,       13/pmon, Проект полностью остановлен - ожидание команд
+WCCILpmon    (1), 2026.04.14 18:00:33.257, SYS,  INFO,        3/pmon, Получена команда отключения - остановка проекта и завершение работы
+WCCILpmon    (1), 2026.04.14 18:00:33.257, SYS,  INFO,       15/pmon, Проект полностью остановлен - завершение
+WCCILpmon    (1), 2026.04.14 18:00:33.257, SYS,  INFO,        2, Manager Stop
+WCCILpmon    (1), 2026.04.14 18:07:49.983, SYS,  INFO,        1, Manager Start, WAIT_MODE
+WCCILpmon    (1), 2026.04.14 18:07:55.108, SYS,  INFO,       20/pmon, Получена команда START_ALL от ::1, запуск проекта
+WCCILpmon    (1), 2026.04.14 18:07:55.124, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SimatekSysRegistrationNew -pmonIndex 1 
+WCCILpmon    (1), 2026.04.14 18:07:56.403, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SimatekSysRegistrationNew -pmonIndex 2 
+WCCILpmon    (1), 2026.04.14 18:07:56.842, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SimatekSysRegistrationNew -pmonIndex 3 
+WCCILpmon    (1), 2026.04.14 18:07:57.275, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SimatekSysRegistrationNew -pmonIndex 4 
+WCCILpmon    (1), 2026.04.14 18:08:02.291, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.14 18:08:02.484, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SimatekSysRegistrationNew -pmonIndex 6 
+WCCILpmon    (1), 2026.04.14 18:08:02.686, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.14 18:08:05.631, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SimatekSysRegistrationNew -pmonIndex 9 -num 2
+WCCILpmon    (1), 2026.04.14 18:08:05.933, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.14 18:09:29.074, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.14 18:09:29.082, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.14 18:38:17.193, SYS,  SEVERE,     10/pmon, Менеджер центрального сервера WCCILevent(0) остановлен! Перезапуск проекта
+WCCILpmon    (1), 2026.04.14 18:38:17.294, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 18:38:17.295, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 18:38:24.140, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 18:38:25.119, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 18:38:25.558, SYS,  INFO,       14/pmon, Проект полностью остановлен - перезапуск
+WCCILpmon    (1), 2026.04.14 18:38:25.667, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SimatekSysRegistrationNew -pmonIndex 1 
+WCCILpmon    (1), 2026.04.14 18:38:26.971, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SimatekSysRegistrationNew -pmonIndex 2 
+WCCILpmon    (1), 2026.04.14 18:38:27.409, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SimatekSysRegistrationNew -pmonIndex 3 
+WCCILpmon    (1), 2026.04.14 18:38:27.832, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SimatekSysRegistrationNew -pmonIndex 4 
+WCCILpmon    (1), 2026.04.14 18:38:32.614, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.14 18:38:32.838, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SimatekSysRegistrationNew -pmonIndex 6 
+WCCILpmon    (1), 2026.04.14 18:38:33.048, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.14 18:59:53.257, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SimatekSysRegistrationNew -pmonIndex 9 -num 2
+WCCILpmon    (1), 2026.04.14 18:59:53.469, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.14 19:00:08.812, SYS,  INFO,       21/pmon, Получена команда нду STOP_ALL от ::1, остановка проекта
+WCCILpmon    (1), 2026.04.14 19:00:08.812, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAopcua(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 19:00:08.812, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 19:00:08.812, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 19:00:08.812, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 19:00:12.739, SYS,  INFO,       17/pmon, Остановка менеджера WCCILevent(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 19:00:12.848, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 19:00:13.828, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.14 19:00:14.543, SYS,  INFO,       13/pmon, Проект полностью остановлен - ожидание команд
+WCCILpmon    (1), 2026.04.14 19:00:19.812, SYS,  INFO,        3/pmon, Получена команда отключения - остановка проекта и завершение работы
+WCCILpmon    (1), 2026.04.14 19:00:19.812, SYS,  INFO,       15/pmon, Проект полностью остановлен - завершение
+WCCILpmon    (1), 2026.04.14 19:00:19.812, SYS,  INFO,        2, Manager Stop
+WCCILpmon    (1), 2026.04.15 08:58:25.520, SYS,  INFO,        1, Manager Start, WAIT_MODE
+WCCILpmon    (1), 2026.04.15 08:58:29.141, SYS,  INFO,       20/pmon, Получена команда START_ALL от ::1, запуск проекта
+WCCILpmon    (1), 2026.04.15 08:58:29.157, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SimatekSysRegistrationNew -pmonIndex 1 
+WCCILpmon    (1), 2026.04.15 08:58:30.434, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SimatekSysRegistrationNew -pmonIndex 2 
+WCCILpmon    (1), 2026.04.15 08:58:30.865, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SimatekSysRegistrationNew -pmonIndex 3 
+WCCILpmon    (1), 2026.04.15 08:58:31.195, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SimatekSysRegistrationNew -pmonIndex 4 
+WCCILpmon    (1), 2026.04.15 08:58:36.137, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.15 08:58:36.418, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SimatekSysRegistrationNew -pmonIndex 6 
+WCCILpmon    (1), 2026.04.15 08:58:36.738, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.15 08:58:38.728, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SimatekSysRegistrationNew -pmonIndex 9 -num 2
+WCCILpmon    (1), 2026.04.15 08:58:39.131, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.15 08:58:43.794, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(1) с индексом 8
+WCCILpmon    (1), 2026.04.15 08:58:43.803, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.15 19:01:04.697, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.15 19:01:04.698, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.15 19:01:11.761, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.15 19:01:11.839, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.15 19:04:04.119, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.15 19:04:04.119, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.15 19:04:08.260, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.15 19:04:08.263, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.15 19:08:31.585, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.15 19:08:31.585, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.15 19:08:35.469, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.15 19:08:35.469, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.16 08:29:35.755, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.16 08:29:35.755, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.16 08:29:40.938, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.16 08:29:40.938, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.16 08:31:12.093, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.16 08:31:12.093, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.16 08:31:16.769, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.16 08:31:16.769, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.16 14:56:16.652, SYS,  INFO,       21/pmon, Получена команда нду STOP_ALL от ::1, остановка проекта
+WCCILpmon    (1), 2026.04.16 14:56:16.654, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAopcua(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.16 14:56:16.655, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.16 14:56:16.655, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.16 14:56:16.656, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.16 14:56:16.657, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.16 14:56:16.658, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.16 14:56:31.338, SYS,  INFO,       17/pmon, Остановка менеджера WCCILevent(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.16 14:56:31.558, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.16 14:56:32.584, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.16 14:56:32.693, SYS,  INFO,       13/pmon, Проект полностью остановлен - ожидание команд
+WCCILpmon    (1), 2026.04.16 14:57:10.677, SYS,  INFO,        3/pmon, Получена команда отключения - остановка проекта и завершение работы
+WCCILpmon    (1), 2026.04.16 14:57:10.677, SYS,  INFO,       15/pmon, Проект полностью остановлен - завершение
+WCCILpmon    (1), 2026.04.16 14:57:10.677, SYS,  INFO,        2, Manager Stop
+WCCILpmon    (1), 2026.04.16 15:05:40.644, SYS,  INFO,        1, Manager Start, START_MODE
+WCCILpmon    (1), 2026.04.16 15:05:40.833, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SimatekSysRegistrationNew -pmonIndex 1 
+WCCILpmon    (1), 2026.04.16 15:05:42.265, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SimatekSysRegistrationNew -pmonIndex 2 
+WCCILpmon    (1), 2026.04.16 15:05:42.869, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SimatekSysRegistrationNew -pmonIndex 3 
+WCCILpmon    (1), 2026.04.16 15:05:43.334, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SimatekSysRegistrationNew -pmonIndex 4 
+WCCILpmon    (1), 2026.04.16 15:05:48.176, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.16 15:05:48.440, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SimatekSysRegistrationNew -pmonIndex 6 
+WCCILpmon    (1), 2026.04.16 15:05:48.658, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.16 15:05:50.631, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SimatekSysRegistrationNew -pmonIndex 9 -num 2
+WCCILpmon    (1), 2026.04.16 15:05:50.933, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.16 15:05:56.130, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(1) с индексом 8
+WCCILpmon    (1), 2026.04.16 15:05:56.137, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.16 17:24:13.004, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOAui(1) с индексом 7
+WCCILpmon    (1), 2026.04.16 17:24:13.005, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.16 17:24:32.799, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.16 17:24:32.801, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.16 17:24:36.791, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.16 17:24:36.793, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.16 19:01:06.656, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOAui(1) с индексом 7
+WCCILpmon    (1), 2026.04.16 19:01:06.657, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.17 08:33:21.444, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOAui(1) с индексом 7
+WCCILpmon    (1), 2026.04.17 08:33:21.444, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.17 12:46:58.682, SYS,  INFO,       28/pmon, Получена команда INS от ::1, вставка нового менеджера WCCOActrl по индексу 10
+WCCILpmon    (1), 2026.04.18 14:49:03.422, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.18 14:49:03.423, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.18 14:49:07.603, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.18 14:49:07.675, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.18 15:12:09.802, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(1) с индексом 10
+WCCILpmon    (1), 2026.04.18 15:12:09.807, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 10 SetValues.ctl
+WCCILpmon    (1), 2026.04.18 16:00:29.104, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(3) с индексом 10
+WCCILpmon    (1), 2026.04.18 16:00:29.105, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(3) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.18 16:00:41.433, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOAui(1) с индексом 7
+WCCILpmon    (1), 2026.04.18 16:00:41.434, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.22 12:07:58.633, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOAui(1) с индексом 7
+WCCILpmon    (1), 2026.04.22 12:07:58.633, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.22 15:43:24.761, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.22 15:43:24.761, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.22 15:43:28.970, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.22 15:43:29.034, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.22 15:45:13.126, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.22 15:45:13.127, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.22 15:45:17.807, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.22 15:45:17.811, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.23 10:18:45.523, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 10:18:45.523, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.23 10:18:48.908, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 10:18:48.970, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.23 10:18:57.714, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 10:18:57.714, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.23 10:19:06.344, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 10:19:06.348, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.23 12:55:13.094, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 12:55:13.094, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.23 12:55:16.904, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 12:55:16.908, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.23 12:56:17.960, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 12:56:17.961, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.23 12:56:20.978, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 12:56:20.983, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.23 13:21:22.439, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 13:21:22.440, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.23 13:21:26.098, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 13:21:26.101, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.23 13:22:29.825, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 13:22:29.826, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.23 13:22:35.794, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 13:22:35.800, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.23 13:44:04.438, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 13:44:04.439, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.23 13:44:09.320, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 13:44:09.324, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.23 14:00:18.808, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 14:00:18.809, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.23 14:00:22.763, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 14:00:22.768, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.23 14:00:42.200, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 14:00:42.201, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.23 14:00:45.813, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 14:00:45.819, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.23 18:17:05.209, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 18:17:05.210, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.23 18:17:11.131, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 18:17:11.134, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.23 18:19:46.839, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 18:19:46.840, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.23 18:19:52.009, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 18:19:52.012, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.23 18:30:23.046, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 18:30:23.046, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.23 18:30:27.101, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 18:30:27.104, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.23 18:37:11.436, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 18:37:11.436, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.23 18:37:15.423, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.23 18:37:15.426, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 10:37:44.386, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 10:37:44.387, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 10:37:50.115, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 10:37:50.196, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 13:13:34.423, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:13:34.424, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:13:38.637, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:13:38.641, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 13:18:40.308, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:18:40.309, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:18:45.061, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:18:45.065, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 13:22:01.733, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:22:01.734, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:22:07.968, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:22:07.972, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 13:23:02.174, SYS,  INFO,       21/pmon, Получена команда нду STOP_ALL от ::1, остановка проекта
+WCCILpmon    (1), 2026.04.24 13:23:02.174, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAopcua(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:23:02.175, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:23:02.175, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAui(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:23:02.176, SYS,  INFO,       17/pmon, Остановка менеджера WCCILsim(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:23:02.176, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:23:02.177, SYS,  INFO,       17/pmon, Остановка менеджера WCCOAnextgenarch(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:23:08.194, SYS,  INFO,       17/pmon, Остановка менеджера WCCILevent(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:23:08.303, SYS,  INFO,       17/pmon, Остановка менеджера WCCILdata(0) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:23:09.346, SYS,  INFO,       17/pmon, Остановка менеджера WCCILproxy(1) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:23:09.785, SYS,  INFO,       13/pmon, Проект полностью остановлен - ожидание команд
+WCCILpmon    (1), 2026.04.24 13:23:15.443, SYS,  INFO,       20/pmon, Получена команда START_ALL от ::1, запуск проекта
+WCCILpmon    (1), 2026.04.24 13:23:15.521, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILdata.exe -PROJ SimatekSysRegistrationNew -pmonIndex 1 
+WCCILpmon    (1), 2026.04.24 13:23:17.056, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAnextgenarch.exe -PROJ SimatekSysRegistrationNew -pmonIndex 2 
+WCCILpmon    (1), 2026.04.24 13:23:17.777, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILevent.exe -PROJ SimatekSysRegistrationNew -pmonIndex 3 
+WCCILpmon    (1), 2026.04.24 13:23:18.289, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILproxy.exe -PROJ SimatekSysRegistrationNew -pmonIndex 4 
+WCCILpmon    (1), 2026.04.24 13:23:23.120, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 5 -f pvss_scripts.lst
+WCCILpmon    (1), 2026.04.24 13:23:23.497, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCILsim.exe -PROJ SimatekSysRegistrationNew -pmonIndex 6 
+WCCILpmon    (1), 2026.04.24 13:23:23.773, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi
+WCCILpmon    (1), 2026.04.24 13:23:26.993, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAopcua.exe -PROJ SimatekSysRegistrationNew -pmonIndex 9 -num 2
+WCCILpmon    (1), 2026.04.24 13:23:27.195, SYS,  INFO,        9/pmon, Проект запущен и работает. Вход в режим монитора
+WCCILpmon    (1), 2026.04.24 13:23:36.593, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:23:36.597, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 13:25:26.281, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:25:26.282, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:25:32.124, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:25:32.128, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 13:30:40.255, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:30:40.256, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:30:45.986, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:30:45.991, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 13:36:13.719, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:36:13.719, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:36:17.651, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:36:17.654, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 13:41:48.329, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:41:48.330, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:41:52.329, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:41:52.333, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 13:55:43.693, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:55:43.694, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 13:55:48.632, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:55:48.637, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 13:57:00.412, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:57:00.418, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 13:57:54.108, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:57:54.114, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 13:58:39.577, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 13:58:39.580, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 14:02:12.832, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 14:02:12.833, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 14:02:16.603, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 14:02:16.606, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 14:06:02.977, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 14:06:02.978, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 14:06:07.172, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 14:06:07.177, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.24 14:06:55.866, SYS,  INFO,       25/pmon, Получена команда STOP (SIGTERM) от ::1, остановка менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 14:06:55.867, SYS,  INFO,       17/pmon, Остановка менеджера WCCOActrl(2) с сигналом SIGTERM
+WCCILpmon    (1), 2026.04.24 14:07:00.086, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOActrl(2) с индексом 8
+WCCILpmon    (1), 2026.04.24 14:07:00.091, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOActrl.exe -PROJ SimatekSysRegistrationNew -pmonIndex 8 WritePassport.ctl
+WCCILpmon    (1), 2026.04.27 15:12:02.779, SYS,  INFO,       24/pmon, Получена команда START от ::1, запуск менеджера WCCOAui(1) с индексом 7
+WCCILpmon    (1), 2026.04.27 15:12:02.857, SYS,  INFO,        1, Manager Start, C:\Sybcom\Kaskad\3.18\bin\WCCOAui.exe -PROJ SimatekSysRegistrationNew -pmonIndex 7 -m gedi

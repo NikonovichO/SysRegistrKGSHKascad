@@ -1,7 +1,7 @@
 V 14
 1
 LANG:10027 0 
-PANEL,-1 -1 294 454 N {207,207,207} 0
+PANEL,-1 -1 345 454 N {207,207,207} 0
 "main()
 {
   int rc;
@@ -9,7 +9,8 @@ PANEL,-1 -1 294 454 N {207,207,207} 0
   dbRecordset rs;
   string cmdStr, sn, id_r, tstart;
   //подключение к БД через ODBC. В приложении \"Администратор ODBC\" создается источник данных, в нашем случае KGSHVulcanisation
-  rc = dbOpenConnection(\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
+  dpGet(\"System1:GlobalVar1.ConnectionDB:_online.._value\",conStr);
+  rc = dbOpenConnection(conStr, conn);
   Debug(\"подключение:\", rc);
   if (!rc)
   {

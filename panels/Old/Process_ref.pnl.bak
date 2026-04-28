@@ -1,7 +1,7 @@
 V 14
 1
 LANG:10027 0 
-PANEL,-1 -1 1946 956 N {207,207,207} 0
+PANEL,-1 -1 1946 974 N {207,207,207} 0
 "main()
 {
   int rc;
@@ -144,7 +144,7 @@ LANG:10027 1 1
   delay(0,500);
   dyn_string MyParams;
   MyParams =  makeDynString(\"$dp:Press1.\");
-  RootPanelOnModule(\"Process.pnl\", \"Process\", \"Module1\", MyParams);
+  RootPanelOnModule(\"Old/Process.pnl\", \"Process\", \"Module1\", MyParams);
 
 
  // EMBEDDED_MODULE1.loadPanel(0, \"Process.pnl\", \"Process\", MyParams);
@@ -178,7 +178,7 @@ LANG:10027 1 2
   delay(0,500);
   dyn_string MyParams;
   MyParams =  makeDynString(\"$dp:Press2.\");
-  RootPanelOnModule(\"Process.pnl\", \"Process\", \"Module1\", MyParams);
+  RootPanelOnModule(\"Old/Process.pnl\", \"Process\", \"Module1\", MyParams);
   //EMBEDDED_MODULE1.loadPanel(0, \"Process.pnl\", \"Process\", MyParams);
 }" 0
  E E E
@@ -204,12 +204,12 @@ T
 LANG:10027 1 3
 "main(mapping event)
 {
-  EMBEDDED_MODULE1.ModuleName = \"Module1\";
+ EMBEDDED_MODULE1.ModuleName = \"Module1\";
   PanelOffModule(\"Process\", \"Module1\");
   delay(0,500);
   dyn_string MyParams;
   MyParams =  makeDynString(\"$dp:Press3.\");
-  RootPanelOnModule(\"Process.pnl\", \"Process\", \"Module1\", MyParams);
+  RootPanelOnModule(\"Old/Process.pnl\", \"Process\", \"Module1\", MyParams);
 }" 0
  E E E
 13 89
