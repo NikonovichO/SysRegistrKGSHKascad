@@ -4,7 +4,21 @@ LANG:10027 0
 PANEL,-1 -1 1920 130 N "_3DFace" 0
 E E E E E 1 -1 -1 0  100 50
 ""0  1
-E E 4
+E "shape current_btn;  //нажатая кнопка
+
+void checkPress_btn(shape new_btn){  // меняем состояние нажатой кнопки и предыдущей кнопки
+  if (shapeExists(current_btn)) {
+    current_btn.enabled(true);
+    current_btn.backCol(\"{0,136,185}\");
+  }
+  // Настраиваем новую кнопку
+  new_btn.backCol(\"{148,236,248}\");
+  new_btn.enabled(false);
+
+  // Запоминаем её как текущую
+  current_btn = new_btn;
+}" 0
+ 4
 "CBRef" "1"
 "EClose" E
 "dpi" "96"
@@ -168,9 +182,9 @@ LANG:10027 10 Общее
 "main(mapping event)
 {
   dyn_string MyParams;
-  RootPanelOnModule(\"Main/1_Summary.pnl\", \"Summary\", \"MainModule\", MyParams);
+  RootPanelOnModule(\"Belshina/Body/0_General/General.pnl\", \"General\", \"BodyModule\", MyParams);
   setValue(\"CURRENT_WIN\", \"text\", \"Общее\");
-  check_btn(this);
+  checkPress_btn(this);
 }" 0
  E E E
 13 9
@@ -198,9 +212,9 @@ LANG:10027 14 Процесс
 "main(mapping event)
 {
   dyn_string MyParams;
-  RootPanelOnModule(\"Main/2_Process.pnl\", \"Process\", \"MainModule\", MyParams);
+  RootPanelOnModule(\"Belshina/Body/1_Process/Process.pnl\", \"Process\", \"BodyModule\", MyParams);
   setValue(\"CURRENT_WIN\", \"text\", \"Процесс\");
-  check_btn(this);
+  checkPress_btn(this);
 }" 0
  E E E
 13 10
@@ -228,9 +242,9 @@ LANG:10027 24 Производство
 "main(mapping event)
 {
   dyn_string MyParams;
-  RootPanelOnModule(\"Main/3_Production.pnl\", \"Production\", \"MainModule\", MyParams);
+  RootPanelOnModule(\"Belshina/Body/2_Production/Production.pnl\", \"Production\", \"BodyModule\", MyParams);
   setValue(\"CURRENT_WIN\", \"text\", \"Производство\");
-  check_btn(this);
+  checkPress_btn(this);
 }" 0
  E E E
 13 11
@@ -258,9 +272,9 @@ LANG:10027 12 Отчеты
 "main(mapping event)
 {
   dyn_string MyParams;
-  RootPanelOnModule(\"Main/4_Report.pnl\", \"Report\", \"MainModule\", MyParams);
+  RootPanelOnModule(\"Belshina/Body/3_Reports/Reports.pnl\", \"Reports\", \"BodyModule\", MyParams);
   setValue(\"CURRENT_WIN\", \"text\", \"Отчеты\");
-  check_btn(this);
+  checkPress_btn(this);
 }" 0
  E E E
 13 12
@@ -288,9 +302,9 @@ LANG:10027 14 Рецепты
 "main(mapping event)
 {
   dyn_string MyParams;
-  RootPanelOnModule(\"Main/5_Recipes.pnl\", \"Recipes\", \"MainModule\", MyParams);
+  RootPanelOnModule(\"Belshina/Body/4_Recipes/Recipes.pnl\", \"Recipes\", \"BodyModule\", MyParams);
   setValue(\"CURRENT_WIN\", \"text\", \"Рецепты\");
-  check_btn(this);
+  checkPress_btn(this);
 }" 0
  E E E
 13 13
@@ -318,9 +332,9 @@ LANG:10027 6 КИП
 "main(mapping event)
 {
   dyn_string MyParams;
-  RootPanelOnModule(\"Main/6_KIP.pnl\", \"KIP\", \"MainModule\", MyParams);
+  RootPanelOnModule(\"Belshina/Body/5_KIP/KIP.pnl\", \"KIP\", \"BodyModule\", MyParams);
   setValue(\"CURRENT_WIN\", \"text\", \"КИП\");
-  check_btn(this);
+  checkPress_btn(this);
 }" 0
  E E E
 13 14
@@ -348,9 +362,9 @@ LANG:10027 18 Сообщения
 "main(mapping event)
 {
   dyn_string MyParams;
-  RootPanelOnModule(\"Main/7_Alarms.pnl\", \"Alarms\", \"MainModule\", MyParams);
+  RootPanelOnModule(\"Belshina/Body/6_Alarms/Alarms.pnl\", \"Alarms\", \"BodyModule\", MyParams);
   setValue(\"CURRENT_WIN\", \"text\", \"Сообщения\");
-  check_btn(this);
+  checkPress_btn(this);
 }" 0
  E E E
 0
