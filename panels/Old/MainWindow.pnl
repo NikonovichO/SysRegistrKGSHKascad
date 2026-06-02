@@ -1,10 +1,13 @@
 V 14
 1
 LANG:10027 0 
-PANEL,-1 -1 2057 992 N "_3DFace" 2
-"$SCREENTYPE"
+PANEL,-1 -1 2044 1120 N "_3DFace" 1
 "$dp"
-E E E E E 1 -1 -1 0  120 170
+"main()
+{
+  RootPanelOnModule(\"Old//footer.pnl\",\"footer\",\"ModuleFooter\",\"\");
+}" 0
+ E E E E 1 -1 -1 0  120 170
 ""0  1
 E E 4
 "CBRef" "1"
@@ -20,7 +23,7 @@ LANG:10027 0
 28 2
 "TAB1"
 ""
-1 55.99999999999967 10 E E E 1 E 1 E N "_3DText" E N {235,237,239} E E
+1 59.99999999999978 10 E E E 1 E 1 E N "_3DText" E N {235,237,239} E E
  E E
 1 0 0 0 0 0
 E E E
@@ -36,10 +39,10 @@ LANG:10027 0
 "showBackground" "0"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
-0  54 8 2042 952
+0  58.00000000000011 8 2042 952
 E5 "General" 1
 LANG:10027 10 Общее
-1 "Old/General.pnl" 1
+1 "Old/1_Row.pnl" 1
 LANG:10027 0 
 0
 
@@ -94,11 +97,11 @@ LANG:10027 6 РЯД
 13 4
 "PUSH_BUTTON1"
 ""
-1 1 42.42934782608703 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+1 4 42.42934782608703 E E E 1 E 1 E N "White" E N {0,95,135} E E
  E E
 3 0 0 0 0 0
 E E E
-0
+1
 1
 LANG:10027 0 
 
@@ -106,35 +109,56 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
-0  -1 33.82065217391309 55.00000000000001 75.82065217391309
+0  2 34 60 77
 
 T 
 1
-LANG:10027 1 1
+LANG:10027 1 9
 E E E E
 13 5
 "PUSH_BUTTON2"
 ""
-1 1 80 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+1 5 80 E E E 1 E 1 E N "White" E N {0,95,135} E E
  E E
 4 0 0 0 0 0
 E E E
-0
+1
 1
 LANG:10027 0 
 
 1
 "layoutAlignment" "AlignNone"
 1
-LANG:10027 56 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Полужирный
-0  -1 71.69565217391309 55 111.9456521739131
+LANG:10027 40 MS Shell Dlg 2,-1,21,5,75,0,0,0,0,0,Bold
+0  2 82 60 125
 
 T 
 1
-LANG:10027 1 2
+LANG:10027 2 15
 E E E E
-1 6 0 "" 18
+29 51
+"EMBEDDED_MODULE1"
+""
+1 53.00000000000045 961.9999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+10 0 0 0 0 0
+E E E
 0
+1
+LANG:10027 0 
+
+2
+"ModuleName" "string ModuleFooter"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  53.00000000000045 961.9999999999999 2043 1109
+15 Canvas.Canvas.1
+0
+"main()
+{
+   RootPanelOnModule(\"Old\\\\Footer.pnl\", \"Footer\", \"Foot\", \"\");
+}" 0
 0
 LAYER, 1 
 1
@@ -164,10 +188,4 @@ LAYER, 7
 1
 LANG:10027 0 
 0
-3 0 "PANEL_REF2" -1
-"layoutAlignment" "AlignNone"
-"" ""
-"vision/aes/AESRow.pnl" 131 2183 T 6 U 
-1
-"$SCREENTYPE""$SCREENTYPE"
 0

@@ -1,0 +1,1110 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1920 800 N "_3DFace" 0
+"main()
+{
+  setDTinterval(24*3600); // Задаю интервал времени 7 дней
+  filterTypeClear();
+  setValue(\"Status_RB\", \"number\", 1);
+
+  // Инициализирую хранилище фильтров места/устройства
+  placeDeviceFilter[\"columns\"] = makeDynString();
+  placeDeviceFilter[\"patterns\"] = makeDynString();
+
+  p_result = queryMessages(query); //создать запрос по филтрам
+  loadMessages(p_result); //загрузить данные
+}" 0
+ E E E E 1 -1 -1 0  -7.105427357601002e-14 -2.567839681383475
+""0  1
+E "// ===========================     КОНСТАНТЫ     ===========================
+const string base_query = \"SELECT ALERT \"+
+                             \"'_alert_hdl.._ack_state',\" +    //3
+                             \"'_alert_hdl.._abbr',\" +         //4
+                             \"'_alert_hdl.._text',\" +         //5
+                             \"'_alert_hdl.._direction',\" +    //6
+                             \"'_alert_hdl.._ack_time',\" +     //7
+                             \"'_alert_hdl.._ack_user',\" +     //8
+                             \"'_alert_hdl.._alert_color',\";   //9
+
+const string archive_query = \"'_alert_hdl.._class,'\" +        // 10 для получения цветов прямо из класса аларма
+                             \"'_alert_class.._prior'\" +       // 11 для получения цветов из общего массива цветов по приоритету
+                             \" FROM '*'\"+
+                             \" WHERE '_alert_hdl.._prior' > 25\";
+
+const string active_query = \"'_alert_hdl.._alert_fore_color',\" + // 10 просто получаем текущий цвет текста
+                            \"'_alert_hdl.._act_state'\"+          // 11 просто получаем текущий цвет фона
+                            \" FROM '*'\"+
+                            \" WHERE '_alert_hdl.._prior' > 25\";
+
+const string queryDTformat = \"%Y.%m.%d %H:%M:%S\"; // Формат даты/времени для запроса
+
+const int DP = 1,
+          msgTime = 2,
+          ackState = 3,
+          msgAbr = 4,
+          msgText = 5,
+          direction = 6,
+          ackTime = 7,
+          user = 8,
+          backColor = 9,
+          foreColor = 10,
+          msgClassName = 10,
+          msgPrior = 11,
+          actState = 11;
+
+
+// ===========================     ГЛОБ.ПЕРЕМЕННЫЕ     ===========================
+
+//  фильтры
+dyn_string filter_Type;        //тип сообщения
+int filter_Status;            // 0-активные, 1-ушедшие
+int filter_Line;             //линия
+int filter_Press;           //пресс
+string timeFrom, timeTo;   //временные рамки
+
+mapping placeDeviceFilter; // Фильтр по месту/устройству
+
+//  другие
+string query;
+dyn_dyn_anytype p_result; // Массив с результатами запроса
+dyn_dyn_string ColorClasses_array; //массив с цветами сообщений
+
+/* ===========================    ФУНКЦИИ ПОДГОТОВКИ К ЗАГРУЗКЕ     =========================== */
+
+//  Начальные параметры
+
+void preloadClear(){ //запускается при init панели алармов
+  AlarmTable.deleteAllLines();
+}
+
+// очистить ТИП
+
+void filterTypeClear(){
+  filter_Type = makeDynString();
+  int n = Type_CB.itemCount();
+  for (int i = 0; i < n; i++)
+  {
+    Type_CB.state(i, FALSE);
+  }
+}
+
+// очистить фильтр по линии и прессу
+
+void filterPlaceClear(){
+  Line_CB.currentIndex(0);
+  Press_CB.currentIndex(0);
+  int filter_Line = 0;             //линия
+  int filter_Press = 0;
+}
+
+/* ===========================    ОБРАБОТКА ФИЛЬТРОВ     =========================== */
+// Задание диапазона даты/времени
+
+void setDTinterval(uint interval)
+{
+  time currentTime = getCurrentTime();
+  time fromTime = currentTime - interval;
+
+  DE_START.dateTime(fromTime);
+  DE_END.dateTime(currentTime);
+}
+
+// функция определения фильтра СТАТУСА
+
+void filterStatusCheck(){
+  getValue(\"Status_RB\", \"number\", filter_Status);
+}
+
+// функция определения фильтра ТИПА
+
+void filterTypeCheck(string dpe){
+// сортировка по типу запроса продумать: возможно по классу / возможно по алиас
+}
+
+// функция определения фильтра ЛИНИИ/ПРЕССА
+
+void filterPlaceCheck(){
+// сортировка по Алиас / Дискрипшн
+}
+
+// функция определения фильтра ПРОМЕЖУТКА ВРЕМЕНИ
+
+void filterDTCheck(){
+  timeFrom = formatTime(queryDTformat, DE_START.dateTime);
+  timeTo = formatTime(queryDTformat, DE_END.dateTime);
+}
+
+// =========================    ФУНКЦИИ ОПРОСА И ЗАПИСИ    =========================
+
+dyn_dyn_anytype queryMessages(){
+  dyn_dyn_anytype result;
+
+  filterStatusCheck(); //архив или текущие?
+  //текущие
+  if(filter_Status == 0){
+    query = base_query + active_query;
+  }
+  //архив
+  else if(filter_Status == 1) {
+    queryColorClasses(); //загрузить цвета из общего списка классов
+    filterDTCheck();     //получить заданный промежуток времени
+    query = base_query + archive_query + \" TIMERANGE(\\\"\" + timeFrom + \"\\\",\\\"\" + timeTo + \"\\\",1,0)\";
+
+  }
+  //DebugN(query); //проверка запроса к бд
+
+  dpQuery(query, result);
+
+  return result;
+}
+
+void loadMessages(dyn_dyn_anytype result){
+  //  массивы для колонок таблицы
+dyn_dyn_string Count_Col,
+               DPe_Col,
+               Abr_Col,
+               DateTime_Col,
+               Place_Col,
+               Press_Col,
+               Status_Col,
+               Text_Col,
+               Class_Col,
+               AknTime_Col,
+               User_Col;
+
+// массив строк ответа на sql-запрос
+  dyn_anytype resultRow;
+
+// переменные-буферы для получения данных алармов
+  atime messageTime; // Используем atime вместо time (alerttime)
+
+  string ACKUser,          // Имя пользователя, который квтитровал сообщение
+         ACKTime,          // время квитирования сообщения
+         deviceDescript,   // Описание устройства (возможно использовать как тип)
+         deviceAlias,      // Наименование устройства (имя на русском)
+         curr_dp_name;     // текущий дата поинт
+  int priorAlert;          // приоритет класса (для поиска цветов алармов)
+  string msgClassAbr,      // аббривиатура класса
+         ClassMessageColor,// цвет аларма
+         RowColorText;     // цвет текста аларма
+
+
+  preloadClear();
+  int rowWrite = 1;
+  for (int row = 2; row <= dynlen(result); row ++)
+  {
+    resultRow = result[row];
+    curr_dp_name = dpSubStr(resultRow[DP], DPSUB_SYS_DP); //dp текущего аларма
+    if(dpExists(curr_dp_name))
+    {
+      deviceAlias = dpGetAlias(curr_dp_name + \".\"); //ищем алиас дп (конфиг common)
+      deviceDescript = dpGetDescription(curr_dp_name + \".\"); //ищем описание дп (конфиг common)
+    }
+    else
+    {
+      deviceAlias = \"\";
+      deviceDescript = \"\";
+    }
+
+    messageTime = resultRow[msgTime];
+    // проверяем было ли квитирование
+    ACKTime = (period(resultRow[ackTime]) == 0) ? \" - \" : (string)resultRow[ackTime];
+    ACKUser = (period(resultRow[ackTime]) == 0) ? \" - \" : getUserName(resultRow[user]);
+
+    msgClassAbr = resultRow[msgAbr];
+    //если архив - грузим цвета из общего массива цветов
+    if(filter_Status == 1){
+      priorAlert = (int)resultRow[msgPrior];
+      if(dynlen(ColorClasses_array[msgPrior]) > 1)
+      {
+        ClassMessageColor = ColorClasses_array[priorAlert][2];
+        RowColorText = ColorClasses_array[priorAlert][1];
+      }
+      else
+      {
+        dpGet(resultRow[msgClassName] + \":_alert_class.._color_c_ack\", ClassMessageColor);
+        dpGet(resultRow[msgClassName] + \":_alert_class.._fore_color_c_ack\", RowColorText);
+      }
+    //если текущие сообщения - берем их собственные цвета
+    } else if(filter_Status == 0){
+        ClassMessageColor = resultRow[backColor];
+        RowColorText = resultRow[foreColor];
+    }
+    // заполняем массивы параметров аларма
+    // добавьте ClassMessageColor, RowColorText в массив чтобы добавить элементу строки цвета
+      Count_Col[rowWrite] = makeDynString(getACount(messageTime), ClassMessageColor, RowColorText);    //пока не работает, не уверен что понадобится
+      DPe_Col[rowWrite] = makeDynString(getAIdentifier(messageTime), ClassMessageColor, RowColorText); //массив элементов точек данных, вызвавших алармы
+      DateTime_Col[rowWrite] = makeDynString(messageTime);
+      Abr_Col[rowWrite] = makeDynString(msgClassAbr, ClassMessageColor, RowColorText);
+      Place_Col[rowWrite] = makeDynString(deviceDescript, ClassMessageColor, RowColorText);
+      Press_Col[rowWrite] = makeDynString(deviceAlias, ClassMessageColor, RowColorText);
+      Text_Col[rowWrite] = makeDynString(resultRow[msgText]);
+      Status_Col[rowWrite] = makeDynString(resultRow[direction]? \"Пришел\":\"Ушел\", ClassMessageColor, RowColorText);
+      AknTime_Col[rowWrite] = makeDynString(ACKTime);
+      User_Col[rowWrite] = makeDynString(ACKUser);
+
+      rowWrite++;
+  }
+  // вносим получанные массивы данных в строки таблицы
+  AlarmTable.appendLines(dynlen(DPe_Col),
+                             \"Count\",       Count_Col,
+                             \"DPe\",         DPe_Col,
+                             \"DateTime\",    DateTime_Col,
+                             \"Class\",       Abr_Col,
+                             \"Place\",        Place_Col,
+                             \"Press\",       Press_Col,
+                             \"MessageText\", Text_Col,
+                             \"Status\",      Status_Col,
+                             \"AknTime\",     AknTime_Col,
+                             \"User\",        User_Col);
+
+  AlarmTable.sort(true, \"DateTime\");
+}
+
+
+// В архиве алармов (ушедшие квитированные алармы) ПОЛУЧАТЬ ЦВЕТА ПО АТРИБУТАМ alert_fore_color и alert_color не получится
+// они там уже не хранятся либо хранятся не корректно.
+// Поэтому загружается массив с цветами всех классов алармов,
+// для сообщений в архиве устанавливается цвет квитированного аларма соотвующего класса.
+void queryColorClasses()
+{
+    const string query = \"SELECT '_alert_class.._prior',\" +     //приоритет
+                         \" '_alert_class.._color_c_ack',\" +     //цвет квит
+                         \" '_alert_class.._fore_color_c_ack'\" + //цвет текста квит
+                         \" FROM '*' WHERE _DPT = \\\"_AlertClass\\\" SORT BY 1\"; //из всех алерт классов
+
+  // Запрашиваю данные
+  dyn_dyn_anytype result; // Массив с результатами запроса
+  dpQuery(query, result); // Запрос к базе данных
+  for(int i = 2; i <= result.count(); i++)
+  {
+    ColorClasses_array[(int)result[i][2]][2] = result[i][3];//запись массива цветов фона
+    ColorClasses_array[(int)result[i][2]][1] = result[i][4];//запись массива цветов рисунка
+  }
+}
+
+
+
+
+
+" 0
+ 4
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.746"
+1 1 0 0 0 0 1 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+29 31
+"DE_START"
+""
+1 55.69496147174007 40.7635669448168 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+30 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"displayFormat" "string dd:MM:yy HH:mm"
+"specialValueText" "string "
+"calendarPopup" "bool TRUE"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  55.69496147174007 40.7635669448168 238.5933958129484 73.64384756019061
+16 DateTimeEdit.ewo
+0
+E29 32
+"DE_END"
+""
+1 55.77302536047785 73.7874286705528 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+31 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"displayFormat" "string dd:MM:yy HH:mm"
+"specialValueText" "string "
+"calendarPopup" "bool TRUE"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  55.77302536047785 73.7874286705528 238.5948839081865 106.009650892775
+16 DateTimeEdit.ewo
+0
+E13 34
+"btnDay"
+""
+1 23.04681292528515 120.3264976474842 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+33 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {0,149,199,139}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,20,5,75,0,0,0,0,0,Полужирный
+0  17.52643152723419 108.9258896730605 240.5978600986628 141.9258896730605
+
+T 
+1
+LANG:10027 29 Прошедшие сутки
+"main(mapping event)
+{
+  setDTinterval(24*3600);
+}" 0
+ E E E
+13 35
+"btnWeek"
+""
+1 23.04681292528517 154.8264976474842 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+34 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {0,149,199,139}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,20,5,75,0,0,0,0,0,Полужирный
+0  17.52643152723419 142.9258896730605 240.5978600986628 175.9258896730605
+
+T 
+1
+LANG:10027 10 7 дней
+"main(mapping event)
+{
+  setDTinterval(7*24*3600);
+}" 0
+ E E E
+6 24
+"RECTANGLE1"
+""
+1 30 630 E E E 1 E 1 E N {0,0,0} E N {0,95,135} E E
+ E E
+23 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+5
+"minimumSize" "260 800"
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 0 3 2 1 E 1.438888888888889 0 9.975015625000003 -37.99496555378938 -5485.259218750003 1 E 30 630 210 550
+30 25
+"FRAME2"
+""
+1 220 351 E E E 1 E 1 E N "White" E N {0,0,0} E E
+ E E
+24 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.903905232747397 0 1.617647058823527 -411.4671132783838 -385.0193512096112 0 E 220 351 349 420
+1
+LANG:10027 56 MS Shell Dlg 2,-1,23,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 30 Фильтр по прессу
+2 26
+"PRIMITIVE_TEXT11"
+""
+1 22.90621991109709 339.5182175328318 E E E 1 E 1 E N "White" E N "_Window" E E
+ E E
+25 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1.079410154434911 0 1 -4.911395370045028 -117.5741103269395 0 E 22.90621991109709 339.5182175328318 111 363
+0 2 2 "0s" 0 0 0 192 0 0  22.90621991109709 339.5182175328318 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 14 Линия №
+2 27
+"PRIMITIVE_TEXT12"
+""
+1 22.84564294719439 373.8488767643863 E E E 1 E 1 E N "White" E N "_Window" E E
+ E E
+26 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1.058059655081168 0 1 -2.405441754992216 -117.6567751348281 0 E 22.84564294719439 373.8488767643863 107 397
+0 2 2 "0s" 0 0 0 192 0 0  22.84564294719439 373.8488767643863 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 14 Пресс №
+30 28
+"FRAME3"
+""
+1 220 351 E E E 1 E 1 E N "White" E N {0,0,0} E E
+ E E
+27 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+4
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.906249999999999 0 3.514032898401852 -412.3749999999998 -940.42554733905 0 E 220 351 349 420
+1
+LANG:10027 56 MS Shell Dlg 2,-1,23,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 26 Фильтр по типу
+2 29
+"PRIMITIVE_TEXT9"
+""
+1 20.939453125 30.23943876925242 E E E 1 E 1 E N "White" E N "_Window" E E
+ E E
+28 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 0 3 2 1 E 3.622712211511009 0 1.428571428571428 -38.48589390627333 13.71428571428572 0 E 16 19 26 42
+0 0 2 "0s" 0 0 0 201 0 0  20.939453125 30.23943876925242 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 2 с
+2 30
+"PRIMITIVE_TEXT10"
+""
+1 30.0384671447176 207.9999999999997 E E E 1 E 1 E N "White" E N "_Window" E E
+ E E
+29 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 0 3 2 1 E 1.648461548158135 0 1.404146312108228 -11.84326793710176 -202.9025377710351 0 E 19 197 41 220
+0 0 2 "0s" 0 0 0 201 0 0  30.0384671447176 207.9999999999997 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 4 по
+30 33
+"FRAME1"
+""
+1 220 351 E E E 1 E 1 E N "White" E N {0,0,0} E E
+ E E
+32 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.903905232747395 0 2.573529411764703 -411.4671132783831 -898.3829338563497 0 E 220 351 349 420
+1
+LANG:10027 56 MS Shell Dlg 2,-1,22,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 32 Выборка за период
+22 36
+"Line_CB"
+""
+1 108.4761914907635 226.1849984394764 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+35 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  115.0619520810999 213.1849984394764 246.7751408623524 251.1849984394764
+3
+1
+LANG:10027 6 Все
+
+0
+1
+LANG:10027 1 1
+
+0
+1
+LANG:10027 1 2
+
+0
+
+E
+E
+E
+ 1 0
+22 37
+"Press_CB"
+""
+1 110.2521426060217 251.8483224789189 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+36 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  115.1874458444317 247.2676632473651 246.8865318867981 285.267663247365
+1
+1
+LANG:10027 6 Все
+
+0
+
+E
+E
+E
+ 1 0
+20 39
+"Type_CB"
+""
+1 19.28363259162193 317.1878876881543 E E E 1 E 1 E N "White" E N "_3DFace" E E
+ E E
+38 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignNone"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  17.28363259162192 315.1878876881543 240.3550611630505 530.3390109237682
+7
+T 
+1
+LANG:10027 24 Производство
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 34 Произв. отклонения
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 25 Реле давления
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 26 Неисправность
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 18 Состояние
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 12 Режимы
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 18 Системные
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE13 41
+"btn_Filter"
+""
+1 23.13495468402742 562.6071428571523 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+40 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {153,153,153,130}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  17.7632157636171 675.6754480206221 240.7989300493314 713.6754480206221
+
+B 
+4294967295
+"pictures/refresh_32.svg"
+1
+LANG:10027 22 Фильтровать
+"main(mapping event)
+{
+  p_result = queryMessages(query); //создать запрос по филтрам
+  loadMessages(p_result); //загрузить данные
+}" 0
+ E E E
+13 42
+"btn_Report"
+""
+1 19.37879946158428 648.6473214285998 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+41 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {153,153,153,130}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  17.7632157636171 755.6785714285998 240.7989300493314 793.6785714285998
+
+B 
+4294967295
+"pictures/projAdmin/file.svg"
+1
+LANG:10027 29 Составить отчет
+E E E E
+30 43
+"FRAME4"
+""
+1 220 351 E E E 1 E 1 E N "White" E N {0,0,0} E E
+ E E
+42 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+4
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.903905232747396 0 1.397950908304498 -411.9091386419119 83.8204467264416 0 E 220 351 349 420
+1
+LANG:10027 56 MS Shell Dlg 2,-1,23,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 31 Статус сообщений
+19 45
+"Status_RB"
+""
+1 20.03381092561049 601.6058019794062 E E E 1 E 1 E N "White" E N "_3DFace" E E
+ E E
+44 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"layoutAlignment" "AlignNone"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  18.03381092561049 599.6058019794062 241.152858544658 668.6370519794064
+2
+T 
+1
+LANG:10027 14 Текущие
+
+1 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 16 Архивные
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+1
+E "main(int button)
+{
+  filter_Status = this.number();//получает выбранный вариант 0 - список текущих сообщений, 1 - архив.
+  bool permission; //разрешение на ввод значений
+
+  if (filter_Status == 0) //список - отключает фильтр по временному промежутку
+  {
+    permission = false;
+  }
+  else if (filter_Status == 1) //архив - включает фильтр по временному промежутку
+  {
+    permission = true;
+  }
+
+  DE_START.enabled = permission;
+  DE_END.enabled = permission;
+  btnDay.enabled = permission;
+  btnWeek.enabled = permission;
+
+  p_result = queryMessages(query); //запрос
+  loadMessages(p_result);         //загрузка
+}" 0
+
+25 46
+"AlarmTable"
+""
+1 294.1717011128773 6.49999999999948 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ "main(int row, string column)
+{
+   // Сбрасываю фильтры
+  dynClear(placeDeviceFilter[\"columns\"]);
+  dynClear(placeDeviceFilter[\"patterns\"]);
+
+  p_result = queryMessages(query); // запрос сообщений с учетом фильтров (ныне отсутствующих)
+  loadMessages(p_result);
+}" 0
+ "main(int row, string column)
+{
+  // Перечень столбцов для фильтрации
+  dyn_string filterColumns = makeDynString(\"Class\", \"DateTime\", \"Place\", \"Press\", \"Status\");
+
+  if(! filterColumns.contains(column)) return; // Не выполняю скрипт на неподходящем столбце
+
+  int filterPos;
+  string pattern;
+
+  // Если нет нужного столбца в фильтре столбцов, добавляю его
+  filterPos = dynContains(placeDeviceFilter[\"columns\"], column);
+  if(filterPos == 0) filterPos = dynAppend(placeDeviceFilter[\"columns\"], column);
+
+  // Определяю значение фильтра если столбец \"Дата/время\"
+  pattern = (column == \"DateTime\")
+          ? formatTime(\"%d\",(time)this.cellValue)+\".\"+formatTime(\"%m\",(time)this.cellValue)+\".\"+formatTime(\"%Y\",(time)this.cellValue)+\"*\"
+          : this.cellValue;
+
+
+  // Задаю значение фильтра для выбранного столбца
+  if (dynlen(placeDeviceFilter[\"patterns\"]) < filterPos) dynAppend(placeDeviceFilter[\"patterns\"], pattern);
+  else placeDeviceFilter[\"patterns\"][filterPos] = pattern;
+
+  // Применяю фильтр
+  this.filterRows(placeDeviceFilter[\"columns\"], placeDeviceFilter[\"patterns\"], true);
+}" 0
+
+45 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+5
+"hoverfclr" "N \"STD_textfield_text\""
+"hoverbclr" "N {204,204,204}"
+"minimumSize" "1660 800"
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  263.1717011128773 -2.50000000000052 1926.171701112877 800.4999999999994
+"main()
+{
+  this.tableMode(1);
+  this.selectByClick(3);
+}" 0
+E 1 0 1 10 0 "DPe" 6 0 0 "[0s,,,AlignHCenter|AlignVCenter]" 1
+LANG:10027 3 DPe
+E
+1
+LANG:10027 0 
+
+100 "Count" 6 0 0 "[0s,,,AlignHCenter|AlignVCenter]" 1
+LANG:10027 5 Count
+E
+1
+LANG:10027 0 
+
+100 "Class" 6 1 0 "[0s,,,AlignHCenter|AlignVCenter]" 1
+LANG:10027 10 Класс
+E
+1
+LANG:10027 0 
+
+80 "Place" 6 1 0 "[0s,,,AlignLeft]" 1
+LANG:10027 10 Место
+E
+1
+LANG:10027 0 
+
+170 "Press" 6 1 0 "[0s,,,AlignLeft]" 1
+LANG:10027 10 Пресс
+E
+1
+LANG:10027 0 
+
+170 "DateTime" 6 1 0 "[%ct,False,,AlignLeft|AlignVCenter]" 1
+LANG:10027 19 Дата/Время
+E
+1
+LANG:10027 0 
+
+200 "MessageText" 6 1 0 "[0s,,,AlignLeft]" 1
+LANG:10027 29 Текст сообщения
+E
+1
+LANG:10027 0 
+
+400 "Status" 6 1 0 "[0s,,,AlignHCenter|AlignVCenter]" 1
+LANG:10027 12 Статус
+E
+1
+LANG:10027 0 
+
+100 "AknTime" 6 1 0 "[0s,,,AlignLeft|AlignVCenter]" 1
+LANG:10027 35 Время квитирования
+E
+1
+LANG:10027 0 
+
+220 "User" 6 1 0 "[0s,,,AlignLeft]" 1
+LANG:10027 24 Пользователь
+E
+1
+LANG:10027 0 
+
+200 
+25 25 10 0
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0 0 1 1 1 7
+1 0
+13 49
+"btn_Reset"
+""
+1 19.59204463314598 422.8271397325648 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+48 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {0,149,199,139}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,20,5,75,0,0,0,0,0,Полужирный
+0  14.59416732951654 540.8641948960345 237.4275006628499 573.8641948960345
+
+T 
+1
+LANG:10027 16 Сбросить
+"main(mapping event)
+{
+  filterTypeClear(); //очистить фильтры по типу
+  filterPlaceClear();//очистить фильры по месту (линия/пресс)
+
+  // Сбрасываю фильтры по выбранному значению столбца
+  dynClear(placeDeviceFilter[\"columns\"]);
+  dynClear(placeDeviceFilter[\"patterns\"]);
+
+  p_result = queryMessages(query); // запрос сообщений с учетом фильтров (ныне отсутствующих)
+  loadMessages(p_result);         // загрузка сообщений
+}" 0
+ E E E
+13 50
+"btn_Ack"
+""
+1 23.27593145337349 602.6058019794062 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+49 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {153,153,153,130}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  17.7632157636171 715.6770097246109 240.7989300493314 753.6770097246109
+
+B 
+4294967295
+"pictures/concom.svg"
+1
+LANG:10027 22 Квитировать
+"main(mapping event)
+{
+  dyn_string dpElementsAlarm;
+  shape table = getShape(\"AlarmTable\");
+  int firstRowm,
+      lastRow;
+  if(filter_Status == 1){
+    DebugN(\"Квитирование в архиве запрещено\");
+    return;
+  }
+   dyn_string classAlarm = AlarmTable.getColumnN(2);//столбец Класс
+   dyn_string dpElements = AlarmTable.getColumnN(0);//столбец DPE
+
+   //DebugN(classAlarm);
+   //DebugN(dpElements);
+
+  //все видимые (только помещющиеся!!!) на экране алармы
+   getValue(table, \"lineRangeVisible\", firstRowm, lastRow);
+   //смещаем на 1ед. так как таблица начинается с 0
+   firstRowm++;
+   lastRow++;
+
+   int dpeAlarm = 1;
+   int dpe;
+   int dpeCount = dynlen(classAlarm);
+
+   if(lastRow > dpeCount)  lastRow = dpeCount;
+
+   for(dpe = firstRowm; dpe <= lastRow; dpe++)
+   {
+        dpElementsAlarm[dpeAlarm] = dpElements[dpe];
+        dpeAlarm++;
+   }
+   	dyn_int cmd; // Массив комманд квитирования
+    dpeCount = dynlen(dpElementsAlarm);
+  // Заполняю массивы
+  for (dpe = 1; dpe <= dpeCount; dpe++)
+  {
+    dpElementsAlarm[dpe] += \"._ack\";
+    cmd[dpe] = 2;
+    //DebugN(dpElementsAlarm[dpe], cmd[dpe]);
+  }
+  dpSetWait(dpElementsAlarm, cmd);
+
+  p_result = queryMessages(query);
+  loadMessages(p_result);
+}" 0
+ E E E
+0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+4 0 "LAYOUT_GROUP1" -1
+2 0 
+46 24 
+
+"S 46" "1 0 1 1"
+"S 24" "0 0 1 1"
+"" ""
+0 1 0 1 0
+0

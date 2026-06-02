@@ -1,0 +1,760 @@
+V 14
+1
+LANG:10027 6 footer
+PANEL,-1 -1 1920 150 N {0,95,135} 0
+E E E E E 1 -1 -1 0  4 10
+""0  1
+E "const string query = \"SELECT ALERT '_alert_hdl.._act_state'\"+           // 3
+                                   \",'_alert_hdl.._ack_state'\"+         // 4
+                                   \",'_alert_hdl.._abbr'\"+              // 5
+                                   \",'_alert_hdl.._text'\"+              // 6
+                                   \",'_alert_hdl.._direction'\"+         // 7
+                                   \",'_alert_hdl.._ack_time'\"+          // 8
+                                   \",'_alert_hdl.._ack_user'\"+          // 9
+                                   \",'_alert_hdl.._alert_color'\"+       // 10
+                                   \",'_alert_hdl.._prior'\"+             // 11
+                                   \",'_alert_hdl.._alert_fore_color'\" + //12
+                                   \" FROM '*'\"+
+                                   \" WHERE '_alert_hdl.._prior' > 25\";
+
+// на работу с результатом запроса
+ const int DP = 1,
+           msgTime = 2,
+           actState = 3,
+           ackState = 4,
+           mClass = 5,
+           text = 6,
+           direction = 7,
+           ackTime = 8,
+           user = 9,
+           backColor = 10,
+           foreColor = 12;
+
+ // команда обновить
+ const int update_cmd = 10;
+
+ // команда удалить
+ const int delete_cmd = 20;
+
+ // на массив обновления
+ const int numRow_upd = 1,
+           DP_upd = 2,
+           msgTime_upd = 3,
+           actState_upd = 4,
+           ackState_upd = 5,
+           mClass_upd = 6,
+           text_upd = 7,
+           direction_upd = 8,
+           ackTime_upd = 9,
+           user_upd = 10,
+           backColor_upd = 11,
+           foreColor_upd = 12;
+
+ // на массив удаления
+  const int numRow_del = 1,
+            DP_del = 2,
+            msgTime_del = 3;
+
+const string queryDTformat = \"%d.%m.%Y %H:%M:%S\"; // Формат даты/времени для запроса
+
+/* =================================== ОБНОВЛЕНИЕ ПОЛЯ СООБЩЕНИЙ =================================== */
+
+OnlineLoadMessages(){
+  //подписка на группу алармов по маске запроса, автоматически вносит в подписку новые подходящие точки
+  dpQueryConnectSingle(\"workWithMessage\", true, 0, query);
+}
+
+workWithMessage(anytype userData, dyn_dyn_anytype result)
+{
+  // ------------  SUMMARY VARS  ------------
+
+  //Определяю имена столбцов в массиве сообщений
+  dyn_anytype resultRow; // Строка из массива результата
+  int row;               // Номер строки для перебора
+
+  mapping template;      // Шаблон поиска строки ссобщения
+
+  dyn_int searchResult,  // Результат поиска строки сообщения
+          deletedRows;   // Массив строк для удаления
+
+  string ACKUser,        // Имя пользователя, который квтитровал сообщение
+         ACKTime,
+         medium,         // Наименование среды
+         RowColorText;   // Цвет текста?
+
+  int currNumbRow;
+  time currTimeMsg;
+
+  dyn_dyn_anytype DateTimeColl,
+                  DPeColl,
+                  CountColl,
+                  PlaceColl,
+                  deviceAliasColl,
+                  deviceDescriptColl,
+                  ClassColl,
+                  messageTextColl,
+                  Value_1Coll,
+                  ACKtimeColl,
+                  userColl,
+                  CommentColl;
+
+  // ------------  UPD/DEL FUNC VARS  ------------
+
+  // массивы для записи номеров строк для обновления или удаления
+  dyn_dyn_anytype updRows,
+                  delRows;
+
+  // флаги нахождений совпадений в массивах updRows, delRows
+  bool found_updRows,
+       found_delRows;
+
+  // флаги проверки актуальности данных в массивах updRows, delRows
+  bool actData_updRows,
+       actData_delRows;
+
+  int len_updRows,
+      len_delRows;
+
+  uint i_updRows,
+       i_delRows,
+       i_write;
+
+  // Команда управления строками
+  int command;
+
+  int rowWrite;
+
+  rowWrite = 0;
+
+  // Показываю результат запроса
+  for (row = 2; row <= dynlen(result); row ++)
+  {
+    resultRow = result[row];
+
+    // Ищу строку в таблице и параметрами пришедшего сообщения
+    template[\"DPe\"] = makeDynString(getAIdentifier(resultRow[msgTime])); // получаем дпе новой точки
+    getValue(\"messageList\", \"lineNumbers\", template, searchResult); // по этому же идентификатору в таблице сообщений получаем массив id подходящих строк
+
+    ACKTime = (period(resultRow[ackTime]) == 0) ? \" - \" : formatTime(queryDTformat, resultRow[ackTime]);
+    ACKUser = (period(resultRow[ackTime]) == 0) ? \" - \" : getUserName(resultRow[user]);
+
+    if (searchResult[1] == -1) // нет подходящих по шаблону строк
+    { // Строки нет
+      if(resultRow[actState] != DPATTR_ALERTSTATE_NONE){
+        this.appendLine(\"DateTime\",       makeDynAnytype(resultRow[msgTime], resultRow[backColor], resultRow[foreColor]),
+                        \"DPe\",            getAIdentifier(resultRow[msgTime]),
+                        \"Count\",          getACount(resultRow[msgTime]),
+                        \"Press\",          makeDynAnytype(dpGetAlias(dpSubStr(resultRow[DP], DPSUB_SYS_DP) + \".\"), resultRow[backColor], resultRow[foreColor]),
+                        \"Place\",          makeDynAnytype(dpGetDescription(dpSubStr(resultRow[DP], DPSUB_SYS_DP) + \".\"), resultRow[backColor], resultRow[foreColor]),
+                        \"Class\",          makeDynAnytype(resultRow[mClass], resultRow[backColor], resultRow[foreColor]),
+                        \"messageText\",    makeDynAnytype(resultRow[text], resultRow[backColor], resultRow[foreColor]),
+                        \"Status\",         makeDynString(resultRow[direction]? \"Пришло\":\"Ушло\", resultRow[backColor], resultRow[foreColor]),
+                        \"ACKtime\",        makeDynAnytype(ACKTime, resultRow[backColor], resultRow[foreColor]),
+                        \"user\",           makeDynAnytype(ACKUser, resultRow[backColor], resultRow[foreColor]));
+       }
+    }
+
+    else if (resultRow[msgTime] >= this.cellValueRC(searchResult[1], \"DateTime\"))
+    {
+        // Сообщение новое
+        // Определяю операцию
+        switch(resultRow[actState])
+        {
+          case DPATTR_ALERTSTATE_NONE:
+            command = delete_cmd;
+            break;
+          case DPATTR_ALERTSTATE_APP_NOT_ACK:
+              command = update_cmd;
+            break;
+          case DPATTR_ALERTSTATE_DISAPP_NOT_ACK:
+            switch(resultRow[ackState])
+            {
+              case DPATTR_ACKTYPE_NOT:
+                command = update_cmd;
+                break;
+              case DPATTR_ACKTYPE_SINGLE:
+                command = delete_cmd;
+                break;
+            }
+            break;
+        }
+
+        currNumbRow = searchResult[1];    // получаем id строки в таблице
+        currTimeMsg = resultRow[msgTime]; // новое время полученное из запроса
+
+        len_updRows = dynlen(updRows);
+        len_delRows = dynlen(delRows);
+
+        found_updRows = false;
+        found_delRows = false;
+
+        actData_updRows = false;
+        actData_delRows  = false;
+
+        // если массив для удал. строк не пустой
+        if(len_delRows > 0)
+        {
+          for(i_delRows = 1; i_delRows <= len_delRows; i_delRows++)
+          {
+            if(currNumbRow == delRows[i_delRows][numRow_del]) //ищем совпадение (была ли раньше отмечана текущ. строка)
+            {
+              found_delRows = true;
+
+              if(delRows[i_delRows][msgTime_del] >= currTimeMsg) //сравниваем метки времени (проверяем актуальны ли данные в массиве (для удал. строк))
+              {
+                actData_delRows = true;
+              }
+              break;
+            }
+          }
+        }
+
+        //если массив для обнов. строк не пустой
+        if(len_updRows > 0)
+        {
+          for(i_updRows = 1; i_updRows <= len_updRows; i_updRows++)
+          {
+            if(currNumbRow == updRows[i_updRows][numRow_upd]) //ищем совпадение (была ли раньше отмечана текущ. строка)
+            {
+              found_updRows = true;
+
+              if(updRows[i_updRows][msgTime_upd] >= currTimeMsg) //сравниваем метки времени (проверяем актуальны ли данные в массиве (для обнов. строк))
+              {
+                actData_updRows = true;
+              }
+              break;
+            }
+          }
+        }
+
+        //если нашли в массиве delRows | и | данные в массиве delRows не актуальные | и |  не нашли в массиве updRows
+        if(found_delRows && !actData_delRows && !found_updRows)
+        {
+            if(command == update_cmd) //если команда обнов. строку
+            {
+              delRows[i_delRows][numRow_del] = -1; //помечаем что строка на удал. не действительна
+
+              i_write = len_updRows + 1;
+
+              ////записываем новую строку на обновление
+              updRows[i_write][numRow_upd] = currNumbRow; // новый номер строки на обновл.
+              updRows[i_write][DP_upd] = resultRow[DP];
+              updRows[i_write][msgTime_upd] = resultRow[msgTime];
+              updRows[i_write][actState_upd] = resultRow[actState];
+              updRows[i_write][ackState_upd] = resultRow[ackState];
+              updRows[i_write][mClass_upd] = resultRow[mClass];
+              updRows[i_write][text_upd] = resultRow[text];
+              updRows[i_write][direction_upd] = resultRow[direction];
+              updRows[i_write][ackTime_upd] = ACKTime;
+              updRows[i_write][user_upd] = ACKUser;
+              updRows[i_write][backColor_upd] = resultRow[backColor];
+              updRows[i_write][foreColor_upd] = resultRow[foreColor];
+            }
+        }
+
+        //если нашли в массиве updRows | и | данные в массиве updRows не актуальные | и | не нашли в массиве delRows
+        else if(found_updRows && !actData_updRows && !found_delRows)         {
+            //если команда обнов. строку
+            if(command == update_cmd)
+            {
+             ////перезаписываем строку на обновление
+              updRows[i_updRows][numRow_upd] = currNumbRow;//номер строки на обновл.
+              updRows[i_updRows][DP_upd] = resultRow[DP];
+              updRows[i_updRows][msgTime_upd] = resultRow[msgTime];
+              updRows[i_updRows][actState_upd] = resultRow[actState];
+              updRows[i_updRows][ackState_upd] = resultRow[ackState];
+              updRows[i_updRows][mClass_upd] = resultRow[mClass];
+              updRows[i_updRows][text_upd] = resultRow[text];
+              updRows[i_updRows][direction_upd] = resultRow[direction];
+              updRows[i_updRows][ackTime_upd] = ACKTime;
+              updRows[i_updRows][user_upd] = ACKUser;
+              updRows[i_updRows][backColor_upd] = resultRow[backColor];
+              updRows[i_updRows][foreColor_upd] = resultRow[foreColor];
+            }
+            //если команда удал. строку
+            else if(command == delete_cmd)
+            {
+              updRows[i_updRows][numRow_upd] = -1; //помечаем что строка на обновл. не действительна
+
+              i_write = len_delRows + 1;
+
+              delRows[i_write][numRow_del] = currNumbRow; //записываем новый номер строки на удал.
+              delRows[i_write][DP_del] = resultRow[DP];
+              delRows[i_write][msgTime_del] = currTimeMsg; //записываем тек. метку времени
+            }
+        }
+
+        //если не нашли в массиве delRows и не нашли в массиве updRows
+        else if(!found_delRows && !found_updRows)
+        {
+          //если команда обнов. строку
+          if(command == update_cmd)
+          {
+              i_write = len_updRows + 1;
+
+              ////записываем новую строку на обновление
+              updRows[i_write][numRow_upd] = currNumbRow;// новый номер строки на обновл.
+              updRows[i_write][DP_upd] = resultRow[DP];
+              updRows[i_write][msgTime_upd] = resultRow[msgTime];
+              updRows[i_write][actState_upd] = resultRow[actState];
+              updRows[i_write][ackState_upd] = resultRow[ackState];
+              updRows[i_write][mClass_upd] = resultRow[mClass];
+              updRows[i_write][text_upd] = resultRow[text];
+              updRows[i_write][direction_upd] = resultRow[direction];
+              updRows[i_write][ackTime_upd] = ACKTime;
+              updRows[i_write][user_upd] = ACKUser;
+              updRows[i_write][backColor_upd] = resultRow[backColor];
+              updRows[i_write][foreColor_upd] = resultRow[foreColor];
+
+          }
+          // если команда удал. строку
+          else if(command == delete_cmd)
+          {
+              i_write = len_delRows + 1;
+
+              delRows[i_write][numRow_del] = currNumbRow;                    // записываем новый номер строки на удал.
+              delRows[i_write][DP_del] = getAIdentifier(resultRow[msgTime]); // resultRow[DP];
+              delRows[i_write][msgTime_del] = currTimeMsg;                   // записываем тек. метку времени
+          }
+
+
+        }
+    }
+  }
+
+// ----------------------------- ОБНОВЛЕНИЕ -----------------------------
+
+  len_updRows = dynlen(updRows);
+  len_delRows = dynlen(delRows);
+
+  //если есть строки на обновление
+  if(len_updRows > 0)
+  {
+    for(i_updRows = 1; i_updRows <= len_updRows; i_updRows++)
+    {
+            this.cellValueRC(updRows[i_updRows][numRow_upd], \"DateTime\",    makeDynAnytype(updRows[i_updRows][msgTime_upd], updRows[i_updRows][backColor_upd], updRows[i_updRows][foreColor_upd]));
+            this.cellValueRC(updRows[i_updRows][numRow_upd], \"Class\",       makeDynAnytype(updRows[i_updRows][mClass_upd], updRows[i_updRows][backColor_upd], updRows[i_updRows][foreColor_upd]));
+
+            this.cellValueRC(updRows[i_updRows][numRow_upd], \"Press\",       makeDynAnytype(dpGetAlias(dpSubStr(updRows[i_updRows][DP_upd], DPSUB_DP) + \".\"), updRows[i_updRows][backColor_upd], updRows[i_updRows][foreColor_upd]));
+            this.cellValueRC(updRows[i_updRows][numRow_upd], \"Place\",       makeDynAnytype(dpGetDescription(dpSubStr(updRows[i_updRows][DP_upd], DPSUB_DP) + \".\"), updRows[i_updRows][backColor_upd], updRows[i_updRows][foreColor_upd]));
+
+            this.cellValueRC(updRows[i_updRows][numRow_upd], \"messageText\", makeDynAnytype(updRows[i_updRows][text_upd], updRows[i_updRows][backColor_upd], updRows[i_updRows][foreColor_upd]));
+            this.cellValueRC(updRows[i_updRows][numRow_upd], \"Status\",      makeDynString(updRows[i_updRows][direction_upd]? \"Пришло\":\"Ушло\", updRows[i_updRows][backColor_upd], updRows[i_updRows][foreColor_upd]));
+            this.cellValueRC(updRows[i_updRows][numRow_upd], \"ACKtime\",     makeDynAnytype(updRows[i_updRows][ackTime_upd], updRows[i_updRows][backColor_upd], updRows[i_updRows][foreColor_upd]));
+            this.cellValueRC(updRows[i_updRows][numRow_upd], \"user\",        makeDynAnytype(updRows[i_updRows][user_upd], updRows[i_updRows][backColor_upd], updRows[i_updRows][foreColor_upd]));
+    }
+  }
+
+  // если есть строки на удаление
+  if(len_delRows > 0)
+  {
+    for(i_delRows = 1; i_delRows <= len_delRows; i_delRows++)
+    {
+       this.deleteLine(1, \"DPe\", delRows[i_delRows][DP_del]);
+    }
+  }
+}
+
+/* ===================================  =================================== */" 0
+ 4
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.746"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+25 1
+"messageList"
+""
+1 -4.573361891211582e-16 1.776356839400257e-15 E E E 1 E 1 E N "_WindowText" E N {237,239,241} E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  -2 -1.999999999999999 1452 151.4805194805195
+"main(){
+OnlineLoadMessages();
+}
+" 0
+E 1 0 1 10 0 "Count" 4 0 0 "[0s,,,AlignLeft|AlignVCenter]" 1
+LANG:10027 14 Счётчик
+E
+1
+LANG:10027 0 
+
+50 "DPe" 19 0 0 "[0s,,,AlignLeft|AlignVCenter]" 1
+LANG:10027 38 Элемент точки данных
+E
+1
+LANG:10027 0 
+
+200 "Class" 6 1 0 "[0s,,,AlignHCenter|AlignVCenter]" 1
+LANG:10027 10 Класс
+E
+1
+LANG:10027 0 
+
+70 "Place" 6 1 0 "s" 1
+LANG:10027 10 Место
+E
+1
+LANG:10027 0 
+
+150 "Press" 15 1 0 "[0s,,,AlignLeft|AlignVCenter]" 1
+LANG:10027 10 Пресс
+E
+1
+LANG:10027 0 
+
+110 "DateTime" 6 1 0 "[%ct,False,,AlignLeft]" 1
+LANG:10027 19 Дата/Время
+E
+1
+LANG:10027 0 
+
+160 "messageText" 29 1 0 "[0s,,,AlignLeft|AlignVCenter]" 1
+LANG:10027 29 Текст сообщения
+E
+1
+LANG:10027 0 
+
+300 "Status" 9 1 0 "[0s,,,AlignHCenter|AlignVCenter]" 1
+LANG:10027 12 Статус
+E
+1
+LANG:10027 0 
+
+100 "ACKtime" 15 1 0 "[0s,,,AlignLeft|AlignVCenter]" 1
+LANG:10027 20 Время квит.
+E
+1
+LANG:10027 0 
+
+160 "user" 9 1 0 "[0s,,,AlignHCenter|AlignVCenter]" 1
+LANG:10027 24 Пользователь
+E
+1
+LANG:10027 0 
+
+160 
+20 20 10 50
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0 0 1 0 1 7
+1 0
+13 2
+"PUSH_BUTTON4"
+""
+1 1449.999999999999 9.57575757575758 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+1 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {92,120,131}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  1448 7.909090909090908 1580 78.90909090909091
+
+P 
+4294967295
+"pictures/concom.svg"
+1
+LANG:10027 22 Квитировать
+"main(mapping event)
+{
+   dyn_string classAlarm = messageList.getColumnN(3);//столбец Класс
+   dyn_string dpElements = messageList.getColumnN(1);//столбец DPE
+   dyn_string dpElementsAlarm;
+
+   int firstRowm, lastRow;
+
+   firstRowm = 1;
+   lastRow = dpElements.count();
+
+   int dpeAlarm = 1;
+   int dpe;
+   int dpeCount = dynlen(classAlarm);
+
+  if(lastRow > dpeCount)  lastRow = dpeCount;
+
+  for(dpe = firstRowm; dpe <= lastRow; dpe++)
+  {
+    dpElementsAlarm[dpeAlarm] = dpElements[dpe];
+    dpeAlarm++;
+  }
+
+  dyn_int cmd; // Массив комманд квитирования
+  dpeCount = dynlen(dpElementsAlarm);
+
+  // Заполняю массивы
+  for (dpe = 1; dpe <= dpeCount; dpe++)
+  {
+    dpElementsAlarm[dpe] += \"._ack\";
+    cmd[dpe] = 2;
+  }
+
+  dpSetWait(dpElementsAlarm, cmd);
+}" 0
+ E E E
+13 3
+"btnLogin"
+""
+1 1401.9385837907 96.27183600713009 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+2 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+2
+"hoverbclr" "N {92,120,131}"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  1448 79.90909090909092 1580 150.9090909090909
+
+P 
+4294967295
+"pictures/group_mgmt_16.svg"
+1
+LANG:10027 22 Авторизация
+E E E E
+2 4
+"PRIMITIVE_TEXT3"
+""
+1 230 0 E E E 1 E 1 E N "White" E N "Head_dark_blue" E E
+ E E
+3 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 3.764848303870038 0 0.835 712.0848901098905 9.909090909090908 1 E 230 0 360 40
+0 0 2 "0s" 0 0 0 72 0 0  230 0 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 21   Компьютер:
+2 5
+"PRIMITIVE_TEXT4"
+""
+1 230 0 E E E 1 E 1 E N "White" E N "Head_dark_blue" E E
+ E E
+4 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 3.764848303870042 0 0.811666666666667 712.0848901098894 44.44242424242423 1 E 230 0 360 40
+0 0 2 "0s" 0 0 0 72 0 0  230 0 1
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0 1
+LANG:10027 15   Сервер:
+14 6
+"PC_NAME"
+""
+1 1749.301369863014 20.77575757575757 E E E 1 E 1 E N "_WindowText" E N {255,255,255} E E
+ E E
+5 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  1689 10.1090909090909 1917 43.10909090909091
+3 "0s" 0 0 0 0 0 -1  E E E
+14 7
+"SERVER_NAME"
+""
+1 1749.419276323135 62.11149426224922 E E E 1 E 1 E N "_WindowText" E N {255,255,255} E E
+ E E
+6 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  1689 44.17575757575758 1917 77.17575757575756
+3 "0s" 0 0 0 0 0 -1  E E E
+14 8
+"AuthStatus"
+""
+1 1599.171505376344 83.1460606060606 E E E 1 E 1 E N "White" E N {39,51,56} E E
+ E E
+7 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  1581 80 1917 115
+3 "14s" 14 0 0 9 0 -1  E "main()
+{
+  setValue(\"\", \"text\", \"Status\");
+}" 0
+ E
+14 9
+"Lock_Status"
+""
+1 1638.453541153327 34.71411616161614 E E E 1 E 1 E N "White" E N {39,51,56} E E
+ E E
+8 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  1581 116 1917 151
+3 "14s" 14 0 0 9 0 -1  E "main()
+{
+  setValue(this, \"text\", \"UserName\");
+}" 0
+ E
+29 14
+"Splitter5"
+""
+1 1450 77 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+13 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  1450 77 1920 82
+8 Splitter
+0
+E29 15
+"Splitter6"
+""
+1 1578 82 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+14 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  1578 82 1583 149
+8 Splitter
+0
+E29 17
+"Splitter8"
+""
+1 1915 81.90909090909093 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+16 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  1915 81.90909090909093 1920 148.9090909090909
+8 Splitter
+0
+E29 18
+"Splitter9"
+""
+1 1583 113 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+17 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  1583 113 1915 118
+8 Splitter
+0
+E0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

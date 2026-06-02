@@ -21,13 +21,10 @@ main()
 {
 
 //строка подключения к БД
-
-
 //регистрируем начало/окончание вулканизации
-
-// dpConnect("passportWrite",
-//          "System1:Press1.Inputs.PassportBoolVal.Curing",
-//          "System1:Press1.Inputs.PassportBoolVal.Curing:_online.._stime");
+ dpConnect("passportWrite",
+          "System1:Press1.Inputs.PassportBoolVal.Curing",
+          "System1:Press1.Inputs.PassportBoolVal.Curing:_online.._stime");
 
  dpConnect("passportWrite",
            "System1:Press2.Inputs.PassportBoolVal.Curing",
@@ -37,9 +34,9 @@ main()
            "System1:Press3.Inputs.PassportBoolVal.Curing",
            "System1:Press3.Inputs.PassportBoolVal.Curing:_online.._stime");
 
-// dpConnect("passportWrite",
-//         "System1:Press4.Inputs.RecipeBoolVal.Runtime",
-//          "System1:Press4.Inputs.RecipeBoolVal.Runtime:_online.._stime");
+ dpConnect("passportWrite",
+           "System1:Press4.Inputs.PassportBoolVal.Curing",
+           "System1:Press4.Inputs.PassportBoolVal.Curing:_online.._stime");
 
 //запись тега "Качество"
   dpConnect("writeQuality", "System1:Press1.Inputs.PassportBoolVal.Quality");
@@ -48,10 +45,9 @@ main()
   dpConnect("writeQuality", "System1:Press4.Inputs.PassportBoolVal.Quality");
 
 //регистрируем начало формования
-
-//  dpConnect("formingWrite",
-//             "System1:Press1.Inputs.PassportBoolVal.Forming",
-//             "System1:Press1.Inputs.PassportBoolVal.Forming:_online.._stime");
+  dpConnect("formingWrite",
+             "System1:Press1.Inputs.PassportBoolVal.Forming",
+             "System1:Press1.Inputs.PassportBoolVal.Forming:_online.._stime");
 
   dpConnect("formingWrite",
             "System1:Press2.Inputs.PassportBoolVal.Forming",
@@ -61,12 +57,41 @@ main()
             "System1:Press3.Inputs.PassportBoolVal.Forming",
             "System1:Press3.Inputs.PassportBoolVal.Forming:_online.._stime");
 
-//  dpConnect("formingWrite",
-//             "System1:Press4.Inputs.PassportBoolVal.Forming",
-//             "System1:Press4.Inputs.PassportBoolVal.Forming:_online.._stime");
+  dpConnect("formingWrite",
+             "System1:Press4.Inputs.PassportBoolVal.Forming",
+             "System1:Press4.Inputs.PassportBoolVal.Forming:_online.._stime");
 }
 
 //переводим время в стороку для добавления в БД
+
+void showError (dbConnection conn, string nvoid)
+{
+	int errCnt, errNo, errNative;
+	string errDescr, errSql;
+	int rc;
+	DebugN("Ошибка SQL: "+nvoid,conn);
+	errCnt = 1;
+	rc = 0;
+	while (errCnt > 0 && ! rc)
+		{
+		delay(0,100);
+		rc = dbGetError (conn, errCnt, errNo, errNative, errDescr, errSql);
+		if (!rc)
+	{
+	DebugN("Errornumber : ", errNo);
+	DebugN("BaseError : ", errNative);
+	DebugN("Description : ", errDescr);
+	DebugN("SQL-errortext: ", errSql);
+	} else
+		DebugN("dbGetError failed, rc = ", rc2);
+	errCnt--;
+	}
+}
+
+
+
+
+
 string convertTime(time timeStemp)
 {
   int yr, mn, d, hh, mm, ss;
@@ -133,6 +158,7 @@ void insertPassport(string dp, string time_str, int proc) //proc - 1: формо
   // открываем подключение к БД
   dpGet("System1:GlobalVar1.ConnectionDB:_online.._value", conStr);
   rc = dbOpenConnection(conStr, conn);
+ // startThread("showError",conn, "insertPassport");
   DebugN("conStr: ",conStr);
   DebugN("insertPassport_OpenConnection: ",rc);
 
@@ -188,13 +214,14 @@ void insertPassport(string dp, string time_str, int proc) //proc - 1: формо
   }
 
 
-void formingWrite(string dpe, bool val, string dpe, time ts)
+void formingWrite(string dpe, int val, string dpe, time ts)
 {
   string dp;
+  Debug("forming:",dpe);
   if (val == 4)
   {
     dp = dpSubStr(dpe, DPSUB_DP);
-    Debug("forming:",dp);
+    Debug("forming1:",dp);
     string time_str = convertTime(ts);
     DebugN("time_str:",time_str);
     insertPassport(dp, time_str, 1);
@@ -203,7 +230,7 @@ void formingWrite(string dpe, bool val, string dpe, time ts)
 
 void passportWrite(string dpe, bool val, string dpe, time ts)
 {
-   string serial_num, dp, cmdStr,conStr, time_str;
+   string serial_num, dp, cmdStr, conStr, time_str;
    int isRec, rc;
    dbRecordset rs;
    DebugN("PassportWrite:");
@@ -227,21 +254,25 @@ void passportWrite(string dpe, bool val, string dpe, time ts)
   if (val) //вулканизация началась, добавляем/редактируем запись в БД
   {
 
+  Debug("Val_true:", "зашли в if");
   //проверяем есть ли уже запись в БД c таким серийным номером
     dpGet("System1:GlobalVar1.ConnectionDB:_online.._value", conStr);
     rc = dbOpenConnection(conStr, conn);
-    cmdStr = "SELECT serial_num FROM tPassport Where serial_num = " + serial_num;
+  //  startThread("showError",conn, "passportWrite1");
+    cmdStr = "SELECT serial_num FROM tPassport Where serial_num = '" + serial_num +"'";
     rc = dbOpenRecordset(conn, cmdStr, rs);
+    Debug("dbOpenRecordset_Val_true", rc);
     isRec = 0;
-    while (!rc && !dbEOF(rs))
+    while (!dbEOF(rs))
     {
-      isRec++;
+      isRec ++;
+      DebugN("isRec:", isRec);
+      dbMoveNext(rs);
     }
+    DebugN("isRec1:", isRec);
     dbCloseConnection(conn);
-    Debug("passportWrite_rs:", rc);
-    Debug("isRec:", isRec);
 
-    if (isRec == 0) //не было формования запись не найдена
+   if (isRec == 0) //не было формования запись не найдена
     {
       dp = dpSubStr(dpe, DPSUB_DP);
       time_str = convertTime(ts);
@@ -252,7 +283,8 @@ void passportWrite(string dpe, bool val, string dpe, time ts)
     {
       dpGet("System1:GlobalVar1.ConnectionDB:_online.._value", conStr);
       rc = dbOpenConnection(conStr, conn);
-      DebugN("OpenConnection_ passportWrite", rc);
+   //   startThread("showError",conn, "passportWrite2");
+      DebugN("OpenConnection_ passportUpdate", rc);
       rc = dbBeginTransaction(conn); //запуск транзакции
 
       cmdStr = "UPDATE tPassport SET  time_start = ? WHERE serial_num = ? AND time_stop IS NULL";
@@ -260,7 +292,7 @@ void passportWrite(string dpe, bool val, string dpe, time ts)
       rc = dbSetParameter(cmd, 1, DB_PARAM_IN, time_str);
       rc = dbSetParameter(cmd, 2, DB_PARAM_IN, serial_num);
       rc = dbExecuteCommand(cmd);
-
+      DebugN("dbExecuteCommand: cmdStr", cmdStr);
       DebugN("dbExecuteCommand: passportWrite", rc);
       //флаг формования
       //showError  (cmd);
@@ -290,10 +322,11 @@ void passportWrite(string dpe, bool val, string dpe, time ts)
     DebugN("Curing end:");
     dpGet("System1:GlobalVar1.ConnectionDB:_online.._value", conStr);
     rc = dbOpenConnection(conStr, conn);
+  //  startThread("showError",conn, "Curing end");
     DebugN("conStr_Curing end: ",conStr);
     DebugN("Curing end_OpenConnection: ",rc);
     rc = dbBeginTransaction(conn);  //запуск транзакции
-    cmdStr = "UPDATE tPassport SET time_stop = ? WHERE serial_num=? AND time_stop IS NULL";
+    cmdStr = "UPDATE tPassport SET time_stop = ? WHERE serial_num=? AND time_stop IS NULL AND time_start IS NOT NULL";
     rc = dbStartCommand(conn, cmdStr, cmd);
     rc = dbSetParameter(cmd, 1, DB_PARAM_IN, time_str);
     rc = dbSetParameter(cmd, 2, DB_PARAM_IN, serial_num);
@@ -334,6 +367,7 @@ void writeQuality(string dpe, bool val)
     // открываем подключение к БД
     dpGet("System1:GlobalVar1.ConnectionDB:_online.._value", conStr);
     rc = dbOpenConnection(conStr, conn);
+  //  startThread("showError",conn, "writeQuality: ");
     DebugN("writeQuality_OpenConnection", rc);
 
     rc = dbBeginTransaction(conn);  //запуск транзакции

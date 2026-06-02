@@ -1,0 +1,163 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1650 192 N "_3DFace" 0
+E E E E E 1 -1 -1 0  2 2.471698113207538
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.746"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+25 1
+"TABLE1"
+""
+1 0.9999999999999996 32.7641509433962 E E E 1 E 1 E N "_WindowText" E N "BG_gray" E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  -1 32.23584905660374 821.875 192.2358490566038
+EE 1 0 1 4 0 "DT" 6 1 0 "s" 1
+LANG:10027 19 Дата/время
+E
+1
+LANG:10027 0 
+
+130 "Press" 6 1 0 "s" 1
+LANG:10027 10 Пресс
+E
+1
+LANG:10027 0 
+
+90 "Text" 6 1 0 "s" 1
+LANG:10027 10 Текст
+E
+1
+LANG:10027 0 
+
+450 "Recipe_dt" 6 1 0 "s" 1
+LANG:10027 20 Рецепт от...
+E
+1
+LANG:10027 0 
+
+135 
+20 20 10 0
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0 0 1 1 1 7
+1 0
+25 2
+"TABLE2"
+""
+1 18.00000000000023 34.23584905660374 E E E 1 E 1 E N "_WindowText" E N "BG_gray" E E
+ E E
+1 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  826 32.23584905660374 1649 192.2358490566038
+EE 1 0 1 1 0 "#1" 6 1 0 "s" 1
+LANG:10027 2 #1
+E
+1
+LANG:10027 0 
+
+60 
+20 20 10 0
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0 0 1 1 1 7
+1 0
+29 3
+"Label1"
+""
+1 1 0 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+2 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"backgroundBrush" "fill [solid]"
+"text" "string   Производство продукции"
+"frameShape" "enum 6"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  1 0 820 34
+5 Label
+0
+E29 4
+"Label2"
+""
+1 828.0416666666667 0.2358490566037688 E E E 1 E 1 E N "White" E N {0,95,135} E E
+ E E
+3 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"backgroundBrush" "fill [solid]"
+"text" "string   Рабочие сообщения"
+"frameShape" "enum 6"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  828 0 1647 34
+5 Label
+0
+E0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+0

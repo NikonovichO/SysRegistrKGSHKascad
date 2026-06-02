@@ -1,7 +1,7 @@
 V 14
 1
 LANG:10027 7 Process
-PANEL,-1 -1 1959 908 N {207,207,207} 1
+PANEL,-1 -1 1959 895 N {207,207,207} 1
 "$dp"
 "main()
 {
@@ -87,7 +87,7 @@ LANG:10027 0
 29 14
 "DateTimeEdit_ewo2"
 ""
-1 1492.008462236974 7.503442723032438 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 1483 8.000000000000004 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 13 0 0 0 0 0
 E E E
@@ -102,7 +102,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  1492.008462236974 7.503442723032438 1621.008462236974 37.50344272303244
+0  1483 8 1620 37
 16 DateTimeEdit.ewo
 0
 "main()
@@ -113,7 +113,7 @@ LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
 29 15
 "DateTimeEdit_ewo3"
 ""
-1 1677.991537763026 10.50114757434414 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 1650.990881775664 9.501147574344138 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 14 0 0 0 0 0
 E E E
@@ -128,7 +128,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  1677.991537763026 10.50114757434414 1806.991537763026 40.50114757434415
+0  1651 10 1790 39
 16 DateTimeEdit.ewo
 0
 "main()
@@ -139,7 +139,7 @@ LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
 14 16
 "TEXT_FIELD1"
 ""
-1 510 110 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 503.925 109.6809563431946 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 15 0 0 0 0 0
 E E E
@@ -151,7 +151,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  499 101.8793624378703 572 126.8793624378703
+0  493 102 571 127
 3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
 main()
 {
@@ -195,7 +195,7 @@ void EP_textFieldInCB(string dp, float fNewValue)
 29 17
 "Label3"
 ""
-1 230.9500000000001 104.4396812189351 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 220.8750000000001 104.1206375621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 16 0 0 0 0 0
 E E E
@@ -208,13 +208,13 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  230.9500000000001 104.4396812189351 494.8499999999999 124.4396812189351
+0  220.8750000000001 104.1206375621297 484.7749999999999 124.1206375621297
 5 Label
 0
 E14 18
 "TEXT_FIELD2"
 ""
-1 503.1500000000001 139.4999999999999 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 495.0750000000001 139.1809563431945 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 17 0 0 0 0 0
 E E E
@@ -226,7 +226,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  501.1500000000001 132.3793624378702 574.1500000000001 157.3793624378702
+0  493 132 571 157
 3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
 main()
 {
@@ -270,7 +270,7 @@ void EP_textFieldInCB(string dp, float fNewValue)
 29 19
 "Label4"
 ""
-1 205.3500000000002 134.6896812189351 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 195.2750000000002 134.3706375621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 18 0 0 0 0 0
 E E E
@@ -283,13 +283,13 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  205.1500000000001 134.4396812189351 495.1500000000001 155.4396812189351
+0  195.0750000000001 134.1206375621297 485.0750000000001 155.1206375621297
 5 Label
 0
 E14 20
 "TEXT_FIELD3"
 ""
-1 501.1500000000001 174.8793624378702 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 495.0750000000001 174.5603187810648 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 19 0 0 0 0 0
 E E E
@@ -301,7 +301,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  499.1500000000001 164.7587248757405 572.1500000000001 189.7587248757405
+0  493 164 571 189
 3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
 main()
 {
@@ -343,7 +343,7 @@ void EP_textFieldInCB(string dp, float fNewValue)
 29 21
 "Label5"
 ""
-1 215.1500000000001 164.4396812189351 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 205.0750000000001 164.1206375621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 20 0 0 0 0 0
 E E E
@@ -356,13 +356,13 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  215.1500000000001 164.4396812189351 495.1500000000001 185.4396812189351
+0  205.0750000000001 164.1206375621297 485.0750000000001 185.1206375621297
 5 Label
 0
 E14 22
 "TEXT_FIELD4"
 ""
-1 504.3000000000001 201.5646812189351 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 495.2250000000001 201.2456375621297 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 21 0 0 0 0 0
 E E E
@@ -374,7 +374,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  502.1500000000001 192.3190436568054 575.1500000000001 217.3190436568054
+0  493 192 571 217
 3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
 main()
 {
@@ -417,7 +417,7 @@ void EP_textFieldInCB(string dp, float fNewValue)
 29 23
 "Label6"
 ""
-1 205.1125000000001 193.5334312189351 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 195.0375000000001 193.2143875621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 22 0 0 0 0 0
 E E E
@@ -430,13 +430,13 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  195.1500000000001 194.4396812189351 495.1500000000001 215.4396812189351
+0  185.0750000000001 194.1206375621297 485.0750000000001 215.1206375621297
 5 Label
 0
 E14 24
 "TEXT_FIELD5"
 ""
-1 504.3000000000001 258.5646812189351 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 495.2250000000001 258.2456375621297 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 23 0 0 0 0 0
 E E E
@@ -448,7 +448,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  502.1500000000001 252.3190436568054 575.1500000000001 277.3190436568054
+0  493 252 571 277
 3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
 main()
 {
@@ -491,7 +491,7 @@ void EP_textFieldInCB(string dp, float fNewValue)
 29 25
 "Label7"
 ""
-1 297.0779296875001 254.0646812189351 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 287.0029296875001 253.7456375621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 24 0 0 0 0 0
 E E E
@@ -504,13 +504,13 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  297.1500000000001 254.4396812189351 497.1500000000001 275.4396812189351
+0  287.0750000000001 254.1206375621297 487.0750000000001 275.1206375621297
 5 Label
 0
 E14 26
 "TEXT_FIELD6"
 ""
-1 502.2125000000002 228.5937499999999 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 495.1375000000002 228.2747063431945 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 25 0 0 0 0 0
 E E E
@@ -522,7 +522,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  500.1500000000001 222.3793624378702 573.1500000000001 247.3793624378702
+0  493 222 571 247
 3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
 main()
 {
@@ -566,7 +566,7 @@ void EP_textFieldInCB(string dp, float fNewValue)
 29 27
 "Label8"
 ""
-1 313.2125000000002 224.4709312189351 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 303.1375000000002 224.1518875621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 26 0 0 0 0 0
 E E E
@@ -579,13 +579,13 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  313.1500000000001 224.4396812189351 495.1500000000001 245.4396812189351
+0  303.0750000000001 224.1206375621297 485.0750000000001 245.1206375621297
 5 Label
 0
 E14 28
 "TEXT_FIELD7"
 ""
-1 504.1562500000002 288.5490562189351 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 495.0812500000002 288.2300125621297 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 27 0 0 0 0 0
 E E E
@@ -597,7 +597,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  502.1500000000001 282.3190436568054 575.1500000000001 307.3190436568054
+0  493 282 571 307
 3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
 main()
 {
@@ -641,7 +641,7 @@ void EP_textFieldInCB(string dp, float fNewValue)
 29 29
 "Label9"
 ""
-1 305.1593750000002 284.1037437189351 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 295.0843750000002 283.7847000621297 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 28 0 0 0 0 0
 E E E
@@ -654,7 +654,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  305.1500000000001 284.4396812189351 497.1500000000001 305.4396812189351
+0  295.0750000000001 284.1206375621297 487.0750000000001 305.1206375621297
 5 Label
 0
 E30 30
@@ -672,7 +672,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 "dashclr"N "_Transparent"
 "antiAliased" "0"
-E E 0 4 3 2 1 E 1.312903225806451 0 1.131926121372032 -591.6129032258056 -3.366754617414275 0 E 590 71 901 451
+E E 0 4 3 2 1 E 1.280645161290322 0 1.131926121372032 -572.5806451612897 -3.366754617414275 0 E 590 71 901 451
 1
 LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
 0 1
@@ -680,7 +680,7 @@ LANG:10027 35 Параметры процесса
 14 33
 "TEXT_FIELD9"
 ""
-1 510 330 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 494.925 329.6809563431946 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 32 0 0 0 0 0
 E E E
@@ -692,12 +692,12 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  507.8984375000001 309.7699874378703 580.8984375000001 334.7699874378703
+0  493 309 571 334
 3 "0s" 0 0 0 0 0 -1  E E E
 29 34
 "Label11"
 ""
-1 268.6615234375 311.6784186568054 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 258.5865234375 311.359375 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 33 0 0 0 0 0
 E E E
@@ -710,13 +710,13 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  268.6500000000001 311.8190436568054 500.6500000000001 332.8190436568054
+0  258.5750000000001 311.5 490.5750000000001 332.5
 5 Label
 0
 E14 35
 "TEXT_FIELD10"
 ""
-1 507.6681884765625 363.7487311568054 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 494.5931884765625 363.4296875 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 34 0 0 0 0 0
 E E E
@@ -728,12 +728,12 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  505.6500000000001 338.6984060946758 578.6500000000001 363.6984060946758
+0  493 338 571 363
 3 "0s" 0 0 0 0 0 -1  E E E
 29 36
 "Label12"
 ""
-1 338.6603515625002 344.6784186568054 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 328.5853515625002 344.359375 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 35 0 0 0 0 0
 E E E
@@ -746,13 +746,13 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  340.6500000000001 341.6984060946758 499.6500000000001 362.6984060946758
+0  330.5750000000001 341.3793624378704 489.5750000000001 362.3793624378704
 5 Label
 0
 E14 37
 "TEXT_FIELD11"
 ""
-1 507.6671875 396.0416999068054 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 494.5921875 395.72265625 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 36 0 0 0 0 0
 E E E
@@ -764,12 +764,12 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  505.6500000000001 368.6984060946758 578.6500000000001 393.6984060946758
+0  493 368 571 393
 3 "0s" 0 0 0 0 0 -1  E E E
 29 38
 "Label13"
 ""
-1 328.6500000000001 370.8190436568054 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 318.5750000000001 370.5 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 37 0 0 0 0 0
 E E E
@@ -782,13 +782,13 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  328.6500000000001 370.8190436568054 498.6500000000001 391.8190436568054
+0  318.5750000000001 370.5 488.5750000000001 391.5
 5 Label
 0
 E14 39
 "TEXT_FIELD12"
 ""
-1 507.6761718749999 425.9284186568054 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 494.6011718749999 425.609375 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 38 0 0 0 0 0
 E E E
@@ -800,12 +800,12 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  505.6500000000001 398.6984060946758 578.6500000000001 423.6984060946758
+0  493 398 571 423
 3 "0s" 0 0 0 0 0 -1  E E E
 29 40
 "Label14"
 ""
-1 330.6589843750002 400.7057624068054 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 320.5839843750002 400.38671875 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 39 0 0 0 0 0
 E E E
@@ -818,13 +818,13 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  330.6500000000001 400.8190436568054 500.6500000000001 421.8190436568054
+0  320.5750000000001 400.5 490.5750000000001 421.5
 5 Label
 0
 E14 41
 "TEXT_FIELD13"
 ""
-1 450.6171356201172 454.8190436568054 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 440 450 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 40 0 0 0 0 0
 E E E
@@ -836,12 +836,12 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  448.6500000000001 449.6984060946758 578.6500000000001 474.6984060946758
+0  438.0328643798829 444.8793624378704 568.0328643798828 469.8793624378704
 3 "0s" 0 0 0 0 0 -1  E E E
 29 42
 "Label15"
 ""
-1 352.1095947265627 451.8190436568054 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 340 450 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 41 0 0 0 0 0
 E E E
@@ -854,13 +854,13 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
-0  351.6500000000001 451.8190436568054 450.6500000000001 472.8190436568054
+0  339.5404052734374 450 438.5404052734374 471
 5 Label
 0
 E23 43
 "TREND1"
 ""
-1 589.5520981625898 49.99999999999989 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 579.5484775507982 49.99999999999989 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 42 0 0 0 0 0
 E E E
@@ -872,18 +872,18 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
-0  587.9971505511022 48.00000000000004 1302.000407064128 751.9999999999999
+0  577.999796467936 48.00000000000004 1302.000203532064 751.9999999999999
 5 "main()
 {
-  TREND1.connectDirectly(\"FormingPressuer\", \"System1:\"+$dp+\"Inputs.AnalogValues.FormingPressure:_online.._value\");
+  //TREND1.connectDirectly(\"FormingPressuer\", \"System1:\"+$dp+\"Inputs.AnalogValues.FormingPressure:_online.._value\");
   TREND1.connectDirectly(\"PressReturnDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.PressReturnDiaph:_online.._value\");
-  TREND1.connectDirectly(\"PressSupplyDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.PressSupplyDiaph:_online.._value\");
+  TREND1.connectDirectly(\"PressSupplyDiaph \", \"System1:\"+$dp+\"Inputs.AnalogValues.PressSupplyDiaph:_online.._value\");
   TREND1.connectDirectly(\"TempSupplyDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.TempSupplyDiaph:_online.._value\");
   TREND1.connectDirectly(\"TempReturnDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.TempReturnDiaph:_online.._value\");
   TREND1.manageCommands(TRUE);
 }
 " 0
- E E 2 709 N {0,0,0} 0 0 1 0 1 0 2 0 "PressSupplyDiaph " "" 0 2 0 0 1 "3 2 0.0" "%x" 0 0 2 0 E
+ E E 2 719 N {0,0,0} 0 0 1 0 1 0 2 0 "PressSupplyDiaph " "" 0 2 0 0 1 "1 2 0.0" "%x" 0 0 2 0 E
 E
 0 0 0 1 2
 1
@@ -892,7 +892,7 @@ LANG:10027 0
 LANG:10027 0 
 1 "" ""  0 0 4 0 0 1 0 1 N "Red"
 1 0 0 0 0 0 0 0
-0 "PressReturnDiaph" "" 0 2 0 0 0 E
+0 "PressReturnDiaph" "" 0 2 0 0 1 "1 2 0.0" "%x" 0 0 3 0 E
 E
 1 0 0 3 2
 1
@@ -902,7 +902,7 @@ LANG:10027 0
 1 "" ""  0 0 4 0 0 1 0 1 N "blue"
 0 0 0 0 0 0 0 0
 1 0 "%H:%M:%S" "%x" 0 1 0 0 
-E 709 N {0,0,0} 0 0 1 0 1 0 2 0 "TempSupplyDiaph" "" 0 2 0 0 1 "1 2 0.0" "%x" 0 0 2 0 E
+E 719 N {0,0,0} 0 0 1 0 1 0 2 0 "TempSupplyDiaph" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 0 2 0 E
 E
 1 0 0 3 2
 1
@@ -911,7 +911,7 @@ LANG:10027 0
 LANG:10027 0 
 1 "" ""  0 0 300 0 0 1 0 1 N "Red"
 0 0 0 0 0 0 0 0
-0 "TempReturnDiaph" "" 0 2 0 0 0 E
+0 "TempReturnDiaph" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 1 3 0 E
 E
 1 0 0 3 2
 1
@@ -951,7 +951,7 @@ LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
 {
   TREND2.connectDirectly(\"PressureCam\", \"System1:\"+$dp+\"Inputs.AnalogValues.PressureCam:_online.._value\");
   TREND2.connectDirectly(\"TempCam\", \"System1:\"+$dp+\"Inputs.AnalogValues.TempCam:_online.._value\");
- // TREND2.connectDirectly(\"PressingForce\", \"System1:\"+$dp+\"Inputs.AnalogValues.PressingForce\");
+  TREND2.connectDirectly(\"ControlTemp\", \"System1:\"+$dp+\"Inputs.AnalogValues.ControlTempSupplyCam:_online.._value\");
   TREND2.manageCommands(TRUE);
  }" 0
  E E 2 648 N {0,0,0} 0 0 1 0 1 0 1 0 "PressureCam" "" 0 2 0 0 1 "1 2 0.0" "%x" 0 0 2 0 E
@@ -964,7 +964,7 @@ LANG:10027 0
 1 "" ""  0 0 2 0 0 1 0 1 N "STD_windows_available"
 0 0 0 0 0 0 0 0
 1 0 "%H:%M:%S" "%x" 0 1 0 0 
-E 648 N {0,0,0} 0 0 1 0 1 0 1 0 "TempCam" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 0 2 0 E
+E 648 N {0,0,0} 0 0 1 0 1 0 2 0 "TempCam" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 0 2 0 E
 E
 1 0 0 3 2
 1
@@ -972,6 +972,15 @@ LANG:10027 0
 1
 LANG:10027 0 
 1 "" ""  0 0 300 0 0 1 0 1 N "stoerKamQuit"
+0 0 0 0 0 0 0 0
+0 "ControlTemp" "" 0 2 0 0 1 "2 2 0.0" "%x" 0 0 3 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 0 
+1
+LANG:10027 0 
+1 "" ""  0 0 100 0 0 1 0 1 N "STD_trend_pen6"
 0 0 0 0 0 0 0 0
 1 0 "%X" "%x" 0 1 0 0 
 E 1 0 0 0 90 1 20 7200
@@ -1045,7 +1054,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  18 178 161 203
+0  18 178 172 203
 3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
 main()
 {
@@ -1119,7 +1128,7 @@ LANG:10027 0
 14 49
 "TEXT_SERIALNUM"
 ""
-1 20 237.9329158310935 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 20 240 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 48 0 0 0 0 0
 E E E
@@ -1131,7 +1140,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  18 233 161 258
+0  18 235.0670841689065 174 260.0670841689065
 3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
 main()
 {
@@ -1224,7 +1233,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  18 308 161 333
+0  18 308 172 333
 3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
 main()
 {
@@ -1305,7 +1314,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  18 125.1786314485382 161 150.1786314485382
+0  18 125.1786314485382 172 150.1786314485382
 3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
 main()
 {
@@ -1383,7 +1392,7 @@ LANG:10027 0
 "dashclr"N "_Transparent"
 "antiAliased" "0"
 "transformable" "0"
-E E 0 4 3 2 1 E 1 0 0.9882352941176471 -9.774999999999949 -21.23573139083043 0 E 24.9999999999998 51.56467895349223 96 70
+E E 0 4 3 2 1 E 1 0 0.9882352941176471 -9.774999999999949 -26.41635500325892 0 E 24.9999999999998 51.56467895349223 96 70
 0 2 2 "0s" 0 0 0 192 0 0  24.9999999999998 51.56467895349223 1
 1
 LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
@@ -1392,7 +1401,7 @@ LANG:10027 15 Пресс №
 25 62
 "TABLE1"
 ""
-1 613.9731274823498 807.6448228520597 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 604.3107740678744 807.6448228520597 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 61 0 0 0 0 0
 E E E
@@ -1404,7 +1413,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  588 748 1302.006513026052 892
+0  578 748 1302.006513026051 892
 "main()
 {
 //определяем массивы x и y для заполнения строк таблицы TABLE1
@@ -1607,7 +1616,7 @@ T
 LANG:10027 1 A
 E E E "main()
 {
-  dpConnect(\"ShowMode\",\"System1:\"+$dp+\"Inputs.BoolValues.ModeWork\");
+  //dpConnect(\"ShowMode\",\"System1:\"+$dp+\"Inputs.BoolValues.ModeWork\");
 }
 
  void ShowMode(string dp1, bool bNewValue)
@@ -1623,28 +1632,6 @@ E E E "main()
 }
 " 0
 
-2 65
-"PRIMITIVE_TEXT7"
-""
-1 1386.974613289078 19.1320536200399 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
- E E
-64 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-4
-"layoutAlignment" "AlignNone"
-"dashclr"N "_Transparent"
-"antiAliased" "0"
-"transformable" "0"
-E E 0 4 3 2 1 E 1 0 1 0 -9 0 E 1386.974613289078 19.1320536200399 1451.974613289078 36.99655727696758
-0 2 2 "0s" 0 0 0 192 0 0  1386.974613289078 19.1320536200399 1
-1
-LANG:10027 50 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Обычный
-0 1
-LANG:10027 14 Выборка
 2 66
 "PRIMITIVE_TEXT8"
 ""
@@ -1661,7 +1648,7 @@ LANG:10027 0
 "dashclr"N "_Transparent"
 "antiAliased" "0"
 "transformable" "0"
-E E 0 4 3 2 1 E U  0 E 741.25 7.129518229688232 833 25.36244874990278
+E E 0 4 3 2 1 E U  0 E 741.25 7.129518229688232 833 25
 0 2 2 "0s" 0 0 0 192 0 0  741.25 7.129518229688232 1
 1
 LANG:10027 50 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Обычный
@@ -1683,10 +1670,10 @@ LANG:10027 0
 "dashclr"N "_Transparent"
 "antiAliased" "0"
 "transformable" "0"
-E E 0 4 3 2 1 E 1 0 1 0 -9 0 E 1472.068363289078 18.28260570463553 1480.974613289078 36.49885242565586
+E E 0 4 3 2 1 E 1 0 1.611111111111112 -6 -19 0 E 1472.068363289078 18.28260570463553 1483 40
 0 2 2 "0s" 0 0 0 192 0 0  1472.068363289078 18.28260570463553 1
 1
-LANG:10027 50 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Обычный
+LANG:10027 43 MS Shell Dlg 2,-1,19,5,50,0,0,0,0,0,Regular
 0 1
 LANG:10027 2 с
 2 68
@@ -1705,10 +1692,10 @@ LANG:10027 0
 "dashclr"N "_Transparent"
 "antiAliased" "0"
 "transformable" "0"
-E E 0 4 3 2 1 E 1 0 1 0 -9 0 E 1651.804037763026 24.4284349914648 1670.991537763026 42.50114757434414
+E E 0 4 3 2 1 E 1 0 1.526315789473685 -28 -26.63157894736842 0 E 1651.804037763026 24.4284349914648 1674 46
 0 2 2 "0s" 0 0 0 192 0 0  1651.804037763026 24.4284349914648 1
 1
-LANG:10027 50 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Обычный
+LANG:10027 43 MS Shell Dlg 2,-1,19,5,50,0,0,0,0,0,Regular
 0 1
 LANG:10027 4 по
 13 69
@@ -1753,7 +1740,7 @@ LANG:10027 0
  E E " main()
 {
   BTN_UPDATE.buttonUpPixmap = \"play.png\";
-  dpConnect(\"ShowRuntime\",\"System1:\"+$dp+\"Inputs.BoolValues.Runtime\");
+  //dpConnect(\"ShowRuntime\",\"System1:\"+$dp+\"Inputs.BoolValues.Runtime\");
 }
 
  void ShowRuntime(string dp1, bool bValue)
@@ -1826,7 +1813,7 @@ LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
 13 71
 "PUSH_BUTTON1"
 ""
-1 1829 22 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+1 1815 14 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
  E E
 70 0 0 0 0 0
 E E E
@@ -1838,7 +1825,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  1827 16.00000000000001 1951 43.00000000000001
+0  1813 8 1937 41
 
 B 
 4294967295
@@ -1862,7 +1849,7 @@ LANG:10027 18 Применить
 29 73
 "Label16"
 ""
-1 589.5500628419485 29.99770485131155 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 579.5500628419485 29.99770485131159 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 72 0 0 0 0 0
 E E E
@@ -1875,7 +1862,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  589.5500628419485 29.99770485131155 694.156876469203 49.99770485131155
+0  579.5500628419485 29.99770485131159 684.156876469203 49.99770485131159
 5 Label
 0
 E29 74
@@ -1894,7 +1881,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  1300.117835671342 29.99770485131172 1365.921242484969 49.99770485131172
+0  1300.117835671342 29.99770485131172 1380 49.99770485131172
 5 Label
 0
 E29 79
@@ -1938,7 +1925,7 @@ LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
 E14 85
 "TEXT_FIELD18"
 ""
-1 88.22500000000005 28.9424496391127 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 88.22500000000005 27.33534092943706 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 84 0 0 0 0 0
 E E E
@@ -1950,7 +1937,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 43 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Regular
-0  86.22500000000005 20.99540970262343 122 62
+0  86.22500000000005 20.99540970262343 132 52.00000000000001
 3 "0s" 0 0 0 0 0 -1  E "// SimpleCtrlScriptStart {invalid}
 main()
 {

@@ -109,20 +109,23 @@ LANG:10027 25 Отчет пример
 
  range=objXL.Range(\"A3\");
  range.Value2 = \"Привет мир\"; // Записываем значение
+ int nstr =5;
+ range=objXL.Range(\"B\"+nstr);
+ range.Value2 = \"Миру мир\"; // Записываем значение
 
   // Сохраняем изменения и закрываем файл
-  objXLWorkbook.Save(); // Сохраняем изменения в файле
+ // objXLWorkbook.Save(); // Сохраняем изменения в файле
   // objXLWorkbook.SaveAs(\"C:\\\\path\\\\to\\\\your\\\\newfile.xlsx\");  // Альтернатива: Сохранить как новый файл, не перезаписывая исходный.
 
-  objXLWorkbook.Close();    // Закрываем книгу
+//  objXLWorkbook.Close();    // Закрываем книгу
 
-  objXL.Quit();  // Закрываем Excel.  Это важно!
+ // objXL.Quit();  // Закрываем Excel.  Это важно!
 DebugN(\"Документ закрыт, проверьте результат\");
   // Освобождаем COM-объекты
-  releaseComObject(objXLWorksheet);
-  releaseComObject(objXLWorkbook);
-  releaseComObject(objXLWorkbooks);
-  releaseComObject(objXL);
+//  releaseComObject(objXLWorksheet);
+ // releaseComObject(objXLWorkbook);
+ // releaseComObject(objXLWorkbooks);
+ // releaseComObject(objXL);
 
 }" 0
  E E E

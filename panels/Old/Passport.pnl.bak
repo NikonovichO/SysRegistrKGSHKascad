@@ -1,7 +1,7 @@
 V 14
 1
 LANG:10027 8 Passport
-PANEL,-1 -1 1856 865 N {207,207,207} 1
+PANEL,-1 -1 1800 860 N "_3DFace" 1
 "$dp"
 "main()
 {
@@ -15,37 +15,58 @@ PANEL,-1 -1 1856 865 N {207,207,207} 1
   dbConnection conn;
   dbCommand cmd;
   dbRecordset rs;
-  anytype fld;
+
   dyn_string models;
-  int press_num, num_diaphr, count_diaphr, limit_diaphr;
-  string cmdStr, id_r, sn, press_line, num_recipe, raw_tire, model_tire, dp_press, time_str1, time_str2,  time_str3, size_diaphr;
+
+  int press_num,
+      num_diaphr,
+      count_diaphr,
+      limit_diaphr;
+
+  string cmdStr,
+  id_r,
+  sn,
+  press_line,
+  num_recipe,
+  raw_tire,
+  model_tire,
+  dp_press,
+  time_str1,
+  time_str2,
+  time_str3,
+  size_diaphr;
+
   time timestart, timestop, time_forming;
   bool bad_quality;
 
+  string  ms_text;
+  time ts;
+
   //подключение к БД через ODBC. В приложении \"Администратор ODBC\" создается источник данных, в нашем случае KGSHVulcanisation
   //rc = dbCloseConnection(\"Data Source=KGSHVulcanisation;UID=BTW\\nikonovichoa\", conn);
-  dpGet(\"System1:GlobalVar1.ConnectionDB:_online.._value\",conStr);
+  dpGet(\"System1:GlobalVar1.ConnectionDB:_online.._value\", conStr);
+
   rc = dbOpenConnection(conStr, conn);
   Debug(\"подключение:\", rc);
-  shape list = getShape(\"CB_Passports\");
 
   if (!rc)
   {
-    //выборка данных в recordset
-    cmdStr = \"SELECT serial_num, CAST(time_start AS datetime) AS time_start,  CAST(time_stop AS datetime) AS time_stop, \" +
-              + \"raw_tire_num, press_line, press_number, id_recipe, model_tire, size_diaphr, num_diaphr, count_diaphr, limit_diaphr, CAST(time_form_start AS datetime) AS time_form_start, bad_quality FROM vPassport WHERE serial_num = '\" + serialNum+\"'\";
+    //вью vPassport выборка данных в recordset
+    cmdStr = \"SELECT serial_num, \" +
+             \"CAST(time_start AS datetime) AS time_start, \" +
+             \"CAST(time_stop AS datetime) AS time_stop, \" +
+             \"raw_tire_num, press_line, press_number, \" +
+             \"id_recipe, model_tire, size_diaphr, \" +
+             \"num_diaphr, count_diaphr, limit_diaphr, \" +
+             \"CAST(time_form_start AS datetime) AS time_form_start, \" +
+             \"bad_quality FROM vPassport WHERE serial_num = '\" + serialNum+\"'\";
+
     rc =  dbOpenRecordset(conn, cmdStr, rs);
-    Debug(\"cmdStr\", cmdStr);
+    Debug(\"cmdStr vPassport\", cmdStr);
     Debug(\"dbOpenRecordset\", rc);
 
    if (!rc)
    {
-    shape num = getShape(\"TF_NUMBER\");
-    shape model = getShape(\"TF_MODEL\");
-    shape recipe = getShape(\"TF_PRESS\");
-    shape press = getShape(\"TF_RECIPE\");
-    shape num_row = getShape(\"TF_ROWTIRE\");
-
     dbGetField(rs, 0, sn);
     dbGetField(rs, 1, timestart);
     dbGetField(rs, 2, timestop);
@@ -61,22 +82,18 @@ PANEL,-1 -1 1856 865 N {207,207,207} 1
     dbGetField(rs, 12, time_forming);
     dbGetField(rs, 13, bad_quality);
     Debug(\"time_forming\", time_forming);
+    dbCloseRecordset(rs); //очищаем память занятую рекордсетом
 
-   // Debug(\"time_stop\",  timestop);
 
-  //  setValue(\"TREND1\", \"timeInterval\", timestop-timestart);
-  //  setValue(\"TREND1\", \"timeBegin\", timestart);
-    setValue(\"TREND2\", \"timeInterval\", timestop-timestart);
-    setValue(\"TREND2\", \"timeBegin\", timestart);
-   // setValue(\"TREND1\", \"timeBegin\", 1, time_forming);
-    setValue(\"TREND1\", \"visibleTimeRange\", 0, time_forming,timestart);
-    setValue(\"TREND1\", \"visibleTimeRange\", 1, timestart,timestop);
-    setValue(\"TREND1\", \"visibleTimeRange\", 2, timestart,timestop);
+    // устанавливаем промежутки времени производства в тренды
+    setValue(\"TREND2\", \"timeInterval\", timestop-timestart, \"timeBegin\", timestart);
+    setValue(\"TREND1\", \"visibleTimeRange\", 0, time_forming,timestart, \"visibleTimeRange\", 1, timestart,timestop, \"visibleTimeRange\", 2, timestart,timestop);
 
     time_str1 = formatTime(\"%d-%m-%Y %H:%M:%S\", timestart);
     time_str2 = formatTime(\"%d-%m-%Y %H:%M:%S\", timestop);
     time_str3 = formatTime(\"%d-%m-%Y %H:%M:%S\", time_forming);
 
+    // заполняем все поля и другую графику
     setValue(\"TF_NUMBER\", \"text\", sn);
     setValue(\"TF_MODEL\", \"text\", model_tire);
     setValue(\"TF_PRESS\", \"text\", press_line+\"/\"+press_num);
@@ -89,21 +106,39 @@ PANEL,-1 -1 1856 865 N {207,207,207} 1
     setValue(\"TF_Count\", \"text\", count_diaphr);
     setValue(\"TF_Limmit\", \"text\", limit_diaphr);
     setValue(\"TF_TimeForming\", \"text\", time_str3);
+
+    // ---------------------------------------- обработка бита плохого качества ------------------------------------------------
+
     if (bad_quality)
     {
      setValue(\"TF_QUALITY\", \"text\", \"с отклонениями\");
+
+     //вывод сообщений: причина отклонения
+     cmdStr = \"SELECT text_mess, time_stemp FROM vPassport_message WHERE serial_num = '\" + serialNum+ \"'\";
+     rc = dbOpenRecordset(conn, cmdStr, rs);
+     DebugN(\"dbOpenRecordset_vPassport_message\", rc);
+    while (!rc && !dbEOF (rs))
+     {
+       dbGetField(rs, 0, ms_text);
+       dbGetField(rs, 1, ts);
+       tblMes.appendLine(\"mesText\", ms_text, //сообщение
+                         \"mesTime\", ts);    //время
+       dbMoveNext(rs);
+      }
+     if (rc == 0) dbCloseRecordset(rs);
     }
     else
     {
     setValue(\"TF_QUALITY\", \"text\", \"норма\");
     }
 
+    // --------------------------------------------------------------------------------------------------------------------------
 
     DebugN(\"press_num\", press_num);
     DebugN(\"time_start\",  timestart);
     Debug(\"time_stop\",  timestop);
 
-   //определяем точку данных по номеру пресса
+   //Определение префикса точки данных по номеру пресса
     switch(press_num)
   {
     case 1: dp_press = \"Press1.\"; break;
@@ -119,17 +154,14 @@ PANEL,-1 -1 1856 865 N {207,207,207} 1
    TREND1.connectDirectly(\"TempSupplyDiaph\", \"System1:\"+dp_press+\"Inputs.AnalogValues.TempSupplyDiaph:_online.._value\");
    TREND1.connectDirectly(\"TempReturnDiaph\", \"System1:\"+dp_press+\"Inputs.AnalogValues.TempReturnDiaph:_online.._value\");
 
-   TREND2.connectDirectly(\"PressureCam\", \"System1:\"+dp_press+\"Inputs.AnalogValues.PressureCam:_online.._value\"); //линия 1
-   //TREND2.connectDirectly(\"TempCam\",\" System1:\"+dp_press+\"Inputs.AnalogValues.TempCam:_online.._value\");//линия 2
-  TREND2.connectDirectly(\"TempCam\", \"System1:\"+dp_press+\"Inputs.AnalogValues.TempCam:_online.._value\");
-  TREND2.manageCommands(TRUE);
+   TREND2.connectDirectly(\"PressureCam\", \"System1:\"+dp_press+\"Inputs.AnalogValues.PressureCam:_online.._value\");
+   TREND2.connectDirectly(\"ControlTemp\", \"System1:\"+dp_press+\"Inputs.AnalogValues.ControlTempSupplyCam:_online.._value\");
+   TREND2.connectDirectly(\"TempCam\", \"System1:\"+dp_press+\"Inputs.AnalogValues.TempCam:_online.._value\");
+   TREND2.manageCommands(TRUE);
    //TREND1.connectDirectly(\"PressingForce\", \"System1:\"+dp_press+\"Inputs.AnalogValues.PressingForce:_online.._value\"); //линия 3
   }
-
   }
-    dbCloseConnection(conn); // Соединение закрыто
-
-
+    dbCloseConnection(conn);
 }" 0
  E E E E 1 -1 -1 0  230 180
 ""0  1
@@ -145,10 +177,694 @@ DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
 LAYER, 0 
 1
 LANG:10027 0 
+29 11
+"Label16"
+""
+1 388.367129817758 -0.302521008403282 E E E 1 E 1 E N "STD_textfield_text" E N {237,239,241} E E
+ E E
+10 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Диафрагма"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  388.367129817758 -0.302521008403282 1089.166666666667 23.69747899159672
+5 Label
+0
+E29 12
+"Label17"
+""
+1 1045.784575800316 1.211222532501377 E E E 1 E 1 E N "STD_textfield_text" E N {237,239,241} E E
+ E E
+11 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Камера"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  1099.166666666667 0 1798.166666666667 24
+5 Label
+0
+E6 73
+"RECTANGLE1"
+""
+1 30 630 E E E 1 E 1 E N {0,95,135} E N {0,95,135} E E
+ E E
+72 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 0 3 2 1 E 2.158251811076228 0 10.7359243697479 -64.86575050824997 -5903.155462184874 1 E 30 630 210 550
+0
+LAYER, 1 
+1
+LANG:10027 0 
+14 20
+"TF_RECIPE"
+""
+1 25.28684898294915 197.6913238023068 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+19 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  157.8971075161555 117.9133488974943 253.7760786579252 150.9133488974944
+3 "0s" 0 0 0 0 0 -1  E E E
+14 22
+"TF_NUMBER"
+""
+1 64.91115164623336 45.35907893187538 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+21 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  157.902747153001 25.04998677461054 374.8604811530027 58.04998677461054
+3 "14s" 14 0 0 0 0 -1  E E E
+14 24
+"TF_PRESS"
+""
+1 225.6413756489505 117.2008844701865 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+23 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  157.9086377778928 86.95889485653308 253.7760786579251 119.958894856533
+3 "0s" 0 0 0 0 0 -1  E E E
+14 26
+"TF_MODEL"
+""
+1 64.23326337122202 77.17694439807494 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+25 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  157.902747153001 56.00444081557182 374.8971075161555 89.00444081557183
+3 "0s" 0 0 0 0 0 -1  E E E
+29 29
+"Label28"
+""
+1 27.58231825605095 51.18134431565942 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+28 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string  Номер:"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0  16.5637741828221 27.04998677461055 155.5297615993284 56.04998677461055
+5 Label
+0
+E29 30
+"Label29"
+""
+1 27.58231825605102 81.13579835662068 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+29 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string  Модель:"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0  16.5637741828221 58.00444081557182 155.5297615993284 87.00444081557183
+5 Label
+0
+E29 31
+"Label30"
+""
+1 26.70954034465168 110.6539648044037 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+30 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string  Пресс №:"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0  16.56377418282212 89.04998677461055 155.5637741828221 118.0499867746105
+5 Label
+0
+E29 33
+"Label31"
+""
+1 267.2475825669359 113.1825177278713 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+32 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string  Рецепт:"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0  16.56377418282212 120.0499867746105 155.5637741828221 149.0499867746105
+5 Label
+0
+E30 35
+"FRAME2"
+""
+1 110 482 E E E 1 E 1 E N "White" E N {0,0,0} E E
+ E E
+34 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+4
+"hoverfclr" "N \"_Transparent\""
+"layoutAlignment" "AlignNone"
+"dashclr"N "yellow"
+"antiAliased" "0"
+E E -1 3 3 2 1 E 3.271396032214282 0 1.845787669702987 -352.1986705588877 -704.7373170810527 0 E 110 482 225 547
+1
+LANG:10027 56 MS Shell Dlg 2,-1,20,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 22 Изготовлена
+14 36
+"TF_TimeStart"
+""
+1 159.8390750070062 243.7594849962414 E E E 1 E 1 E N "_WindowText" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+35 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  157.8390750070062 237.6248123510034 374.8362551885835 269.7180441944481
+3 "0s" 0 0 0 0 0 -1  E E E
+14 37
+"TF_TimeStop"
+""
+1 159.988554919326 274.7915447926354 E E E 1 E 1 E N "_WindowText" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+36 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  157.988554919326 268.6705937140333 374.8362551885835 300.6705937140333
+3 "0s" 0 0 0 0 0 -1  E E E
+30 38
+"FRAME3"
+""
+1 110 482 E E E 1 E 1 E N "White" E N {0,0,0} E E
+ E E
+37 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E -1 3 3 2 1 E 3.273366182556286 0 2.45833333333333 -352.5276856660024 -881.8539160898868 0 E 110 482 225 547
+1
+LANG:10027 56 MS Shell Dlg 2,-1,20,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 18 Диафрагма
+29 39
+"Label35"
+""
+1 15.72161183301453 334.0201458054289 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+38 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string  Номер:"
+"layoutAlignment" "AlignNone"
+"focusPolicy" "NoFocus"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0  16.11671009197853 333.7176470588235 155.6666666666666 362.7176470588235
+5 Label
+0
+E29 40
+"Label36"
+""
+1 16.11671009197853 364.5176470588235 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+39 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string  Ходимость:"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0  16.11671009197853 364.5176470588235 155.6666666666666 393.5176470588235
+5 Label
+0
+E29 41
+"Label37"
+""
+1 16.11671009197853 395.3176470588235 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+40 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Счетчик циклов:"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0  16.11671009197853 395.3176470588235 155.6666666666666 424.3176470588235
+5 Label
+0
+E14 42
+"TF_NumberDiaph"
+""
+1 169.9172697522209 340.7240618953175 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+41 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 40 MS Shell Dlg 2,-1,16,5,75,0,0,0,0,0,Bold
+0  158.2254135958421 331.7176470588235 375 364.7176470588235
+3 "0s" 0 0 0 0 0 -1  E E E
+14 43
+"TF_Limmit"
+""
+1 159.9795869169234 367.6581258467364 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+42 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 40 MS Shell Dlg 2,-1,16,5,75,0,0,0,0,0,Bold
+0  158.2254135958421 362.5176470588234 375 395.5176470588234
+3 "0s" 0 0 0 0 0 -1  E E E
+14 44
+"TF_Count"
+""
+1 159.3114431701667 398.1180805621217 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+43 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 40 MS Shell Dlg 2,-1,16,5,75,0,0,0,0,0,Bold
+0  158.0824729127479 393.3176470588234 375 426.3176470588234
+3 "0s" 0 0 0 0 0 -1  E E E
+29 45
+"Label38"
+""
+1 34.78411731980979 205.0180108196691 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+44 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string  Номер \"сырой\" покрышки:"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0  16.56377418282209 150.8678029384556 250.3217164663615 179.8678029384556
+5 Label
+0
+E14 46
+"TF_ROWTIRE"
+""
+1 200.3932315471633 173.4909352328907 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+45 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
+0  251.8971075161555 148.8678029384556 374.8971075161555 181.8678029384556
+3 "0s" 0 0 0 0 0 -1  E E E
+2 54
+"PRIMITIVE_TEXT6"
+""
+1 27.11671009197856 477.4789160898886 E E E 1 E 1 E N "White" E N "_Window" E E
+ E E
+53 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 4 3 2 1 E 1.043068606318551 0 1 -4.719732314445126 -3.058823529411768 0 E 27.11671009197856 477.4789160898886 139 504
+0 2 2 "0s" 0 0 0 192 0 0  27.11671009197856 477.4789160898886 1
+1
+LANG:10027 56 MS Shell Dlg 2,-1,23,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 16 Качество
+14 55
+"TF_QUALITY"
+""
+1 172.2719766895817 541.5917393977367 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+54 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  158.1127067979211 472.1553866781239 374.9705882352941 505.1553866781239
+3 "0s" 0 0 0 0 0 -1  E E E
+29 56
+"Label39"
+""
+1 16.11671009197853 427.1176470588235 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+55 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string  Размер:"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0  16.11671009197853 427.1176470588235 155.6666666666666 456.1176470588235
+5 Label
+0
+E14 57
+"TF_SizeDiaphr"
+""
+1 159.4549014786513 429.9180805621218 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+56 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 40 MS Shell Dlg 2,-1,16,5,75,0,0,0,0,0,Bold
+0  158.2254135958421 425.1176470588235 375 458.1176470588235
+3 "0s" 0 0 0 0 0 -1  E E E
+13 58
+"PUSH_BUTTON1"
+""
+1 343.1484408837592 529.1401027249577 E E E 1 E 1 E N "STD_textfield_text" E N {237,239,241} E E
+ E E
+57 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  14.05835504598932 515.1377053549751 375 548.1377053549751
+
+B 
+4294967295
+"pictures/projAdmin/file.svg"
+1
+LANG:10027 25 Печать отчета
+"main(mapping event)
+{
+ // делаем скриншот панели и выводим на печать
+ string fileName = getPath(DATA_REL_PATH) + \"passport_screen.png\";
+ printPanel(myModuleName(),\"Passport\", fileName, 1);
+}" 0
+ E E E
+13 59
+"PUSH_BUTTON2"
+""
+1 15.89552398190187 498.0819536094034 E E E 1 E 0 E N "_ButtonText" E N "_Button" E E
+ E E
+58 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  13.89552398190187 492.5941286764589 110.8955239819018 519.2649907405977
+
+T 
+1
+LANG:10027 12 PUSH_BUTTON2
+"main(mapping event)
+{
+  dpSet(\"System1:PressInputs.PassportBoolVal.IsForming\", TRUE);
+}" 0
+ E E E
+14 61
+"TF_TimeForming"
+""
+1 159.8390750070062 212.5432139100201 E E E 1 E 1 E N "_WindowText" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+60 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  157.8390750070062 206.422262831418 374.8362551885835 238.422262831418
+3 "0s" 0 0 0 0 0 -1  E E E
+29 63
+"Label41"
+""
+1 34.33499752478411 223.7358042086217 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+62 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Формование с"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0  16.0030087058739 208.422262831418 155.4348966882627 236.422262831418
+5 Label
+0
+E29 64
+"Label42"
+""
+1 34.34394122208796 254.8599696499294 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+63 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Вулканизация с"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0  16.0030087058739 239.5464282727256 155.5029218552501 267.5464282727256
+5 Label
+0
+E29 65
+"Label43"
+""
+1 34.33499752478414 285.984135091237 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+64 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"text" "string Окончание в"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+0  16.00300870587391 270.6705937140333 155.4348966882627 298.6705937140333
+5 Label
+0
+E25 66
+"tblMes"
+""
+1 7.601874818265495 555 E E E 1 E 1 E N "_WindowText" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+65 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  5.601874818265498 553 382.6018748182654 861.5420168067236
+EE 1 0 1 2 0 "mesText" 6 1 0 "[250s,,,AlignLeft]" 1
+LANG:10027 18 Сообщение
+E
+1
+LANG:10027 0 
+
+250 "mesTime" 6 1 0 "[%ct,False,,AlignLeft]" 1
+LANG:10027 10 Время
+E
+1
+LANG:10027 0 
+
+80 
+20 20 10 0
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0 0 1 1 1 7
+1 0
+30 67
+"FRAME4"
+""
+1 110 482 E E E 1 E 1 E N "White" E N {0,0,0} E E
+ E E
+66 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+4
+"hoverfclr" "N \"_Transparent\""
+"layoutAlignment" "AlignNone"
+"dashclr"N "yellow"
+"antiAliased" "0"
+E E -1 3 3 2 1 E 3.2736808044562 0 2.859375 -352.580227523288 -1376.286410284213 0 E 110 482 225 547
+1
+LANG:10027 56 MS Shell Dlg 2,-1,20,5,75,0,0,0,0,0,Полужирный
+0 1
+LANG:10027 16 Пасспорт
+0
+LAYER, 2 
+1
+LANG:10027 0 
 23 2
 "TREND1"
 ""
-1 372.5317568881985 23.99999999999981 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 399.3910302026261 25.33333333333318 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 1 0 0 0 0 0
 E E E
@@ -160,7 +876,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
-0  371 22 1122 861.9999999999999
+0  386.367129817758 23 1091 861
 5 "main()
 {
   TREND1.connectDirectly(\"FormingPressuer\", \"System1:\"+$dp+\"Inputs.AnalogValues.FormingPressure:_online.._value\");
@@ -168,20 +884,20 @@ LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
   TREND1.connectDirectly(\"PressSupplyDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.PressSupplyDiaph:_online.._value\");
   TREND1.connectDirectly(\"TempSupplyDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.TempSupplyDiaph:_online.._value\");
   TREND1.connectDirectly(\"TempReturnDiaph\", \"System1:\"+$dp+\"Inputs.AnalogValues.TempReturnDiaph:_online.._value\");
-  TREND1.manageCommands(TRUE);
+  //TREND1.manageCommands(TRUE);
 }
 " 0
- E E 3 746 N {0,0,0} 0 0 1 0 1 0 1 0 "FormingPressuer" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 1 2 0 E
+ E E 3 700 N {0,0,0} 0 0 1 0 1 0 1 0 "FormingPressuer" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 1 2 0 E
 E
 0 0 0 3 2
 1
 LANG:10027 0 
 1
 LANG:10027 0 
-1 "" ""  0 0 4 0 0 1 0 1 N "STD_dp_not_existing"
-1 0 0 0 0 0 0 0
+1 "" ""  0 0 1 0 0 1 0 1 N "STD_dp_not_existing"
+1 20 1 0.05 0.01 0 0 0
 1 0 "%X" "%x" 0 1 0 0 
-E 746 N {0,0,0} 0 0 1 0 1 0 2 0 "PressSupplyDiaph" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 1 2 0 E
+E 700 N {0,0,0} 0 0 1 0 1 0 2 0 "PressSupplyDiaph" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 1 2 0 E
 E
 0 0 0 3 2
 1
@@ -189,7 +905,7 @@ LANG:10027 0
 1
 LANG:10027 0 
 1 "" ""  0 0 4 0 0 1 0 1 N "Red"
-0 0 0 0 0 0 0 0
+1 20 0 0.2 0.2 0 0 0
 0 "PressReturnDiaph" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 0 3 0 E
 E
 0 0 0 3 2
@@ -199,8 +915,8 @@ LANG:10027 0
 LANG:10027 0 
 1 "" ""  0 0 4 0 0 1 0 1 N "blue"
 0 0 0 0 0 0 0 0
-0 
-E 746 N {0,0,0} 0 0 1 0 1 0 2 0 "TempSupplyDiaph" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 0 2 0 E
+1 0 "%H:%M:%S" "%x" 0 1 0 0 
+E 700 N {0,0,0} 0 0 1 0 1 0 2 0 "TempSupplyDiaph" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 0 2 0 E
 E
 0 0 0 3 2
 1
@@ -208,7 +924,7 @@ LANG:10027 0
 1
 LANG:10027 0 
 1 "" "С"  0 0 300 0 0 1 0 1 N "Red"
-1 0 0 0 0 0 0 0
+1 20 0 20 0 0 0 0
 0 "TempReturnDiaph" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 0 3 0 E
 E
 0 0 0 3 2
@@ -232,7 +948,7 @@ N {0,0,0} 0 0 1 0 1 150 1 5 5 1 2
 23 3
 "TREND2"
 ""
-1 1123 20 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 1049.755668670063 21.08911173166942 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 2 0 0 0 0 0
 E E E
@@ -244,7 +960,7 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
-0  1118.55832157381 17.91088826833058 1812.55832157381 861.4108882683305
+0  1097.166666666667 23 1800.166666666667 861
 5 "main()
 {
   //connectDirectly(\"PressureCam\", \"System1:\"+$dp+\"Inputs.AnalogValues.PressureCam\");
@@ -254,7 +970,7 @@ LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
   //TREND2.connectDirectly(\"TempCam\",\"System1:\"+$dp+\"Inputs.AnalogValues.TempCam:_online.._value\");
   //TREND2.manageCommands(TRUE);
 }" 0
- E E 2 689 N {0,0,0} 0 0 1 0 1 0 1 0 "PressureCam" "" 0 2 0 0 1 "1 3 0.0" "%x" 0 0 2 0 E
+ E E 2 698 N {0,0,0} 0 0 1 0 1 0 1 0 "PressureCam" "" 0 2 0 0 1 "1 3 0.0" "%x" 0 0 2 0 E
 E
 1 0 0 3 2
 1
@@ -262,9 +978,9 @@ LANG:10027 0
 1
 LANG:10027 0 
 1 "" ""  0 0 2 0 0 1 0 1 N "STD_windows_available"
-1 0 0 0 0 0 0 0
+1 20 0 0.1 0 0 0 0
 1 0 "%H:%M:%S" "%x" 0 1 0 0 
-E 689 N {0,0,0} 0 0 1 0 1 0 1 0 "TempCam" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 0 2 0 E
+E 698 N {0,0,0} 0 0 1 0 1 0 2 0 "TempCam" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 0 2 0 E
 E
 1 0 0 3 2
 1
@@ -272,6 +988,15 @@ LANG:10027 0
 1
 LANG:10027 0 
 1 "" ""  0 0 300 0 0 1 0 1 N "Red"
+1 20 0 20 0 0 0 0
+0 "ControlTemp" "" 0 2 0 0 1 "3 2 0.0" "%x" 0 1 3 0 E
+E
+1 0 0 3 2
+1
+LANG:10027 39 Контроль температуры
+1
+LANG:10027 0 
+1 "" ""  0 0 100 0 0 1 0 1 N "STD_trend_pen6"
 0 0 0 0 0 0 0 0
 1 0 "%H:%M:%S" "%x" 0 1 0 0 
 E 1 0 0 0 90 1 20 7200
@@ -284,712 +1009,6 @@ LANG:10027 35 MS Shell Dlg 2,-1,11,5,50,0,0,0,0,0
 0  100 
 N {0,0,0} 0 0 1 0 1 150 1 5 5 1 2
 0
-29 11
-"Label16"
-""
-1 373.3931863727455 3.655008405897036 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-10 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string Диафрагма"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  373.3931863727455 3.655008405897036 478 23.65500840589704
-5 Label
-0
-E29 12
-"Label17"
-""
-1 1122.638271612563 0.300989089829276 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-11 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string Камера"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  1122.638271612563 0.300989089829276 1188.44167842619 20.30098908982928
-5 Label
-0
-E29 13
-"Label21"
-""
-1 1090 830 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-12 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string °С"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  1089.938564629259 830 1111.938564629259 852
-5 Label
-0
-E29 14
-"Label23"
-""
-1 1070 540 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-13 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string МПа"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  1070 547 1101 563
-5 Label
-0
-E29 16
-"Label25"
-""
-1 1749.25 393 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-15 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string МПа"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  1749.25 400 1780.25 416
-5 Label
-0
-E29 17
-"Label26"
-""
-1 1769.186435370741 800.6020618401906 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-16 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string °С"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  1769.125 800.6020618401906 1791.125 822.6020618401906
-5 Label
-0
-E14 20
-"TF_RECIPE"
-""
-1 176.5378359503102 164.0959757701638 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
- E E
-19 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  230 120.2681279028379 363 153.2681279028379
-3 "0s" 0 0 0 0 0 -1  E E E
-14 22
-"TF_NUMBER"
-""
-1 44.31320072187688 35.57722006010277 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
- E E
-21 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  140 15.26812790283793 363 48.26812790283793
-3 "14s" 14 0 0 0 0 -1  E E E
-14 24
-"TF_PRESS"
-""
-1 180.25 116.2681279028379 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
- E E
-23 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  230.086154716636 85.70083775818553 363.086154716636 118.7008377581855
-3 "0s" 0 0 0 0 0 -1  E E E
-14 26
-"TF_MODEL"
-""
-1 43.63299670241432 71.44063148534103 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
- E E
-25 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  140 50.26812790283793 363 83.26812790283793
-3 "0s" 0 0 0 0 0 -1  E E E
-29 29
-"Label28"
-""
-1 19.01615376033165 32.58166928004172 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-28 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string Номер:"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  6 17.26812790283793 105 45.26812790283793
-5 Label
-0
-E29 30
-"Label29"
-""
-1 19.01615376033166 68.58166928004172 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-29 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string Модель:"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  6 52.26812790283793 105 80.26812790283793
-5 Label
-0
-E29 31
-"Label30"
-""
-1 19.26615376033166 104.1453816868635 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-30 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string Пресс №"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  6 87.26812790283793 105 115.2681279028379
-5 Label
-0
-E29 33
-"Label31"
-""
-1 19.14115376033166 141.4183357840514 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-32 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string Рецепт:"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  6 122.2681279028379 105 151.2681279028379
-5 Label
-0
-E30 35
-"FRAME2"
-""
-1 110 482 E E E 1 E 1 E N {0,0,0} E N {0,0,0} E E
- E E
-34 0 0 0 0 0
-E E E
-1
-1
-LANG:10027 0 
-
-4
-"hoverfclr" "N \"_Transparent\""
-"layoutAlignment" "AlignNone"
-"dashclr"N "yellow"
-"antiAliased" "0"
-E E -1 3 3 2 1 E 3.106138647842132 0 2.027060501518161 -334.7750571166375 -790.5069059260779 0 E 110 482 225 547
-1
-LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
-0 1
-LANG:10027 22 изготовлена
-14 36
-"TF_TimeStart"
-""
-1 150 244.2427664018827 E E E 1 E 1 E N "_WindowText" E N "WF_HeadText" E E
- E E
-35 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  148 237.9746384990448 350.9825417035738 270.9746384990448
-3 "0s" 0 0 0 0 0 -1  E E E
-14 37
-"TF_TimeStop"
-""
-1 150 274.2427664018827 E E E 1 E 1 E N "_WindowText" E N "WF_HeadText" E E
- E E
-36 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  148 267.9746384990448 350.9825417035738 300.9746384990448
-3 "0s" 0 0 0 0 0 -1  E E E
-30 38
-"FRAME3"
-""
-1 110 482 E E E 1 E 1 E N "black" E N {0,0,0} E E
- E E
-37 0 0 0 0 0
-E E E
-1
-1
-LANG:10027 0 
-
-3
-"layoutAlignment" "AlignNone"
-"dashclr"N "_Transparent"
-"antiAliased" "0"
-E E -1 3 3 2 1 E 3.107686566048646 0 2.500582022237837 -331.7073880005781 -869.2805347186375 0 E 110 482 225 547
-1
-LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
-0 1
-LANG:10027 18 диафрагма
-29 39
-"Label35"
-""
-1 9.925195800366339 356.3397481698269 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-38 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-3
-"text" "string Номер:"
-"layoutAlignment" "AlignNone"
-"focusPolicy" "NoFocus"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  10.2762685295457 356.0372494232215 134.2762685295457 385.0372494232215
-5 Label
-0
-E29 40
-"Label36"
-""
-1 10.2762685295457 386.0372494232215 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-39 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string Ходимость:"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  10.2762685295457 386.0372494232215 134.2762685295457 415.0372494232215
-5 Label
-0
-E29 41
-"Label37"
-""
-1 10.2762685295457 416.0372494232215 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-40 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string Счетчик циклов:"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  10.2762685295457 416.0372494232215 134.2762685295457 445.0372494232215
-5 Label
-0
-E14 42
-"TF_NumberDiaph"
-""
-1 206.984601862879 363.3397481698269 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
- E E
-41 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 40 MS Shell Dlg 2,-1,16,5,75,0,0,0,0,0,Bold
-0  198.2762685295457 354.0372494232215 351.2762685295457 382.0372494232215
-3 "0s" 0 0 0 0 0 -1  E E E
-14 43
-"TF_Limmit"
-""
-1 200.025524806342 389.4738121212458 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
- E E
-42 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 40 MS Shell Dlg 2,-1,16,5,75,0,0,0,0,0,Bold
-0  198.2762685295457 384.0372494232215 351.2762685295457 412.0372494232215
-3 "0s" 0 0 0 0 0 -1  E E E
-14 44
-"TF_Count"
-""
-1 199.6581024951359 419.1337668366312 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
- E E
-43 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 40 MS Shell Dlg 2,-1,16,5,75,0,0,0,0,0,Bold
-0  198.2762685295457 414.0372494232215 351.2762685295457 442.0372494232215
-3 "0s" 0 0 0 0 0 -1  E E E
-29 45
-"Label38"
-""
-1 21.66701406916179 211.4183357840514 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-44 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string Номер \"сырой\" покрышки"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  6 157.2681279028379 207 186.2681279028379
-5 Label
-0
-E14 46
-"TF_ROWTIRE"
-""
-1 174 179.8912601972729 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
- E E
-45 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 56 MS Shell Dlg 2,-1,13,5,75,0,0,0,0,0,Полужирный
-0  230 155.2681279028379 363 188.2681279028379
-3 "0s" 0 0 0 0 0 -1  E E E
-2 54
-"PRIMITIVE_TEXT6"
-""
-1 16 516.750900906029 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
- E E
-53 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-4
-"layoutAlignment" "AlignNone"
-"dashclr"N "_Transparent"
-"antiAliased" "0"
-"transformable" "0"
-E E 0 4 3 2 1 E U  0 E 16 516.750900906029 95 534.9169669686763
-0 2 2 "0s" 0 0 0 192 0 0  16 516.750900906029 1
-1
-LANG:10027 56 MS Shell Dlg 2,-1,16,5,75,0,0,0,0,0,Полужирный
-0 1
-LANG:10027 16 качество
-14 55
-"TF_QUALITY"
-""
-1 202.1145704312679 578.9372536256418 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
- E E
-54 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  190.4885406092398 509.500900906029 363 542.500900906029
-3 "0s" 0 0 0 0 0 -1  E E E
-29 56
-"Label39"
-""
-1 10.2762685295457 446.0372494232215 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-55 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string Размер:"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  10.2762685295457 446.0372494232215 134.2762685295457 475.0372494232215
-5 Label
-0
-E14 57
-"TF_SizeDiaphr"
-""
-1 199.6581024951359 449.1337668366312 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
- E E
-56 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 40 MS Shell Dlg 2,-1,16,5,75,0,0,0,0,0,Bold
-0  198.2762685295457 444.0372494232215 351.2762685295457 472.0372494232215
-3 "0s" 0 0 0 0 0 -1  E E E
-13 58
-"PUSH_BUTTON1"
-""
-1 229 822.8010309200953 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
- E E
-57 0 0 0 0 0
-E E E
-8
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
-0  227 816.8010309200953 351 846.8010309200953
-
-T 
-1
-LANG:10027 12 Печать
-"main(mapping event)
-{
- // делаем скриншот панели и выводим на печать
- string fileName = getPath(DATA_REL_PATH) + \"passport_screen.png\";
- printPanel(myModuleName(),\"Passport\", fileName, 1);
-}" 0
- E E E
-13 59
-"PUSH_BUTTON2"
-""
-1 30 822.8010309200953 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
- E E
-58 0 0 0 0 0
-E E E
-8
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
-0  28 816.8010309200953 152 846.8010309200953
-
-T 
-1
-LANG:10027 12 PUSH_BUTTON2
-"main(mapping event)
-{
-  dpSet(\"System1:PressInputs.PassportBoolVal.IsForming\", TRUE);
-}" 0
- E E E
-29 60
-"Label40"
-""
-1 1080 270 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-59 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string МПа"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  1080 277 1111 293
-5 Label
-0
-E14 61
-"TF_TimeForming"
-""
-1 150 213.3257994332064 E E E 1 E 1 E N "_WindowText" E N "WF_HeadText" E E
- E E
-60 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  148 207.0576715303685 351 240.0576715303685
-3 "0s" 0 0 0 0 0 -1  E E E
-29 63
-"Label41"
-""
-1 38 226 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-62 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string Формование с:"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  21.12725376365386 210.6864586227962 149.4602396944921 238.6864586227962
-5 Label
-0
-E29 64
-"Label42"
-""
-1 37.68436339175624 256.6567732206485 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-63 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string Вулканизация с:"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  20.83350703458089 241.3432318434447 149 269.3432318434446
-5 Label
-0
-E29 65
-"Label43"
-""
-1 36.75666493488042 286.3135413772038 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-64 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"text" "string Окончание:"
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  19.91675351729047 271 148 299
-5 Label
-0
-E0
-LAYER, 1 
-1
-LANG:10027 0 
-0
-LAYER, 2 
-1
-LANG:10027 0 
 0
 LAYER, 3 
 1
@@ -998,7 +1017,107 @@ LANG:10027 0
 LAYER, 4 
 1
 LANG:10027 0 
+29 17
+"Label26"
+""
+1 1742.257285450267 795.5913070779579 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+16 0 0 0 0 0
+E E E
 0
+1
+LANG:10027 0 
+
+3
+"text" "string °С"
+"frameShape" "enum 1"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1742.181712962963 795.5913070779579 1769.244212962963 817.5913070779579
+5 Label
+0
+E29 16
+"Label25"
+""
+1 1735.150462962963 367.1789160898884 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+15 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string МПа"
+"frameShape" "enum 1"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1735.150462962963 376.8039160898884 1769.244212962963 398.8039160898884
+5 Label
+0
+E29 68
+"Label44"
+""
+1 1007.702262209341 795.5913070779579 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+67 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string °С"
+"frameShape" "enum 1"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1007.626689722037 795.5913070779579 1034.689189722037 817.5913070779579
+5 Label
+0
+E29 70
+"Label45"
+""
+1 1000.595439722037 508.7921171196813 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+69 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string МПа"
+"frameShape" "enum 1"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1000.595439722037 518.4171171196813 1034.689189722037 540.4171171196813
+5 Label
+0
+E29 71
+"Label46"
+""
+1 1000.595439722037 227.3333333333333 E E E 1 E 1 E N "_3DText" E N "White" E E
+ E E
+70 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string МПа"
+"frameShape" "enum 1"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  1000.595439722037 236.9583333333333 1034.689189722037 258.9583333333333
+5 Label
+0
+E0
 LAYER, 5 
 1
 LANG:10027 0 

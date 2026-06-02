@@ -1,12 +1,14 @@
 V 14
 1
 LANG:10027 0 
-PANEL,-1 -1 1635 826 N {207,207,207} 0
-"main()
+PANEL,-1 -1 1932 892 N {0,95,135} 0
+"
+#uses \"CtrlADO\"
+main()
 {
-    //Debug (\"строка подключения:\", conStr);
+  //Debug (\"строка подключения:\", conStr);
   int rc;
-  dbRecordset rs;
+  dbRecordset rs_presses;
   dyn_string models;
   string cmdStr, nLine;
   dbConnection conn;
@@ -19,16 +21,16 @@ PANEL,-1 -1 1635 826 N {207,207,207} 0
   if (!rc)
   {
     cmdStr = \"SELECT DISTINCT line FROM tPresses\";
-    rc =  dbOpenRecordset(conn, cmdStr, rs);
+    rc =  dbOpenRecordset(conn, cmdStr, rs_presses);
     Debug(\"dbOpenRecordset\", rc);
     if (!rc)
     {
      shape list = getShape(\"cbLine\");
-     while (!rc && !dbEOF (rs))
+     while (!rc && !dbEOF (rs_presses))
      {
-       dbGetField(rs, 0, nLine);
+       dbGetField(rs_presses, 0, nLine);
        list.appendItem(nLine); // Добавление
-       dbMoveNext(rs);
+       dbMoveNext(rs_presses);
       }
      }
    }
@@ -38,6 +40,7 @@ PANEL,-1 -1 1635 826 N {207,207,207} 0
 ""0  1
 E "dbConnection conn;
 string conStr;
+dbRecordset rs;
 " 0
  4
 "CBRef" "1"
@@ -53,7 +56,7 @@ LANG:10027 0
 29 5
 "DE_START"
 ""
-1 43.97851562499995 32.50274873074751 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 60.92327351770795 26.53250774788363 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 4 0 0 0 0 0
 E E E
@@ -67,8 +70,8 @@ LANG:10027 0
 "calendarPopup" "bool TRUE"
 "layoutAlignment" "AlignNone"
 1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  51 35 265 58
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  66.59007263700889 29.36012065403511 239.3021299119911 55.40279310843782
 16 DateTimeEdit.ewo
 0
 "main()
@@ -79,7 +82,7 @@ LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
 29 6
 "DE_END"
 ""
-1 52.08494786288559 60 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 66.68722791938532 59.66609402618127 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
  E E
 5 0 0 0 0 0
 E E E
@@ -93,8 +96,8 @@ LANG:10027 0
 "calendarPopup" "bool TRUE"
 "layoutAlignment" "AlignNone"
 1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  52 60 266 81
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  66.61860219379508 59.66609402618127 239.5 85.26609402618126
 16 DateTimeEdit.ewo
 0
 "main()
@@ -105,7 +108,7 @@ LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
 2 7
 "PRIMITIVE_TEXT9"
 ""
-1 40.96093750000005 32.50274873074749 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 40.96093750000005 32.50274873074749 E E E 1 E 1 E N "White" E N "_Window" E E
  E E
 6 0 0 0 0 0
 E E E
@@ -118,16 +121,16 @@ LANG:10027 0
 "dashclr"N "_Transparent"
 "antiAliased" "0"
 "transformable" "0"
-E E 0 4 3 2 1 E 1.040702543042955 0 1 -13.07582969519068 2 0 E 40.96093750000005 32.50274873074749 49 51
+E E 0 4 3 2 1 E 2.328144685341292 0 0.9529866860730793 -53.86298894722196 0.3854338528540775 0 E 40.96093750000005 32.50274873074749 50 53
 0 2 2 "0s" 0 0 0 192 0 0  40.96093750000005 32.50274873074749 1
 1
-LANG:10027 50 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Обычный
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
 0 1
 LANG:10027 2 с
 2 8
 "PRIMITIVE_TEXT10"
 ""
-1 39.77880859375005 67.46639243930785 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 39.77880859375005 67.46639243930785 E E E 1 E 1 E N "White" E N "_Window" E E
  E E
 7 0 0 0 0 0
 E E E
@@ -140,16 +143,16 @@ LANG:10027 0
 "dashclr"N "_Transparent"
 "antiAliased" "0"
 "transformable" "0"
-E E 0 4 3 2 1 E 1.040702543042955 0 1 -11.39790726273464 -7 0 E 39.77880859375005 67.46639243930785 59 85
+E E 0 4 3 2 1 E 1.129105644171358 0 1 -3.4144773016153 -5.800298413126569 0 E 39.77880859375005 67.46639243930785 60 87
 0 2 2 "0s" 0 0 0 192 0 0  39.77880859375005 67.46639243930785 1
 1
-LANG:10027 50 MS Shell Dlg 2,-1,16,5,50,0,0,0,0,0,Обычный
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
 0 1
 LANG:10027 4 по
 25 9
 "tblPassports"
 ""
-1 276.0000000000001 2.00000000000002 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 270.0659214203519 4.118214716525957 E E E 1 E 1 E N "STD_reference_line" E N "_3DFace" E E
  E "// SimpleCtrlScriptStart {invalid}
 main()
 {
@@ -189,9 +192,9 @@ LANG:10027 0
 "layoutAlignment" "AlignHCenter"
 1
 LANG:10027 43 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Regular
-0  274.0000000000001 0 1642 823.0443431153739
+0  249 -4.440892098500626e-16 1942 882.0000000000001
 EE 1 0 1 13 0 "serial_num" 6 1 0 "[11s,,,AlignLeft]" 1
-LANG:10027 26 cерийный номер
+LANG:10027 27 Серийный номер
 E
 1
 LANG:10027 0 
@@ -203,49 +206,49 @@ E
 LANG:10027 0 
 
 80 "model" 6 1 0 "[25s,,,AlignLeft|AlignVCenter]" 1
-LANG:10027 12 модель
+LANG:10027 12 Модель
 E
 1
 LANG:10027 0 
 
-150 "recipe" 6 1 0 "[4d,False,False,AlignLeft|AlignVCenter,False]" 1
-LANG:10027 12 рецепт
+150 "recipe" 6 1 0 "[10s,,,AlignLeft|AlignVCenter]" 1
+LANG:10027 12 Рецепт
 E
 1
 LANG:10027 0 
 
-80 "quality" 6 1 0 "[4d,False,False,AlignLeft|AlignVCenter,False]" 1
-LANG:10027 16 качество
+80 "quality" 6 1 0 "[10s,,,AlignLeft|AlignVCenter]" 1
+LANG:10027 16 Качество
 E
 1
 LANG:10027 0 
 
 80 "time_forming" 6 1 0 "[%ct,False,,AlignLeft|AlignVCenter]" 1
-LANG:10027 20 формование
+LANG:10027 20 Формование
 E
 1
 LANG:10027 0 
 
 150 "time_start" 6 1 0 "[%ct,False,,AlignLeft|AlignVCenter]" 1
-LANG:10027 12 начало
+LANG:10027 24 Вулканизация
 E
 1
 LANG:10027 0 
 
 150 "time_end" 6 1 0 "[%ct,False,,AlignLeft|AlignVCenter]" 1
-LANG:10027 18 окончание
+LANG:10027 18 Окончание
 E
 1
 LANG:10027 0 
 
 150 "press" 6 1 0 "[3d,False,False,AlignLeft|AlignVCenter,False]" 1
-LANG:10027 10 пресс
+LANG:10027 10 Пресс
 E
 1
 LANG:10027 0 
 
 70 "num_diaphr" 6 1 0 "[3d,False,False,AlignLeft|AlignVCenter,False]" 1
-LANG:10027 18 диафрагма
+LANG:10027 18 Диафрагма
 E
 1
 LANG:10027 0 
@@ -277,19 +280,20 @@ LANG:10027 43 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Regular
 13 10
 "btnPassports"
 ""
-1 33.67792243245605 107.5090890728599 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+1 21.26470588235295 93.56948900388912 E E E 1 E 1 E N "White" E N {0,136,185} E E
  E E
 9 0 0 0 0 0
 E E E
-8
+1
 1
 LANG:10027 0 
 
-1
+2
+"hoverfclr" "N {0,136,185}"
 "layoutAlignment" "AlignNone"
 1
-LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  31.67792243245605 101.5090890728599 274.0293645216734 131.5090890728599
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  19.26470588235295 87.56948900388912 241.5 117.5694890038891
 
 T 
 1
@@ -305,7 +309,7 @@ LANG:10027 29 Прошедшие сутки
 22 11
 "cbLine"
 ""
-1 78 208 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 101.5666666666665 190.7 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 10 0 0 0 0 0
 E E E
@@ -316,8 +320,8 @@ LANG:10027 0
 1
 "layoutAlignment" "AlignNone"
 1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  76 203 119 231
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  99.56666666666651 185.7 142.5666666666665 213.7
 0
 
 E
@@ -359,7 +363,7 @@ E
 22 12
 "cbPress"
 ""
-1 220 208 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 199.9305290485132 190.7 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 11 0 0 0 0 0
 E E E
@@ -370,8 +374,8 @@ LANG:10027 0
 1
 "layoutAlignment" "AlignNone"
 1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  218 203 261 231
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  197.9305290485132 185.7 240.9305290485132 213.7
 0
 
 E
@@ -381,7 +385,7 @@ E
 20 13
 "chBox_quality"
 ""
-1 1.999999999999996 301 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 18.70040215295068 241.766666666667 E E E 1 E 1 E N "White" E N "_3DFace" E E
  E E
 12 0 0 0 0 0
 E E E
@@ -393,8 +397,8 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 "showBackground" "0"
 1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  -1.06581410364015e-14 299 151.028076171875 323
+LANG:10027 40 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Bold
+0  16.70040215295068 239.766666666667 196.3604840402587 270.2666666666669
 1
 T 
 1
@@ -414,7 +418,7 @@ E"main(int button, int state)
 14 14
 "tfSerialNum"
 ""
-1 6.000000000000011 265 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 24.50304245891 308.9333333333336 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
  E E
 13 0 0 0 0 0
 E E E
@@ -426,24 +430,25 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
-0  0 260 273 288
+0  19.25717905778745 303.9333333333336 241.5414927832777 331.9333333333336
 3 "0s" 0 0 0 0 0 -1  E E E
 13 15
 "btn7Days"
 ""
-1 32.67792243245604 141.4972512692525 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+1 21.2647058823529 127.5576512002817 E E E 1 E 1 E N "White" E N {0,136,185} E E
  E E
 14 0 0 0 0 0
 E E E
-8
+1
 1
 LANG:10027 0 
 
-1
+2
+"hoverfclr" "N {0,136,185}"
 "layoutAlignment" "AlignNone"
 1
-LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  30.67792243245604 135.4972512692525 272.9988047892926 165.4972512692525
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  19.2647058823529 121.5576512002817 241.5 151.5576512002817
 
 T 
 1
@@ -459,7 +464,7 @@ LANG:10027 10 7 дней
 2 16
 "PRIMITIVE_TEXT11"
 ""
-1 32 205 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 47.13333333333301 189.7333333333333 E E E 1 E 1 E N "White" E N "_Window" E E
  E E
 15 0 0 0 0 0
 E E E
@@ -472,16 +477,16 @@ LANG:10027 0
 "dashclr"N "_Transparent"
 "antiAliased" "0"
 "transformable" "0"
-E E 0 1 3 2 1 E U  0 E 32 205 74 222
-0 2 2 "0s" 0 0 0 192 0 0  32 205 1
+E E 0 1 3 2 1 E U  0 E 47.13333333333301 189.7333333333333 100 210
+0 2 2 "0s" 0 0 0 192 0 0  47.13333333333301 189.7333333333333 1
 1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
 0 1
-LANG:10027 10 линия
+LANG:10027 10 Линия
 2 17
 "PRIMITIVE_TEXT12"
 ""
-1 161.0423193834723 206 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+1 161.0423193834723 206 E E E 1 E 1 E N "White" E N "_Window" E E
  E E
 16 0 0 0 0 0
 E E E
@@ -494,16 +499,16 @@ LANG:10027 0
 "dashclr"N "_Transparent"
 "antiAliased" "0"
 "transformable" "0"
-E E 0 1 3 2 1 E 0.9516644293253905 0 1.470588235294118 16.46453742763723 -98.06617647058823 0 E 161.0423193834723 206 201 223
+E E 0 1 3 2 1 E 1.051384101290835 0 0.956521739130434 -20.86013222256217 -7.43043478260854 0 E 161.0423193834723 206 208 226
 0 2 2 "0s" 0 0 0 192 0 0  161.0423193834723 206 1
 1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
 0 1
-LANG:10027 10 пресс
+LANG:10027 10 Пресс
 30 18
 "FRAME1"
 ""
-1 220 351 E E E 1 E 1 E N "_WindowText" E N {0,0,0} E E
+1 220 351 E E E 1 E 1 E N "White" E N {0,0,0} E E
  E E
 17 0 0 0 0 0
 E E E
@@ -515,15 +520,15 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 "dashclr"N "_Transparent"
 "antiAliased" "0"
-E E 0 1 3 2 1 E 2.140625000000001 0 2.617647058823531 -468.9375000000006 -916.7941176470595 0 E 220 351 349 420
+E E 0 1 3 2 1 E 1.903204987567646 0 2.323529411764707 -410.8153356735409 -813.5588235294124 0 E 220 351 349 420
 1
-LANG:10027 56 MS Shell Dlg 2,-1,15,5,75,0,0,0,0,0,Полужирный
+LANG:10027 56 MS Shell Dlg 2,-1,20,5,75,0,0,0,0,0,Полужирный
 0 1
-LANG:10027 12 период
+LANG:10027 12 Период
 30 19
 "FRAME2"
 ""
-1 220 351 E E E 1 E 1 E N "_WindowText" E N {0,0,0} E E
+1 220 351 E E E 1 E 1 E N "White" E N {0,0,0} E E
  E E
 18 0 0 0 0 0
 E E E
@@ -535,63 +540,447 @@ LANG:10027 0
 "layoutAlignment" "AlignNone"
 "dashclr"N "_Transparent"
 "antiAliased" "0"
-E E 0 1 3 2 1 E 2.140625 0 0.8823529411764713 -468.9375000000002 -129.7058823529415 0 E 220 351 349 420
+E E 0 1 3 2 1 E 1.904597848360659 0 0.9264705882352978 -411.1786037666657 -164.9578431372563 0 E 220 351 349 420
 1
-LANG:10027 56 MS Shell Dlg 2,-1,16,5,75,0,0,0,0,0,Полужирный
+LANG:10027 56 MS Shell Dlg 2,-1,20,5,75,0,0,0,0,0,Полужирный
 0 1
-LANG:10027 10 пресс
+LANG:10027 10 Пресс
 13 20
 "PUSH_BUTTON2"
 ""
-1 1.444369015735333 350.5875462787022 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+1 9.418830374770105 367.7750462787021 E E E 1 E 1 E N "STD_textfield_text" E N {237,239,241} E E
  E E
 19 0 0 0 0 0
 E E E
-8
+1
 1
 LANG:10027 0 
 
 1
 "layoutAlignment" "AlignNone"
 1
-LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
-0  0.1610387837719247 334.2499999999999 273.161038783772 367.2499999999999
+LANG:10027 43 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Regular
+0  8.000000000000027 351 241.0659655954617 384
 
-T 
+B 
+4294967295
+"pictures/refresh_32.svg"
 1
-LANG:10027 48 показать список паспортов
-"main(mapping event)
+LANG:10027 32 Применить фильтр
+
+"#uses \"CtrlADO\"
+main(mapping event)
 {
   int rc;
-  dbConnection conn;
-  dbCommand cmd;
-  dbRecordset rs;
-  anytype fld;
-  dyn_string models;
-  string cmdStr, sn, raw, model, recipe, quality, num_diaphr, cycle_counter, all_cycles, line, press;
+
+  //массивы для хранения данных для записи в таблицу
+  dyn_string arr_sn, arr_raw, arr_model, arr_recipe, arr_quality, arr_press, arr_num_diaphr, arr_cycle_counter, arr_all_cycles;
+  dyn_time   arr_time_forming, arr_time_start, arr_time_end;
+
+  string cmdStr,
+         line,
+         snTxt,
+         press;
+
+  string  sn,
+          raw,
+          model,
+          recipe,
+          quality,
+          num_diaphr,
+          cycle_counter,
+          all_cycles;
+
+
   time  time_start,  time_end, time_forming;
-  string startStr, endStr;
+  string startStr, endStr, quality_str;
   bool bad_quality;
+
+  // Переменные для динамического SQL
+  dyn_string whereClauses;
+  string whereStr = \"\";
 
   tblPassports.deleteAllLines();
 
   //подключение к БД через ODBC. В приложении \"Администратор ODBC\" создается источник данных, в нашем случае KGSHVulcanisation
   rc = dbOpenConnection(conStr, conn);
   Debug(\"подключение:\", rc);
+  this.enabled(false);
+  setValue(\"L_Load\",\"visible\",true);
+  if (rc != 0)
+  {
+    DebugTN(\"Ошибка подключения к БД\");
+    return;
+  }
+
+  /* ========================= УСЛОВИЯ =========================*/
+
+  // ---------Фильтр по времени:---------
+  bool isPeriodChecked;
+  getValue(\"chbPeriod\", \"state\", 0, isPeriodChecked);
+  if (isPeriodChecked)
+  {
+    getValue(\"DE_START\", \"dateTime\", time_start);
+    getValue(\"DE_END\", \"dateTime\", time_end);
+
+    startStr = formatTime(\"%Y-%m-%d %H:%M:%S\", time_start);
+    endStr   = formatTime(\"%Y-%m-%d %H:%M:%S\", time_end);
+
+    dynAppend(whereClauses, \"time_start BETWEEN '\" + startStr + \"' AND '\" + endStr + \"'\");
+  }
+
+  // ---------Фильтр по прессу:---------
+  bool isPressChecked;
+  getValue(\"chbPress\", \"state\", 0, isPressChecked);
+  if(isPressChecked)
+  {
+    getValue(\"cbLine\", \"selectedText\", line);
+    getValue(\"cbPress\", \"selectedText\", press);
+    dynAppend(whereClauses, \"press_fullNum = '\" + line + press + \"'\");
+  }
+
+  // ---------Фильтр по Серийному номеру---------
+  bool isSNChecked;
+  getValue(\"chBox_SN\", \"state\", 0, isSNChecked);
+  if(isSNChecked)
+  {
+    getValue(\"tfSerialNum\", \"text\", snTxt);
+    strreplace(snTxt, \"'\", \"''\");
+    dynAppend(whereClauses, \"serial_num LIKE '%\" + snTxt + \"%'\");
+  }
+
+  // ---------Фильтр по качеству---------
+  bool isQuality;
+  getValue(\"chBox_quality\", \"state\", 0, isQuality);
+  if (isQuality)
+  {
+    dynAppend(whereClauses, \"bad_quality = 1\");
+  }
+
+  /* ========================= СБОР SQL ЗАПРОСА =========================*/
+
+
+    cmdStr = \"SELECT serial_num, \" +
+              \"raw_tire_num, \" +
+              \"model_tire, \" +
+              \"id_recipe, \" +
+              \"bad_quality, \" +
+              \"CAST(time_start AS datetime) AS time_start, \" +
+              \"CAST(time_stop AS datetime) AS time_stop, \" +
+              \"press_fullNum, \" +
+              \"num_diaphr, \" +
+              \"count_diaphr, \" +
+              \"limit_diaphr, \" +
+              \"CAST(time_form_start AS datetime) AS time_form_start \" +
+              \"FROM vPassport\";
+
+   // если есть хотя бы одно условие
+  if (dynlen(whereClauses) > 0)
+  {
+    string whereStr = \"\";
+
+    // Обходим массив и склеиваем условия через \" AND \"
+    for (int i = 1; i <= dynlen(whereClauses); i++)
+    {
+      if (i == 1)
+      {
+        whereStr += \" WHERE \" + whereClauses[i];
+      }
+      else
+      {
+        whereStr += \" AND \" + whereClauses[i];
+      }
+    }
+
+    cmdStr += whereStr;
+  }
+
+    DebugTN(\"Запрос SQL:\", cmdStr);
+
+    /* ========================= ПОЛУЧЕНИЕ ДАННЫХ =========================*/
+
+    rc = dbOpenRecordset(conn, cmdStr, rs);
+    if (rc == 0)
+    {
+      while (!rc && !dbEOF(rs))
+      {
+        dbGetField(rs, 0, sn);
+        dbGetField(rs, 1, raw);
+        dbGetField(rs, 2, model);
+        dbGetField(rs, 3, recipe);
+        dbGetField(rs, 4, bad_quality);
+        dbGetField(rs, 5, time_start);
+        dbGetField(rs, 6, time_end);
+        dbGetField(rs, 7, press);
+        dbGetField(rs, 8, num_diaphr);
+        dbGetField(rs, 9, cycle_counter);
+        dbGetField(rs, 10, all_cycles);
+        dbGetField(rs, 11, time_forming);
+
+        quality_str = (bad_quality) ? \"отклонение\" : \"норма\";
+
+        dynAppend(arr_sn, sn);
+        dynAppend(arr_raw, raw);
+        dynAppend(arr_model, model);
+        dynAppend(arr_recipe, recipe);
+        dynAppend(arr_quality, quality_str);
+        dynAppend(arr_time_forming, time_forming);
+        dynAppend(arr_time_start, time_start);
+        dynAppend(arr_time_end, time_end);
+        dynAppend(arr_press, press);
+        dynAppend(arr_num_diaphr, num_diaphr);
+        dynAppend(arr_cycle_counter, cycle_counter);
+        dynAppend(arr_all_cycles, all_cycles);
+
+       rc = dbMoveNext(rs);
+      }
+      dbCloseRecordset(rs);
+
+      if (dynlen(arr_sn) > 0)
+      {
+        tblPassports.appendLines(dynlen(arr_sn),
+                                \"serial_num\", arr_sn,
+                                \"raw\", arr_raw,
+                                \"model\", arr_model,
+                                \"recipe\", arr_recipe,
+                                \"quality\", arr_quality,
+                                \"time_forming\", arr_time_forming,
+                                \"time_start\", arr_time_start,
+                                \"time_end\", arr_time_end,
+                                \"press\", arr_press,
+                                \"num_diaphr\", arr_num_diaphr,
+                                \"cycle_counter\", arr_cycle_counter,
+                                \"all_cycles\", arr_all_cycles
+                                );
+      }
+    } else {
+      DebugTN(\"Ошибка выполнения запроса к БД, код:\", rc);
+    }
+
+     dbCloseConnection(conn); // Соединение закрыто
+     setValue(\"L_Load\",\"visible\",false);
+     this.enabled(true);
+
+    //переводим таблицу в режим выделения записи
+    tblPassports.tableMode(TABLE_SELECT_BROWSE);
+    setValue (\"tblPassports\", \"selectByClick\", 1);
+}" 0
+ E E E
+20 21
+"chBox_SN"
+""
+1 18.7004021529507 275.7666666666669 E E E 1 E 1 E N "White" E N "_3DFace" E E
+ E E
+20 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"layoutAlignment" "AlignNone"
+"showBackground" "0"
+1
+LANG:10027 40 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Bold
+0  16.70040215295068 273.7666666666669 223.5275258854008 307.2666666666669
+1
+T 
+1
+LANG:10027 27 серийный номер
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+E"main(int button, int state)
+{
+  bool isSNChecked;
+  getValue(\"chBox_SN\", \"state\", 0, isSNChecked);
+
+  if (isSNChecked)
+  {
+    setValue(\"chbPress\", \"state\", 0, !isSNChecked);
+  }
+}" 0
+20 23
+"chbPress"
+""
+1 18.29084056059638 184.1999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+22 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"layoutAlignment" "AlignNone"
+"showBackground" "0"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  16.29084056059638 182.1999999999999 38.33333333333317 204.1338235294117
+1
+T 
+1
+LANG:10027 0 
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+E"main(int button, int state)
+{
+  bool isPressChecked;
+  getValue(\"chbPress\", \"state\", 0, isPressChecked);
+
+  if (isPressChecked)
+  {
+    setValue(\"chBox_SN\", \"state\", 0, !isPressChecked);
+  }
+}
+
+
+" 0
+13 26
+"PUSH_BUTTON5"
+""
+1 10.07650619226253 393.9360477804418 E E E 1 E 1 E N "STD_textfield_text" E N {237,239,241} E E
+ E E
+25 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  8.000000000000005 387.5333333333333 241.1163161310642 420.5333333333332
+
+B 
+4294967295
+"pictures/clipboard_en.svg"
+1
+LANG:10027 29 Открыть паспорт
+"// SimpleCtrlScriptStart {invalid}
+main()
+{
+  EP_childPanelOn();
+}
+
+void EP_childPanelOn()
+{
+  int nLine, nColl;
+  string SN;
+  getValue (\"tblPassports\", \"currentCell\", nLine, nColl);
+  Debug(\"line:\",nLine);
+  getValue (\"tblPassports\", \"cellValueRC\", nLine, \"serial_num\", SN);
+  Debug(\"num:\",SN);
+  ChildPanelOnCentralModal(\"Old/Passport.pnl\", \"Passport\",  makeDynString(\"$dp:\" + SN));
+}
+
+// SimpleCtrlScript {EP_childPanelOn}
+// Function {ChildPanelOnCentralModal}
+// File {Passport.pnl}
+// Panel {Passport}
+// Parent {}
+// Module {}
+// OffsetX {0}
+// OffsetY {0}
+// PanelPara1 {$dp:$dp}
+// SimpleCtrlScriptEnd {EP_childPanelOn}
+" 0
+ E E E
+20 27
+"chbPeriod"
+""
+1 16.50000000000001 25.99930433233247 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+26 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+2
+"layoutAlignment" "AlignNone"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  14.50000000000001 23.99930433233247 37.14966360702498 43.83608206408083
+1
+T 
+1
+LANG:10027 0 
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE13 28
+"btnPrint"
+""
+1 9.671803652968045 431.3666666666665 E E E 1 E 1 E N "STD_textfield_text" E N {237,239,241} E E
+ E E
+27 0 0 0 0 0
+E E E
+1
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,20,5,50,0,0,0,0,0,Обычный
+0  8.000000000000004 424.6999999999999 242 457.6999999999999
+
+B 
+4294967295
+"pictures/projAdmin/file.svg"
+1
+LANG:10027 35 Сформировать отчет
+"#uses \"CtrlADO\"
+main(mapping event)
+{
+
+  idispatch objXL;
+  idispatch objXLWorkbooks;
+  idispatch objXLWorkbook;
+  idispatch objXLWorksheet;
+  idispatch objRange;
+  string filePath;
+  string sheetName = \"Лист1\";
+  filePath = \"D:\\\\Kaskad\\\\Projects\\\\SimatekSysRegistrationNew\\\\source\\\\PassportsReport.xlsx\";
+  objXL = createComObject(\"Excel.Application\");
+
+
+  string   cmdStr, sn, raw, model, recipe, quality, num_diaphr, cycle_counter, all_cycles, line, press;
+  time  time_start,  time_end, time_forming;
+  string startStr, endStr;
+  bool bad_quality;
+  int rc;
+
+   rc = dbOpenConnection(conStr, conn);
+  Debug(\"подключение:\", rc);
 
   if (!rc)
   {
     bool isPeriodChecked;
     getValue(\"chbPeriod\", \"state\", 0, isPeriodChecked);
-    // Считываем значения из виджетов DateTimeEdit
     getValue(\"DE_START\", \"dateTime\",time_start);
     getValue(\"DE_END\", \"dateTime\", time_end);
 
-    //Форматируем время в строку для MS SQL (YYYY-MM-DD HH:MM:SS)
-     startStr = formatTime(\"%Y-%m-%d %H:%M:%S\", time_start);
-     endStr   = formatTime(\"%Y-%m-%d %H:%M:%S\", time_end);
+    startStr = formatTime(\"%Y-%m-%d %H:%M:%S\", time_start);
+    endStr   = formatTime(\"%Y-%m-%d %H:%M:%S\", time_end);
 
-     cmdStr = \"SELECT serial_num, raw_tire_num, model_tire, id_recipe, bad_quality, CAST(time_start AS datetime) AS time_start, CAST(time_stop AS datetime) AS time_stop, press_fullNum, num_diaphr, count_diaphr, limit_diaphr,\"+
+    cmdStr = \"SELECT serial_num, raw_tire_num, model_tire, id_recipe, bad_quality, CAST(time_start AS datetime) AS time_start, CAST(time_stop AS datetime) AS time_stop, press_fullNum, num_diaphr, count_diaphr, limit_diaphr,\"+
               +\" CAST(time_form_start AS datetime) AS time_form_start FROM vPassport\";
 
      if (isPeriodChecked) //выборка данных в recordset по дате
@@ -627,9 +1016,15 @@ LANG:10027 48 показать список паспортов
      cmdStr = cmdStr + \" WHERE serial_num like '%\" +tfSerialNum.text+\"%'\";
     }
 
-  //Серийный номер и период
+  //с дефектом
     bool isQuality;
     getValue(\"chBox_quality\", \"state\", 0, isQuality);
+    if(isQuality && !isPeriodChecked)
+    {
+     cmdStr = \"WHERE bad_quality  = true\";;
+    }
+
+    //с дефектом за период
     if(isQuality && isPeriodChecked)
     {
      cmdStr = cmdStr + \"AND bad_quality  = true\";;
@@ -639,11 +1034,20 @@ LANG:10027 48 показать список паспортов
     Debug(\"rs:\", rc);
     Debug(\"cmdStr:\", cmdStr);
 
-    if (!rc)
+
+  objXL.Visible = 0; // -1 делает Excel видимым, 0 - невидимым (для фоновой работы)
+  objXLWorkbooks = objXL.Workbooks;
+
+  // Открываем СУЩЕСТВУЮЩИЙ файл
+  objXLWorkbook = objXLWorkbooks.Open(filePath);
+ DebugN(\"Документ открыт\");
+ string sheetName = \"Sheet1\";
+ objXLWorksheet = objXLWorkbook.Worksheets(sheetName);  // Первый лист (индексация с 1)
+
+ int nstr=2;
+ while (!dbEOF(rs))
     {
-    // shape list = getShape(\"CB_Passports\");
-     while (!rc && !dbEOF (rs))
-     {
+   DebugN(\"запись данных\");
        dbGetField(rs, 0, sn);
        dbGetField(rs, 1, raw);
        dbGetField(rs, 2, model);
@@ -657,200 +1061,84 @@ LANG:10027 48 показать список паспортов
        dbGetField(rs, 10, all_cycles);
        dbGetField(rs, 11, time_forming);
 
-      // dbGetField(rs, 8,  num_diaphr);
-      // dbGetField(rs, 9, cycle_counter);
-      // dbGetField(rs, 10, all_cycles);
-       tblPassports.appendLine(\"serial_num\", sn, \"raw\", raw, \"model\", model, \"recipe\", recipe, \"time_forming\", time_forming,
-                               \"time_start\", time_start, \"time_end\", time_end,\"press\", press, \"num_diaphr\", num_diaphr, \"cycle_counter\", cycle_counter, \"all_cycles\", all_cycles);
+       objRange = objXL.Range(\"A\" + nstr);
+       objRange.Value2 = sn;
+       objRange = objXL.Range(\"B\" + nstr);
+       objRange.Value2 = raw;
+       objRange = objXL.Range(\"C\" + nstr);
+       objRange.Value2 = model;
+       objRange = objXL.Range(\"D\" + nstr);
+       objRange.Value2 = recipe;
+       objRange = objXL.Range(\"E\" + nstr);
+       if (bad_quality)
+       {
+         objRange.Value2 = \"оклонение\";
+       }
+       else
+       {
+        objRange.Value2 = \"норма\";
+       }
+       objRange = objXL.Range(\"F\" + nstr);
+       objRange.Value2 = formatTime(\"%Y-%m-%d %H:%M:%S\", time_forming);
+       objRange = objXL.Range(\"G\" + nstr);
+       objRange.Value2 = formatTime(\"%Y-%m-%d %H:%M:%S\", time_start);
+       objRange = objXL.Range(\"H\" + nstr);
+       objRange.Value2 = formatTime(\"%Y-%m-%d %H:%M:%S\", time_end);
+       objRange = objXL.Range(\"I\" + nstr);
+       objRange.Value2 = press;
+       objRange = objXL.Range(\"J\" + nstr);
+       objRange.Value2 = num_diaphr;
+       objRange = objXL.Range(\"K\" + nstr);
+       objRange.Value2 = cycle_counter;
+        objRange = objXL.Range(\"L\" + nstr);
+       objRange.Value2 = all_cycles;
+
+
+
        dbMoveNext(rs);
-      }
+       nstr++;
      }
-     dbCloseConnection(conn); // Соединение закрыто
-  }
+  dbCloseRecordset(rs);
+  objXL.Visible = -1;
+  dbCloseConnection(conn); // Соединение закрыто
+}
 
-    //переводим таблицу в режим выделения записи
-    tblPassports.tableMode(TABLE_SELECT_BROWSE);
-    setValue (\"tblPassports\", \"selectByClick\", 1);
+  // Сохраняем изменения и закрываем файл
+ // objXLWorkbook.Save(); // Сохраняем изменения в файле
+  // objXLWorkbook.SaveAs(\"C:\\\\path\\\\to\\\\your\\\\newfile.xlsx\");  // Альтернатива: Сохранить как новый файл, не перезаписывая исходный.
+
+ // objXLWorkbook.Close();    // Закрываем книгу
+
+ // objXL.Quit();  // Закрываем Excel.  Это важно!
+DebugN(\"Документ закрыт, проверьте результат\");
+  // Освобождаем COM-объекты
+ // releaseComObject(objXLWorksheet);
+ // releaseComObject(objXLWorkbook);
+ // releaseComObject(objXLWorkbooks);
+//  releaseComObject(objXL);
 }" 0
  E E E
-20 21
-"chBox_SN"
+29 32
+"L_Load"
 ""
-1 2.00000000000002 240 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+1 674 349.8419117647057 E E E 1 E 0 E N "stoerKamQuit" E N "cyan" E E
  E E
-20 0 0 0 0 0
+31 0 0 0 0 0
 E E E
 0
 1
 LANG:10027 0 
 
-2
-"layoutAlignment" "AlignNone"
-"showBackground" "0"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  0 238 174 262
-1
-T 
-1
-LANG:10027 27 серийный номер
-
-0 
-1
-LANG:10027 0 
-E E
-0 0 0 0 0
-0
-E"main(int button, int state)
-{
-  bool isSNChecked;
-  getValue(\"chBox_SN\", \"state\", 0, isSNChecked);
-
-  if (isSNChecked)
-  {
-    setValue(\"chbPress\", \"state\", 0, !isSNChecked);
-  }
-}" 0
-13 22
-"PUSH_BUTTON3"
-""
-1 2.407886987013764 399.2610857788434 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
- E E
-21 0 0 0 0 0
-E E E
-8
-1
-LANG:10027 0 
-
-1
+3
+"text" "string Данные загружаются!"
+"alignment" "enum 132"
 "layoutAlignment" "AlignNone"
 1
-LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
-0  0 393 273 426
-
-T 
-1
-LANG:10027 35 сформировать отчет
-E E E E
-20 23
-"chbPress"
-""
-1 12.10070787509892 205 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-22 0 0 0 0 0
-E E E
+LANG:10027 43 MS Shell Dlg 2,-1,35,5,50,0,0,0,0,0,Regular
+0  674 349.8419117647057 1246 426.7333333333332
+5 Label
 0
-1
-LANG:10027 0 
-
-2
-"layoutAlignment" "AlignNone"
-"showBackground" "0"
-1
-LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
-0  10.10070787509892 203 33.96643070830032 227
-1
-T 
-1
-LANG:10027 0 
-
-0 
-1
-LANG:10027 0 
-E E
-0 0 0 0 0
-0
-E"main(int button, int state)
-{
-  bool isPressChecked;
-  getValue(\"chbPress\", \"state\", 0, isPressChecked);
-
-  if (isPressChecked)
-  {
-    setValue(\"chBox_SN\", \"state\", 0, !isPressChecked);
-  }
-}
-
-
-" 0
-13 26
-"PUSH_BUTTON5"
-""
-1 2.073128166463301 369.4027144471086 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
- E E
-25 0 0 0 0 0
-E E E
-8
-1
-LANG:10027 0 
-
-1
-"layoutAlignment" "AlignNone"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
-0  0.1610387837719554 363.4999999999999 273.161038783772 396.4999999999999
-
-T 
-1
-LANG:10027 29 открыть паспорт
-"// SimpleCtrlScriptStart {invalid}
-main()
-{
-  EP_childPanelOn();
-}
-
-void EP_childPanelOn()
-{
-  int nLine, nColl;
-  string SN;
-  getValue (\"tblPassports\", \"currentCell\", nLine, nColl);
-  Debug(\"line:\",nLine);
-  getValue (\"tblPassports\", \"cellValueRC\", nLine, \"serial_num\", SN);
-  Debug(\"num:\",SN);
-  ChildPanelOnCentralModal(\"Old/Passport.pnl\", \"Passport\",  makeDynString(\"$dp:\" + SN));
-}
-
-// SimpleCtrlScript {EP_childPanelOn}
-// Function {ChildPanelOnCentralModal}
-// File {Passport.pnl}
-// Panel {Passport}
-// Parent {}
-// Module {}
-// OffsetX {0}
-// OffsetY {0}
-// PanelPara1 {$dp:$dp}
-// SimpleCtrlScriptEnd {EP_childPanelOn}
-" 0
- E E E
-20 27
-"chbPeriod"
-""
-1 10.32207756754392 8.42369580575582 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
- E E
-26 0 0 0 0 0
-E E E
-0
-1
-LANG:10027 0 
-
-2
-"layoutAlignment" "AlignNone"
-"showBackground" "0"
-1
-LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
-0  8.322077567543921 6.42369580575582 25.99999999999997 53.46639243930785
-1
-T 
-1
-LANG:10027 0 
-
-0 
-1
-LANG:10027 0 
-E E
-0 0 0 0 0
-0
-EE0
+E0
 LAYER, 1 
 1
 LANG:10027 0 
@@ -879,10 +1167,4 @@ LAYER, 7
 1
 LANG:10027 0 
 0
-4 0 "LAYOUT_GROUP1" -1
-4 0 
-7 8 10 15 
-
-"" ""
-0 1 0 0
 0

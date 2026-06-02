@@ -1,0 +1,103 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 1660 610 N "_3DFace" 0
+E E E E E 1 -1 -1 0  4.582461301230362 -13.75610804246936
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.746"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+1 1 0 "" 1
+0
+1 30 1 "" 1
+0
+1 45 2 "" 1
+0
+1 60 3 "" 1
+0
+1 75 4 "" 1
+0
+1 90 5 "" 1
+0
+1 105 6 "" 1
+0
+0
+LAYER, 1 
+1
+LANG:10027 0 
+0
+LAYER, 2 
+1
+LANG:10027 0 
+0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+3 0 "PANEL_REF9" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"Main/Summary_sub/Line_ref_1.pnl" 3.758765058935523 32.92645284751293 T 7 0.9672373580834721 0 0.9436060365369338 11.52987131146864 -20.59776211642907
+1
+"$BranchPress""\"2/1\""
+3 1 "PANEL_REF11" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"Main/Summary_sub/Line_ref.pnl" 418 17.48076923076911 T 8 1 0 0.9436060365369336 -28.28431463155073 -15.10020162522137
+1
+"$BranchPress""\"2/2\""
+3 2 "PANEL_REF12" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"Main/Summary_sub/Line_ref.pnl" 418 17.48076923076911 T 9 1 0 0.9436060365369336 81.71568536844933 -15.10020162522135
+1
+"$BranchPress""\"2/3\""
+3 3 "PANEL_REF13" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"Main/Summary_sub/Line_ref.pnl" 418 17.48076923076911 T 10 1 0 0.9436060365369336 191.7156853684494 -15.10020162522129
+1
+"$BranchPress""\"2/4\""
+3 4 "PANEL_REF14" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"Main/Summary_sub/Line_ref.pnl" 418 17.48076923076911 T 11 1 0 0.9436060365369336 301.7156853684496 -15.10020162522124
+1
+"$BranchPress""\"2/5\""
+3 5 "PANEL_REF15" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"Main/Summary_sub/Line_ref.pnl" 418 17.48076923076911 T 12 1 0 0.9436060365369336 411.7156853684497 -15.10020162522121
+1
+"$BranchPress""\"2/6\""
+3 6 "PANEL_REF16" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"Main/Summary_sub/Line_ref.pnl" 418 17.48076923076911 T 13 1 0 0.9436060365369336 521.7156853684497 -15.10020162522115
+1
+"$BranchPress""\"2/7\""
+0
