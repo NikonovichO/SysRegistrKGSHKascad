@@ -4,9 +4,9 @@ LANG:10027 0
 PANEL,-1 -1 1920 1080 N "_3DFace" 0
 "main()
 {
-  RootPanelOnModule(\"Belshina/Header/Header.pnl\", \"Header\", \"HeaderPlace\", \"\");
-  RootPanelOnModule(\"Belshina/Body/0_General/General.pnl\", \"General\", \"BodyPlace\", \"\");
-  RootPanelOnModule(\"Belshina/Footer/Footer.pnl\", \"Footer\", \"FooterPlace\", \"\");
+  RootPanelOnModule(\"Belshina/Header/Header.pnl\", \"Header\", \"HeaderModule\", \"\");
+  RootPanelOnModule(\"Belshina/Body/0_General/General.pnl\", \"General\", \"BodyModule\", \"\");
+  RootPanelOnModule(\"Belshina/Footer/Footer.pnl\", \"Footer\", \"FooterModule\", \"\");
 }" 0
  E E E E 1 -1 -1 0  230 40
 ""0  1
@@ -41,7 +41,7 @@ LANG:10027 0
 "oldPanelAnimateSize" "bool TRUE"
 "newPanelAnimType" "string TopLeft"
 "oldPanelAnimType" "string BottomRight"
-"ModuleName" "string HeaderPlace"
+"ModuleName" "string HeaderModule"
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
@@ -68,7 +68,7 @@ LANG:10027 0
 "oldPanelAnimateSize" "bool TRUE"
 "newPanelAnimType" "string TopLeft"
 "oldPanelAnimType" "string BottomRight"
-"ModuleName" "string FooterPlace"
+"ModuleName" "string FooterModule"
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
@@ -95,7 +95,7 @@ LANG:10027 0
 "oldPanelAnimateSize" "bool TRUE"
 "newPanelAnimType" "string TopLeft"
 "oldPanelAnimType" "string BottomRight"
-"ModuleName" "string BodyPlace"
+"ModuleName" "string BodyModule"
 "layoutAlignment" "AlignNone"
 1
 LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0

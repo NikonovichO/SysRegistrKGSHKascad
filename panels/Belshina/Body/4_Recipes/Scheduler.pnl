@@ -1,0 +1,4187 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 929 405 N {179,204,220} 0
+E E E E E 1 -1 -1 0  10.03999999999542 12.7999999999999
+""0  1
+E E 5
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.746"
+"sizePolicy" "Fixed Fixed"
+1 1 5 5 31 30 1 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10027 0 
+14 4
+"TEXT_FIELD1"
+""
+1 298.7374999999941 53.55729166666663 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+3 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  296.6749999999941 48.57291666666663 339.6749999999941 73.57291666666663
+3 "0s" 0 0 0 0 0 -1  E E E
+14 5
+"TEXT_FIELD19"
+""
+1 337.5812499999943 53.56510416666663 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+4 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  335.6749999999943 48.57291666666663 378.6749999999943 73.57291666666663
+3 "0s" 0 0 0 0 0 -1  E E E
+14 6
+"TEXT_FIELD20"
+""
+1 376.9249999999943 53.32291666666674 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+5 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  374.6749999999943 48.57291666666674 417.6749999999943 73.57291666666674
+3 "0s" 0 0 0 0 0 -1  E E E
+14 7
+"TEXT_FIELD21"
+""
+1 415.9249999999943 53.32291666666674 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+6 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  413.6749999999943 48.57291666666674 456.6749999999943 73.57291666666674
+3 "0s" 0 0 0 0 0 -1  E E E
+14 8
+"TEXT_FIELD22"
+""
+1 453.9249999999943 53.57336635719206 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+7 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  452.6749999999943 48.82552083333331 495.6749999999943 73.80906847007287
+3 "0s" 0 0 0 0 0 -1  E E E
+14 9
+"TEXT_FIELD23"
+""
+1 493.7524038461484 53.44791666666674 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+8 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  491.4999999999943 48.57291666666674 534.8749999999943 73.57291666666674
+3 "0s" 0 0 0 0 0 -1  E E E
+14 10
+"TEXT_FIELD24"
+""
+1 533.127724358968 53.44791666666674 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+9 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  530.8749999999941 48.57291666666674 574.299999999994 73.57291666666674
+3 "0s" 0 0 0 0 0 -1  E E E
+14 11
+"TEXT_FIELD25"
+""
+1 571.7505608974304 53.51041666666674 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+10 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  569.4999999999943 48.57291666666674 612.5874999999942 73.57291666666674
+3 "0s" 0 0 0 0 0 -1  E E E
+14 12
+"TEXT_FIELD26"
+""
+1 610.8380608974301 53.51041666666674 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+11 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  608.5874999999942 48.57291666666674 651.6749999999943 73.57291666666674
+3 "0s" 0 0 0 0 0 -1  E E E
+14 13
+"TEXT_FIELD27"
+""
+1 649.9238782051225 53.51041666666674 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+12 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  647.6749999999943 48.57291666666674 690.4999999999943 73.57291666666674
+3 "0s" 0 0 0 0 0 -1  E E E
+14 14
+"TEXT_FIELD28"
+""
+1 688.7124999999944 53.54166666666674 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+13 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  686.5874999999944 48.57291666666674 729.5874999999944 73.57291666666674
+3 "0s" 0 0 0 0 0 -1  E E E
+14 15
+"TEXT_FIELD29"
+""
+1 727.9244391025582 53.54166666666674 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+14 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  725.6749999999943 48.57291666666674 768.5874999999944 73.57291666666674
+3 "0s" 0 0 0 0 0 -1  E E E
+14 16
+"TEXT_FIELD30"
+""
+1 766.8374999999942 53.54166666666674 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+15 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  764.5874999999942 48.57291666666674 807.5874999999942 73.57291666666674
+3 "0s" 0 0 0 0 0 -1  E E E
+14 17
+"TEXT_FIELD31"
+""
+1 805.8374999999942 53.54166666666674 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+16 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  803.5874999999942 48.57291666666674 846.5874999999942 73.57291666666674
+3 "0s" 0 0 0 0 0 -1  E E E
+14 18
+"TEXT_FIELD32"
+""
+1 844.8374999999942 53.54166666666674 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+17 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  842.5874999999942 48.57291666666674 885.5874999999942 73.57291666666674
+3 "0s" 0 0 0 0 0 -1  E E E
+14 19
+"TEXT_FIELD33"
+""
+1 883.8380608974301 53.55729166666674 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+18 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0,Обычный
+0  881.5874999999942 48.57291666666674 924.674999999994 73.57291666666674
+3 "0s" 0 0 0 0 0 -1  E E E
+29 20
+"Label1"
+""
+1 328.4249999999941 1.645182291666568 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+19 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 1"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  298.6749999999941 30.49999999999989 337.6749999999941 50.57291666666652
+5 Label
+0
+E29 21
+"Label2"
+""
+1 367.4249999999941 1.520182291666568 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+20 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 2"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  337.6749999999941 30.49479166666669 376.6749999999941 50.65104166666674
+5 Label
+0
+E29 22
+"Label3"
+""
+1 406.4249999999941 1.520182291666519 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+21 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 3"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  376.6749999999941 30.49479166666657 415.6749999999941 50.65104166666663
+5 Label
+0
+E29 23
+"Label4"
+""
+1 445.4249999999941 1.520182291666519 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+22 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 4"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  415.6749999999941 30.49479166666657 454.6749999999941 50.65104166666663
+5 Label
+0
+E29 24
+"Label5"
+""
+1 484.4249999999941 1.520182291666519 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+23 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 5"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  454.6749999999941 30.49479166666657 493.6749999999941 50.65104166666663
+5 Label
+0
+E29 25
+"Label6"
+""
+1 523.424999999994 1.40020461309518 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+24 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 6"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  493.6749999999941 30.49479166666669 532.674999999994 50.65104166666663
+5 Label
+0
+E29 26
+"Label7"
+""
+1 562.424999999994 1.460193452380789 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+25 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 7"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  532.674999999994 30.49479166666669 571.674999999994 50.65104166666663
+5 Label
+0
+E29 27
+"Label8"
+""
+1 601.424999999994 1.490187872023679 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+26 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 8"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  571.674999999994 30.49479166666669 610.674999999994 50.65104166666663
+5 Label
+0
+E29 28
+"Label9"
+""
+1 640.424999999994 1.520182291666568 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+27 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 9"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  610.674999999994 30.49479166666669 649.674999999994 50.65104166666663
+5 Label
+0
+E29 29
+"Label10"
+""
+1 679.424999999994 1.520182291666568 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+28 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 10"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  649.674999999994 30.49479166666669 688.674999999994 50.65104166666663
+5 Label
+0
+E29 30
+"Label11"
+""
+1 718.424999999994 1.520182291666568 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+29 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 11"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  688.674999999994 30.49479166666669 727.674999999994 50.65104166666663
+5 Label
+0
+E29 31
+"Label12"
+""
+1 757.424999999994 1.520182291666568 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+30 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 12"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  727.674999999994 30.49479166666669 766.674999999994 50.65104166666663
+5 Label
+0
+E29 32
+"Label13"
+""
+1 796.424999999994 1.520182291666568 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+31 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 13"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  766.674999999994 30.49479166666669 805.674999999994 50.65104166666663
+5 Label
+0
+E29 33
+"Label14"
+""
+1 835.424999999994 1.520182291666568 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+32 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 14"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  805.674999999994 30.49479166666669 844.674999999994 50.65104166666663
+5 Label
+0
+E29 34
+"Label15"
+""
+1 874.424999999994 1.520182291666568 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+33 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 15"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  844.674999999994 30.49479166666669 883.674999999994 50.65104166666663
+5 Label
+0
+E29 35
+"Label16"
+""
+1 913.424999999994 1.520182291666568 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+34 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+7
+"text" "string 16"
+"alignment" "enum 132"
+"indent" "int 0"
+"minimumSize" "40 22"
+"maximumSize" "40 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  883.674999999994 30.49479166666669 922.674999999994 50.65104166666663
+5 Label
+0
+E29 66
+"Label40"
+""
+1 -1202.613627917898 70.94950214386978 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+65 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"text" "string Общее количество шагов:"
+"alignment" "enum 128"
+"frameShape" "enum 6"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  3 375 284 404
+5 Label
+0
+E29 67
+"Label41"
+""
+1 270.2387924075717 -13.77253401360709 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+66 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  283.9999999999894 375.0476190476195 495.9849454365018 404.3333333333336
+5 Label
+0
+E29 68
+"Label42"
+""
+1 498.6089459605536 347.2163277178168 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+67 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"text" "string Общее время цикла:"
+"alignment" "enum 128"
+"frameShape" "enum 6"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  495.9887090773749 375.0476190476195 690.8636222718196 403.5595238095233
+5 Label
+0
+E29 69
+"Label43"
+""
+1 1022.018672019938 -90.61187770562836 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+68 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"text" "string -"
+"alignment" "enum 132"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  690.9014384920588 375.0476190476195 922.999999999999 404.3333333333336
+5 Label
+0
+E29 70
+"Label133"
+""
+1 -116.2981983921907 1.019169802117403 E E E 1 E 1 E N "White" E N {0,136,185} E E
+ E E
+69 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+4
+"text" "string Планировщик задач"
+"alignment" "enum 132"
+"frameShape" "enum 6"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,23,5,50,0,0,0,0,0,Обычный
+0  3 1 924 31
+5 Label
+0
+E29 1
+"Label18"
+""
+1 298.837499999997 71.5000000000001 E E E 1 E 1 E N "_3DText" E N {204,204,204} E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"minimumSize" "-1 300"
+"sizePolicy" "Preferred Expanding"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0  298.837499999997 71.5 922.674999999994 373.000000000001
+5 Label
+0
+E29 104
+"Splitter1"
+""
+1 284 94 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+103 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  284 94 919.0000000000001 94
+8 Splitter
+0
+E29 105
+"Splitter2"
+""
+1 283.9999999999904 113.9999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+104 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  283.9999999999904 113.9999999999999 922.9999999999905 113.9999999999999
+8 Splitter
+0
+E29 106
+"Splitter3"
+""
+1 283.9999999999904 133.9999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+105 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  283.9999999999904 133.9999999999999 922.9999999999905 133.9999999999999
+8 Splitter
+0
+E29 107
+"Splitter4"
+""
+1 283.9999999999904 153.9999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+106 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  283.9999999999904 153.9999999999999 922.9999999999905 153.9999999999999
+8 Splitter
+0
+E29 108
+"Splitter5"
+""
+1 283.9999999999904 173.9999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+107 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  283.9999999999904 173.9999999999999 922.9999999999905 173.9999999999999
+8 Splitter
+0
+E29 109
+"Splitter6"
+""
+1 283.9999999999904 193.9999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+108 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  283.9999999999904 193.9999999999999 922.9999999999905 193.9999999999999
+8 Splitter
+0
+E29 110
+"Splitter7"
+""
+1 283.9999999999904 213.9999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+109 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  283.9999999999904 213.9999999999999 922.9999999999905 213.9999999999999
+8 Splitter
+0
+E29 111
+"Splitter8"
+""
+1 283.9999999999904 233.9999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+110 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  283.9999999999904 233.9999999999999 922.9999999999905 233.9999999999999
+8 Splitter
+0
+E29 112
+"Splitter9"
+""
+1 283.9999999999904 253.9999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+111 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  283.9999999999904 253.9999999999999 922.9999999999905 253.9999999999999
+8 Splitter
+0
+E29 113
+"Splitter10"
+""
+1 283.9999999999904 273.9999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+112 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  283.9999999999904 273.9999999999999 922.9999999999905 273.9999999999999
+8 Splitter
+0
+E29 114
+"Splitter11"
+""
+1 283.9999999999904 293.9999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+113 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  283.9999999999904 293.9999999999999 922.9999999999905 293.9999999999999
+8 Splitter
+0
+E29 115
+"Splitter12"
+""
+1 283.9999999999904 313.9999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+114 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  283.9999999999904 313.9999999999999 922.9999999999905 313.9999999999999
+8 Splitter
+0
+E29 116
+"Splitter13"
+""
+1 283.9999999999904 333.9999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+115 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  283.9999999999904 333.9999999999999 922.9999999999905 333.9999999999999
+8 Splitter
+0
+E29 117
+"Splitter14"
+""
+1 283.9999999999904 353.9999999999999 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+116 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  283.9999999999904 353.9999999999999 922.9999999999905 353.9999999999999
+8 Splitter
+0
+E0
+LAYER, 1 
+1
+LANG:10027 0 
+29 65
+"Label33"
+""
+1 -0.575000000005959 368.5626220703124 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+64 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Резерв"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 365.5 298.6749999999941 386.5
+5 Label
+0
+E29 64
+"Label32"
+""
+1 -0.575000000005959 347.5627441406249 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+63 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Резерв"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 344.5 298.6749999999941 365.5
+5 Label
+0
+E29 63
+"Label31"
+""
+1 -0.575000000005959 326.5629882812499 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+62 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Резерв"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 323.5000000000001 298.6749999999941 344.5000000000001
+5 Label
+0
+E29 62
+"Label30"
+""
+1 -0.5750000000059607 305.5632324218749 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+61 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Возврат пара в ПК"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.3250000000059607 302.5 298.6749999999941 323.5
+5 Label
+0
+E29 61
+"Label29"
+""
+1 -0.575000000005959 284.5635375976561 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+60 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Главный слив"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 281.5 298.6749999999941 302.5
+5 Label
+0
+E29 60
+"Label28"
+""
+1 -0.575000000005959 263.5664062499999 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+59 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Слив остатков перегретой воды"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 260.5 298.6749999999941 281.5
+5 Label
+0
+E29 59
+"Label27"
+""
+1 -0.575000000005959 242.5703124999999 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+58 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Внешняя циркуляция перегретой воды"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 239.5 298.6749999999941 260.5
+5 Label
+0
+E29 58
+"Label26"
+""
+1 -0.575000000005959 221.5859374999999 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+57 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Прямая перегретая вода"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 218.5 298.6749999999941 239.5
+5 Label
+0
+E29 57
+"Label25"
+""
+1 -0.575000000005959 200.5937499999999 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+56 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Циркуляция перегретой воды"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 197.5 298.6749999999941 218.5
+5 Label
+0
+E29 56
+"Label24"
+""
+1 -0.575000000005959 179.6406249999999 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+55 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Подача холодной воды"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 176.5 298.6749999999941 197.5
+5 Label
+0
+E29 55
+"Label23"
+""
+1 -0.575000000005959 158.6093749999999 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+54 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Подача прогревающего пара"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 155.5 298.6749999999941 176.5
+5 Label
+0
+E29 54
+"Label22"
+""
+1 -0.575000000005959 137.5624999999999 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+53 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Вакуум"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 134.5 298.6749999999941 155.5
+5 Label
+0
+E29 53
+"Label21"
+""
+1 0.4612694300458315 49.56249999999989 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+52 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Возврат охлаждающей воды из ПК"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 113.5 298.6749999999941 134.5
+5 Label
+0
+E29 52
+"Label20"
+""
+1 0.4612694300458315 52.55468749999989 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+51 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Охлаждающая вода в ПК"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 92.5 298.6749999999941 113.5
+5 Label
+0
+E29 51
+"Label19"
+""
+1 0.4612694300458315 53.56249999999989 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+50 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Пар в паровую камеру"
+"alignment" "enum 1"
+"minimumSize" "100 20"
+"maximumSize" "290 20"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignTop"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 71.5 298.6749999999941 92.5
+5 Label
+0
+E29 2
+"Label17"
+""
+1 -0.575000000005959 50.83884899068306 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+1 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string Время шага, мин."
+"alignment" "enum 1"
+"minimumSize" "100 22"
+"maximumSize" "290 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,15,5,50,0,0,0,0,0,Обычный
+0  -0.325000000005959 50.77717391304344 298.6749999999941 71.49999999999994
+5 Label
+0
+E29 72
+"Label134"
+""
+1 -0.575000000005959 30.56034873188389 E E E 1 E 1 E N "STD_textfield_text" E N "WF_TableAlternatingRowColor_2" E E
+ E E
+71 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+6
+"text" "string "
+"alignment" "enum 1"
+"minimumSize" "100 22"
+"maximumSize" "290 22"
+"sizePolicy" "Preferred Fixed"
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 56 MS Shell Dlg 2,-1,17,5,75,0,0,0,0,0,Полужирный
+0  -0.325000000005959 30.49999999999994 298.6749999999941 50.7771739130435
+5 Label
+0
+E0
+LAYER, 2 
+1
+LANG:10027 0 
+20 74
+"CHECK_BOX21"
+""
+1 295.875 73.99999999999964 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+73 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  294 72.00000000000063 317 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 75
+"CHECK_BOX22"
+""
+1 335.6003657308453 103.3499934111465 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+74 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  334 71.99999999999994 357 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 76
+"CHECK_BOX23"
+""
+1 376.1899081993785 103.7630471646434 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+75 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  374 71.99999999999994 397 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 77
+"CHECK_BOX24"
+""
+1 416.5871483419105 103.3499934111465 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+76 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  414 71.99999999999994 437 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 78
+"CHECK_BOX25"
+""
+1 455.8440034162358 103.2387995326142 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+77 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  454 71.99999999999994 477 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 79
+"CHECK_BOX26"
+""
+1 495.9485379453615 103.3499934111466 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+78 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  494 71.99999999999994 517 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 80
+"CHECK_BOX27"
+""
+1 536.205393019688 103.3499934111468 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+79 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  534 71.99999999999994 557 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 81
+"CHECK_BOX28"
+""
+1 575.9353205564448 103.3499934111466 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+80 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  574 71.99999999999994 597 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 82
+"CHECK_BOX29"
+""
+1 616.1921756307618 103.3499934111466 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+81 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  614 71.99999999999994 637 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 83
+"CHECK_BOX30"
+""
+1 656.2967101598972 103.3499934111466 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+82 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  654 71.99999999999994 677 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 84
+"CHECK_BOX31"
+""
+1 695.5535652342143 103.3499934111466 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+83 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  694 71.99999999999994 717 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 85
+"CHECK_BOX32"
+""
+1 736.0703904697722 75.4407446052389 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+84 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  734 71.99999999999994 757 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 86
+"CHECK_BOX33"
+""
+1 1038.902880521244 104.2618475144907 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+85 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  774 71.99999999999994 797 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 87
+"CHECK_BOX34"
+""
+1 1099.868801690176 104.2618475144907 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+86 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  814 71.99999999999994 837 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 88
+"CHECK_BOX35"
+""
+1 1161.078282578103 104.2618475144907 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+87 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  854 71.99999999999994 877 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE20 89
+"CHECK_BOX36"
+""
+1 1221.178161592495 102.4381393078027 E E E 1 E 1 E N {0,0,0,0} E N "_3DFace" E E
+ E E
+88 0 0 0 0 0
+E E E
+0
+1
+LANG:10027 0 
+
+3
+"sizePolicy" "Preferred Preferred"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"showBackground" "0"
+1
+LANG:10027 50 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Обычный
+0  894 71.99999999999994 917 375.9999999999999
+15
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+T 
+1
+LANG:10027 1 1
+
+0 
+1
+LANG:10027 0 
+E E
+0 0 0 0 0
+0
+EE0
+LAYER, 3 
+1
+LANG:10027 0 
+0
+LAYER, 4 
+1
+LANG:10027 0 
+0
+LAYER, 5 
+1
+LANG:10027 0 
+0
+LAYER, 6 
+1
+LANG:10027 0 
+0
+LAYER, 7 
+1
+LANG:10027 0 
+0
+4 20 "LAYOUT_GROUP22" 39
+17 0 
+65 64 63 62 61 60 59 58 56 57 55 54 53 52 51 2 72 
+
+"S 65" "16 0 1 1"
+"S 64" "15 0 1 1"
+"S 63" "14 0 1 1"
+"S 62" "13 0 1 1"
+"S 61" "12 0 1 1"
+"S 60" "11 0 1 1"
+"S 59" "10 0 1 1"
+"S 58" "9 0 1 1"
+"S 56" "7 0 1 1"
+"S 57" "8 0 1 1"
+"S 55" "6 0 1 1"
+"S 54" "5 0 1 1"
+"S 53" "4 0 1 1"
+"S 52" "3 0 1 1"
+"S 51" "2 0 1 1"
+"S 2" "1 0 1 1"
+"S 72" "0 0 1 1"
+"" ""
+0 2 1 0 0 0 0 1 0
+4 21 "LAYOUT_GROUP23" 37
+2 0 
+4 20 
+
+"S 4" "1 0 1 1"
+"S 20" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 22 "LAYOUT_GROUP24" 37
+2 0 
+5 21 
+
+"S 5" "1 0 1 1"
+"S 21" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 23 "LAYOUT_GROUP25" 37
+2 0 
+6 22 
+
+"S 6" "1 0 1 1"
+"S 22" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 24 "LAYOUT_GROUP26" 37
+2 0 
+7 23 
+
+"S 7" "1 0 1 1"
+"S 23" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 25 "LAYOUT_GROUP27" 37
+2 0 
+8 24 
+
+"S 8" "1 0 1 1"
+"S 24" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 26 "LAYOUT_GROUP28" 37
+2 0 
+9 25 
+
+"S 9" "1 0 1 1"
+"S 25" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 27 "LAYOUT_GROUP29" 37
+2 0 
+10 26 
+
+"S 10" "1 0 1 1"
+"S 26" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 28 "LAYOUT_GROUP30" 37
+2 0 
+11 27 
+
+"S 11" "1 0 1 1"
+"S 27" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 29 "LAYOUT_GROUP31" 37
+2 0 
+12 28 
+
+"S 12" "1 0 1 1"
+"S 28" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 30 "LAYOUT_GROUP32" 37
+2 0 
+13 29 
+
+"S 13" "1 0 1 1"
+"S 29" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 31 "LAYOUT_GROUP33" 37
+2 0 
+14 30 
+
+"S 14" "1 0 1 1"
+"S 30" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 32 "LAYOUT_GROUP34" 37
+2 0 
+15 31 
+
+"S 15" "1 0 1 1"
+"S 31" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 33 "LAYOUT_GROUP35" 37
+2 0 
+16 32 
+
+"S 16" "1 0 1 1"
+"S 32" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 34 "LAYOUT_GROUP36" 37
+2 0 
+17 33 
+
+"S 17" "1 0 1 1"
+"S 33" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 35 "LAYOUT_GROUP37" 37
+2 0 
+18 34 
+
+"S 18" "1 0 1 1"
+"S 34" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 36 "LAYOUT_GROUP38" 37
+2 0 
+19 35 
+
+"S 19" "1 0 1 1"
+"S 35" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 37 "LAYOUT_GROUP39" 38
+0 16 
+
+21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 
+"G 21" "0 0 1 1"
+"G 22" "1 0 1 1"
+"G 23" "2 0 1 1"
+"G 24" "3 0 1 1"
+"G 25" "4 0 1 1"
+"G 26" "5 0 1 1"
+"G 27" "6 0 1 1"
+"G 28" "7 0 1 1"
+"G 29" "8 0 1 1"
+"G 30" "9 0 1 1"
+"G 31" "10 0 1 1"
+"G 32" "11 0 1 1"
+"G 33" "12 0 1 1"
+"G 34" "13 0 1 1"
+"G 35" "14 0 1 1"
+"G 36" "15 0 1 1"
+"" ""
+0 1 0 1 0
+4 38 "LAYOUT_GROUP40" 39
+1 1 
+1 
+37 
+"S 1" "1 0 1 1"
+"G 37" "0 0 1 1"
+"" ""
+0 2 1 0 0 0 0 1 0
+4 39 "LAYOUT_GROUP41" -1
+0 2 
+
+20 38 
+"G 20" "0 0 1 1"
+"G 38" "1 0 1 1"
+"" ""
+0 1 0 1 0
+0
